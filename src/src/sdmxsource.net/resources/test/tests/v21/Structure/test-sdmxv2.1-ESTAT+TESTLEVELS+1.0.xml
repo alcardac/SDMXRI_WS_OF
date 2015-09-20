@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>false</Test>
+    <Prepared>2013-09-10T09:08:17.0828+02:00</Prepared>
+    <Sender id="ESTAT" />
+    <Receiver id="unknown" />
+  </Header>
+  <Structures>
+    <HierarchicalCodelists xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <HierarchicalCodelist id="TESTLEVELS" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCodelist=ESTAT:TESTLEVELS(1.0)" agencyID="ESTAT" version="1.0" isFinal="false">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">TESTLEVELS</Name>
+        <IncludedCodelist alias="CL_ADJUSTMENT@ESTAT@10">
+          <Ref id="CL_ADJUSTMENT" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+        </IncludedCodelist>
+        <Hierarchy id="HIER1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Hierarchy=ESTAT:TESTLEVELS(1.0).HIER1" leveled="true">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">HIER1</Name>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">HIER1</Description>
+          <HierarchicalCode id="C" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:TESTLEVELS(1.0).HIER1.C">
+            <CodelistAliasRef>CL_ADJUSTMENT@ESTAT@10</CodelistAliasRef>
+            <CodeID>
+              <Ref id="C" xmlns="" />
+            </CodeID>
+            <HierarchicalCode id="N" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:TESTLEVELS(1.0).HIER1.C.N">
+              <CodelistAliasRef>CL_ADJUSTMENT@ESTAT@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="N" xmlns="" />
+              </CodeID>
+              <Level>
+                <Ref id="PEPONI.KARPOYZI" xmlns="" />
+              </Level>
+            </HierarchicalCode>
+            <HierarchicalCode id="S" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:TESTLEVELS(1.0).HIER1.C.S">
+              <CodelistAliasRef>CL_ADJUSTMENT@ESTAT@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="S" xmlns="" />
+              </CodeID>
+              <Level>
+                <Ref id="PEPONI.KARPOYZI" xmlns="" />
+              </Level>
+            </HierarchicalCode>
+            <Level>
+              <Ref id="PEPONI" xmlns="" />
+            </Level>
+          </HierarchicalCode>
+          <Level id="PEPONI" urn="urn:sdmx:org.sdmx.infomodel.codelist.Level=ESTAT:TESTLEVELS(1.0).HIER1.PEPONI">
+            <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">peponi</Name>
+            <Level id="KARPOYZI" urn="urn:sdmx:org.sdmx.infomodel.codelist.Level=ESTAT:TESTLEVELS(1.0).HIER1.PEPONI.KARPOYZI">
+              <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Watermelon</Name>
+              <Level id="BANANA" urn="urn:sdmx:org.sdmx.infomodel.codelist.Level=ESTAT:TESTLEVELS(1.0).HIER1.PEPONI.KARPOYZI.BANANA">
+                <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">BANANA</Name>
+              </Level>
+            </Level>
+          </Level>
+        </Hierarchy>
+      </HierarchicalCodelist>
+    </HierarchicalCodelists>
+  </Structures>
+</Structure>

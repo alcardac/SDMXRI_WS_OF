@@ -1,0 +1,884 @@
+<CompactData xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:ns1="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ESTAT:DEMOGRAPHY(2.1):ObsLevelDim:TIME_PERIOD" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header>
+    <ID>IT1001</ID>
+    <Test>true</Test>
+    <Name xml:lang="en">Trans46302</Name>
+    <Prepared>2001-03-11T15:30:47</Prepared>
+    <Sender id="ISTAT">
+      <Name xml:lang="en">Italian Statistical Institute</Name>
+      <Contact>
+        <Name xml:lang="en">Francesco Rizzo</Name>
+        <Department xml:lang="en">Statistics</Department>
+        <Role xml:lang="en">Francesco Rizzo</Role>
+        <Telephone>210 2222222</Telephone>
+        <Fax>210 00010999</Fax>
+        <URI>http://www.sdmx.org</URI>
+        <Email>rizzo@istat.it</Email>
+      </Contact>
+    </Sender>
+    <Receiver id="ESTAT">
+      <Name xml:lang="en">Eurostat</Name>
+      <Contact>
+        <Name xml:lang="en">Bengt-Ake Lindblad</Name>
+        <Department xml:lang="en">Information Technology</Department>
+        <Role xml:lang="en">Bengt-Ake Lindblad</Role>
+        <Telephone>210 1234567</Telephone>
+        <Fax>210 3810999</Fax>
+        <X400>lalala</X400>
+        <URI>http://www.sdmx.org</URI>
+        <Email>bengt-ake.lindblad@ec.europa.eu</Email>
+      </Contact>
+    </Receiver>
+    <KeyFamilyRef>DEMOGRAPHY</KeyFamilyRef>
+    <KeyFamilyAgency>ESTAT</KeyFamilyAgency>
+    <DataSetAgency>BIS</DataSetAgency>
+    <DataSetID>ISTAT_JD_237</DataSetID>
+    <DataSetAction>Append</DataSetAction>
+    <Extracted>2001-03-11T15:30:47</Extracted>
+    <ReportingBegin>2000-12-01T00:00:00</ReportingBegin>
+    <ReportingEnd>2006-01-01T00:00:00</ReportingEnd>
+    <Source xml:lang="en">source</Source>
+  </Header>
+  <ns1:DataSet TAB_NUM="RQFI05V1" REV_NUM="1">
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="DK" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="DK" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="DK" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="DK" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="DK" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="DK" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="DK" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="DK" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="DK" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="DK" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="EE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="EE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="EE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="EE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="EE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="EE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="EE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="EE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="EE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="EE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="FI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="FI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="FI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="FI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="FI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="FI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="FI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="FI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="FI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="FI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="FR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="FR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="FR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="FR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="FR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="FR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="FR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="FR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="FR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="FR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="DE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="DE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="DE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="DE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="DE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="DE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="DE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="DE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="DE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="DE" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="EL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="EL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="EL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="EL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="EL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="EL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="EL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="EL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="EL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="EL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="HR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="HR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="HR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="HR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="HR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="HR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="HR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="HR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="HR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="HR" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="IT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="IT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="IT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="IT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="IT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="IT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="IT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="IT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="IT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="IT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="PL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="PL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="PL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="PL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="PL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="PL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="PL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="PL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="PL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="PL" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="PT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="PT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="PT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="PT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="PT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="PT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="PT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="PT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="PT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="PT" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="SI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="SI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="SI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="SI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="SI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="SI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="SI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="SI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="SI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="SI" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="ADJT" FREQ="A" COUNTRY="ES" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="16666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="85555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="53333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7484736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="16666" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHST" FREQ="A" COUNTRY="ES" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="17777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="86666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="54444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="87487" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="17777" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="DEATHUN1" FREQ="A" COUNTRY="ES" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="31111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="70000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="666666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="7373" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="31111" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="EMIGT" FREQ="A" COUNTRY="ES" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="20000" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="79999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="655555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8383" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="20000" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="IMMIT" FREQ="A" COUNTRY="ES" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="29999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="788888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="644444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="738762354" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="29999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHOUT" FREQ="A" COUNTRY="ES" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="32222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="77777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="6474847" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8392" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="32222" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="LBIRTHST" FREQ="A" COUNTRY="ES" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="18888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="87777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="55555" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="387467" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="18888" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="NETMT" FREQ="A" COUNTRY="ES" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="19999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="899999" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="566666" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="8374647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="19999" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJAN1T" FREQ="A" COUNTRY="ES" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="23333" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="711111" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="57777" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="83736" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="23333" OBS_STATUS="P" />
+    </ns1:Series>
+    <ns1:Series SEX="T" DEMO="PJANT" FREQ="A" COUNTRY="ES" UNIT_MULT="0" DECI="0" TIME_FORMAT="P1Y" UNIT="UNITS">
+      <ns1:Obs TIME="1991" OBS_VALUE="24444" OBS_STATUS="P" />
+      <ns1:Obs TIME="1992" OBS_VALUE="72222" OBS_STATUS="P" />
+      <ns1:Obs TIME="1993" OBS_VALUE="58888" OBS_STATUS="P" />
+      <ns1:Obs TIME="1994" OBS_VALUE="53647" OBS_STATUS="P" />
+      <ns1:Obs TIME="1995" OBS_VALUE="24444" OBS_STATUS="P" />
+    </ns1:Series>
+  </ns1:DataSet>
+</CompactData>

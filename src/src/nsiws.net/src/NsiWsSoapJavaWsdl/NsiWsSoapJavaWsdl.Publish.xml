@@ -1,0 +1,13 @@
+<publishData>
+  <publishTarget publishUrl="http://localhost/NSIWS-T">
+    <file relUrl="bin/log4net.dll" publishTime="10/14/2013 18:03:38" />
+    <file relUrl="bin/NsiWsSoapJavaWsdl.dll.config" publishTime="10/15/2013 14:31:05" />
+    <file relUrl="bin/NsiWsSoapJavaWsdl.pdb" publishTime="10/15/2013 18:41:30" />
+    <file relUrl="bin/NsiWsSoapJavaWsdl.dll" publishTime="10/15/2013 18:41:30" />
+    <file relUrl="NSI.wsdl" publishTime="10/15/2013 18:03:23" />
+    <file relUrl="Web.config" publishTime="10/15/2013 14:31:05" />
+    <file relUrl="bin/log4net.xml" publishTime="10/14/2013 18:03:38" />
+    <file relUrl="Global.asax" publishTime="10/15/2013 12:57:51" />
+    <file relUrl="NsiWsSoapJavaWsdl.NsiEstatV20Service.svc" publishTime="10/15/2013 18:41:37" />
+  </publishTarget>
+</publishData>

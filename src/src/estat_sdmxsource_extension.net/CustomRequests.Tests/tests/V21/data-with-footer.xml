@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<message:StructureSpecificData xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:ns1="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=IT1:56_University_Education(1.0):ObsLevelDim:TIME_PERIOD" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message SDMXMessage.xsd">
+  <message:Header>
+    <message:ID>TestMaxAllowedObservations</message:ID>
+    <message:Test>false</message:Test>
+    <message:Prepared>2015-01-26T17:13:05</message:Prepared>
+    <message:Sender id="ZZ9" />
+    <message:Structure structureID="IT1_56_University_Education_1_0" namespace="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=IT1:56_University_Education(1.0):ObsLevelDim:TIME_PERIOD" dimensionAtObservation="TIME_PERIOD">
+      <common:Structure xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+        <Ref agencyID="IT1" id="56_University_Education" version="1.0" />
+      </common:Structure>
+    </message:Structure>
+  </message:Header>
+  <message:DataSet ss:dataScope="DataStructure" xsi:type="ns1:DataSetType" ss:structureRef="IT1_56_University_Education_1_0" TITLE="University education - enrolments" TIME_FORMAT="P1Y" xmlns:ss="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific">
+    <Group xsi:type="ns1:x_unita" IND_TYPE="ENR" STAT_POP="UNIV_ENROL" />
+    <Group xsi:type="ns1:x_unita" IND_TYPE="CLSS" STAT_POP="UNIV_ENROL" />
+    <Series TERRITORIO="IT" TIPO_ATENEO="1" REG_RES="IT" GRUP_CORSILAUREA="1" MEASURE="9" SESSO="1" IND_TYPE="ENR" TIPCORSOLAUREA="9999" FREQ="A">
+      <Obs TIME_PERIOD="2008" OBS_VALUE="39635" />
+      <Obs TIME_PERIOD="2009" OBS_VALUE="38805" />
+    </Series>
+    <Series TERRITORIO="IT" TIPO_ATENEO="1" REG_RES="IT" GRUP_CORSILAUREA="10" MEASURE="9" SESSO="1" IND_TYPE="ENR" TIPCORSOLAUREA="9999" FREQ="A">
+      <Obs TIME_PERIOD="2008" OBS_VALUE="77870" />
+      <Obs TIME_PERIOD="2009" OBS_VALUE="74638" />
+    </Series>
+    <Series TERRITORIO="IT" TIPO_ATENEO="1" REG_RES="IT" GRUP_CORSILAUREA="11" MEASURE="9" SESSO="1" IND_TYPE="ENR" TIPCORSOLAUREA="9999" FREQ="A">
+      <Obs TIME_PERIOD="2008" OBS_VALUE="48213" />
+      <Obs TIME_PERIOD="2009" OBS_VALUE="47287" />
+    </Series>
+    <Series TERRITORIO="IT" TIPO_ATENEO="1" REG_RES="IT" GRUP_CORSILAUREA="12" MEASURE="9" SESSO="1" IND_TYPE="ENR" TIPCORSOLAUREA="9999" FREQ="A">
+      <Obs TIME_PERIOD="2008" OBS_VALUE="14445" />
+      <Obs TIME_PERIOD="2009" OBS_VALUE="14919" />
+    </Series>
+    <Series TERRITORIO="IT" TIPO_ATENEO="1" REG_RES="IT" GRUP_CORSILAUREA="13" MEASURE="9" SESSO="1" IND_TYPE="ENR" TIPCORSOLAUREA="9999" FREQ="A">
+      <Obs TIME_PERIOD="2008" OBS_VALUE="7205" />
+      <Obs TIME_PERIOD="2009" OBS_VALUE="6882" />
+    </Series>
+  </message:DataSet>
+  <footer:Footer xmlns:footer="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer">
+    <footer:Message code="510" severity="Error">
+      <common:AnnotationText xml:lang="en" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Response size exceeds service limit : Reached configured limit : 10 observations</common:AnnotationText>
+    </footer:Message>
+  </footer:Footer>
+</message:StructureSpecificData>

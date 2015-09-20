@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which
+         assemblies to include from solution and project documentation
+         sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9ac39cb7-95b1-48ce-a942-1fd20a822c40}</ProjectGuid>
+    <SHFBSchemaVersion>1.9.9.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual
+         Studio adds them anyway -->
+    <AssemblyName>ApiDocumentation</AssemblyName>
+    <RootNamespace>ApiDocumentation</RootNamespace>
+    <Name>ApiDocumentation</Name>
+    <!-- SHFB properties -->
+    <OutputPath>.\Help\</OutputPath>
+    <HtmlHelpName>ApiDocumentation</HtmlHelpName>
+    <Language>en-US</Language>
+    <ApiFilter>
+      <Filter entryType="Namespace" fullName="GuideTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="GuideTests.Chapter1" isExposed="False" />
+<Filter entryType="Namespace" fullName="GuideTests.Chapter4" isExposed="False" />
+<Filter entryType="Namespace" fullName="SdmxApiTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="SdmxDataParserTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="SdmxEdiDataWriterTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="SdmxMlConstantsTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="SdmxObjectsTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="SdmxQueryBuilderTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="SdmxSourceUtilTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="SdmxStructureMutableParserTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="SdmxStructureParserTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="SdmxStructureRetrievalTests" isExposed="False" />
+<Filter entryType="Namespace" fullName="Xml.Fxt" isExposed="False" />
+<Filter entryType="Namespace" fullName="Xml.Schema.Linq" isExposed="False" />
+<Filter entryType="Namespace" fullName="Xml.Schema.Linq.CodeGen" isExposed="False" /></ApiFilter>
+    <ComponentConfigurations>
+      <ComponentConfig id="Code Block Component" enabled="True">
+        <component id="Code Block Component">
+          <!-- Base path for relative filenames in source attributes (optional) -->
+          <basePath value="{@HtmlEncProjectFolder}" />
+          <!-- Base output paths for the files (required).  These should match the parent folder of the output path
+	 of the HTML files (see each of the SaveComponent instances in the configuration files). -->
+          <outputPaths>
+	{@HelpFormatOutputPaths}
+</outputPaths>
+          <!-- Allow missing source files (Optional).  If omitted, it will generate errors if referenced source files
+	 are missing. -->
+          <allowMissingSource value="false" />
+          <!-- Remove region markers from imported code blocks.  If omitted, region markers in imported code blocks
+	 are left alone. -->
+          <removeRegionMarkers value="false" />
+          <!-- Code colorizer options (required).
+	 Attributes:
+		Language syntax configuration file (required)
+		XSLT style sheet file (required)
+		CSS style sheet file (required)
+		Script file (required)
+		Disabled (optional, leading whitespace normalization only)
+		Default language (optional)
+		Enable line numbering (optional)
+		Enable outlining (optional)
+		Keep XML comment "see" tags within the code (optional)
+		Tab size override (optional, 0 = Use syntax file setting)
+		Use language name as default title (optional) -->
+          <colorizer syntaxFile="{@SHFBFolder}Colorizer\highlight.xml" styleFile="{@SHFBFolder}Colorizer\highlight.xsl" stylesheet="{@SHFBFolder}Colorizer\highlight.css" scriptFile="{@SHFBFolder}Colorizer\highlight.js" disabled="{@DisableCodeBlockComponent}" language="cs" numberLines="false" outlining="false" keepSeeTags="false" tabSize="0" defaultTitle="true" />
+        </component>
+      </ComponentConfig>
+      <ComponentConfig id="Resolve Reference Links (ESENT Cache)" enabled="True">
+        <component id="Resolve Reference Links (ESENT Cache)">
+          <locale value="{@Locale}" />
+          <linkTarget value="{@SdkLinkTarget}" />
+          <helpOutput format="HtmlHelp1">
+            <msdnContentIdCache path="{@LocalDataFolder}Cache\MsdnContentId.cache" cachePath="{@LocalDataFolder}Cache\ESentMsdnContentIdCache" localCacheSize="2500" />
+            <targets base="{@SHFBFolder}Data\Reflection" recurse="true" files="*.xml" type="{@HtmlSdkLinkType}" id="FrameworkTargets" cachePath="{@LocalDataFolder}Cache\ESentFrameworkTargetCache" localCacheSize="2500">
+		{@ReferenceLinkNamespaceFiles}
+	</targets>
+            <targets files="reflection.xml" type="Local" id="ProjectTargets" cachePath="" localCacheSize="2500" noReload="true" />
+          </helpOutput>
+          <helpOutput format="MSHelp2">
+            <msdnContentIdCache path="{@LocalDataFolder}Cache\MsdnContentId.cache" cachePath="{@LocalDataFolder}Cache\ESentMsdnContentIdCache" localCacheSize="2500" />
+            <targets base="{@SHFBFolder}Data\Reflection" recurse="true" files="*.xml" type="{@MSHelp2SdkLinkType}" id="FrameworkTargets" cachePath="{@LocalDataFolder}Cache\ESentFrameworkTargetCache" localCacheSize="2500">
+		{@ReferenceLinkNamespaceFiles}
+	</targets>
+            <targets files="reflection.xml" type="Index" id="ProjectTargets" cachePath="" localCacheSize="2500" noReload="true" />
+          </helpOutput>
+          <helpOutput format="MSHelpViewer">
+            <msdnContentIdCache path="{@LocalDataFolder}Cache\MsdnContentId.cache" cachePath="{@LocalDataFolder}Cache\ESentMsdnContentIdCache" localCacheSize="2500" />
+            <targets base="{@SHFBFolder}Data\Reflection" recurse="true" files="*.xml" type="{@MSHelpViewerSdkLinkType}" id="FrameworkTargets" cachePath="{@LocalDataFolder}Cache\ESentFrameworkTargetCache" localCacheSize="2500">
+		{@ReferenceLinkNamespaceFiles}
+	</targets>
+            <targets files="reflection.xml" type="Id" id="ProjectTargets" cachePath="" localCacheSize="2500" noReload="true" />
+          </helpOutput>
+          <helpOutput format="Website">
+            <msdnContentIdCache path="{@LocalDataFolder}Cache\MsdnContentId.cache" cachePath="{@LocalDataFolder}Cache\ESentMsdnContentIdCache" localCacheSize="2500" />
+            <targets base="{@SHFBFolder}Data\Reflection" recurse="true" files="*.xml" type="{@WebsiteSdkLinkType}" id="FrameworkTargets" cachePath="{@LocalDataFolder}Cache\ESentFrameworkTargetCache" localCacheSize="2500">
+		{@ReferenceLinkNamespaceFiles}
+	</targets>
+            <targets files="reflection.xml" type="Local" id="ProjectTargets" cachePath="" localCacheSize="2500" noReload="true" />
+          </helpOutput>
+        </component>
+      </ComponentConfig>
+      <ComponentConfig id="API Token Resolution" enabled="True">
+        <component id="API Token Resolution">{@TokenFiles}
+<replace elements="/*//token" item="string(.)" /></component>
+      </ComponentConfig>
+      <ComponentConfig id="Comments Index Data (ESENT Cache)" enabled="True">
+        <component id="Comments Index Data (ESENT Cache)">
+          <index name="comments" value="/doc/members/member" key="@name" cache="30" localCacheSize="2500" frameworkCachePath="{@LocalDataFolder}Cache\CommentsIndexCache" projectCachePath="">
+	{@FrameworkCommentList}
+	{@CommentFileList}
+</index>
+          <copy name="comments" source="*" target="/document/comments" />
+        </component>
+      </ComponentConfig>
+      <ComponentConfig id="Reflection Index Data (ESENT Cache)" enabled="False">
+        <component id="Reflection Index Data (ESENT Cache)">
+          <index name="reflection" value="/reflection/apis/api" key="@id" cache="15" localCacheSize="2500" frameworkCachePath="{@LocalDataFolder}Cache\ReflectionIndexCache" projectCachePath="">
+            <data base="{@SHFBFolder}Data\Reflection" recurse="true" files="*.xml" duplicateWarning="false" groupId="ReflectionIndexCache">
+		{@ReferenceLinkNamespaceFiles}
+	</data>
+            <data files="reflection.xml" groupId="Project_Ref_{@UniqueID}" />
+          </index>
+          <copy name="reflection" source="*" target="/document/reference" />
+        </component>
+      </ComponentConfig>
+      <ComponentConfig id="IntelliSense Component" enabled="True">
+        <component id="IntelliSense Component">
+          <!-- Output options (optional)
+  Attributes:
+    Include namespaces (false by default)
+    Namespaces comments filename ("Namespaces" if not specified or empty)
+    Output folder (current folder if not specified or empty) -->
+          <output includeNamespaces="false" namespacesFile="Namespaces" folder="{@OutputFolder}" />
+        </component>
+      </ComponentConfig>
+      <ComponentConfig id="Syntax Component" enabled="True">
+        <component id="Syntax Component">
+          <syntax input="/document/reference" output="/document/syntax" renderReferenceLinks="false" />
+          <generators>
+    {@SyntaxFilters}
+</generators>
+          <containerElement name="codeSnippetGroup" addNoExampleTabs="true" includeOnSingleSnippets="false" groupingEnabled="{@CodeSnippetGrouping}" />
+          <configurations>
+            <generator id="C#" />
+            <generator id="Visual Basic">
+              <includeLineContinuation value="false" />
+            </generator>
+            <generator id="Visual Basic Usage">
+              <includeLineContinuation value="false" />
+            </generator>
+            <generator id="Managed C++" />
+            <generator id="F#" />
+            <generator id="J#" />
+            <generator id="JScript" />
+            <generator id="JavaScript" />
+            <generator id="XAML Usage" />
+            <generator id="ASP.NET" />
+          </configurations>
+        </component>
+      </ComponentConfig>
+    </ComponentConfigurations>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="..\CommonAPI.sln" />
+      <DocumentationSource sourceFile="RootNamespaceSummaries.xml" />
+    </DocumentationSources>
+    <HelpAttributes />
+    <NamespaceSummaries>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Builder" isDocumented="True">Builder interfaces</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Constants" isDocumented="True">This package contains &lt;b&gt;Enumerated Constants&lt;/b&gt; useful for processing SDMX messages</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Engine" isDocumented="True">Contains Engine Interfaces - Engines are responsible for 'doing the hard work'</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Exception" isDocumented="True">Contains Custom Exception Classes</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Manager" isDocumented="True">Contains High Level Manager Interfaces 
+&lt;p/&gt;
+Managers are the highest level interface for performing a task, generally a Manager will manage the delegation of work to relevant classes.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Manager.Persist" isDocumented="True">Contains Interfaces Responsible for &lt;b&gt;Managing Persistence&lt;/b&gt; of SDMX Information</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Manager.Retrieval" isDocumented="True">Contains Interfaces Responsible for &lt;b&gt;Managing Retrieval&lt;/b&gt; of SDMX Information</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.Mutable" isDocumented="True">Contains Interfaces Responsible for &lt;b&gt;Managing Retrieval&lt;/b&gt; of SDMX Information in the &lt;b&gt;Mutable&lt;/b&gt; form</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model" isDocumented="True">Contains the &lt;b&gt;SDMX Domain Object&lt;/b&gt; interfaces, including: &lt;b&gt;SdmxObjects&lt;/b&gt;, &lt;b&gt;BaseObjects&lt;/b&gt;, &lt;b&gt;MutableObjects&lt;/b&gt;, &lt;b&gt;DataObjects&lt;/b&gt; and &lt;b&gt;QueryObjects&lt;/b&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.BaseObjects" isDocumented="True">Contains the SdmxBaseObjects, these are a higher level of domain Object, where the SdmxBeans cross references structures, the BaseObjects 
+contain the cross referneced structures by composition</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.CategoryScheme" isDocumented="True">Contains Base Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;CategoryScheme&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.Codelist" isDocumented="True">Contains Base Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Codelist&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.ConceptScheme" isDocumented="True">Contains Base Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;ConceptScheme&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.DataStructure" isDocumented="True">Contains Base Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;DataStructure&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.Metadata" isDocumented="True">Contains Base Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Metadata&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.Process" isDocumented="True">Contains Base Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Process&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.Registry" isDocumented="True">Contains Base Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Registry&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Data" isDocumented="True">Contains representations of SDMX DataSet artefacts</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Data.Query" isDocumented="True">Contains Data Query domain objects</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Metadata" isDocumented="True">Contains representations of SDMX MetadataSet artefacts</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Metadata.Mutable" isDocumented="True">Contains mutable representations of SDMX MetadataSet artefacts</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable" isDocumented="True">Contains &lt;b&gt;MutableObjects&lt;/b&gt;, these domain objects can be modified as oppose to their counterpart variants SdmxBeans (which are immutable)</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base" isDocumented="True">Contains all the SdmxMutableObject Base structures</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.CategoryScheme" isDocumented="True">Contains Sdmx Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;CategoryScheme&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.Codelist" isDocumented="True">Contains Sdmx Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Codelist&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.ConceptScheme" isDocumented="True">Contains Sdmx Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;ConceptScheme&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.DataStructure" isDocumented="True">Contains Sdmx Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;DataStructure&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.Mapping" isDocumented="True">Contains Sdmx Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Mapping&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.MetadataStructure" isDocumented="True">Contains Sdmx Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;MetadataStructure&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.Process" isDocumented="True">Contains Sdmx Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Process&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.Reference" isDocumented="True">Contains Sdmx Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Reference&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.Registry" isDocumented="True">Contains Sdmx Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Registry&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.MutableBaseObjects.Base" isDocumented="True" />
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.MutableBaseObjects.CategoryScheme" isDocumented="True">Contains Sdmx Base Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;CategoryScheme&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.MutableBaseObjects.Codelist" isDocumented="True">Contains Sdmx Base Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Codelist&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.MutableBaseObjects.ConceptScheme" isDocumented="True">Contains Sdmx Base Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;ConceptScheme&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.MutableBaseObjects.DataStructure" isDocumented="True">Contains Sdmx Base Mutable Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;DataStructure&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects" isDocumented="True">Contains SdmxBeans which are a version independent, immutable, representation of SDMX Structure artefacts</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects.Base" isDocumented="True">Contains all the SdmxObject Base structures</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects.CategoryScheme" isDocumented="True">Contains Sdmx Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;CategoryScheme&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects.Codelist" isDocumented="True">Contains Sdmx Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Codelist&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects.ConceptScheme" isDocumented="True">Contains Sdmx Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;ConceptScheme&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure" isDocumented="True">Contains Sdmx Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;DataStructure&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects.Mapping" isDocumented="True">Contains Sdmx Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Mapping&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects.MetadataStructure" isDocumented="True">Contains Sdmx Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;MetadataStructure&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects.Process" isDocumented="True">Contains Sdmx Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Process&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference" isDocumented="True">Contains Sdmx Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Reference&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry" isDocumented="True">Contains Sdmx Objects which the &lt;b&gt;information model&lt;/b&gt; packages in the &lt;b&gt;Registry&lt;/b&gt; namespace</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.SubmissionResponse" isDocumented="True">Contains domain objects which contain information about Registry submission responses (registration, Structure, and Subscription)</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Util" isDocumented="True">Various helper classes</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxDataParser.Engine" isDocumented="True">This namespace contains various data writers</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxEdiDataWriter.Constants" isDocumented="True">Gesmes Constants</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxEdiDataWriter.Engine" isDocumented="True">Contains GESMES/TS also known as SDMX-EDI data writer</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxStructureMutableParser.Engine.V2" isDocumented="True">XmlReader/Writer based SDMX v2.0 readers/writers. Only a subset of SDMX v2.0 is supported.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxStructureMutableParser.Manager" isDocumented="True">Contains managers which use the Engine class of this assembly.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxXmlConstants" isDocumented="True">Auto-generated SDMX constants build from SDMX v1.0, v2.0 and v2.1 XSD files.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.TabularWriters.Engine" isDocumented="True">Contains Tabular data writers</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V10" isDocumented="True">&lt;a href="http://linqtoxsd.codeplex.com/"&gt;LINQ to XSD&lt;/a&gt; generated code from SDMX v1.0 XSD</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20" isDocumented="True">&lt;a href="http://linqtoxsd.codeplex.com/"&gt;LINQ to XSD&lt;/a&gt; generated code from SDMX v2.0 XSD</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21" isDocumented="True">&lt;a href="http://linqtoxsd.codeplex.com/"&gt;LINQ to XSD&lt;/a&gt; generated code from SDMX v2.1 XSD</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxDataParser.Factory" isDocumented="True">This namespace contains factory for creating SdmxStructure</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxParseBase.Engine" isDocumented="True">Base classes for SDMX-ML file reading/parsing</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxParseBase.Helper" isDocumented="True">Helper classes for SDMX-ML file reading/parsing</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxParseBase.Model" isDocumented="True">Various namespace - prefix related model classes</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxStructureMutableParser.Engine" isDocumented="True">The engines for writing/reading Structure/Registry Interface SDMX-ML messages.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Estat.Sri.SdmxStructureMutableParser.Model" isDocumented="True">Helper model classes</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V10.common" isDocumented="True">&lt;inheritdoc cref="N:Org.Sdmx.Resources.SdmxMl.Schemas.V10"/&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V10.compact" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V10.cross" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V10.generic" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V10.message" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V10.query" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V10.structure" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V10.utility" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.common" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.compact" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.cross" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.extension.common" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.extension.registry" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.extension.structure" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.generic" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.genericmetadata" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.message" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.metadatareport" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.query" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.registry" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.structure" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V20.utility" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21.Common" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21.Data.Generic" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21.Data.StructureSpecific" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21.Message" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21.Message.Footer" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21.MetaData.Generic" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21.MetaData.StructureSpecific" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21.Query" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21.Registry" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmx.Resources.SdmxMl.Schemas.V21.Structure" isDocumented="True">&lt;inheritdoc /&gt;</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Constants.InterfaceConstant" isDocumented="True">Contains constants grouped by interface. The Java Sdmx Source implementation had constants in interfaces. Since this is not supported in C#, they were moved to static classes.</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Manager.Output" isDocumented="True">Output related managers</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Manager.Parse" isDocumented="True">Parsing managers</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Manager.Persist.Mutable" isDocumented="True">Contains Interfaces Responsible for &lt;b&gt;Managing Persistence&lt;/b&gt; of SDMX Information in mutable form</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.Webservive" isDocumented="True">Web Service retrieval related interfaces</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.Api.Model.Base" isDocumented="True">The base domain objects</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="Org.Sdmxsource.Sdmx.SdmxObjects.Model.Data.Query" isDocumented="True" />
+      <NamespaceSummaryItem name="(global)" isDocumented="False" />
+    </NamespaceSummaries>
+    <PlugInConfigurations>
+    </PlugInConfigurations>
+    <BuildLogFile />
+    <HtmlHelp1xCompilerPath />
+    <HtmlHelp2xCompilerPath />
+    <SandcastlePath />
+    <WorkingPath />
+    <SyntaxFilters>Standard</SyntaxFilters>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceContainer>True</RootNamespaceContainer>
+    <PresentationStyle>VS2010</PresentationStyle>
+    <Preliminary>False</Preliminary>
+    <NamingMethod>Guid</NamingMethod>
+    <HelpTitle>Eurostat&amp;#39%3bs Sdmx Source .NET API reference documentation</HelpTitle>
+    <CopyrightText>&amp;#169%3b 2009-2011 by the European Community, represented by Eurostat. All rights Reserved</CopyrightText>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <VisibleItems>ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, Protected, SealedProtected, ProtectedInternalAsProtected</VisibleItems>
+    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, TypeParameter, AutoDocumentDispose</MissingTags>
+    <ProjectSummary>&amp;lt%3bh1&amp;gt%3bSDMX Source .NET for .NET v4.0&amp;lt%3b/h1&amp;gt%3b
+&amp;lt%3bp&amp;gt%3b
+This is a .NET implementation of the  &amp;lt%3ba href=&amp;quot%3bhttp://www.sdmxsource.org/&amp;quot%3b&amp;gt%3bSDMX Source&amp;lt%3b/a&amp;gt%3b
+&amp;lt%3b/p&amp;gt%3b</ProjectSummary>
+    <RootNamespaceTitle>Eurostat&amp;#39%3bs Sdmx Source .NET API reference documentation</RootNamespaceTitle>
+    <ComponentPath />
+  </PropertyGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in
+       order for Visual Studio to perform the build.  The others are optional
+       common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="GettingStarted.aml" />
+    <None Include="RootNamespaceSummaries.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ContentLayout Include="Content Layout.content" />
+  </ItemGroup>
+  <!-- Import the SHFB build targets -->
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+</Project>

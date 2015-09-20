@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PcAxis2Csv", "src\PcAxis2Csv\PcAxis2Csv.csproj", "{5C636D39-C37E-46FB-829B-F18DD4A9E9C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E347D552-42AE-45B7-8F63-ED6A3C9ED837}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PcAxis.NuGet", "build\PcAxis.NuGet\PcAxis.NuGet.csproj", "{2B07421D-F91D-4386-9D06-94B3CFCAA3CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C636D39-C37E-46FB-829B-F18DD4A9E9C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C636D39-C37E-46FB-829B-F18DD4A9E9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C636D39-C37E-46FB-829B-F18DD4A9E9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C636D39-C37E-46FB-829B-F18DD4A9E9C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B07421D-F91D-4386-9D06-94B3CFCAA3CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B07421D-F91D-4386-9D06-94B3CFCAA3CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B07421D-F91D-4386-9D06-94B3CFCAA3CE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B07421D-F91D-4386-9D06-94B3CFCAA3CE}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

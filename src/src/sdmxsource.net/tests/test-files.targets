@@ -1,0 +1,9 @@
+<Project DefaultTargets="AfterBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<TestFiles Include="$(SolutionDir)\resources\test\**\*.*" /> 
+	</ItemGroup>
+	<Target Name="AfterBuild">
+		<Message Text="Copying test files from $(SolutionDir)\resources\test to $(OutputPath)"/> 
+		<Copy SourceFiles="@(TestFiles)" DestinationFolder="$(OutputPath)\%(RecursiveDir)" UseHardlinksIfPossible="true" SkipUnchangedFiles="true" />
+	</Target>
+</Project>

@@ -1,0 +1,705 @@
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\RDFProvider.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\RDFProvider.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Controllers.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\DataRetriever.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Estat.Nsi.AuthModule.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\EstatSdmxSourceExtension.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\log4net.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\MappingStoreRetrieval.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\PcAxis.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\RdfXMLConstants.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxApi.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxDataParser.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxObjects.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxParseBase.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxSourceUtil.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxStructureMutableParser.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxStructureParser.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxXmlConstants.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\StructureRetriever.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Xml.Schema.Linq.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxStructureRetrieval.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxSoapValidatorExtension.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\TabularWriters.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\edtFTPnet.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxStructureParser.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxStructureParser.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Controllers.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\DataRetriever.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\DataRetriever.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Estat.Nsi.AuthModule.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Estat.Nsi.AuthModule.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\EstatSdmxSourceExtension.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\log4net.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\MappingStoreRetrieval.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\MappingStoreRetrieval.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\PcAxis.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\PcAxis.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\RdfXMLConstants.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxApi.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxApi.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxDataParser.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxDataParser.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxObjects.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxObjects.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxParseBase.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxParseBase.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxSourceUtil.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxSourceUtil.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxStructureMutableParser.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxXmlConstants.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxXmlConstants.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\StructureRetriever.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\StructureRetriever.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Xml.Schema.Linq.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxStructureRetrieval.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxStructureRetrieval.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxSoapValidatorExtension.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\SdmxSoapValidatorExtension.xml
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\bin\Debug\TabularWriters.pdb
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\obj\Debug\ResolveAssemblyReference.cache
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\obj\Debug\RDFProvider.dll
+C:\Sviluppi\WebServiceNuovo - Copia (2)\NSIWS\WEBServiceRDF_Nuovo\src\nsiws.net\RDFDataMachine\obj\Debug\RDFProvider.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\obj\Debug\ResolveAssemblyReference.cache
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Controllers.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\log4net.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\edtFTPnet.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.dll
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Controllers.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\log4net.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\RdfXMLConstants.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.xml
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.pdb
+C:\Sviluppi\NSIWebService_.NET_v4.2.0_2014.09.30\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Controllers.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\log4net.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\edtFTPnet.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Controllers.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\log4net.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\RdfXMLConstants.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.xml
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.pdb
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.csprojResolveAssemblyReference.cache
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.dll
+C:\BackUp Sorgenti SDMX_RDF\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Controllers.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\log4net.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\edtFTPnet.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Controllers.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\log4net.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.xml
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.pdb
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.csprojResolveAssemblyReference.cache
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.dll
+G:\SDMX\Grant SDMX\DEV\NSIWebService_Ottobre\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\obj\Debug\ResolveAssemblyReference.cache
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Controllers.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\log4net.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\edtFTPnet.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Controllers.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\log4net.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.xml
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.pdb
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.dll
+C:\Sviluppi\NSIWebService_21_10\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Controllers.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\log4net.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\edtFTPnet.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Controllers.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\log4net.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.xml
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.pdb
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\obj\Debug\ResolveAssemblyReference.cache
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.dll
+C:\Sviluppi\NSIWebService_21_10_BIXADO\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Controllers.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\log4net.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\edtFTPnet.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Controllers.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\log4net.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.xml
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.pdb
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\obj\Debug\ResolveAssemblyReference.cache
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.dll
+C:\Sviluppi\NSIWebService_1212\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Controllers.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\log4net.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\edtFTPnet.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Controllers.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\DataRetriever.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\log4net.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxApi.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxObjects.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureParser.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.xml
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.pdb
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.csprojResolveAssemblyReference.cache
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.dll
+C:\Sviluppi\2015\WS_RDF\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\log4net.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\edtFTPnet.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Controllers.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.xml
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\log4net.xml
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.xml
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.xml
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.xml
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.xml
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.xml
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.csprojResolveAssemblyReference.cache
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.pdb
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Controllers.dll
+C:\Sviluppi\2015\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Controllers.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\log4net.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\edtFTPnet.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Controllers.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.xml
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\log4net.xml
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.xml
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.xml
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.xml
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.xml
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.xml
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.pdb
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.csprojResolveAssemblyReference.cache
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.dll
+C:\ISTAT\Source\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\RDFProvider.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Controllers.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\log4net.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\edtFTPnet.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Controllers.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Estat.Nsi.AuthModule.xml
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\log4net.xml
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\MappingStoreRetrieval.xml
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\PcAxis.xml
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSourceUtil.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureRetrieval.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\StructureRetriever.xml
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Xml.Schema.Linq.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxDataParser.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxParseBase.xml
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxXmlConstants.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\EstatSdmxSourceExtension.CustomRequests.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxSoapValidatorExtension.xml
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxStructureMutableParser.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\TabularWriters.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\bin\Debug\SdmxEdiParser.pdb
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\obj\Debug\ResolveAssemblyReference.cache
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.dll
+G:\OpenFormatsWriters\WS_OpenFormats\src\nsiws.net\RDFProvider\obj\Debug\RDFProvider.pdb

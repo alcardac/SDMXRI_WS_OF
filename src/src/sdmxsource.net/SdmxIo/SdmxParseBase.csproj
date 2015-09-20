@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CAC33584-A10B-4071-8E9C-1FB6BF488464}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Estat.Sri.SdmxParseBase</RootNamespace>
+    <AssemblyName>SdmxParseBase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/SdmxIO/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SdmxParseBase.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\lib\SdmxParseBase.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\SdmxParseBase.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\HeaderReader.cs" />
+    <Compile Include="Engine\HeaderWriter.cs" />
+    <Compile Include="Engine\IoBase.cs" />
+    <Compile Include="Engine\Reader.cs" />
+    <Compile Include="Engine\Writer.cs" />
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Helper\Validator.cs" />
+    <Compile Include="Helper\WriterHelper.cs" />
+    <Compile Include="Model\NamespacePrefixPair.cs" />
+    <Compile Include="Model\SdmxNamespaces.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V10\Org.Sdmx.Resources.SdmxMl.Schemas.V10.csproj">
+      <Project>{A288BFA3-8192-C141-A356-812A0262F2CF}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V20\Org.Sdmx.Resources.SdmxMl.Schemas.V20.csproj">
+      <Project>{AA97E1E9-E028-FC4D-8736-13372B3712DD}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V20</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V21\Org.Sdmx.Resources.SdmxMl.Schemas.V21.csproj">
+      <Project>{AF1E630B-A511-437E-BA63-1BC874403749}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V21</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxAPI\SdmxAPI.csproj">
+      <Project>{C13FCF38-348B-4848-BCFF-A7BD4D75911C}</Project>
+      <Name>SdmxAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxMlConstants\SdmxMlConstants.csproj">
+      <Project>{F678D2FF-02C1-4D42-902E-A7B995A6731B}</Project>
+      <Name>SdmxMlConstants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxObjects\SdmxObjects.csproj">
+      <Project>{ECC53B22-BD93-49FF-8575-1DDFA2FE9A04}</Project>
+      <Name>SdmxObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxSourceUtil\SdmxSourceUtil.csproj">
+      <Project>{206D467D-2C89-4FA4-826E-CEFDE000A334}</Project>
+      <Name>SdmxSourceUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XObjects\XObjects.csproj">
+      <Project>{29FF8E34-FD09-47DF-8F6C-DF847E4B3AAB}</Project>
+      <Name>XObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

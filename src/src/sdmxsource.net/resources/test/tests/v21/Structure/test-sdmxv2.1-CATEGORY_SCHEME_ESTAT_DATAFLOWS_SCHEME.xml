@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>false</Test>
+    <Prepared>2013-09-10T09:08:17.0998+02:00</Prepared>
+    <Sender id="ESTAT" />
+    <Receiver id="unknown" />
+  </Header>
+  <Structures>
+    <CategorySchemes xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <CategoryScheme id="ESTAT_DATAFLOWS_SCHEME" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.CategoryScheme=ESTAT:ESTAT_DATAFLOWS_SCHEME(1.1)" agencyID="ESTAT" version="1.1" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">A category scheme of Eurostat's dataflows</Name>
+        <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">A scheme to group dataflows used by Eurostat. At this version contains all STS related dataflows.</Description>
+        <Category id="14" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:ESTAT_DATAFLOWS_SCHEME(1.1).14">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">IT normalisation and collaborative infrastructure for the ESS</Name>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">IT normalisation and collaborative infrastructure for the ESS</Description>
+          <Category id="14200" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:ESTAT_DATAFLOWS_SCHEME(1.1).14.14200">
+            <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Normalisation of information systems</Name>
+            <Category id="SSTSRTD" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:ESTAT_DATAFLOWS_SCHEME(1.1).14.14200.SSTSRTD">
+              <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Retail Trade</Name>
+            </Category>
+            <Category id="SSTSIND" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:ESTAT_DATAFLOWS_SCHEME(1.1).14.14200.SSTSIND">
+              <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Industry</Name>
+            </Category>
+            <Category id="SSTSSERV" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:ESTAT_DATAFLOWS_SCHEME(1.1).14.14200.SSTSSERV">
+              <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Services</Name>
+            </Category>
+            <Category id="SSTSCONS" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:ESTAT_DATAFLOWS_SCHEME(1.1).14.14200.SSTSCONS">
+              <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Construction</Name>
+            </Category>
+            <Category id="CENSUS" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:ESTAT_DATAFLOWS_SCHEME(1.1).14.14200.CENSUS">
+              <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Construction</Name>
+            </Category>
+            <Category id="CPI" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Category=ESTAT:ESTAT_DATAFLOWS_SCHEME(1.1).14.14200.CPI">
+              <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Construction</Name>
+            </Category>
+          </Category>
+        </Category>
+      </CategoryScheme>
+    </CategorySchemes>
+    <Categorisations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <Categorisation id="-162397768_1905457435" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:-162397768_1905457435(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Retail Trade</Name>
+        <Source>
+          <Ref id="SSTSRTD_TURN_M" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSRTD" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="-162397768_1970456382" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:-162397768_1970456382(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Retail Trade</Name>
+        <Source>
+          <Ref id="SSTSRTD_TURNR_MS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSRTD" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="-968966657_-1253678654" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:-968966657_-1253678654(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Industry</Name>
+        <Source>
+          <Ref id="SSTSIND_TURN_M" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSIND" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="-968966657_-1624512663" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:-968966657_-1624512663(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Industry</Name>
+        <Source>
+          <Ref id="SSTSIND_PRODR_MS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSIND" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="-968966657_-572316772" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:-968966657_-572316772(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Industry</Name>
+        <Source>
+          <Ref id="SSTSIND_PROD_M" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSIND" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="-968966657_-947745617" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:-968966657_-947745617(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Industry</Name>
+        <Source>
+          <Ref id="SSTSIND_PRIC_M" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSIND" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="-968966657_1071888018" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:-968966657_1071888018(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Industry</Name>
+        <Source>
+          <Ref id="SSTSIND_PRICR_MS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSIND" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="-968966657_1669443445" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:-968966657_1669443445(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Industry</Name>
+        <Source>
+          <Ref id="SSTSIND_ORDR_MS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSIND" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="-968966657_2071247665" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:-968966657_2071247665(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Industry</Name>
+        <Source>
+          <Ref id="SSTSIND_TURNR_MS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSIND" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="-968966657_580472606" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:-968966657_580472606(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Industry</Name>
+        <Source>
+          <Ref id="SSTSIND_ORD_M" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSIND" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="1988906674_-1136937612" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:1988906674_-1136937612(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Services</Name>
+        <Source>
+          <Ref id="SSTSSERV_EMPL_Q" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSSERV" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="1988906674_-1444987640" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:1988906674_-1444987640(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Services</Name>
+        <Source>
+          <Ref id="SSTSSERV_PRIC_Q" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSSERV" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="1988906674_-1683661766" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:1988906674_-1683661766(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Services</Name>
+        <Source>
+          <Ref id="SSTSSERV_TURNR_QS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSSERV" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="1988906674_-77702187" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:1988906674_-77702187(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Services</Name>
+        <Source>
+          <Ref id="SSTSSERV_PRICR_QS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSSERV" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="1988906674_-794815457" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:1988906674_-794815457(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Services</Name>
+        <Source>
+          <Ref id="SSTSSERV_TURN_Q" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSSERV" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="1988906674_1127659419" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:1988906674_1127659419(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Services</Name>
+        <Source>
+          <Ref id="SSTSSERV_TURN_M" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSSERV" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="1988906674_1629784094" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:1988906674_1629784094(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Services</Name>
+        <Source>
+          <Ref id="SSTSSERV_TURNR_MS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSSERV" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="1988906674_590429361" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:1988906674_590429361(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Services</Name>
+        <Source>
+          <Ref id="SSTSSERV_EMPLR_QS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSSERV" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="2076367301_-1058388713" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:2076367301_-1058388713(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Construction</Name>
+        <Source>
+          <Ref id="SSTSCONS_PRODR_MS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSCONS" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="2076367301_1837760171" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:2076367301_1837760171(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Construction</Name>
+        <Source>
+          <Ref id="SSTSCONS_PRODR_QS" version="1.0" agencyID="ESTAT" package="metadatastructure" class="Metadataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSCONS" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="2076367301_1929415840" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:2076367301_1929415840(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Construction</Name>
+        <Source>
+          <Ref id="SSTSCONS_PROD_M" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSCONS" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+      <Categorisation id="2076367301_6940964" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:2076367301_6940964(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">SODI - Short-term Statistics on Construction</Name>
+        <Source>
+          <Ref id="SSTSCONS_PROD_Q" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="14.14200.SSTSCONS" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+    </Categorisations>
+  </Structures>
+</Structure>

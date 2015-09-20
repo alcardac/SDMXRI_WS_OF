@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureSpecificDataQuery xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>IDREF19</ID>
+    <Test>false</Test>
+    <Prepared>2014-01-28T18:05:46.468+01:00</Prepared>
+    <Sender id="Unknown" />
+    <Receiver id="Unknown" />
+  </Header>
+  <Query>
+    <ReturnDetails defaultLimit="313803" detail="Full" observationAction="Active" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query" />
+    <DataWhere xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query">
+      <Dataflow>
+        <Ref agencyID="ESTAT" id="SSTSIND_PROD_M" version="2.0" xmlns="" />
+      </Dataflow>
+      <TimeDimensionValue>
+        <TimeValue operator="greaterThanOrEqual">1990-01-02</TimeValue>
+        <TimeValue operator="lessThanOrEqual">1990-01-02</TimeValue>
+      </TimeDimensionValue>
+      <Or>
+        <DimensionValue>
+          <ID>ADJUSTMENT</ID>
+          <Value operator="equal">S</Value>
+        </DimensionValue>
+      </Or>
+      <Or>
+        <DimensionValue>
+          <ID>STS_ACTIVITY</ID>
+          <Value operator="equal">NS0040</Value>
+        </DimensionValue>
+      </Or>
+    </DataWhere>
+  </Query>
+</StructureSpecificDataQuery>

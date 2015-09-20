@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns7:GenericDataQuery xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/metadata/structurespecific"
+ xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific"
+ xmlns:ns3="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common"
+ xmlns:ns4="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/metadata/generic"
+ xmlns:ns5="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure"
+ xmlns:ns6="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/registry"
+ xmlns:ns7="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message"
+ xmlns:ns8="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer"
+ xmlns:ns9="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic"
+ xmlns:ns10="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message file:/Users/sli/temp/SDMX_2-1_ALL_SECTIONS/SDMX_2-1_SECTION_3B_SDMX_ML_Schemas_Samples/schemas/SDMXMessage.xsd">
+    <ns7:Header>
+        <ns7:ID>ID0</ns7:ID>
+        <ns7:Test>false</ns7:Test>
+        <ns7:Prepared>2006-05-04T18:13:51.0Z</ns7:Prepared>
+        <ns7:Sender id="id0">
+        </ns7:Sender>
+        <ns7:Receiver id="id1">
+        </ns7:Receiver>
+    </ns7:Header>
+    <ns7:Query>
+        <ns10:ReturnDetails>
+        </ns10:ReturnDetails>
+        <ns10:DataWhere>
+            <ns10:DataStructure>
+                <Ref agencyID="ESTAT" version="2.2" id="STS"/>
+            </ns10:DataStructure>
+            <ns10:Dataflow>
+                <Ref agencyID="ESTAT" id="SSTSCONS_PROD_A"/>
+            </ns10:Dataflow>
+            <ns10:TimeDimensionValue>
+                <ns10:ID>TIME_PERIOD</ns10:ID>
+                <ns10:TimeValue operator="greaterThanOrEqual">2000-09</ns10:TimeValue>
+            </ns10:TimeDimensionValue>
+            <ns10:PrimaryMeasureValue>
+                <ns10:NumericValue operator="greaterThanOrEqual">1000</ns10:NumericValue>
+            </ns10:PrimaryMeasureValue>
+            <ns10:Or>
+                <ns10:AttributeValue>
+                    <ns10:ID>OBS_VALUE</ns10:ID>
+                    <ns10:Value>A</ns10:Value>
+                </ns10:AttributeValue>
+                <ns10:AttributeValue>
+                    <ns10:ID>OBS_VALUE</ns10:ID>
+                    <ns10:TextValue operator="contains">Mitsos</ns10:TextValue>
+                </ns10:AttributeValue>
+            </ns10:Or>
+            <ns10:Or>
+                <ns10:DimensionValue>
+                    <ns10:ID>FREQ</ns10:ID>
+                    <ns10:Value>M</ns10:Value>
+                </ns10:DimensionValue>
+                <ns10:DimensionValue>
+                    <ns10:ID>FREQ</ns10:ID>
+                    <ns10:Value>A</ns10:Value>
+                </ns10:DimensionValue>
+            </ns10:Or>
+        </ns10:DataWhere>
+    </ns7:Query>
+</ns7:GenericDataQuery>

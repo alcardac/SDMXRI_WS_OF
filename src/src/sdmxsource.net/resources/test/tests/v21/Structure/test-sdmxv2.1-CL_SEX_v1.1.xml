@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>DEMOGRAPHY_RAPID_V21</ID>
+    <Test>false</Test>
+    <Prepared>2013-09-10T09:08:08.8418+02:00</Prepared>
+    <Sender id="ESTAT">
+      <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Statistical Office of the European Communities</Name>
+    </Sender>
+    <Receiver id="unknown" />
+    <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Demography Rapid Questionnaire DSD</Name>
+  </Header>
+  <Structures>
+    <Codelists xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <Codelist id="CL_SEX" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_SEX(1.1)" agencyID="ESTAT" version="1.1" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Sex codelist</Name>
+        <Code id="F" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.1).F">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Female</Name>
+          <Parent>
+            <Ref id="T" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.1).M">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Male</Name>
+          <Parent>
+            <Ref id="T" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="T" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.1).T">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Total</Name>
+        </Code>
+      </Codelist>
+    </Codelists>
+  </Structures>
+</Structure>

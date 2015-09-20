@@ -1,0 +1,1499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>true</Test>
+    <Truncated>false</Truncated>
+    <Prepared>2014-07-01T22:13:18</Prepared>
+    <Sender id="EUROSTAT" />
+    <Extracted>2014-07-01T22:13:18</Extracted>
+  </Header>
+  <CodeLists>
+    <structure:CodeList id="CL_TERYT" agencyID="US_WAWA" version="1.4" isFinal="true">
+      <structure:Name xml:lang="en">TERYT - reg, woj</structure:Name>
+      <structure:Description xml:lang="en">TERYT - regiony i województwa</structure:Description>
+      <structure:Code value="0000000000" parentCode="" urn="">
+        <structure:Description xml:lang="en">POLSKA</structure:Description>
+      </structure:Code>
+      <structure:Code value="1" parentCode="0000000000" urn="">
+        <structure:Description xml:lang="en">REGION CENTRALNY</structure:Description>
+      </structure:Code>
+      <structure:Code value="110" parentCode="1" urn="">
+        <structure:Description xml:lang="en">ŁÓDZKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="114" parentCode="1" urn="">
+        <structure:Description xml:lang="en">MAZOWIECKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="2" parentCode="0000000000" urn="">
+        <structure:Description xml:lang="en">REGION POŁUDNIOWY</structure:Description>
+      </structure:Code>
+      <structure:Code value="212" parentCode="2" urn="">
+        <structure:Description xml:lang="en">MAŁOPOLSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="224" parentCode="2" urn="">
+        <structure:Description xml:lang="en">ŚLĄSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="3" parentCode="0000000000" urn="">
+        <structure:Description xml:lang="en">REGION WSCHODNI</structure:Description>
+      </structure:Code>
+      <structure:Code value="306" parentCode="3" urn="">
+        <structure:Description xml:lang="en">LUBELSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="318" parentCode="3" urn="">
+        <structure:Description xml:lang="en">PODKARPACKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="320" parentCode="3" urn="">
+        <structure:Description xml:lang="en">PODLASKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="326" parentCode="3" urn="">
+        <structure:Description xml:lang="en">ŚWIĘTOKRZYSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="4" parentCode="0000000000" urn="">
+        <structure:Description xml:lang="en">REGION PÓŁNOCNO-ZACHODNI</structure:Description>
+      </structure:Code>
+      <structure:Code value="408" parentCode="4" urn="">
+        <structure:Description xml:lang="en">LUBUSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="430" parentCode="4" urn="">
+        <structure:Description xml:lang="en">WIELKOPOLSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="432" parentCode="4" urn="">
+        <structure:Description xml:lang="en">ZACHODNIOPOMORSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="5" parentCode="0000000000" urn="">
+        <structure:Description xml:lang="en">REGION POŁUDNIOWO-ZACHODNI</structure:Description>
+      </structure:Code>
+      <structure:Code value="502" parentCode="5" urn="">
+        <structure:Description xml:lang="en">DOLNOŚLĄSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="516" parentCode="5" urn="">
+        <structure:Description xml:lang="en">OPOLSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="6" parentCode="0000000000" urn="">
+        <structure:Description xml:lang="en">REGION PÓŁNOCNY</structure:Description>
+      </structure:Code>
+      <structure:Code value="604" parentCode="6" urn="">
+        <structure:Description xml:lang="en">KUJAWSKO-POMORSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="622" parentCode="6" urn="">
+        <structure:Description xml:lang="en">POMORSKIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="628" parentCode="6" urn="">
+        <structure:Description xml:lang="en">WARMIŃSKO-MAZURSKIE</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_PKD2007_GRUP_SEK_PRZEM" agencyID="US_WAWA" version="1.2" isFinal="true">
+      <structure:Name xml:lang="en">PKD2007 grupowanie sekcji z przemysłem</structure:Name>
+      <structure:Description xml:lang="en">PKD2007 grupowanie sekcji z przemysłem</structure:Description>
+      <structure:Code value="0" parentCode="" urn="">
+        <structure:Description xml:lang="en">OGŁEM</structure:Description>
+      </structure:Code>
+      <structure:Code value="A" parentCode="0" urn="">
+        <structure:Description xml:lang="en">ROLNICTWO, LEŚNICTWO, ŁOWIECTWO I RYBACTWO</structure:Description>
+      </structure:Code>
+      <structure:Code value="B" parentCode="BCDE" urn="">
+        <structure:Description xml:lang="en">GÓRNICTWO I WYDOBYWANIE</structure:Description>
+      </structure:Code>
+      <structure:Code value="BCDE" parentCode="0" urn="">
+        <structure:Description xml:lang="en">PRZEMYSŁ</structure:Description>
+      </structure:Code>
+      <structure:Code value="C" parentCode="BCDE" urn="">
+        <structure:Description xml:lang="en">PRZETWÓRSTWO PRZEMYSŁOWE</structure:Description>
+      </structure:Code>
+      <structure:Code value="D" parentCode="BCDE" urn="">
+        <structure:Description xml:lang="en">WYTWARZANIE I ZAOPATRYWANIE W ENERGIĘ ELEKTRYCZNĄ, GAZ, PARĘ WODNĄ I GORĄCĄ WODĘ</structure:Description>
+      </structure:Code>
+      <structure:Code value="E" parentCode="BCDE" urn="">
+        <structure:Description xml:lang="en">DOSTAWA WODY; GOSPODAROWANIE ŚCIEKAMI I ODPADAMI; REKULTYWACJA</structure:Description>
+      </structure:Code>
+      <structure:Code value="F" parentCode="0" urn="">
+        <structure:Description xml:lang="en">BUDOWNICTWO</structure:Description>
+      </structure:Code>
+      <structure:Code value="G" parentCode="0" urn="">
+        <structure:Description xml:lang="en">HANDEL; NAPRAWA POJAZDÓW SAMOCHODOWYCH</structure:Description>
+      </structure:Code>
+      <structure:Code value="H" parentCode="0" urn="">
+        <structure:Description xml:lang="en">TRANSPORT I GOSPODARKA MAGAZYNOWA</structure:Description>
+      </structure:Code>
+      <structure:Code value="I" parentCode="0" urn="">
+        <structure:Description xml:lang="en">ZAKWATEROWANIE I GASTRONOMIA</structure:Description>
+      </structure:Code>
+      <structure:Code value="J" parentCode="0" urn="">
+        <structure:Description xml:lang="en">INFORMACJA I KOMUNIKACJA</structure:Description>
+      </structure:Code>
+      <structure:Code value="K" parentCode="0" urn="">
+        <structure:Description xml:lang="en">DZIAŁALNOŚĆ FINANSOWA I UBEZPIECZENIOWA</structure:Description>
+      </structure:Code>
+      <structure:Code value="L" parentCode="0" urn="">
+        <structure:Description xml:lang="en">OBSŁUGA RYNKU NIERUCHOMOŚCI</structure:Description>
+      </structure:Code>
+      <structure:Code value="M" parentCode="0" urn="">
+        <structure:Description xml:lang="en">DZIAŁALNOŚĆ PROFESJONALNA, NAUKOWA I TECHNICZNA</structure:Description>
+      </structure:Code>
+      <structure:Code value="N" parentCode="0" urn="">
+        <structure:Description xml:lang="en">ADMINISTROWANIE I DZIAŁALNOŚĆ WSPIERAJĄCA</structure:Description>
+      </structure:Code>
+      <structure:Code value="O" parentCode="0" urn="">
+        <structure:Description xml:lang="en">ADMINISTRACJA PUBLICZNA I OBRONA NARODOWA; OBOWIĄZKOWE ZABEZPIECZENIA SPOŁECZNE</structure:Description>
+      </structure:Code>
+      <structure:Code value="P" parentCode="0" urn="">
+        <structure:Description xml:lang="en">EDUKACJA</structure:Description>
+      </structure:Code>
+      <structure:Code value="Q" parentCode="0" urn="">
+        <structure:Description xml:lang="en">OPIEKA ZDROWOTNA I POMOC SPOŁECZNA</structure:Description>
+      </structure:Code>
+      <structure:Code value="R" parentCode="0" urn="">
+        <structure:Description xml:lang="en">DZIAŁALNOŚĆ ZWIĄZANA Z KULTURĄ, ROZRYWKĄ I REKREACJĄ</structure:Description>
+      </structure:Code>
+      <structure:Code value="S" parentCode="0" urn="">
+        <structure:Description xml:lang="en">POZOSTAŁA DZIAŁALNOŚĆ USŁUGOWA</structure:Description>
+      </structure:Code>
+      <structure:Code value="T" parentCode="0" urn="">
+        <structure:Description xml:lang="en">GOSPODARSTWA DOMOWE ZATRUDNIAJĄCE PRACOWNIKÓW ORAZ WYTWARZAJĄCE PRODUKTY NA WŁASNE POTRZEBY</structure:Description>
+      </structure:Code>
+      <structure:Code value="U" parentCode="0" urn="">
+        <structure:Description xml:lang="en">ORGANIZACJE I ZESPOŁY EKSTERYTORIALNE</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_KLASA_WIELKOSCI" agencyID="US_WAWA" version="1.6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_klasa_wielkosci(1.0)" isFinal="true">
+      <structure:Name xml:lang="en">Klasa wielkości</structure:Name>
+      <structure:Code value="0" urn="">
+        <structure:Description xml:lang="en">ogółem</structure:Description>
+      </structure:Code>
+      <structure:Code value="1" parentCode="2" urn="">
+        <structure:Description xml:lang="en">w tym Mikroprzedsiębiorstwa (&lt;10 pracujących)</structure:Description>
+      </structure:Code>
+      <structure:Code value="2" parentCode="0" urn="">
+        <structure:Description xml:lang="en">małe przedsiębiorstwa (&lt;50 pracujących)</structure:Description>
+      </structure:Code>
+      <structure:Code value="3" parentCode="0" urn="">
+        <structure:Description xml:lang="en">średnie przedsiębiorstwa (&lt;50;249&gt; pracujących)</structure:Description>
+      </structure:Code>
+      <structure:Code value="4" parentCode="0" urn="">
+        <structure:Description xml:lang="en">duże przedsiębiorstwa (&gt;249 pracujących)</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_FORMA_PRAWNA" agencyID="US_WAWA" version="1.5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_FORMA_PRAWNA(1.0)" isFinal="true">
+      <structure:Name xml:lang="en">Forma prawna</structure:Name>
+      <structure:Code value="0" urn="">
+        <structure:Description xml:lang="en">ogółem</structure:Description>
+      </structure:Code>
+      <structure:Code value="1" parentCode="0" urn="">
+        <structure:Description xml:lang="en">osoby fizyczne</structure:Description>
+      </structure:Code>
+      <structure:Code value="2" parentCode="0" urn="">
+        <structure:Description xml:lang="en">osoby prawne</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_EWIDENCJA_KSIEGOWA" agencyID="US_WAWA" version="2.6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_ewidencja_ksiegowa(2.0)" isFinal="true">
+      <structure:Name xml:lang="en">Ewidencja księgowa</structure:Name>
+      <structure:Code value="0" urn="">
+        <structure:Description xml:lang="en">ogółem</structure:Description>
+      </structure:Code>
+      <structure:Code value="R" parentCode="0" urn="">
+        <structure:Description xml:lang="en">księgi rachunkowe</structure:Description>
+      </structure:Code>
+      <structure:Code value="P" parentCode="0" urn="">
+        <structure:Description xml:lang="en">podatkowa księga przychodów i rozchodów</structure:Description>
+      </structure:Code>
+      <structure:Code value="E" parentCode="0" urn="">
+        <structure:Description xml:lang="en">ewidencja przychodów (rozliczające się ryczałtem)</structure:Description>
+      </structure:Code>
+      <structure:Code value="C" parentCode="0" urn="">
+        <structure:Description xml:lang="en">nie prowadzące szczególnej ewidencji (rozliczające się wg karty podatkowej)</structure:Description>
+      </structure:Code>
+      <structure:Code value="N" parentCode="0" urn="">
+        <structure:Description xml:lang="en">brak informacji dotyczącej prowadzenia ewidencji księgowej</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_LATA_DZIALALNOSCI" agencyID="US_WAWA" version="1.5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_lata_dzialalnosci(1.0)" isFinal="true">
+      <structure:Name xml:lang="en">Lata działalności</structure:Name>
+      <structure:Code value="0" urn="">
+        <structure:Description xml:lang="en">ogółem</structure:Description>
+      </structure:Code>
+      <structure:Code value="1" parentCode="0" urn="">
+        <structure:Description xml:lang="en">&lt;= 1 rok</structure:Description>
+      </structure:Code>
+      <structure:Code value="2" parentCode="0" urn="">
+        <structure:Description xml:lang="en">2 - 4 lata</structure:Description>
+      </structure:Code>
+      <structure:Code value="3" parentCode="0" urn="">
+        <structure:Description xml:lang="en">&gt;= 5 lat</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_ZMIENNA" agencyID="US_WAWA" version="2.5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_ZMIENNA(2.0)" isFinal="true">
+      <structure:Name xml:lang="en">Zmienna</structure:Name>
+      <structure:Code value="158" parentCode="" urn="">
+        <structure:Description xml:lang="en">Liczba jednostek (przedsiębiorstw)</structure:Description>
+      </structure:Code>
+      <structure:Code value="273" parentCode="" urn="">
+        <structure:Description xml:lang="en">Liczba pracujących</structure:Description>
+      </structure:Code>
+      <structure:Code value="282" parentCode="" urn="">
+        <structure:Description xml:lang="en">Przeciętna liczba zatrudnionych</structure:Description>
+      </structure:Code>
+      <structure:Code value="283" parentCode="" urn="">
+        <structure:Description xml:lang="en">Wynagrodzenia brutto</structure:Description>
+      </structure:Code>
+      <structure:Code value="32" parentCode="" urn="">
+        <structure:Description xml:lang="en">Przychody z całokształtu działalności</structure:Description>
+      </structure:Code>
+      <structure:Code value="12" parentCode="" urn="">
+        <structure:Description xml:lang="en">Koszty uzyskania przychodów z całokształtu działalności</structure:Description>
+      </structure:Code>
+      <structure:Code value="68" parentCode="" urn="">
+        <structure:Description xml:lang="en">Zysk brutto</structure:Description>
+      </structure:Code>
+      <structure:Code value="41" parentCode="" urn="">
+        <structure:Description xml:lang="en">Strata brutto</structure:Description>
+      </structure:Code>
+      <structure:Code value="484" parentCode="" urn="">
+        <structure:Description xml:lang="en">Wartość produkcji</structure:Description>
+      </structure:Code>
+      <structure:Code value="483" parentCode="" urn="">
+        <structure:Description xml:lang="en">Wartość dodana</structure:Description>
+      </structure:Code>
+      <structure:Code value="57" parentCode="" urn="">
+        <structure:Description xml:lang="en">Wynik finansowy brutto</structure:Description>
+      </structure:Code>
+      <structure:Code value="50" parentCode="" urn="">
+        <structure:Description xml:lang="en">Wskaźnik poziomu kosztów z całokształtu działalności</structure:Description>
+      </structure:Code>
+      <structure:Code value="54" parentCode="" urn="">
+        <structure:Description xml:lang="en">Wskaźnik rentowności obrotu brutto</structure:Description>
+      </structure:Code>
+      <structure:Code value="284" parentCode="" urn="">
+        <structure:Description xml:lang="en">Przeciętne miesięczne wynagrodzenie</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_ROK" agencyID="US_WAWA" version="1.6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_ROK(1.0)" isFinal="true">
+      <structure:Name xml:lang="en">Rok</structure:Name>
+      <structure:Description xml:lang="en">Lata 2009-2015</structure:Description>
+      <structure:Code value="20091231" urn="">
+        <structure:Description xml:lang="en">2009</structure:Description>
+      </structure:Code>
+      <structure:Code value="20101231" urn="">
+        <structure:Description xml:lang="en">2010</structure:Description>
+      </structure:Code>
+      <structure:Code value="20111231" urn="">
+        <structure:Description xml:lang="en">2011</structure:Description>
+      </structure:Code>
+      <structure:Code value="20121231" parentCode="" urn="">
+        <structure:Description xml:lang="en">2012</structure:Description>
+      </structure:Code>
+      <structure:Code value="20131231" parentCode="" urn="">
+        <structure:Description xml:lang="en">2013</structure:Description>
+      </structure:Code>
+      <structure:Code value="20141231" parentCode="" urn="">
+        <structure:Description xml:lang="en">2014</structure:Description>
+      </structure:Code>
+      <structure:Code value="20151231" parentCode="" urn="">
+        <structure:Description xml:lang="en">2015</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_JEDNOSTKA_MIARY" agencyID="US_WAWA" version="1.5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_jednostka_miary(1.0)" isFinal="true">
+      <structure:Name xml:lang="en">Jednostka miary</structure:Name>
+      <structure:Code value="00100" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram</structure:Description>
+      </structure:Code>
+      <structure:Code value="00102" parentCode="" urn="">
+        <structure:Description xml:lang="en">dekagram</structure:Description>
+      </structure:Code>
+      <structure:Code value="00103" parentCode="" urn="">
+        <structure:Description xml:lang="en">gram</structure:Description>
+      </structure:Code>
+      <structure:Code value="00106" parentCode="" urn="">
+        <structure:Description xml:lang="en">miligram</structure:Description>
+      </structure:Code>
+      <structure:Code value="00109" parentCode="" urn="">
+        <structure:Description xml:lang="en">mikrogram</structure:Description>
+      </structure:Code>
+      <structure:Code value="00120" parentCode="" urn="">
+        <structure:Description xml:lang="en">decytona</structure:Description>
+      </structure:Code>
+      <structure:Code value="00130" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona</structure:Description>
+      </structure:Code>
+      <structure:Code value="00160" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc  ton</structure:Description>
+      </structure:Code>
+      <structure:Code value="00190" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion ton</structure:Description>
+      </structure:Code>
+      <structure:Code value="00220" parentCode="" urn="">
+        <structure:Description xml:lang="en">sto kilogramów</structure:Description>
+      </structure:Code>
+      <structure:Code value="00360" parentCode="" urn="">
+        <structure:Description xml:lang="en">megagram</structure:Description>
+      </structure:Code>
+      <structure:Code value="00390" parentCode="" urn="">
+        <structure:Description xml:lang="en">gigagram</structure:Description>
+      </structure:Code>
+      <structure:Code value="00400" parentCode="" urn="">
+        <structure:Description xml:lang="en">karat  metryczny</structure:Description>
+      </structure:Code>
+      <structure:Code value="01100" parentCode="" urn="">
+        <structure:Description xml:lang="en">metr</structure:Description>
+      </structure:Code>
+      <structure:Code value="01101" parentCode="" urn="">
+        <structure:Description xml:lang="en">decymetr</structure:Description>
+      </structure:Code>
+      <structure:Code value="01102" parentCode="" urn="">
+        <structure:Description xml:lang="en">centymetr</structure:Description>
+      </structure:Code>
+      <structure:Code value="01103" parentCode="" urn="">
+        <structure:Description xml:lang="en">milimetr</structure:Description>
+      </structure:Code>
+      <structure:Code value="01106" parentCode="" urn="">
+        <structure:Description xml:lang="en">mikrometr</structure:Description>
+      </structure:Code>
+      <structure:Code value="01120" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektometr</structure:Description>
+      </structure:Code>
+      <structure:Code value="01130" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilometr</structure:Description>
+      </structure:Code>
+      <structure:Code value="01160" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc kilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="01260" parentCode="" urn="">
+        <structure:Description xml:lang="en">megametr</structure:Description>
+      </structure:Code>
+      <structure:Code value="02100" parentCode="" urn="">
+        <structure:Description xml:lang="en">metr kwadratowy</structure:Description>
+      </structure:Code>
+      <structure:Code value="02102" parentCode="" urn="">
+        <structure:Description xml:lang="en">decymetr kwadratowy</structure:Description>
+      </structure:Code>
+      <structure:Code value="02104" parentCode="" urn="">
+        <structure:Description xml:lang="en">centymetr kwadratowy</structure:Description>
+      </structure:Code>
+      <structure:Code value="02106" parentCode="" urn="">
+        <structure:Description xml:lang="en">milimetr kwadratowy</structure:Description>
+      </structure:Code>
+      <structure:Code value="02120" parentCode="" urn="">
+        <structure:Description xml:lang="en">ar</structure:Description>
+      </structure:Code>
+      <structure:Code value="02130" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc metrów kwadratowych</structure:Description>
+      </structure:Code>
+      <structure:Code value="02200" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektar</structure:Description>
+      </structure:Code>
+      <structure:Code value="02220" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilometr kwadratowy</structure:Description>
+      </structure:Code>
+      <structure:Code value="02230" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc hektarów</structure:Description>
+      </structure:Code>
+      <structure:Code value="02260" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion hektarów</structure:Description>
+      </structure:Code>
+      <structure:Code value="02300" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektometr kwadratowy</structure:Description>
+      </structure:Code>
+      <structure:Code value="03100" parentCode="" urn="">
+        <structure:Description xml:lang="en">metr sześcienny</structure:Description>
+      </structure:Code>
+      <structure:Code value="03101" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektolitr</structure:Description>
+      </structure:Code>
+      <structure:Code value="03103" parentCode="" urn="">
+        <structure:Description xml:lang="en">decymetr sześcienny</structure:Description>
+      </structure:Code>
+      <structure:Code value="03106" parentCode="" urn="">
+        <structure:Description xml:lang="en">centymetr sześcienny</structure:Description>
+      </structure:Code>
+      <structure:Code value="03120" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc hektolitrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="03130" parentCode="" urn="">
+        <structure:Description xml:lang="en">dekametr sześcienny</structure:Description>
+      </structure:Code>
+      <structure:Code value="03150" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion hektolitrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="03160" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektometr sześcienny</structure:Description>
+      </structure:Code>
+      <structure:Code value="03190" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilometr sześcienny</structure:Description>
+      </structure:Code>
+      <structure:Code value="03206" parentCode="" urn="">
+        <structure:Description xml:lang="en">mililitr</structure:Description>
+      </structure:Code>
+      <structure:Code value="03303" parentCode="" urn="">
+        <structure:Description xml:lang="en">litr</structure:Description>
+      </structure:Code>
+      <structure:Code value="03330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc litrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="03430" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc metrów sześciennych</structure:Description>
+      </structure:Code>
+      <structure:Code value="03530" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion litrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="04100" parentCode="" urn="">
+        <structure:Description xml:lang="en">sekunda</structure:Description>
+      </structure:Code>
+      <structure:Code value="04200" parentCode="" urn="">
+        <structure:Description xml:lang="en">minuta</structure:Description>
+      </structure:Code>
+      <structure:Code value="04300" parentCode="" urn="">
+        <structure:Description xml:lang="en">godzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="04330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc godzin</structure:Description>
+      </structure:Code>
+      <structure:Code value="04360" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion godzin</structure:Description>
+      </structure:Code>
+      <structure:Code value="04400" parentCode="" urn="">
+        <structure:Description xml:lang="en">doba</structure:Description>
+      </structure:Code>
+      <structure:Code value="04500" parentCode="" urn="">
+        <structure:Description xml:lang="en">rok</structure:Description>
+      </structure:Code>
+      <structure:Code value="05100" parentCode="" urn="">
+        <structure:Description xml:lang="en">wolt</structure:Description>
+      </structure:Code>
+      <structure:Code value="05130" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilowolt</structure:Description>
+      </structure:Code>
+      <structure:Code value="05200" parentCode="" urn="">
+        <structure:Description xml:lang="en">dżul</structure:Description>
+      </structure:Code>
+      <structure:Code value="05212" parentCode="" urn="">
+        <structure:Description xml:lang="en">teradżul</structure:Description>
+      </structure:Code>
+      <structure:Code value="05215" parentCode="" urn="">
+        <structure:Description xml:lang="en">petadżul</structure:Description>
+      </structure:Code>
+      <structure:Code value="05230" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilodżul</structure:Description>
+      </structure:Code>
+      <structure:Code value="05260" parentCode="" urn="">
+        <structure:Description xml:lang="en">megadżul</structure:Description>
+      </structure:Code>
+      <structure:Code value="05290" parentCode="" urn="">
+        <structure:Description xml:lang="en">gigadżul</structure:Description>
+      </structure:Code>
+      <structure:Code value="05300" parentCode="" urn="">
+        <structure:Description xml:lang="en">wat</structure:Description>
+      </structure:Code>
+      <structure:Code value="05330" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilowat</structure:Description>
+      </structure:Code>
+      <structure:Code value="05360" parentCode="" urn="">
+        <structure:Description xml:lang="en">megawat</structure:Description>
+      </structure:Code>
+      <structure:Code value="05390" parentCode="" urn="">
+        <structure:Description xml:lang="en">gigawat</structure:Description>
+      </structure:Code>
+      <structure:Code value="05400" parentCode="" urn="">
+        <structure:Description xml:lang="en">watogodzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="05412" parentCode="" urn="">
+        <structure:Description xml:lang="en">terawatogodzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="05460" parentCode="" urn="">
+        <structure:Description xml:lang="en">megawatogodzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="05490" parentCode="" urn="">
+        <structure:Description xml:lang="en">gigawatogodzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="05530" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilowatogodzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="05560" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc kilowatogodzin</structure:Description>
+      </structure:Code>
+      <structure:Code value="05590" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion kilowatogodzin</structure:Description>
+      </structure:Code>
+      <structure:Code value="05600" parentCode="" urn="">
+        <structure:Description xml:lang="en">elektronowolt</structure:Description>
+      </structure:Code>
+      <structure:Code value="05660" parentCode="" urn="">
+        <structure:Description xml:lang="en">megaelektronowolt</structure:Description>
+      </structure:Code>
+      <structure:Code value="05700" parentCode="" urn="">
+        <structure:Description xml:lang="en">amper</structure:Description>
+      </structure:Code>
+      <structure:Code value="05800" parentCode="" urn="">
+        <structure:Description xml:lang="en">woltoamper</structure:Description>
+      </structure:Code>
+      <structure:Code value="05830" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilowoltoamper</structure:Description>
+      </structure:Code>
+      <structure:Code value="05860" parentCode="" urn="">
+        <structure:Description xml:lang="en">megawoltoamper</structure:Description>
+      </structure:Code>
+      <structure:Code value="05890" parentCode="" urn="">
+        <structure:Description xml:lang="en">gigawoltoamper</structure:Description>
+      </structure:Code>
+      <structure:Code value="05900" parentCode="" urn="">
+        <structure:Description xml:lang="en">war</structure:Description>
+      </structure:Code>
+      <structure:Code value="05930" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilowar</structure:Description>
+      </structure:Code>
+      <structure:Code value="05960" parentCode="" urn="">
+        <structure:Description xml:lang="en">megawar</structure:Description>
+      </structure:Code>
+      <structure:Code value="07100" parentCode="" urn="">
+        <structure:Description xml:lang="en">bekerel</structure:Description>
+      </structure:Code>
+      <structure:Code value="07103" parentCode="" urn="">
+        <structure:Description xml:lang="en">milibekerel</structure:Description>
+      </structure:Code>
+      <structure:Code value="07106" parentCode="" urn="">
+        <structure:Description xml:lang="en">mikrobekerel</structure:Description>
+      </structure:Code>
+      <structure:Code value="07112" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc gigabekereli</structure:Description>
+      </structure:Code>
+      <structure:Code value="07130" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilobekerel</structure:Description>
+      </structure:Code>
+      <structure:Code value="07190" parentCode="" urn="">
+        <structure:Description xml:lang="en">gigabekerel</structure:Description>
+      </structure:Code>
+      <structure:Code value="07200" parentCode="" urn="">
+        <structure:Description xml:lang="en">amperogodzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="07230" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc amperogodzin</structure:Description>
+      </structure:Code>
+      <structure:Code value="07300" parentCode="" urn="">
+        <structure:Description xml:lang="en">grej</structure:Description>
+      </structure:Code>
+      <structure:Code value="07309" parentCode="" urn="">
+        <structure:Description xml:lang="en">nanogrej</structure:Description>
+      </structure:Code>
+      <structure:Code value="07400" parentCode="" urn="">
+        <structure:Description xml:lang="en">herc</structure:Description>
+      </structure:Code>
+      <structure:Code value="07430" parentCode="" urn="">
+        <structure:Description xml:lang="en">kiloherc</structure:Description>
+      </structure:Code>
+      <structure:Code value="07500" parentCode="" urn="">
+        <structure:Description xml:lang="en">siwert</structure:Description>
+      </structure:Code>
+      <structure:Code value="07503" parentCode="" urn="">
+        <structure:Description xml:lang="en">milisiwert</structure:Description>
+      </structure:Code>
+      <structure:Code value="07600" parentCode="" urn="">
+        <structure:Description xml:lang="en">paskal</structure:Description>
+      </structure:Code>
+      <structure:Code value="07620" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektopaskal</structure:Description>
+      </structure:Code>
+      <structure:Code value="07630" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilopaskal</structure:Description>
+      </structure:Code>
+      <structure:Code value="07660" parentCode="" urn="">
+        <structure:Description xml:lang="en">megapaskal</structure:Description>
+      </structure:Code>
+      <structure:Code value="07700" parentCode="" urn="">
+        <structure:Description xml:lang="en">kelwin</structure:Description>
+      </structure:Code>
+      <structure:Code value="07800" parentCode="" urn="">
+        <structure:Description xml:lang="en">stopień Celsjusza</structure:Description>
+      </structure:Code>
+      <structure:Code value="07900" parentCode="" urn="">
+        <structure:Description xml:lang="en">milimetr słupa rtęci</structure:Description>
+      </structure:Code>
+      <structure:Code value="10100" parentCode="" urn="">
+        <structure:Description xml:lang="en">złoty</structure:Description>
+      </structure:Code>
+      <structure:Code value="10130" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc złotych</structure:Description>
+      </structure:Code>
+      <structure:Code value="10160" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion złotych</structure:Description>
+      </structure:Code>
+      <structure:Code value="10190" parentCode="" urn="">
+        <structure:Description xml:lang="en">miliard złotych</structure:Description>
+      </structure:Code>
+      <structure:Code value="10200" parentCode="" urn="">
+        <structure:Description xml:lang="en">dolar amerykański</structure:Description>
+      </structure:Code>
+      <structure:Code value="10230" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc dolarów amerykańskich</structure:Description>
+      </structure:Code>
+      <structure:Code value="10260" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion dolarów amerykańskich</structure:Description>
+      </structure:Code>
+      <structure:Code value="10290" parentCode="" urn="">
+        <structure:Description xml:lang="en">miliard dolarów amerykańskich</structure:Description>
+      </structure:Code>
+      <structure:Code value="10300" parentCode="" urn="">
+        <structure:Description xml:lang="en">euro</structure:Description>
+      </structure:Code>
+      <structure:Code value="10330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc euro</structure:Description>
+      </structure:Code>
+      <structure:Code value="10360" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion euro</structure:Description>
+      </structure:Code>
+      <structure:Code value="10390" parentCode="" urn="">
+        <structure:Description xml:lang="en">miliard euro</structure:Description>
+      </structure:Code>
+      <structure:Code value="11000" parentCode="" urn="">
+        <structure:Description xml:lang="en">sztuka</structure:Description>
+      </structure:Code>
+      <structure:Code value="11020" parentCode="" urn="">
+        <structure:Description xml:lang="en">sto  sztuk</structure:Description>
+      </structure:Code>
+      <structure:Code value="11030" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc sztuk</structure:Description>
+      </structure:Code>
+      <structure:Code value="11060" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion sztuk</structure:Description>
+      </structure:Code>
+      <structure:Code value="11090" parentCode="" urn="">
+        <structure:Description xml:lang="en">miliard sztuk</structure:Description>
+      </structure:Code>
+      <structure:Code value="11100" parentCode="" urn="">
+        <structure:Description xml:lang="en">para</structure:Description>
+      </structure:Code>
+      <structure:Code value="11130" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc par</structure:Description>
+      </structure:Code>
+      <structure:Code value="11160" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion par</structure:Description>
+      </structure:Code>
+      <structure:Code value="11200" parentCode="" urn="">
+        <structure:Description xml:lang="en">tuzin</structure:Description>
+      </structure:Code>
+      <structure:Code value="11230" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc tuzinów</structure:Description>
+      </structure:Code>
+      <structure:Code value="11260" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion tuzinów</structure:Description>
+      </structure:Code>
+      <structure:Code value="11300" parentCode="" urn="">
+        <structure:Description xml:lang="en">komplet</structure:Description>
+      </structure:Code>
+      <structure:Code value="11330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc kompletów</structure:Description>
+      </structure:Code>
+      <structure:Code value="11360" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion kompletów</structure:Description>
+      </structure:Code>
+      <structure:Code value="11400" parentCode="" urn="">
+        <structure:Description xml:lang="en">ryza</structure:Description>
+      </structure:Code>
+      <structure:Code value="11500" parentCode="" urn="">
+        <structure:Description xml:lang="en">egzemplarz</structure:Description>
+      </structure:Code>
+      <structure:Code value="11600" parentCode="" urn="">
+        <structure:Description xml:lang="en">wolumin</structure:Description>
+      </structure:Code>
+      <structure:Code value="11630" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc woluminów</structure:Description>
+      </structure:Code>
+      <structure:Code value="11660" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion woluminów</structure:Description>
+      </structure:Code>
+      <structure:Code value="11700" parentCode="" urn="">
+        <structure:Description xml:lang="en">porcja</structure:Description>
+      </structure:Code>
+      <structure:Code value="11800" parentCode="" urn="">
+        <structure:Description xml:lang="en">osoba</structure:Description>
+      </structure:Code>
+      <structure:Code value="11820" parentCode="" urn="">
+        <structure:Description xml:lang="en">sto osób</structure:Description>
+      </structure:Code>
+      <structure:Code value="11830" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc osób</structure:Description>
+      </structure:Code>
+      <structure:Code value="11850" parentCode="" urn="">
+        <structure:Description xml:lang="en">sto tysięcy osób</structure:Description>
+      </structure:Code>
+      <structure:Code value="11900" parentCode="" urn="">
+        <structure:Description xml:lang="en">gospodarstwo domowe</structure:Description>
+      </structure:Code>
+      <structure:Code value="12000" parentCode="" urn="">
+        <structure:Description xml:lang="en">jednostka konsumpcyjna</structure:Description>
+      </structure:Code>
+      <structure:Code value="13000" parentCode="" urn="">
+        <structure:Description xml:lang="en">dzień</structure:Description>
+      </structure:Code>
+      <structure:Code value="13100" parentCode="" urn="">
+        <structure:Description xml:lang="en">tydzień</structure:Description>
+      </structure:Code>
+      <structure:Code value="13200" parentCode="" urn="">
+        <structure:Description xml:lang="en">miesiąc</structure:Description>
+      </structure:Code>
+      <structure:Code value="13300" parentCode="" urn="">
+        <structure:Description xml:lang="en">kwartał</structure:Description>
+      </structure:Code>
+      <structure:Code value="13400" parentCode="" urn="">
+        <structure:Description xml:lang="en">półrocze</structure:Description>
+      </structure:Code>
+      <structure:Code value="13500" parentCode="" urn="">
+        <structure:Description xml:lang="en">trzy kwartały</structure:Description>
+      </structure:Code>
+      <structure:Code value="20100" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram czystego składnika pierwiastka lub związku chemicznego (X – oznacza symbol chemiczny)*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20130" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona (megagram) czystego składnika pierwiastka lub związku chemicznego (X – oznacza symbol chemiczny)*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20200" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej masy produktu o „n” procentowej zawartości czystego składnika*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20230" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona (megagram) przeliczeniowej masy produktu o „n” procentowej zawartości czystego składnika*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20260" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc ton (gigagram) przeliczeniowej masy produktu o „n” procentowej zawartości czystego składnika*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20300" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej masy produktu absolutnie suchego (suchej masy)*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona (megagram) przeliczeniowej masy produktu absolutnie suchego (suchej masy)*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20360" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc ton (gigagram) przeliczeniowej masy produktu absolutnie suchego (suchej masy)*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20430" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona  (megagram) przeliczeniowej masy cukru surowego na cukier biały*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20460" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc ton  (gigagram) przeliczeniowej masy cukru surowego na cukier biały*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20500" parentCode="" urn="">
+        <structure:Description xml:lang="en">decymetr sześcienny przeliczeniowej objętości produktu o „100%” zawartości czystego składnika*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20520" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektolitr przeliczeniowej objętości produktu o „100%” zawartości czystego składnika*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20600" parentCode="" urn="">
+        <structure:Description xml:lang="en">decymetr sześcienny przeliczeniowej objętości produktu o „n” procentowej zawartości czystego składnika*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20620" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektolitr przeliczeniowej objętości produktu o „n” procentowej zawartości czystego składnika*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20700" parentCode="" urn="">
+        <structure:Description xml:lang="en">decymetr sześcienny przeliczeniowej objętości produktu o stężeniu „n” stopniowym*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20720" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektolitr przeliczeniowej objętości produktu o stężeniu „n” stopniowym*</structure:Description>
+      </structure:Code>
+      <structure:Code value="20800" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej zawartości ołowiu w rudach i koncentratach rud ołowianych i cynkowo-ołowiowych</structure:Description>
+      </structure:Code>
+      <structure:Code value="20830" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona (megagram) przeliczeniowej zawartości ołowiu w rudach i koncentratach rud ołowianych i cynkowo-ołowiowych</structure:Description>
+      </structure:Code>
+      <structure:Code value="20860" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc ton przeliczeniowej zawartości ołowiu w rudach i koncentratach rud ołowianych i cynkowo-ołowiowych</structure:Description>
+      </structure:Code>
+      <structure:Code value="20900" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej zawartości aluminium w kablach i przewodach</structure:Description>
+      </structure:Code>
+      <structure:Code value="20930" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona (megagram) przeliczeniowej zawartości aluminium w kablach i przewodach</structure:Description>
+      </structure:Code>
+      <structure:Code value="21300" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej zawartości pięciotlenku fosforu (bezwodnik fosforowy) w nawozach fosforowych i wieloskładnikowych</structure:Description>
+      </structure:Code>
+      <structure:Code value="21330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona (megagram) przeliczeniowej zawartości pięciotlenku fosforu (bezwodnik fosforowy)  w nawozach fosforowych i wieloskładnikowych</structure:Description>
+      </structure:Code>
+      <structure:Code value="21400" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej zawartości tlenku potasu w nawozach potasowych i wieloskładnikowych</structure:Description>
+      </structure:Code>
+      <structure:Code value="21430" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona (megagram) przeliczeniowej zawartości tlenku potasu w nawozach potasowych i wieloskładnikowych</structure:Description>
+      </structure:Code>
+      <structure:Code value="21500" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram chloru</structure:Description>
+      </structure:Code>
+      <structure:Code value="21530" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona chloru</structure:Description>
+      </structure:Code>
+      <structure:Code value="21600" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram tlenku ołowiu</structure:Description>
+      </structure:Code>
+      <structure:Code value="21630" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona tlenku ołowiu</structure:Description>
+      </structure:Code>
+      <structure:Code value="21700" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram węglanu baru</structure:Description>
+      </structure:Code>
+      <structure:Code value="21730" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona węglanu baru</structure:Description>
+      </structure:Code>
+      <structure:Code value="21800" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram chlorowodoru</structure:Description>
+      </structure:Code>
+      <structure:Code value="21830" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona chlorowodoru</structure:Description>
+      </structure:Code>
+      <structure:Code value="21900" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram węglanu potasu</structure:Description>
+      </structure:Code>
+      <structure:Code value="21930" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona węglanu potasu</structure:Description>
+      </structure:Code>
+      <structure:Code value="22000" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram srebra</structure:Description>
+      </structure:Code>
+      <structure:Code value="22030" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona srebra</structure:Description>
+      </structure:Code>
+      <structure:Code value="22100" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram trójtlenku boru</structure:Description>
+      </structure:Code>
+      <structure:Code value="22130" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona trójtlenku boru</structure:Description>
+      </structure:Code>
+      <structure:Code value="22200" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram fluorowodoru</structure:Description>
+      </structure:Code>
+      <structure:Code value="22230" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona fluorowodoru</structure:Description>
+      </structure:Code>
+      <structure:Code value="22300" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram nadtlenku wodoru</structure:Description>
+      </structure:Code>
+      <structure:Code value="22330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona nadtlenku wodoru</structure:Description>
+      </structure:Code>
+      <structure:Code value="22400" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram dwutlenku krzemu</structure:Description>
+      </structure:Code>
+      <structure:Code value="22430" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona dwutlenku krzemu</structure:Description>
+      </structure:Code>
+      <structure:Code value="22500" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram trójtlenku glinu</structure:Description>
+      </structure:Code>
+      <structure:Code value="22530" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona trójtlenku glinu</structure:Description>
+      </structure:Code>
+      <structure:Code value="22600" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram siarczanu baru</structure:Description>
+      </structure:Code>
+      <structure:Code value="22630" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona siarczanu baru</structure:Description>
+      </structure:Code>
+      <structure:Code value="22700" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram tlenku wapnia</structure:Description>
+      </structure:Code>
+      <structure:Code value="22730" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona tlenku wapnia</structure:Description>
+      </structure:Code>
+      <structure:Code value="22800" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram kwasu octowego</structure:Description>
+      </structure:Code>
+      <structure:Code value="22830" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona kwasu octowego</structure:Description>
+      </structure:Code>
+      <structure:Code value="22900" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram metanolu</structure:Description>
+      </structure:Code>
+      <structure:Code value="22930" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona metanolu</structure:Description>
+      </structure:Code>
+      <structure:Code value="23000" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram butanolu</structure:Description>
+      </structure:Code>
+      <structure:Code value="23030" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona butanolu</structure:Description>
+      </structure:Code>
+      <structure:Code value="23100" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram czystego związku chemicznego - fenolu</structure:Description>
+      </structure:Code>
+      <structure:Code value="23130" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona fenolu</structure:Description>
+      </structure:Code>
+      <structure:Code value="23200" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram trójtlenku chromu</structure:Description>
+      </structure:Code>
+      <structure:Code value="23230" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona trójtlenku chromu</structure:Description>
+      </structure:Code>
+      <structure:Code value="23300" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram miedzi</structure:Description>
+      </structure:Code>
+      <structure:Code value="23330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona miedzi</structure:Description>
+      </structure:Code>
+      <structure:Code value="23360" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc ton miedzi</structure:Description>
+      </structure:Code>
+      <structure:Code value="23400" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram siarczanu miedzi</structure:Description>
+      </structure:Code>
+      <structure:Code value="23430" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona siarczanu miedzi</structure:Description>
+      </structure:Code>
+      <structure:Code value="23500" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram fluoru</structure:Description>
+      </structure:Code>
+      <structure:Code value="23530" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona fluoru</structure:Description>
+      </structure:Code>
+      <structure:Code value="23600" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram wodorotlenku sodu (soda kaustyczna)</structure:Description>
+      </structure:Code>
+      <structure:Code value="23630" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona wodorotlenku sodu (soda kaustyczna)</structure:Description>
+      </structure:Code>
+      <structure:Code value="23700" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram kwasu azotowego</structure:Description>
+      </structure:Code>
+      <structure:Code value="23730" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona kwasu azotowego</structure:Description>
+      </structure:Code>
+      <structure:Code value="23800" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram kwasu siarkowego</structure:Description>
+      </structure:Code>
+      <structure:Code value="23830" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona kwasu siarkowego</structure:Description>
+      </structure:Code>
+      <structure:Code value="23860" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc ton kwasu siarkowego</structure:Description>
+      </structure:Code>
+      <structure:Code value="23900" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram azotu</structure:Description>
+      </structure:Code>
+      <structure:Code value="23930" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona azotu</structure:Description>
+      </structure:Code>
+      <structure:Code value="24000" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram wodorotlenku potasu (potaż żrący)</structure:Description>
+      </structure:Code>
+      <structure:Code value="24030" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona wodorotlenku potasu (potaż żrący)</structure:Description>
+      </structure:Code>
+      <structure:Code value="24100" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram chlorku sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="24130" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona chlorku sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="24160" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc ton chlorku sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="24200" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram amoniaku</structure:Description>
+      </structure:Code>
+      <structure:Code value="24230" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona amoniaku</structure:Description>
+      </structure:Code>
+      <structure:Code value="24300" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram węglanu sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="24330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona węglanu sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="24400" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram pirosiarczyn sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="24430" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona pirosiarczyn sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="24500" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram chlorku choliny</structure:Description>
+      </structure:Code>
+      <structure:Code value="24530" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona chlorku choliny</structure:Description>
+      </structure:Code>
+      <structure:Code value="24600" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram siarki</structure:Description>
+      </structure:Code>
+      <structure:Code value="24630" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona siarki</structure:Description>
+      </structure:Code>
+      <structure:Code value="24700" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram dwutlenku siarki</structure:Description>
+      </structure:Code>
+      <structure:Code value="24730" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona dwutlenku siarki</structure:Description>
+      </structure:Code>
+      <structure:Code value="24800" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram dwutlenku tytanu</structure:Description>
+      </structure:Code>
+      <structure:Code value="24830" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona dwutlenku tytanu</structure:Description>
+      </structure:Code>
+      <structure:Code value="24900" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram cynku</structure:Description>
+      </structure:Code>
+      <structure:Code value="24930" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona cynku</structure:Description>
+      </structure:Code>
+      <structure:Code value="25000" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej masy produktu o 42% zawartości fruktozy</structure:Description>
+      </structure:Code>
+      <structure:Code value="25030" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona przeliczeniowej masy produktu o 42% zawartości fruktozy</structure:Description>
+      </structure:Code>
+      <structure:Code value="25100" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej masy produktu o 60% zawartości mydła i/lub środków powierzchniowo czynnych</structure:Description>
+      </structure:Code>
+      <structure:Code value="25130" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona przeliczeniowej masy produktu o 60% zawartości mydła i/lub środków powierzchniowo czynnych</structure:Description>
+      </structure:Code>
+      <structure:Code value="25200" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej masy produktu o 75% zawartości węgliku wapnia</structure:Description>
+      </structure:Code>
+      <structure:Code value="25230" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona przeliczeniowej masy produktu o 75% zawartości węgliku wapnia</structure:Description>
+      </structure:Code>
+      <structure:Code value="25300" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej masy produktu o 25% zawartości azotu</structure:Description>
+      </structure:Code>
+      <structure:Code value="25330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona przeliczeniowej masy produktu o 25% zawartości azotu</structure:Description>
+      </structure:Code>
+      <structure:Code value="25400" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej masy produktu o 46% zawartości azotu</structure:Description>
+      </structure:Code>
+      <structure:Code value="25430" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona przeliczeniowej masy produktu o 46% zawartości azotu</structure:Description>
+      </structure:Code>
+      <structure:Code value="25500" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej masy produktu o 96% zawartości wodorotlenku sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="25530" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona przeliczeniowej masy produktu o 96% zawartości wodorotlenku sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="25600" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram przeliczeniowej masy produktu o 98% zawartości węglanu sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="25630" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona przeliczeniowej masy produktu o 98% zawartości węglanu sodu</structure:Description>
+      </structure:Code>
+      <structure:Code value="25700" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram substancji wysuszonej w 90% (kilogram przeliczeniowej masy produktu o 90% zawartości suchej masy)</structure:Description>
+      </structure:Code>
+      <structure:Code value="25730" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona substancji wysuszonej w 90% (tona przeliczeniowej masy produktu o 90% zawartości suchej masy)</structure:Description>
+      </structure:Code>
+      <structure:Code value="25800" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram uranu</structure:Description>
+      </structure:Code>
+      <structure:Code value="25900" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram metyloaminy</structure:Description>
+      </structure:Code>
+      <structure:Code value="25930" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona metyloaminy</structure:Description>
+      </structure:Code>
+      <structure:Code value="26000" parentCode="" urn="">
+        <structure:Description xml:lang="en">litr czystego (100%) alkoholu</structure:Description>
+      </structure:Code>
+      <structure:Code value="26100" parentCode="" urn="">
+        <structure:Description xml:lang="en">miligram równoważnika toksyczności</structure:Description>
+      </structure:Code>
+      <structure:Code value="26200" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona  paliwa umownego*</structure:Description>
+      </structure:Code>
+      <structure:Code value="26260" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc ton  paliwa umownego*</structure:Description>
+      </structure:Code>
+      <structure:Code value="26300" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona oleju ekwiwalentnego</structure:Description>
+      </structure:Code>
+      <structure:Code value="26303" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram oleju ekwiwalentnego</structure:Description>
+      </structure:Code>
+      <structure:Code value="26330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc ton oleju ekwiwalentnego</structure:Description>
+      </structure:Code>
+      <structure:Code value="26360" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion ton oleju ekwiwalentnego</structure:Description>
+      </structure:Code>
+      <structure:Code value="26500" parentCode="" urn="">
+        <structure:Description xml:lang="en">gram izotopów rozszczepialnych</structure:Description>
+      </structure:Code>
+      <structure:Code value="26600" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram aktywnego składnika (substancji aktywowanej)</structure:Description>
+      </structure:Code>
+      <structure:Code value="26700" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram masy netto po odsączeniu</structure:Description>
+      </structure:Code>
+      <structure:Code value="26800" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilogram suchej substancji netto</structure:Description>
+      </structure:Code>
+      <structure:Code value="27000" parentCode="" urn="">
+        <structure:Description xml:lang="en">tonometr</structure:Description>
+      </structure:Code>
+      <structure:Code value="27100" parentCode="" urn="">
+        <structure:Description xml:lang="en">tonokilometr</structure:Description>
+      </structure:Code>
+      <structure:Code value="27130" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc tonokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27160" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion tonokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27200" parentCode="" urn="">
+        <structure:Description xml:lang="en">brutto tonokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27230" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc brutto tonokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27260" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion brutto tonokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27290" parentCode="" urn="">
+        <structure:Description xml:lang="en">miliard brutto tonokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27300" parentCode="" urn="">
+        <structure:Description xml:lang="en">tonomila</structure:Description>
+      </structure:Code>
+      <structure:Code value="27330" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc tonomil</structure:Description>
+      </structure:Code>
+      <structure:Code value="27400" parentCode="" urn="">
+        <structure:Description xml:lang="en">pociągokilometr</structure:Description>
+      </structure:Code>
+      <structure:Code value="27430" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc pociągokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27500" parentCode="" urn="">
+        <structure:Description xml:lang="en">pasażeromila</structure:Description>
+      </structure:Code>
+      <structure:Code value="27600" parentCode="" urn="">
+        <structure:Description xml:lang="en">wozokilometr</structure:Description>
+      </structure:Code>
+      <structure:Code value="27630" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc wozokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27660" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion wozokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27700" parentCode="" urn="">
+        <structure:Description xml:lang="en">pasażerokilometr</structure:Description>
+      </structure:Code>
+      <structure:Code value="27730" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc pasażerokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27760" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion pasażerokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27790" parentCode="" urn="">
+        <structure:Description xml:lang="en">miliard pasażerokilometrów</structure:Description>
+      </structure:Code>
+      <structure:Code value="27820" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektolitr przeliczeniowej objętości produktu o 6 procentowej zawartości czystego składnika*</structure:Description>
+      </structure:Code>
+      <structure:Code value="28000" parentCode="" urn="">
+        <structure:Description xml:lang="en">opakowanie</structure:Description>
+      </structure:Code>
+      <structure:Code value="28100" parentCode="" urn="">
+        <structure:Description xml:lang="en">dwudziestostopowa jednostka ekwiwalentna</structure:Description>
+      </structure:Code>
+      <structure:Code value="28200" parentCode="" urn="">
+        <structure:Description xml:lang="en">roboczogodzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="28300" parentCode="" urn="">
+        <structure:Description xml:lang="en">koń mechaniczny</structure:Description>
+      </structure:Code>
+      <structure:Code value="28400" parentCode="" urn="">
+        <structure:Description xml:lang="en">skompensowana pojemność rejestrowa statku*</structure:Description>
+      </structure:Code>
+      <structure:Code value="28500" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona nośności całkowitej ładunku i zapasów statku</structure:Description>
+      </structure:Code>
+      <structure:Code value="28530" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc ton nośności całkowitej ładunku i zapasów statku</structure:Description>
+      </structure:Code>
+      <structure:Code value="28600" parentCode="" urn="">
+        <structure:Description xml:lang="en">pojemność brutto statku</structure:Description>
+      </structure:Code>
+      <structure:Code value="28700" parentCode="" urn="">
+        <structure:Description xml:lang="en">pojemność netto statku</structure:Description>
+      </structure:Code>
+      <structure:Code value="28800" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona rejestrowa pojemności netto statku</structure:Description>
+      </structure:Code>
+      <structure:Code value="28900" parentCode="" urn="">
+        <structure:Description xml:lang="en">ładowność w tonach*</structure:Description>
+      </structure:Code>
+      <structure:Code value="29000" parentCode="" urn="">
+        <structure:Description xml:lang="en">tona (megagram) ładowności samochodów ciężarowych</structure:Description>
+      </structure:Code>
+      <structure:Code value="29100" parentCode="" urn="">
+        <structure:Description xml:lang="en">dobson</structure:Description>
+      </structure:Code>
+      <structure:Code value="29200" parentCode="" urn="">
+        <structure:Description xml:lang="en">liczba ogniw</structure:Description>
+      </structure:Code>
+      <structure:Code value="29300" parentCode="" urn="">
+        <structure:Description xml:lang="en">cal</structure:Description>
+      </structure:Code>
+      <structure:Code value="29400" parentCode="" urn="">
+        <structure:Description xml:lang="en">mila morska</structure:Description>
+      </structure:Code>
+      <structure:Code value="29500" parentCode="" urn="">
+        <structure:Description xml:lang="en">węzeł</structure:Description>
+      </structure:Code>
+      <structure:Code value="29600" parentCode="" urn="">
+        <structure:Description xml:lang="en">hektar przeliczeniowy</structure:Description>
+      </structure:Code>
+      <structure:Code value="29700" parentCode="" urn="">
+        <structure:Description xml:lang="en">metr bieżący</structure:Description>
+      </structure:Code>
+      <structure:Code value="29800" parentCode="" urn="">
+        <structure:Description xml:lang="en">cegła przeliczeniowa materiałów ściennych</structure:Description>
+      </structure:Code>
+      <structure:Code value="29830" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc cegieł przeliczeniowych materiałów ściennych</structure:Description>
+      </structure:Code>
+      <structure:Code value="29860" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion cegieł przeliczeniowych materiałów ściennych</structure:Description>
+      </structure:Code>
+      <structure:Code value="29900" parentCode="" urn="">
+        <structure:Description xml:lang="en">skrzynia przeliczeniowa zapałek*</structure:Description>
+      </structure:Code>
+      <structure:Code value="29930" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc skrzyń przeliczeniowych zapałek*</structure:Description>
+      </structure:Code>
+      <structure:Code value="29960" parentCode="" urn="">
+        <structure:Description xml:lang="en">milion skrzyń przeliczeniowych zapałek*</structure:Description>
+      </structure:Code>
+      <structure:Code value="30000" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilometr  przeliczeniowej długości przędzy</structure:Description>
+      </structure:Code>
+      <structure:Code value="30100" parentCode="" urn="">
+        <structure:Description xml:lang="en">bit</structure:Description>
+      </structure:Code>
+      <structure:Code value="30130" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilobit</structure:Description>
+      </structure:Code>
+      <structure:Code value="30160" parentCode="" urn="">
+        <structure:Description xml:lang="en">megabit</structure:Description>
+      </structure:Code>
+      <structure:Code value="30200" parentCode="" urn="">
+        <structure:Description xml:lang="en">bajt</structure:Description>
+      </structure:Code>
+      <structure:Code value="30230" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilobajt</structure:Description>
+      </structure:Code>
+      <structure:Code value="30260" parentCode="" urn="">
+        <structure:Description xml:lang="en">megabajt</structure:Description>
+      </structure:Code>
+      <structure:Code value="30390" parentCode="" urn="">
+        <structure:Description xml:lang="en">gigabajt</structure:Description>
+      </structure:Code>
+      <structure:Code value="30400" parentCode="" urn="">
+        <structure:Description xml:lang="en">bod</structure:Description>
+      </structure:Code>
+      <structure:Code value="30500" parentCode="" urn="">
+        <structure:Description xml:lang="en">decybel</structure:Description>
+      </structure:Code>
+      <structure:Code value="30600" parentCode="" urn="">
+        <structure:Description xml:lang="en">kaloria</structure:Description>
+      </structure:Code>
+      <structure:Code value="30630" parentCode="" urn="">
+        <structure:Description xml:lang="en">kilokaloria</structure:Description>
+      </structure:Code>
+      <structure:Code value="30700" parentCode="" urn="">
+        <structure:Description xml:lang="en">motogodzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="30730" parentCode="" urn="">
+        <structure:Description xml:lang="en">tysiąc motogodzin</structure:Description>
+      </structure:Code>
+      <structure:Code value="30800" parentCode="" urn="">
+        <structure:Description xml:lang="en">normogodzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="30900" parentCode="" urn="">
+        <structure:Description xml:lang="en">zespołogodzina</structure:Description>
+      </structure:Code>
+      <structure:Code value="31000" parentCode="" urn="">
+        <structure:Description xml:lang="en">osobodzień</structure:Description>
+      </structure:Code>
+      <structure:Code value="31100" parentCode="" urn="">
+        <structure:Description xml:lang="en">osobozagrożenia</structure:Description>
+      </structure:Code>
+      <structure:Code value="31200" parentCode="" urn="">
+        <structure:Description xml:lang="en">ppm*</structure:Description>
+      </structure:Code>
+      <structure:Code value="31300" parentCode="" urn="">
+        <structure:Description xml:lang="en">Standard Siły Nabywczej *</structure:Description>
+      </structure:Code>
+      <structure:Code value="31400" parentCode="" urn="">
+        <structure:Description xml:lang="en">EPC - ekwiwalent pełnego czasu pracy*</structure:Description>
+      </structure:Code>
+      <structure:Code value="31500" parentCode="" urn="">
+        <structure:Description xml:lang="en">roczna jednostka pracy - ekwiwalent pełnego etatu*</structure:Description>
+      </structure:Code>
+      <structure:Code value="80100" parentCode="" urn="">
+        <structure:Description xml:lang="en">procent*</structure:Description>
+      </structure:Code>
+      <structure:Code value="80200" parentCode="" urn="">
+        <structure:Description xml:lang="en">promil*</structure:Description>
+      </structure:Code>
+      <structure:Code value="90100" parentCode="" urn="">
+        <structure:Description xml:lang="en">obiekt</structure:Description>
+      </structure:Code>
+      <structure:Code value="90200" parentCode="" urn="">
+        <structure:Description xml:lang="en">miejsce</structure:Description>
+      </structure:Code>
+      <structure:Code value="90300" parentCode="" urn="">
+        <structure:Description xml:lang="en">szkoła</structure:Description>
+      </structure:Code>
+      <structure:Code value="90400" parentCode="" urn="">
+        <structure:Description xml:lang="en">placówka opiekuńczo-wychowawcza</structure:Description>
+      </structure:Code>
+      <structure:Code value="90500" parentCode="" urn="">
+        <structure:Description xml:lang="en">biochemiczne zużycie tlenu*</structure:Description>
+      </structure:Code>
+      <structure:Code value="90600" parentCode="" urn="">
+        <structure:Description xml:lang="en">chemiczne zużycie tlenu*</structure:Description>
+      </structure:Code>
+      <structure:Code value="90700" parentCode="" urn="">
+        <structure:Description xml:lang="en">stanowisko</structure:Description>
+      </structure:Code>
+      <structure:Code value="90800" parentCode="" urn="">
+        <structure:Description xml:lang="en">podmiot badania</structure:Description>
+      </structure:Code>
+      <structure:Code value="90900" parentCode="" urn="">
+        <structure:Description xml:lang="en">etat*</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_WYROZNIK_OKRESU" agencyID="US_WAWA" version="1.0" isFinal="true">
+      <structure:Name xml:lang="en">Wyróżnik okresu obserwacji</structure:Name>
+      <structure:Description xml:lang="en">Wyróżnik okresu obserwacji</structure:Description>
+      <structure:Code value="1" parentCode="" urn="">
+        <structure:Description xml:lang="en">dane za jeden miesiąc, kwartał lub półrocze (okres sprawozdawczy)</structure:Description>
+      </structure:Code>
+      <structure:Code value="1b" parentCode="" urn="">
+        <structure:Description xml:lang="en">dane za poprzedni miesiąc, kwartał lub półrocze (okres sprawozdawczy)</structure:Description>
+      </structure:Code>
+      <structure:Code value="2" parentCode="" urn="">
+        <structure:Description xml:lang="en">dane od początku roku do końca okresu sprawozdawczego</structure:Description>
+      </structure:Code>
+      <structure:Code value="2b" parentCode="" urn="">
+        <structure:Description xml:lang="en">dane narastające za poprzedni miesiąc, kwartał lub półrocze</structure:Description>
+      </structure:Code>
+      <structure:Code value="3" parentCode="" urn="">
+        <structure:Description xml:lang="en">dane wg stanu na ostatni dzień okresu sprawozdawczego</structure:Description>
+      </structure:Code>
+      <structure:Code value="3a" parentCode="" urn="">
+        <structure:Description xml:lang="en">dane wg stanu na ostatni dzień poprzedniego okresu sprawozdawczego</structure:Description>
+      </structure:Code>
+      <structure:Code value="4" parentCode="" urn="">
+        <structure:Description xml:lang="en">stan na dzień 01.01 roku sprawozdawczego</structure:Description>
+      </structure:Code>
+      <structure:Code value="5" parentCode="" urn="">
+        <structure:Description xml:lang="en">dane na określony dzień (inny niż ostatni dzień okresu sprawozdawczego)</structure:Description>
+      </structure:Code>
+      <structure:Code value="6" parentCode="" urn="">
+        <structure:Description xml:lang="en">dane za reprezentacyjną część okresu sprawozdawczego (mniejszą niż miesiąc)</structure:Description>
+      </structure:Code>
+      <structure:Code value="7" parentCode="" urn="">
+        <structure:Description xml:lang="en">dane za jeden miesiąc - część okresu sprawozdawczego</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+    <structure:CodeList id="CL_SPOSOB_WYZN_WARTOSCI" agencyID="US_WAWA" version="1.0" isFinal="true">
+      <structure:Name xml:lang="en">Sposób wyznaczenia wartości</structure:Name>
+      <structure:Description xml:lang="en">Sposób wyznaczenia wartości</structure:Description>
+      <structure:Code value="-1" parentCode="" urn="">
+        <structure:Description xml:lang="en">Brak danych</structure:Description>
+      </structure:Code>
+      <structure:Code value="1" parentCode="" urn="">
+        <structure:Description xml:lang="en">Dane jednostkowe ze sprawozdania</structure:Description>
+      </structure:Code>
+      <structure:Code value="2" parentCode="" urn="">
+        <structure:Description xml:lang="en">Dane jednostkowe imputowane na podstawie innych danych jednostki</structure:Description>
+      </structure:Code>
+      <structure:Code value="3" parentCode="" urn="">
+        <structure:Description xml:lang="en">Dane jednostkowe imputowane na podstawie danych innych jednostek</structure:Description>
+      </structure:Code>
+      <structure:Code value="4" parentCode="" urn="">
+        <structure:Description xml:lang="en">Agregat zawierający sumę (danych) jednostek, które wystąpiły w badaniu (łącznie z danymi imputowanymi dla poszczególnych jednostek)</structure:Description>
+      </structure:Code>
+      <structure:Code value="5" parentCode="" urn="">
+        <structure:Description xml:lang="en">Agregat zawierający dane uogólnione</structure:Description>
+      </structure:Code>
+    </structure:CodeList>
+  </CodeLists>
+  <Concepts>
+    <structure:ConceptScheme id="CS_WRDOP" agencyID="US_WAWA" version="2.2" isFinal="true">
+      <structure:Name xml:lang="en">Schemat pojęć dla WRDOP</structure:Name>
+      <structure:Description xml:lang="en">Schemat pojęć dla modułu Wybrane Roczne Dane o Przedsiębiorstwach 2009-2012</structure:Description>
+      <structure:Concept id="RK" coreRepresentation="CL_ROK" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="1.6">
+        <structure:Name xml:lang="en">Rok</structure:Name>
+      </structure:Concept>
+      <structure:Concept id="TT" coreRepresentation="CL_TERYT" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="1.4">
+        <structure:Name xml:lang="en">TERYT</structure:Name>
+        <structure:Description xml:lang="en">TERYT - regiony i województwa</structure:Description>
+      </structure:Concept>
+      <structure:Concept id="RD" coreRepresentation="CL_PKD2007_GRUP_SEK_PRZEM" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="1.2">
+        <structure:Name xml:lang="en">Rodzaj działalności PKD2007</structure:Name>
+        <structure:Description xml:lang="en">Rodzaj działalności PKD2007 - grupowanie przemysłu i sekcje</structure:Description>
+      </structure:Concept>
+      <structure:Concept id="KW" coreRepresentation="CL_KLASA_WIELKOSCI" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="1.6">
+        <structure:Name xml:lang="en">Klasa wielkości</structure:Name>
+        <structure:Description xml:lang="en">Klasa wielkości</structure:Description>
+      </structure:Concept>
+      <structure:Concept id="FP" coreRepresentation="CL_FORMA_PRAWNA" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="1.5">
+        <structure:Name xml:lang="en">Forma prawna</structure:Name>
+        <structure:Description xml:lang="en">Forma prawna</structure:Description>
+      </structure:Concept>
+      <structure:Concept id="EK" coreRepresentation="CL_EWIDENCJA_KSIEGOWA" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="2.6">
+        <structure:Name xml:lang="en">Ewidencja księgowa</structure:Name>
+        <structure:Description xml:lang="en">Rodzaj ewidencji księgowej</structure:Description>
+      </structure:Concept>
+      <structure:Concept id="LD" coreRepresentation="CL_LATA_DZIALALNOSCI" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="1.5">
+        <structure:Name xml:lang="en">Lata działalności</structure:Name>
+        <structure:Description xml:lang="en">Przedział lat prowadzenia działalności</structure:Description>
+      </structure:Concept>
+      <structure:Concept id="ZM" coreRepresentation="CL_ZMIENNA" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="2.5">
+        <structure:Name xml:lang="en">Zmienna</structure:Name>
+        <structure:Description xml:lang="en">Nazwa zmiennej</structure:Description>
+      </structure:Concept>
+      <structure:Concept id="JM" coreRepresentation="CL_JEDNOSTKA_MIARY" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="1.5">
+        <structure:Name xml:lang="en">Jednostka miary</structure:Name>
+        <structure:Description xml:lang="en">Jednostka miary</structure:Description>
+      </structure:Concept>
+      <structure:Concept id="WO" coreRepresentation="CL_WYROZNIK_OKRESU" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="1.0">
+        <structure:Name xml:lang="en">Wyróżnik okresu obserwacji</structure:Name>
+        <structure:Description xml:lang="en">Wyróżnik okresu obserwacji</structure:Description>
+      </structure:Concept>
+      <structure:Concept id="SW" coreRepresentation="CL_SPOSOB_WYZN_WARTOSCI" coreRepresentationAgency="US_WAWA" coreRepresentationVersion="1.0">
+        <structure:Name xml:lang="en">Sposób wyznaczenia wartości</structure:Name>
+        <structure:Description xml:lang="en">Sposób wyznaczenia wartości</structure:Description>
+      </structure:Concept>
+      <structure:Concept id="MR">
+        <structure:Name xml:lang="en">Miara</structure:Name>
+        <structure:Description xml:lang="en">Miara - wartość</structure:Description>
+        <structure:TextFormat textType="Decimal" maxLength="38" decimals="1" />
+      </structure:Concept>
+    </structure:ConceptScheme>
+  </Concepts>
+  <KeyFamilies>
+    <structure:KeyFamily id="WRDOP" agencyID="US_WAWA" version="1.7" isFinal="true">
+      <structure:Name xml:lang="en">Wybrane Roczne Dane o Przedsiębiorstwach</structure:Name>
+      <structure:Description xml:lang="en">Wybrane Roczne Dane o Przedsiębiorstwach z PKD2007 dla lat 2009-2012</structure:Description>
+      <structure:Components>
+        <structure:Dimension conceptRef="TT" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_TERYT" codelistVersion="1.4" codelistAgency="US_WAWA" crossSectionalAttachSection="true" />
+        <structure:Dimension conceptRef="RD" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_PKD2007_GRUP_SEK_PRZEM" codelistVersion="1.2" codelistAgency="US_WAWA" crossSectionalAttachSection="true" />
+        <structure:Dimension conceptRef="KW" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_KLASA_WIELKOSCI" codelistVersion="1.6" codelistAgency="US_WAWA" crossSectionalAttachSection="true" />
+        <structure:Dimension conceptRef="FP" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_FORMA_PRAWNA" codelistVersion="1.5" codelistAgency="US_WAWA" crossSectionalAttachSection="true" />
+        <structure:Dimension conceptRef="EK" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_EWIDENCJA_KSIEGOWA" codelistVersion="2.6" codelistAgency="US_WAWA" crossSectionalAttachSection="true" />
+        <structure:Dimension conceptRef="LD" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_LATA_DZIALALNOSCI" codelistVersion="1.5" codelistAgency="US_WAWA" crossSectionalAttachSection="true" />
+        <structure:Dimension conceptRef="ZM" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_ZMIENNA" codelistVersion="2.5" codelistAgency="US_WAWA" crossSectionalAttachSection="true" />
+        <structure:TimeDimension conceptRef="RK" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_ROK" codelistVersion="1.6" codelistAgency="US_WAWA" crossSectionalAttachSection="true" />
+        <structure:PrimaryMeasure conceptRef="MR" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA">
+          <structure:TextFormat textType="Decimal" maxLength="38" decimals="1" />
+        </structure:PrimaryMeasure>
+        <structure:Attribute conceptRef="JM" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_JEDNOSTKA_MIARY" codelistVersion="1.5" codelistAgency="US_WAWA" attachmentLevel="Observation" assignmentStatus="Mandatory" crossSectionalAttachSection="true" />
+        <structure:Attribute conceptRef="WO" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_WYROZNIK_OKRESU" codelistVersion="1.0" codelistAgency="US_WAWA" attachmentLevel="Observation" assignmentStatus="Mandatory" crossSectionalAttachSection="true" isFrequencyAttribute="true" />
+        <structure:Attribute conceptRef="SW" conceptSchemeRef="CS_WRDOP" conceptSchemeVersion="2.2" conceptSchemeAgency="US_WAWA" codelist="CL_SPOSOB_WYZN_WARTOSCI" codelistVersion="1.0" codelistAgency="US_WAWA" attachmentLevel="Observation" assignmentStatus="Mandatory" crossSectionalAttachSection="true" />
+      </structure:Components>
+    </structure:KeyFamily>
+  </KeyFamilies>
+</Structure>
+

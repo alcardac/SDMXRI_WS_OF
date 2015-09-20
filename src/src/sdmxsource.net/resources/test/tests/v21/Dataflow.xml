@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+            <Header>
+               <ID>IT1001</ID>
+               <Test>true</Test>
+               <Prepared>2001-03-11T15:30:47+01:00</Prepared>
+               <Sender id="ISTAT">
+                  <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Italian Statistical Institute</Name>
+                  <Contact>
+                     <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Francesco Rizzo</Name>
+                     <Department xml:lang="en">Statistics</Department>
+                     <Role xml:lang="en">IT Staff</Role>
+                     <Email>rizzo@istat.it</Email>
+                     <Fax>210 00010999</Fax>
+                     <Telephone>210 2222222</Telephone>
+                     <URI>http://www.sdmx.org</URI>
+                  </Contact>
+               </Sender>
+               <Receiver id="ESTAT">
+                  <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Eurostat</Name>
+                  <Contact>
+                     <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bengt-Ake Lindblad</Name>
+                     <Department xml:lang="en">Information Technology</Department>
+                     <Role xml:lang="en">IT Staff</Role>
+                     <Email>bengt-ake.lindblad@ec.europa.eu</Email>
+                     <Fax>210 3810999</Fax>
+                     <Telephone>210 1234567</Telephone>
+                     <URI>http://www.sdmx.org</URI>
+                     <X400>lalala</X400>
+                  </Contact>
+               </Receiver>
+               <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Trans46302</Name>
+               <Source xml:lang="en">source</Source>
+            </Header>
+            <Structures>
+               <Dataflows xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+                  <Dataflow id="HC01_TYPE_A" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ESTAT:HC01_TYPE_A(2.0)" agencyID="ESTAT" version="2.0" isFinal="true">
+                     <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">HC01 TYPE A</Name>
+                     <Structure>
+                        <Ref id="HC01" version="1.0" agencyID="ESTAT" package="datastructure" class="DataStructure" xmlns=""/>
+                     </Structure>
+                  </Dataflow>
+                  <Dataflow id="HC06_TYPE_A" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ESTAT:HC06_TYPE_A(2.0)" agencyID="ESTAT" version="2.0" isFinal="true">
+                     <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">HC06 TYPE A</Name>
+                     <Structure>
+                        <Ref id="HC06" version="1.0" agencyID="ESTAT" package="datastructure" class="DataStructure" xmlns=""/>
+                     </Structure>
+                  </Dataflow>
+                  <Dataflow id="HC06_TYPE_B" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ESTAT:HC06_TYPE_B(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+                     <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">HC06 TYPE B</Name>
+                     <Structure>
+                        <Ref id="HC06" version="1.0" agencyID="ESTAT" package="datastructure" class="DataStructure" xmlns=""/>
+                     </Structure>
+                  </Dataflow>
+               </Dataflows>
+               <Categorisations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+                  <Categorisation id="HC01_TYPE_A@ESTAT@20@ESTAT_DATAFLOWS_SCHEME@10@11" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:HC01_TYPE_A@ESTAT@20@ESTAT_DATAFLOWS_SCHEME@10@11(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+                     <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">HC01_TYPE_A@ESTAT@20@ESTAT_DATAFLOWS_SCHEME@10@11</Name>
+                     <Source>
+                        <Ref id="HC01_TYPE_A" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns=""/>
+                     </Source>
+                     <Target>
+                        <Ref id="11" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.0" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns=""/>
+                     </Target>
+                  </Categorisation>
+                  <Categorisation id="HC06_TYPE_A@ESTAT@20@ESTAT_DATAFLOWS_SCHEME@10@21" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:HC06_TYPE_A@ESTAT@20@ESTAT_DATAFLOWS_SCHEME@10@21(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+                     <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">HC06_TYPE_A@ESTAT@20@ESTAT_DATAFLOWS_SCHEME@10@21</Name>
+                     <Source>
+                        <Ref id="HC06_TYPE_A" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns=""/>
+                     </Source>
+                     <Target>
+                        <Ref id="21" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.0" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns=""/>
+                     </Target>
+                  </Categorisation>
+                  <Categorisation id="HC06_TYPE_B@ESTAT@10@ESTAT_DATAFLOWS_SCHEME@10@21" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:HC06_TYPE_B@ESTAT@10@ESTAT_DATAFLOWS_SCHEME@10@21(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+                     <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">HC06_TYPE_B@ESTAT@10@ESTAT_DATAFLOWS_SCHEME@10@21</Name>
+                     <Source>
+                        <Ref id="HC06_TYPE_B" version="1.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns=""/>
+                     </Source>
+                     <Target>
+                        <Ref id="21" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.0" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns=""/>
+                     </Target>
+                  </Categorisation>
+               </Categorisations>
+            </Structures>
+         </Structure>

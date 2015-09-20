@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Estat.Nsi.DataDisseminationWS.Controller.CompactDataController" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\CompactDataController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.Controller.CrossSectionalDataController" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\CrossSectionalDataController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.Controller.DataControllerBase" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgQAQAAEAADEAAAAAAAAgAAAAAAAAAAAEAEACAAAA=</HashCode>
+      <FileName>Controller\DataControllerBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.Controller.GenericDataController" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\GenericDataController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.Controller.QueryStructureController" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAEAAAADGAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Controller\QueryStructureController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.ErrorHandler" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAABAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>ErrorHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.HeaderSettings" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQGICCAAAD0AAAIAAAAAIABgBAgVRAAIgAAhAAUiAgQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.ImpossibleRequestException" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImpossibleRequestException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.NamespaceSettings" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAIAAADAAAABAAAAAIAAAAAABBKAAAABIAAAAACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.NSIEstatV20Service" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NSIEstatV20Service.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.NSIStdV20Service" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAgAAAAAAACBAAAAAAAAAAAgAAAAAAAAACAAAAAE=</HashCode>
+      <FileName>NSIStdV20Service.asmx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.SettingsConstants" Collapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAgAAAAAAEAUAAAAIACAAAAAAAgJaAAgAAAAAAAAA=</HashCode>
+      <FileName>SettingsConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.SettingsManager" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAEAAEIAAEAQWgAoAIAIEAQABgAAxACBgABAABAAAA=</HashCode>
+      <FileName>SettingsManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.XmlStreamWrapper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAABAAAAAAAAAgEAAAAA=</HashCode>
+      <FileName>XmlStreamWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Estat.Nsi.DataDisseminationWS.Properties.Resources" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACESEgkAABAAAEAACQBESAAIQAAAAAAACAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Estat.Nsi.DataDisseminationWS.Controller.IController" Collapsed="true">
+    <Position X="7.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\IController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

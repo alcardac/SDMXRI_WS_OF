@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F55EF421-DAB3-4432-9E01-9087453CDC97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Estat.Sri.SdmxStructureMutableParser</RootNamespace>
+    <AssemblyName>SdmxStructureMutableParser</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SdmxStructureMutableParser.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\SdmxStructureMutableParser.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\IMutableReader.cs" />
+    <Compile Include="Engine\IMutableWriter.cs" />
+    <Compile Include="Engine\IRegistryInterfaceReader.cs" />
+    <Compile Include="Engine\IRegistryInterfaceWriter.cs" />
+    <Compile Include="Engine\V2\CategorySchemeReaderV2.cs" />
+    <Compile Include="Engine\V2\CategorySchemeWriterV2.cs" />
+    <Compile Include="Engine\V2\CodeListReaderV2.cs" />
+    <Compile Include="Engine\V2\CodeListWriterV2.cs" />
+    <Compile Include="Engine\V2\ConceptSchemeReaderV2.cs" />
+    <Compile Include="Engine\V2\ConceptSchemeWriterV2.cs" />
+    <Compile Include="Engine\V2\DataflowReaderV2.cs" />
+    <Compile Include="Engine\V2\DataflowWriterV2.cs" />
+    <Compile Include="Engine\V2\DataStructureReaderV2.cs" />
+    <Compile Include="Engine\V2\DataStructureWriterV2.cs" />
+    <Compile Include="Engine\V2\HierarchicalCodeListReaderV2.cs" />
+    <Compile Include="Engine\V2\HierarchicalCodeListWriterV2.cs" />
+    <Compile Include="Engine\V2\MetadataStructureReaderV2.cs" />
+    <Compile Include="Engine\V2\QueryStructureRequestReaderV2.cs" />
+    <Compile Include="Engine\V2\QueryStructureRequestWriterV2.cs" />
+    <Compile Include="Engine\V2\QueryStructureResponseReaderV2.cs" />
+    <Compile Include="Engine\V2\QueryStructureResponseWriterV2.cs" />
+    <Compile Include="Engine\V2\RegistryInterfaceReaderBaseV2.cs" />
+    <Compile Include="Engine\V2\RegistryInterfaceReaderV2.cs" />
+    <Compile Include="Engine\V2\RegistryInterfaceWriterBaseV2.cs" />
+    <Compile Include="Engine\V2\RegistryInterfaceWriterV2.cs" />
+    <Compile Include="Engine\V2\StructureReaderBaseV20.cs" />
+    <Compile Include="Engine\V2\StructureReaderV2.cs" />
+    <Compile Include="Engine\V2\StructureWriterBaseV2.cs" />
+    <Compile Include="Engine\V2\StructureWriterV2.cs" />
+    <Compile Include="Factory\SdmxStructureWriterV2Factory.cs" />
+    <Compile Include="Manager\StructureMutableParsingManager.cs" />
+    <Compile Include="Manager\StructureMutableWritingManager.cs" />
+    <Compile Include="Model\DataflowReferenceInfo.cs" />
+    <Compile Include="Model\ICategoryIdInfo.cs" />
+    <Compile Include="Model\IDataflowReferenceInfo.cs" />
+    <Compile Include="Model\IQueryStructureRequestInfo.cs" />
+    <Compile Include="Model\IQueryStructureResponseInfo.cs" />
+    <Compile Include="Model\IReferenceInfo.cs" />
+    <Compile Include="Model\IRegistryInfo.cs" />
+    <Compile Include="Model\IStatusMessageInfo.cs" />
+    <Compile Include="Model\QueryStructureRequestInfo.cs" />
+    <Compile Include="Model\QueryStructureResponseInfo.cs" />
+    <Compile Include="Model\ReferenceInfo.cs" />
+    <Compile Include="Model\RegistryInfo.cs" />
+    <Compile Include="Model\Status.cs" />
+    <Compile Include="Model\StatusMessageInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Builder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V10\Org.Sdmx.Resources.SdmxMl.Schemas.V10.csproj">
+      <Project>{a288bfa3-8192-c141-a356-812a0262f2cf}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V20\Org.Sdmx.Resources.SdmxMl.Schemas.V20.csproj">
+      <Project>{aa97e1e9-e028-fc4d-8736-13372b3712dd}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V20</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V21\Org.Sdmx.Resources.SdmxMl.Schemas.V21.csproj">
+      <Project>{af1e630b-a511-437e-ba63-1bc874403749}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V21</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxAPI\SdmxAPI.csproj">
+      <Project>{C13FCF38-348B-4848-BCFF-A7BD4D75911C}</Project>
+      <Name>SdmxAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxIo\SdmxParseBase.csproj">
+      <Project>{CAC33584-A10B-4071-8E9C-1FB6BF488464}</Project>
+      <Name>SdmxParseBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxMlConstants\SdmxMlConstants.csproj">
+      <Project>{F678D2FF-02C1-4D42-902E-A7B995A6731B}</Project>
+      <Name>SdmxMlConstants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxObjects\SdmxObjects.csproj">
+      <Project>{ECC53B22-BD93-49FF-8575-1DDFA2FE9A04}</Project>
+      <Name>SdmxObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxSourceUtil\SdmxSourceUtil.csproj">
+      <Project>{206D467D-2C89-4FA4-826E-CEFDE000A334}</Project>
+      <Name>SdmxSourceUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxStructureParser\SdmxStructureParser.csproj">
+      <Project>{E5923FA6-6095-4560-8B2C-8CA64E744DB4}</Project>
+      <Name>SdmxStructureParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxStructureRetrieval\SdmxStructureRetrieval.csproj">
+      <Project>{61f796e4-e355-4b6b-ad00-89791bab3900}</Project>
+      <Name>SdmxStructureRetrieval</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XObjects\XObjects.csproj">
+      <Project>{29ff8e34-fd09-47df-8f6c-df847e4b3aab}</Project>
+      <Name>XObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

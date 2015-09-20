@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<QueryMessage xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+    <Header>
+        <ID>UNKNOWN</ID>
+        <Test>false</Test>
+        <Prepared>2013-12-03T16:23:59.5584+01:00</Prepared>
+        <Sender id="UNKNOWN" />
+        <Receiver id="unknown" />
+    </Header>
+    <Query>
+        <DataWhere xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query">
+            <And>
+                <Dataflow>CENSUSHUB_Q_XS1</Dataflow>
+            </And>
+        </DataWhere>
+    </Query>
+</QueryMessage>

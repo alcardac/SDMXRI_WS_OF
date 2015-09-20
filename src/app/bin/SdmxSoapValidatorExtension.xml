@@ -1,0 +1,489 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SdmxSoapValidatorExtension</name>
+    </assembly>
+    <members>
+        <member name="T:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator">
+            <summary>
+            A SoapExtension class that validates the soap message
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.Soap12CodePath">
+            <summary>
+            XPath of SOAP 1.2 Fault Code text
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.SoapPrefix">
+            <summary>
+            A prefix used with <see cref="T:System.Xml.XmlNamespaceManager"/> with soap namespace.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator._initialiserVo">
+            <summary>
+            A value object containing the information that is passed from a GetInitializer method to Initializer
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator._newStream">
+            <summary>
+            The new stream. Used only for Exception handling
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator._oldStream">
+            <summary>
+            the old stream. Used only for Exception handling
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator._postNormalAfterSerialize">
+            <summary>
+            A value indicationg whether we are post the normal <see cref="F:System.Web.Services.Protocols.SoapMessageStage.AfterSerialize"/> stage.
+            This will occur only if an exception is thrown.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator._postBeforeDeserialize">
+            <summary>
+            A value indicationg whether we are post <see cref="F:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize"/> stage
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.ChainStream(System.IO.Stream)">
+            <summary>
+            When overridden in a derived class, allows a SOAP extension access to the memory buffer containing the SOAP request or response.
+            </summary>
+            <returns>
+            A <see cref="T:System.IO.Stream"/> representing a new memory buffer that this SOAP extension can modify.
+            </returns>
+            <param name="stream">
+            A memory buffer containing the SOAP request or response. 
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.GetInitializer(System.Type)">
+            <summary>
+            Allows the SdmxSoapValidator soap extension to initialise the <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject"/> and <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache"/>
+            This GetInitializer overload is called when Soap Extension is specified in the Web.config file.
+            <seealso cref="M:System.Web.Services.Protocols.SoapExtension.GetInitializer(System.Type)"/>
+            </summary>
+            <param name="serviceType">
+            The type of the class implementing the XML Web service to which the SOAP extension is applied. 
+            </param>
+            <returns>
+            The <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject"/> object
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.GetInitializer(System.Web.Services.Protocols.LogicalMethodInfo,System.Web.Services.Protocols.SoapExtensionAttribute)">
+            <summary>
+            Allows the SdmxSoapValidator soap extension to initialise the <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject"/> and <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache"/>
+            This GetInitializer overload is called from applying <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidatorAttribute"/> to Web Methods
+            <seealso cref="M:System.Web.Services.Protocols.SoapExtension.GetInitializer(System.Web.Services.Protocols.LogicalMethodInfo,System.Web.Services.Protocols.SoapExtensionAttribute)"/>
+            </summary>
+            <param name="methodInfo">
+            A <see cref="T:System.Web.Services.Protocols.LogicalMethodInfo"/> representing the specific function prototype for the XML Web service method to which the SOAP extension is applied. 
+            </param>
+            <param name="attribute">
+            The <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidatorAttribute"/> applied to the XML Web service method. 
+            </param>
+            <returns>
+            The <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject"/> object
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.Initialize(System.Object)">
+            <summary>
+            Uses  <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject"/> object from GetInitializer to set the private field <see cref="F:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator._initialiserVo"/>
+            <seealso cref="M:System.Web.Services.Protocols.SoapExtension.Initialize(System.Object)"/>
+            </summary>
+            <param name="initializer">
+            The <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject"/> object
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.ProcessMessage(System.Web.Services.Protocols.SoapMessage)">
+            <summary>
+            This method processes the soap message received and send at various stages.
+            Currently only the <see cref="F:System.Web.Services.Protocols.SoapMessageStage.BeforeDeserialize"/> is handled.
+            <seealso cref="M:System.Web.Services.Protocols.SoapExtension.ProcessMessage(System.Web.Services.Protocols.SoapMessage)"/>
+            </summary>
+            <param name="message">
+            The <see cref="T:System.Web.Services.Protocols.SoapMessage"/> to process
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.Copy(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            Copy the contents of <paramref name="source"/> to <paramref name="dest"/>.
+            The <paramref name="source"/> will rewind.
+            If <paramref name="source"/> and <paramref name="dest"/> are the same instance then nothing happens.
+            </summary>
+            <param name="source">
+            The source stream
+            </param>
+            <param name="dest">
+            The destination stream
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.CheckSoapXml(System.Xml.XmlReader,System.Web.Services.Protocols.SoapMessage)">
+            <summary>
+            Checks if the soap message is valid with schema validation and checking if the soap operation matches the soap message operation
+            </summary>
+            <param name="xr">
+            The <see cref="T:System.Xml.XmlReader"/> to the soap message
+            </param>
+            <param name="message">
+            The soap message
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.CreateXmlReaderSettings(System.Xml.Schema.XmlSchemaSet)">
+            <summary>
+            Creates a <see cref="T:System.Xml.XmlReaderSettings"/> object with various defaults and optionally a SchemaSet
+            </summary>
+            <param name="schemaSet">
+            Optional <see cref="T:System.Xml.Schema.XmlSchemaSet"/>, when set it will be included in the created <see cref="T:System.Xml.XmlReaderSettings"/> object 
+            </param>
+            <returns>
+            A <see cref="T:System.Xml.XmlReaderSettings"/> object
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.GetInitiliaserCommon(System.Type,System.String)">
+            <summary>
+            Initialises the <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject"/> and <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache"/>
+            </summary>
+            <exception cref="T:System.Web.Services.Protocols.SoapException">
+            A server error occured
+            </exception>
+            <param name="type">
+            The type of the class implementing the XML Web service to which the SOAP extension is applied.
+            </param>
+            <param name="name">
+            The web method name or the type name
+            </param>
+            <returns>
+            The <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject"/> object
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.HandleBeforeDeserialize(System.Web.Services.Protocols.SoapMessage)">
+            <summary>
+            Handle Before Deserialize <see cref="T:System.Web.Services.Protocols.SoapMessageStage"/> of the SoapMessage
+            meaning before the server deserialises the soap message sent by the client.
+            It creates an <see cref="T:System.Xml.XmlReader"/> from the SoapMessage stream and
+            using the xml reader settings with the appopriate XmlSchemaSet depending is soap body validation is selected.
+            </summary>
+            <param name="message">
+            The soap message as it was sent by the client
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.HandleException(System.Web.Services.Protocols.SoapMessage)">
+            <summary>
+            Handle exceptions where the base exception is a <see cref="T:System.Web.Services.Protocols.SoapException"/>.
+            </summary>
+            <param name="message">
+            The Soap message
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.ThrowClientSoapException(System.String)">
+            <summary>
+            Creates a client SoapException
+            </summary>
+            <param name="message">
+            The message that should appear at Details/ErrorMessage
+            </param>
+            <returns>
+            A SoapException
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.ThrowServerSoapException(System.Exception)">
+            <summary>
+            Creates a server SoapException
+            </summary>
+            <param name="ex">
+            The exception that causes this error
+            </param>
+            <returns>
+            A SoapException
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.XrsValidationEventHandler(System.Object,System.Xml.Schema.ValidationEventArgs)">
+            <summary>
+            Handle client validation errors, i.e. in soap message
+            </summary>
+            <param name="sender">
+            The object that initiated this event
+            </param>
+            <param name="e">
+            The event args
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants">
+            <summary>
+            SOAP XML Tags
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants.Body">
+            <summary>
+            SOAP Body tag
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants.Soap12ActorLocalName">
+            <summary>
+            The local name of the SOAP 1.2 Fault Actor/Node element
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants.Soap12DetailPath">
+            <summary>
+            XPath of SOAP 1.2 Detail element
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants.Soap12ReasonPath">
+            <summary>
+            XPath of SOAP 1.2 Reason/Fault String element
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants.Soap12ReasonTextPath">
+            <summary>
+            XPath of SOAP 1.2 Reason text element
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants.SoapActorLocalName">
+            <summary>
+            The local name of the SOAP Fault Actor/Node element
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants.SoapCodePath">
+            <summary>
+            XPath of SOAP Fault Code text
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants.SoapDetailPath">
+            <summary>
+            XPath of SOAP Detail element
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants.SoapReasonPath">
+            <summary>
+            XPath of SOAP Reason/Fault String element
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache">
+            <summary>
+            A helper class that keeps a cached copy of the various schema sets
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache.Soap11Location">
+            <summary>
+            Constant string that contains the resource location of soap11 xsd
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache.Soap12Location">
+            <summary>
+            Constant string that contains the resource location of soap12 xsd
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache._instance">
+            <summary>
+            The singleton instance
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache._soapSchema">
+            <summary>
+            This XmlSchemaSet field is used to hold the soap 1.1 and soap 1.2 schemas
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache"/> class from being created. 
+            Initialize a new instance of the <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache"/> class
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache.GetSoapXsdLocation(System.Web.Services.Protocols.SoapProtocolVersion)">
+            <summary>
+            This getter returns the resource location of the soap schemas
+            </summary>
+            <param name="version">
+            The Soap version
+            </param>
+            <returns>
+            The resource location
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache.LoadXsdFromResource(System.String)">
+            <summary>
+            Loads a xsd file from an embeded resource to a <see cref="T:System.Xml.Schema.XmlSchema"/> object
+            </summary>
+            <param name="name">
+            The resource location of the xsd 
+            </param>
+            <returns>
+            The xsd file as a <see cref="T:System.Xml.Schema.XmlSchema"/> object
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache.ThrowServerSoapException(System.Exception)">
+            <summary>
+            Creates a server SoapException
+            </summary>
+            <param name="ex">
+            The exception that causes this error
+            </param>
+            <returns>
+            A SoapException
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache.SchemaSetValidationEventHandler(System.Object,System.Xml.Schema.ValidationEventArgs)">
+            <summary>
+            The handler for schema validation errors. It throws a server Soap Exception
+            </summary>
+            <param name="sender">
+            The XmlSchemaSet object that initiated this event
+            </param>
+            <param name="e">
+            The event argument
+            </param>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache.SoapBodySchema">
+            <summary>
+            Gets or sets the soap 1.1, soap 1.2, the web server wsdl and sdmx schemas
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache.SoapSchema">
+            <summary>
+            Gets the soap 1.1 and soap 1.2 schemas
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.SdmxSoapValidatorExtension.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.Properties.Resources.error_client_code">
+            <summary>
+              Looks up a localized string similar to 2000.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.Properties.Resources.error_client_msg">
+            <summary>
+              Looks up a localized string similar to Error due to a non correct client message.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.Properties.Resources.error_expected_ns">
+            <summary>
+              Looks up a localized string similar to Expected name space &apos;{0}&apos; Found: &apos;{1}&apos;.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.Properties.Resources.error_expected_op">
+            <summary>
+              Looks up a localized string similar to Expected operation: &apos;{0}:{1}&apos; Found: &apos;{2}&apos;.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.Properties.Resources.error_server_code">
+            <summary>
+              Looks up a localized string similar to 1000.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.Properties.Resources.error_server_msg">
+            <summary>
+              Looks up a localized string similar to Error while pre-processing client request.
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.SdmxSoapValidatorExtension.SoapFaultFactory">
+            <summary>
+            This class handle the creation of a SoapException
+            in a standard format accepted by NSI Clients
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapFaultFactory.Error">
+            <summary>
+            Value for the Error element of the SoapException inner xml. 
+            The actual value is Error
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapFaultFactory.ErrorMessage">
+            <summary>
+            Value for the Error message element of the SoapException inner xml. 
+            The actual value is ErrorMessage
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapFaultFactory.ErrorNumber">
+            <summary>
+            Value for the Error number element of the SoapException inner xml.
+            The actual value is ErrorNumber
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.SdmxSoapValidatorExtension.SoapFaultFactory.ErrorSource">
+            <summary>
+            Value for the Error source element of the SoapException inner xml. 
+            The actual value is ErrorSource
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.SdmxSoapValidatorExtension.SoapFaultFactory.CreateSoapException(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            This method initializes and populates an SoapException according to the input arguments
+            </summary>
+            <param name="source">
+            The Uri that identify the piece of code that generated the exception
+            </param>
+            <param name="webServiceNamespace">
+            The nsi namespace
+            </param>
+            <param name="errorMessage">
+            The fault detail error message
+            </param>
+            <param name="errorNumber">
+            The fault detail Error Number
+            </param>
+            <param name="errorSource">
+            The fault detail error source
+            </param>
+            <param name="isClient">
+            Identify if the error is caused on server or client side
+            </param>
+            <param name="faultValue">
+            The fault message
+            </param>
+            <returns>
+            The newly built SoapException
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject">
+            <summary>
+            A VO class that holds the data needed to be passed from <see cref="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.GetInitializer(System.Type)"/> to <see cref="M:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator.Initialize(System.Object)"/>
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject.MethodName">
+            <summary>
+            Gets or sets name of the called Web Method
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject.WsdlNamespace">
+            <summary>
+            Gets or sets name space used by the current WSDL
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidatorAttribute">
+            <summary>
+            Attribute that enables validation of Soap Messages and optionally the soap body contents using the current service WSDL and SDMX schema
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidatorAttribute.ExtensionType">
+            <summary>
+            Getter for the SOAP Extension type. Which is in all cases <see cref="T:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator"/>
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidatorAttribute.Priority">
+            <summary>
+            Gets or sets the priority of the SOAP Extension
+            Defaults to : 0
+            </summary>
+        </member>
+    </members>
+</doc>

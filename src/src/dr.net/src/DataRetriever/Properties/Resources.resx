@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ErrorUnableToGenerateSQL" xml:space="preserve">
+    <value>Unable to generate SQL</value>
+  </data>
+  <data name="InfoBeginGenerateSql" xml:space="preserve">
+    <value>Begin GenerateSql ...</value>
+  </data>
+  <data name="InfoGeneratedSQLFormat1" xml:space="preserve">
+    <value>Generated SQL: {0}</value>
+  </data>
+  <data name="InfoEndGenerateSql" xml:space="preserve">
+    <value>End GenerateSql ...</value>
+  </data>
+  <data name="InfoBeginGenerateSelect" xml:space="preserve">
+    <value>Begin GenerateSelect ...</value>
+  </data>
+  <data name="InfoGeneratedSelectFormat1" xml:space="preserve">
+    <value>Generated SELECT: {0}</value>
+  </data>
+  <data name="InfoBeginGenerateWhere" xml:space="preserve">
+    <value>Begin GenerateWhere ...</value>
+  </data>
+  <data name="InfoGeneratedWhereFormat1" xml:space="preserve">
+    <value>Generated Where: {0}</value>
+  </data>
+  <data name="InfoEndGenerateWhere" xml:space="preserve">
+    <value>End GenerateWhere ...</value>
+  </data>
+  <data name="DataRetriever_GenerateComponentWhere_" xml:space="preserve">
+    <value> ('{0} is not mapped' = '{1}') </value>
+  </data>
+  <data name="InfoGenerateOrderBy" xml:space="preserve">
+    <value>Begin GenerateOrderBy ...</value>
+  </data>
+  <data name="InfoGeneratedOrderByFormat1" xml:space="preserve">
+    <value>Generated OrderBy: {0}</value>
+  </data>
+  <data name="InfoEndGenerateOrderBy" xml:space="preserve">
+    <value>End GenerateOrderBy ...</value>
+  </data>
+  <data name="MissingDataflowInQuery" xml:space="preserve">
+    <value>No Dataflow in query or dataflow not in first DataWhere</value>
+  </data>
+  <data name="NoMappingForDataflowFormat1" xml:space="preserve">
+    <value>Cannot retrieve data for dataflow: {0}. Either there was no mapping for it or you are not authorized to access this dataflow.</value>
+    <comment>
+      1 parameter dataflow id
+    </comment>
+  </data>
+  <data name="DataRetriever_ExecuteSqlQuery_Error_executing_generated_SQL_and_populating_SDMX_model" xml:space="preserve">
+    <value>Error executing generated SQL and populating SDMX model</value>
+  </data>
+  <data name="DataRetriever_ExecuteSqlQuery_Error_during_writing_responce" xml:space="preserve">
+    <value>Error during writing responce</value>
+  </data>
+  <data name="DataRetriever_GenerateFrom_Generated_FROM___0_" xml:space="preserve">
+    <value>Generated FROM: {0}</value>
+  </data>
+  <data name="No_header_information_in_the_Mapping_Store" xml:space="preserve">
+    <value>No header information in the Mapping Store; using default header</value>
+  </data>
+  <data name="ErrorNoHeader" xml:space="preserve">
+    <value>No Header information in the Mapping Store and no default header defined</value>
+  </data>
+  <data name="DataRetriever_GetMessageHeader_Error_populating_header" xml:space="preserve">
+    <value>Error populating header</value>
+  </data>
+  <data name="InfoDataRetrieverBBInvoked" xml:space="preserve">
+    <value>Data Retriever building block invoked.</value>
+  </data>
+  <data name="InfoStartGeneratingSQLDDB" xml:space="preserve">
+    <value>Start Generating SQL for dissemination database</value>
+  </data>
+  <data name="InfoEndGeneratingSQLDDB" xml:space="preserve">
+    <value>End Generating SQL for dissemination database</value>
+  </data>
+  <data name="InfoStartExecutingSql" xml:space="preserve">
+    <value>Start Executing SQL in dissemination database and write to SDMXIO writer</value>
+  </data>
+  <data name="InfoEndExecutingSql" xml:space="preserve">
+    <value>End Executing SQL in dissemination database and write to SDMXIO writer</value>
+  </data>
+  <data name="DataRetriever_RetrieveData_Start_Retrieving_header_information" xml:space="preserve">
+    <value>Start Retrieving header information</value>
+  </data>
+  <data name="DataRetriever_RetrieveData_End_Retrieving_header_information" xml:space="preserve">
+    <value>End Retrieving header information</value>
+  </data>
+  <data name="DataRetriever_RetrieveData_Query_executed_successfully_and_DataSet_populated" xml:space="preserve">
+    <value>Query executed successfully and SDMX DataSet populated</value>
+  </data>
+  <data name="DataRetriever_RetrieveData_Start_Initializing_Data_Retriever" xml:space="preserve">
+    <value>Start Initializing Data Retriever</value>
+  </data>
+  <data name="DataRetriever_RetrieveData_End_Data_Retriever_initialization" xml:space="preserve">
+    <value>End Data Retriever initialization</value>
+  </data>
+  <data name="DataRetriever_RetrieveDataTable_Start_Executing_SQL_in_dissemination_database_and_populate_DataTable" xml:space="preserve">
+    <value>Start Executing SQL in dissemination database and populate DataTable</value>
+  </data>
+  <data name="DataRetriever_RetrieveDataTable_End_Executing_SQL_in_dissemination_database_and_populate_DataTable" xml:space="preserve">
+    <value>End Executing SQL in dissemination database and populate DataTable</value>
+  </data>
+  <data name="DataRetriever_RetrieveDataTable_Query_executed_successfully_and_DataTable_populated" xml:space="preserve">
+    <value>Query executed successfully and DataTable populated</value>
+  </data>
+  <data name="DataRetriever_GenerateFrom_Begin_GenerateFrom____" xml:space="preserve">
+    <value>Begin GenerateFrom ...</value>
+  </data>
+  <data name="DataRetriever_GenerateFrom_End_GenerateFrom____" xml:space="preserve">
+    <value>End GenerateFrom ...</value>
+  </data>
+  <data name="InfoEndGenerateSelect" xml:space="preserve">
+    <value>End GenerateSelect ...</value>
+  </data>
+  <data name="DataRetriever_GenerateSqlQuery_Could_not_generate_sql_query" xml:space="preserve">
+    <value>Could not generate sql query</value>
+  </data>
+  <data name="DataRetriever_Initialize_Could_not_retrieve_Mappings_from__Mapping_Store___Cause__" xml:space="preserve">
+    <value>Could not retrieve Mappings from "Mapping Store"! Cause: </value>
+  </data>
+  <data name="DataRetriever_Initialize_Error_while_retrieving_Mappings_from__Mapping_Store___Cause__" xml:space="preserve">
+    <value>Error while retrieving Mappings from "Mapping Store"! Cause: </value>
+  </data>
+  <data name="NoDataWhereInQuery" xml:space="preserve">
+    <value>No DataWhere in query</value>
+  </data>
+  <data name="ExceptionNotInit" xml:space="preserve">
+    <value>DataRetriever not initialized. Please call Initialize method</value>
+  </data>
+  <data name="InfoOutput" xml:space="preserve">
+    <value>Output: </value>
+  </data>
+  <data name="InfoEndDataRetrieverBBInvoked" xml:space="preserve">
+    <value>DataRetriever Building Block invoke completed</value>
+  </data>
+  <data name="ErrorTypeNotDataRetrievalInfoSeries" xml:space="preserve">
+    <value>Type not DataRetrievalInfoSeries</value>
+  </data>
+  <data name="ErrorTypeNotMappedXsValues" xml:space="preserve">
+    <value>Type not MappedXsValues</value>
+  </data>
+  <data name="ErrorComponentValuesNotMappedValuesFlaType" xml:space="preserve">
+    <value>componentValues not of MappedValuesFlat type</value>
+  </data>
+  <data name="ErrorInfoNotDataRetrievalInfoTabularType" xml:space="preserve">
+    <value>info not of DataRetrievalInfoTabular type</value>
+  </data>
+  <data name="NoRecordsFound" xml:space="preserve">
+    <value>NoRecordsFound</value>
+  </data>
+  <data name="MissingFrequency" xml:space="preserve">
+    <value>Cannot transcode time if there is no Frequency dimension in the DSD.</value>
+  </data>
+    <data name="ErrorIncompleteMappingSet" xml:space="preserve">
+    <value>Incomplete mapping set. Please check if all dimensions, measure(s) and mandatory attributes are mapped</value>
+  </data>
+</root>

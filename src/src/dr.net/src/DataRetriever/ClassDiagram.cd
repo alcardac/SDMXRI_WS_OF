@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Estat.Nsi.DataRetriever.Builders.CrossSectionalSqlBuilder" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAAAAACAIAAAAAAAAAAQAAQQAAAAAAAAA=</HashCode>
+      <FileName>Builders\CrossSectionalSqlBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Builders.DDbConnectionBuilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Builders\DDbConnectionBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Builders.HeaderBuilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAgAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Builders\HeaderBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Builders.KeyFamilyBuilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builders\KeyFamilyBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Builders.SeriesSqlBuilder" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAEAAAAAAgABIAIQAAAAAAAAAAAAQAIAAAAQAAA=</HashCode>
+      <FileName>Builders\SeriesSqlBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Builders.SqlBuilderBase" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQEAAAIAAAAAAAAACAABACAAAAAAABAAAAAABAA=</HashCode>
+      <FileName>Builders\SqlBuilderBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.DataRetrievalInfo" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AsQiQEQsAICAQUAgBAQwAZEBUEiItAwMQESIIQARgIA=</HashCode>
+      <FileName>DataRetrievalInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.DataRetrieverCore" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAIAAVAAABAQCABACAAgFAQAAAAAAAAAABA=</HashCode>
+      <FileName>DataRetrieverCore.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.DataRetrieverException" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataRetrieverException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.DataRetrieverHelper" Collapsed="true">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataRetrieverHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.ErrorTypes" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAACBUAAAASAAAAQACAABBAQAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.GroupInformation" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAAIAAABAAAAAAAAAAAAEAAAAAAAAAQAAEAAAAAAA=</HashCode>
+      <FileName>GroupInformation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.MappedValues" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIpAAAkIIAAAAAAAJACIAiACAAAYCAAgAEBASADBIEA=</HashCode>
+      <FileName>MappedValues.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.MappedXsValues" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYgAIgIYAAKACISIAAIAQACAAAFAAAgAgQAABNCCAA=</HashCode>
+      <FileName>MappedXsValues.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.ReadOnlyKey" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAgAAAAAAA=</HashCode>
+      <FileName>ReadOnlyKey.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.XsMeasureCache" Collapsed="true">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAACAAAAAAgQEAAAAAAQCAAAAgACCAA=</HashCode>
+      <FileName>XsMeasureCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Engines.CrossSectionalDataQueryEngineBase" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAIAEAAAAAAAIAAAAAAAAIAAAAAAAAEAAEA=</HashCode>
+      <FileName>Engines\CrossSectionalDataQueryEngineBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Engines.CrossSectionalMeasuresDataQueryEngine" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Engines\CrossSectionalMeasuresDataQueryEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Engines.CrossSectionalMeasuresMappedDataQueryEngine" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAIAEAAAAAAAAAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Engines\CrossSectionalMeasuresMappedDataQueryEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Engines.CrossSectionalPrimaryDataQueryEngine" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Engines\CrossSectionalPrimaryDataQueryEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Engines.DataQueryEngineBase" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAABUAAAAEAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engines\DataQueryEngineBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Engines.SeriesDataQueryEngine" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAIAEAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Engines\SeriesDataQueryEngine.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Engines.SeriesDataQueryEngineBase" Collapsed="true">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAAQAAAAAAAAAAAAABAAAQAIQABAAAAAAAAEA=</HashCode>
+      <FileName>Engines\SeriesDataQueryEngineBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Engines.SeriesDataQueryEngineXsMeasureBuffered" Collapsed="true">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAIBEAAAAAAAAAAQAAAAAAAAQAAAAAAgAAA=</HashCode>
+      <FileName>Engines\SeriesDataQueryEngineXsMeasureBuffered.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.DataRetriever.Properties.Resources" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAUAAEhQoGABAAdgAAABEBEQASABQAQABIYgCFjCEIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Estat.Nsi.DataRetriever.Builders.IBuilder&lt;T, TE&gt;" Collapsed="true">
+    <Position X="12.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builders\IBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Estat.Nsi.DataRetriever.Builders.ISeriesSqlBuilder" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builders\ISeriesSqlBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Estat.Nsi.DataRetriever.Builders.ISqlBuilder" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builders\ISqlBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Estat.Nsi.DataRetriever.IDataRetriever" Collapsed="true">
+    <Position X="15.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAQAAAAAAAAAAAA=</HashCode>
+      <FileName>IDataRetriever.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Estat.Nsi.DataRetriever.IMappedValues" Collapsed="true">
+    <Position X="17.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>IMappedValues.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Estat.Nsi.DataRetriever.Engines.IDataQueryEngine" Collapsed="true">
+    <Position X="14" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engines\IDataQueryEngine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

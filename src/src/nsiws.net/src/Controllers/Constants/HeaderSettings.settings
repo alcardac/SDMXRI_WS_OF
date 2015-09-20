@@ -1,0 +1,111 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Estat.Sri.Ws.Controllers.Constants" GeneratedClassName="HeaderSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="test" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+    <Setting Name="truncated" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="name" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Trans46302</Value>
+    </Setting>
+    <Setting Name="sendercontactdepartment" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Statistics</Value>
+    </Setting>
+    <Setting Name="sendercontacttelephone" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">210 2222222</Value>
+    </Setting>
+    <Setting Name="sendercontactfax" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">210 00010999</Value>
+    </Setting>
+    <Setting Name="sendercontactx400" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="sendercontacturi" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://www.sdmx.org</Value>
+    </Setting>
+    <Setting Name="receivercontacttelephone" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">210 1234567</Value>
+    </Setting>
+    <Setting Name="receivercontactfax" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">210 3810999</Value>
+    </Setting>
+    <Setting Name="receivercontactx400" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">lalala</Value>
+    </Setting>
+    <Setting Name="receivercontacturi" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://www.sdmx.org</Value>
+    </Setting>
+    <Setting Name="datasetagency" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ESTAT</Value>
+    </Setting>
+    <Setting Name="datasetaction" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Append</Value>
+    </Setting>
+    <Setting Name="reportingbegin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2000-12-01T00:00:00</Value>
+    </Setting>
+    <Setting Name="reportingend" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2006-01-01T00:00:00</Value>
+    </Setting>
+    <Setting Name="lang" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">en</Value>
+    </Setting>
+    <Setting Name="id" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">IT1001</Value>
+    </Setting>
+    <Setting Name="prepared" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2001-03-11T09:30:47-05:00</Value>
+    </Setting>
+    <Setting Name="senderid" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ISTAT</Value>
+    </Setting>
+    <Setting Name="sendername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Italian Statistical Institute</Value>
+    </Setting>
+    <Setting Name="sendercontactname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Francesco Rizzo</Value>
+    </Setting>
+    <Setting Name="sendercontactrole" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">IT Staff</Value>
+    </Setting>
+    <Setting Name="sendercontactemail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">rizzo@istat.it</Value>
+    </Setting>
+    <Setting Name="receiverid" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ESTAT</Value>
+    </Setting>
+    <Setting Name="receivername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Eurostat</Value>
+    </Setting>
+    <Setting Name="receivercontactname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Bengt-Ake Lindblad</Value>
+    </Setting>
+    <Setting Name="receivercontactdepartment" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Information Technology</Value>
+    </Setting>
+    <Setting Name="receivercontactrole" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">IT Staff</Value>
+    </Setting>
+    <Setting Name="receivercontactemail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">bengt-ake.lindblad@ec.europa.eu</Value>
+    </Setting>
+    <Setting Name="datasetid" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ISTAT_JD_237</Value>
+    </Setting>
+    <Setting Name="extracted" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">2001-03-11T09:30:47-05:00</Value>
+    </Setting>
+    <Setting Name="source" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">source</Value>
+    </Setting>
+    <Setting Name="keyfamilyref" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">kfRef</Value>
+    </Setting>
+    <Setting Name="keyfamilyagency" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">kfAg</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

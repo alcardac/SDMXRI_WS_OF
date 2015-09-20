@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF1E630B-A511-437E-BA63-1BC874403749}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Org.Sdmx.Resources.SdmxMl.Schemas.V21</RootNamespace>
+    <AssemblyName>Org.Sdmx.Resources.SdmxMl.Schemas.V21</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Org.Sdmx.Resources.SdmxMl.Schemas.V21.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Common\ActionTypeConstants.cs" />
+    <Compile Include="Common\ContentConstraintTypeCodeTypeConstants.cs" />
+    <Compile Include="Common\DataTypeConstants.cs" />
+    <Compile Include="Common\MetadataTarget.cs" />
+    <Compile Include="Common\PackageTypeCodelistTypeConstants.cs" />
+    <Compile Include="Common\ObjectTypeCodelistTypeConstants.cs" />
+    <Compile Include="Common\ReferenceType.cs" />
+    <Compile Include="Common\RegionType.cs" />
+    <Compile Include="Common\ReportType.cs" />
+    <Compile Include="MessageFactory.cs" />
+    <Compile Include="Message\CategorisationQueryType.cs" />
+    <Compile Include="Message\CategorySchemeQueryType.cs" />
+    <Compile Include="Message\CodelistQueryType.cs" />
+    <Compile Include="Message\ConceptSchemeQueryType.cs" />
+    <Compile Include="Message\ConstraintQueryType.cs" />
+    <Compile Include="Structure\ConstraintType.cs" />
+    <Compile Include="Message\DataflowQueryType.cs" />
+    <Compile Include="Message\DataQueryType.cs" />
+    <Compile Include="Message\DataSchemaQueryType.cs" />
+    <Compile Include="Message\DataStructureQueryType.cs" />
+    <Compile Include="Message\Error.cs" />
+    <Compile Include="Message\GenericMetadataType.cs" />
+    <Compile Include="Message\HierarchicalCodelistQueryType.cs" />
+    <Compile Include="Message\GenericDataType.cs" />
+    <Compile Include="Message\MetadataflowQueryType.cs" />
+    <Compile Include="Message\MetadataQueryType.cs" />
+    <Compile Include="Message\MetadataSchemaQueryType.cs" />
+    <Compile Include="Message\MetadataStructureQueryType.cs" />
+    <Compile Include="Message\OrganisationSchemeQueryType.cs" />
+    <Compile Include="Message\ProcessQueryType.cs" />
+    <Compile Include="Message\ProvisionAgreementQueryType.cs" />
+    <Compile Include="Message\RegistryInterface.cs" />
+    <Compile Include="Message\RegistryInterfaceType.cs" />
+    <Compile Include="Message\ReportingTaxonomyQueryType.cs" />
+    <Compile Include="Message\Structure.cs" />
+    <Compile Include="Message\StructureSetQueryType.cs" />
+    <Compile Include="Message\StructureSpecificMetadataType.cs" />
+    <Compile Include="Message\StructuresQueryType.cs" />
+    <Compile Include="Message\StructureType.cs" />
+    <Compile Include="Registry\StatusTypeConstants.cs" />
+    <Compile Include="SDMXMessage.g.cs" />
+    <Compile Include="Structure\ComponentType.cs" />
+    <Compile Include="Structure\ConceptRepresentation.cs" />
+    <Compile Include="Structure\ConstraintRepresentationType.cs" />
+    <Compile Include="Structure\DataSetRepresentationType.cs" />
+    <Compile Include="Structure\DataStructureType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structure\IdentifiableObjectRepresentationType.cs" />
+    <Compile Include="Structure\Item.cs" />
+    <Compile Include="Structure\ItemAssociation.cs" />
+    <Compile Include="Structure\ItemAssociationType.cs" />
+    <Compile Include="Structure\ItemSchemeMapType.cs" />
+    <Compile Include="Structure\ItemType.cs" />
+    <Compile Include="Structure\KeyDescriptorValuesRepresentationType.cs" />
+    <Compile Include="Structure\MetadataStructureType.cs" />
+    <Compile Include="Structure\ReportingYearStartDayRepresentationType.cs" />
+    <Compile Include="Structure\ReportPeriodRepresentationType.cs" />
+    <Compile Include="Structure\RepresentationType.cs" />
+    <Compile Include="Structure\StructureMapType.cs" />
+    <Compile Include="Structure\StructureUsageType.cs" />
+    <Compile Include="Structure\TimeDimensionRepresentationType.cs" />
+    <Compile Include="Structure\ToValueTypeTypeConstants.cs" />
+    <Compile Include="Structure\UsageStatusTypeConstants.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XObjects\XObjects.csproj">
+      <Project>{29FF8E34-FD09-47DF-8F6C-DF847E4B3AAB}</Project>
+      <Name>XObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

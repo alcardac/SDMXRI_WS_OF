@@ -1,0 +1,31 @@
+<publishData>
+  <publishTarget publishUrl="http://localhost/NSIWS2">
+    <file relUrl="bin/SdmxApi.pdb" publishTime="10/01/2013 18:24:06" />
+    <file relUrl="bin/Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll" publishTime="10/01/2013 18:24:28" />
+    <file relUrl="bin/log4net.xml" publishTime="10/01/2013 18:38:20" />
+    <file relUrl="bin/SdmxApi.dll" publishTime="10/01/2013 18:24:06" />
+    <file relUrl="Global.asax" publishTime="09/27/2013 10:17:57" />
+    <file relUrl="bin/log4net.dll" publishTime="10/01/2013 18:38:20" />
+    <file relUrl="bin/SdmxObjects.dll" publishTime="10/01/2013 18:24:34" />
+    <file relUrl="bin/SdmxSourceUtil.pdb" publishTime="10/01/2013 18:24:17" />
+    <file relUrl="NSIWebServices.DataResource.svc" publishTime="10/10/2013 14:42:42" />
+    <file relUrl="bin/NSIWebServices.pdb" publishTime="10/10/2013 14:42:41" />
+    <file relUrl="bin/SdmxSourceUtil.dll" publishTime="10/01/2013 18:24:17" />
+    <file relUrl="bin/SdmxStructureRetrieval.pdb" publishTime="10/01/2013 18:24:37" />
+    <file relUrl="bin/SdmxStructureParser.dll" publishTime="10/01/2013 18:24:38" />
+    <file relUrl="bin/NSIWebServices.dll.config" publishTime="10/01/2013 18:42:25" />
+    <file relUrl="bin/Xml.Schema.Linq.pdb" publishTime="10/01/2013 18:24:26" />
+    <file relUrl="bin/SdmxObjects.pdb" publishTime="10/01/2013 18:24:34" />
+    <file relUrl="bin/SdmxStructureRetrieval.dll" publishTime="10/01/2013 18:24:37" />
+    <file relUrl="bin/Org.Sdmx.Resources.SdmxMl.Schemas.V10.pdb" publishTime="10/01/2013 18:24:27" />
+    <file relUrl="bin/Xml.Schema.Linq.dll" publishTime="10/01/2013 18:24:26" />
+    <file relUrl="bin/Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll" publishTime="10/01/2013 18:24:27" />
+    <file relUrl="NSIWebServices.StructureResource.svc" publishTime="10/10/2013 14:42:42" />
+    <file relUrl="bin/Org.Sdmx.Resources.SdmxMl.Schemas.V21.pdb" publishTime="10/01/2013 18:24:31" />
+    <file relUrl="bin/NSIWebServices.dll" publishTime="10/10/2013 14:42:41" />
+    <file relUrl="bin/Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll" publishTime="10/01/2013 18:24:31" />
+    <file relUrl="Web.config" publishTime="10/01/2013 18:42:25" />
+    <file relUrl="bin/Org.Sdmx.Resources.SdmxMl.Schemas.V20.pdb" publishTime="10/01/2013 18:24:28" />
+    <file relUrl="bin/SdmxStructureParser.pdb" publishTime="10/01/2013 18:24:38" />
+  </publishTarget>
+</publishData>

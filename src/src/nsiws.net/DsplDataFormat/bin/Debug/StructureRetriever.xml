@@ -1,0 +1,2846 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StructureRetriever</name>
+    </assembly>
+    <members>
+        <member name="T:Estat.Nsi.StructureRetriever.Builders.ComponentSqlBuilder">
+            <summary>
+            SQL Builder for Components
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Builders.SqlBuilderBase">
+            <summary>
+            The base class for SQL Builders
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Builders.ISqlBuilder">
+            <summary>
+            The sql builder interface.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.ISqlBuilder.GenerateSql(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Generate the SQL for executing on the DDB
+            </summary>
+            <param name="info">
+            The current structure retrieval information 
+            </param>
+            <returns>
+            The generated sql. 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.SqlBuilderBase.GenerateSql(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Generate the SQL for executing on the DDB
+            </summary>
+            <param name="info">
+            The current structure retrieval information 
+            </param>
+            <returns>
+            The generated SQL. 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.SqlBuilderBase.ToColumnNameString(Estat.Sri.MappingStoreRetrieval.Model.MappingStoreModel.MappingEntity[])">
+            <summary>
+            Returns string containing all column names used in the specified <paramref name="mappings"/> separated by comma.
+            </summary>
+            <param name="mappings">The mappings.</param>
+            <returns>A string containing all column names used in the specified <paramref name="mappings"/> separated by comma.</returns>
+            <exception cref="T:System.ArgumentException">No mapping provided.</exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.SqlBuilderBase.GenerateWhere(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            This method generates the WHERE part of the SQL query that will be used against the DDB for retrieving the available codes
+            </summary>
+            <param name="info">
+            The current structure retrieval information 
+            </param>
+            <returns>
+            A string containing the WHERE part of the SQL Query or an Empty string 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.ComponentSqlBuilder.GenerateSql(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Generate the SQL for executing on the DDB
+            </summary>
+            <param name="info">
+            The current structure retrieval information 
+            </param>
+            <returns>
+            The generated sql. 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Builders.CountSqlBuilder">
+            <summary>
+            Build SQL query for Count requests
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.CountSqlBuilder.GenerateSql(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Generate the SQL for executing on the DDB
+            </summary>
+            <param name="info">
+            The current structure retrieval information 
+            </param>
+            <returns>
+            The generated sql. 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Builders.DDbConnectionBuilder">
+            <summary>
+            Dissemination database connection builder
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Builders.IBuilder`2">
+            <summary>
+            A generic builder interface which builds a <typeparamref name="T"/> from a <typeparamref name="TE"/> using the <see cref="M:Estat.Nsi.StructureRetriever.Builders.IBuilder`2.Build(`1)"/> method
+            </summary>
+            <typeparam name="T">
+            The output type 
+            </typeparam>
+            <typeparam name="TE">
+            The input type 
+            </typeparam>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.IBuilder`2.Build(`1)">
+            <summary>
+            The method that builds a <typeparamref name="T"/> from a <typeparamref name="TE"/>
+            </summary>
+            <param name="info">
+            The input as <typeparamref name="TE"/> . 
+            </param>
+            <returns>
+            The output as <typeparamref name="T"/> 
+            </returns>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Builders.DDbConnectionBuilder._instance">
+            <summary>
+              The sigleton instance
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.DDbConnectionBuilder.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Estat.Nsi.StructureRetriever.Builders.DDbConnectionBuilder"/> class from being created. 
+              Prevents a default instance of the <see cref="T:Estat.Nsi.StructureRetriever.Builders.DDbConnectionBuilder"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.DDbConnectionBuilder.Build(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            The method that builds a <see cref="T:System.Data.Common.DbConnection"/> from the specified <paramref name="info"/>
+            </summary>
+            <param name="info">
+            The current Data retrieval state 
+            </param>
+            <returns>
+            The <see cref="T:System.Data.Common.DbConnection"/> 
+            </returns>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Builders.DDbConnectionBuilder.Instance">
+            <summary>
+              Gets the singleton instance of this class
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Builders.IStructureRetrievalInfoBuilder">
+            <summary>
+            The <see cref="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo"/> Builder interface
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.IStructureRetrievalInfoBuilder.Build(Estat.Sri.CustomRequests.Model.IConstrainableStructureReference,System.Configuration.ConnectionStringSettings,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Build a <see cref="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo"/> from the specified parameters
+            </summary>
+            <param name="dataflow">
+            The datflow to get the available data for 
+            </param>
+            <param name="connectionStringSettings">
+            The Mapping Store connection string settings 
+            </param>
+            <param name="logger">
+            The logger to log information, warnings and errors. It can be null 
+            </param>
+            <param name="allowedDataflows">
+            The collection of allowed dataflows 
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            connectionStringSettings is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            dataflow is null
+            </exception>
+            <exception cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException">
+            Parsing error or mapping store exception error
+            </exception>
+            <returns>
+            a <see cref="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo"/> from the specified parameters 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder">
+            <summary>
+            Builds a <see cref="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo"/> object
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Build(Estat.Sri.CustomRequests.Model.IConstrainableStructureReference,System.Configuration.ConnectionStringSettings,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Build a <see cref="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo"/> from the specified parameters
+            </summary>
+            <param name="dataflow">
+            The dataflow to get the available data for 
+            </param>
+            <param name="connectionStringSettings">
+            The Mapping Store connection string settings 
+            </param>
+            <param name="allowedDataflows">
+            The collection of allowed dataflows 
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            connectionStringSettings is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            dataflow is null
+            </exception>
+            <exception cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException">
+            Parsing error or mapping store exception error
+            </exception>
+            <returns>
+            a <see cref="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo"/> from the specified parameters 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.Initialize(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Initialize component mappings for coded components and time dimension used in mappings in the dataflow
+            </summary>
+            <param name="info">
+            The current structure retrieval state 
+            </param>
+            <remarks>
+            This method should be called only once
+            </remarks>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.GetRequestedComponentId(Estat.Sri.MappingStoreRetrieval.Model.MappingStoreModel.DsdEntity,System.String)">
+            <summary>
+            Gets the requested component unique identifier.
+            </summary>
+            <param name="dsdEntity">The DSD entity.</param>
+            <param name="conceptId">The requested component.</param>
+            <returns>
+            The Component.Id
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.NormallizeDatabaseProvider(System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Normalizes the DDB provider names so both DDB and MASTORE use the same.
+            </summary>
+            <param name="connectionStringSettings">
+            The connection to the mapping store 
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Builders.StructureRetrievalInfoBuilder.ParserDataflowRef(Estat.Sri.CustomRequests.Model.IConstrainableStructureReference,Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Parse the specified DataflowRefBean object and populate the <see cref="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.RequestedComponent"/> and <see cref="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.Criteria"/> fields
+            </summary>
+            <param name="d">
+            The DataflowRefBean to parse 
+            </param>
+            <param name="info">
+            The current structure retrieval state 
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.CustomCodelistConstants">
+            <summary>
+            This class holds constants for custom codelists used in special requests
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.Agency">
+            <summary>
+              The Agency for custom codelists
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.CountCodeDefault">
+            <summary>
+              The custom dataflow data count code default value
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.CountCodeDescription">
+            <summary>
+              The custom dataflow data count code description
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.CountCodeList">
+            <summary>
+              The custom dataflow data count codelist
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.CountCodeListName">
+            <summary>
+              The custom dataflow data count codelist name
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.Lang">
+            <summary>
+              The language for custom codelist names
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.TimePeriodCodeList">
+            <summary>
+              The custom time dimension start/end codelist
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.TimePeriodCodeListName">
+            <summary>
+              The custom time dimension start/end codelist name
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.TimePeriodEndDescription">
+            <summary>
+              The custom time dimension end code description
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.TimePeriodMax">
+            <summary>
+              The custom time dimension max value
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.TimePeriodMin">
+            <summary>
+              The custom time dimension min value
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.TimePeriodStartDescription">
+            <summary>
+              The custom time dimension start code description
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.Version">
+            <summary>
+              The version used for custom codelists
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.CustomCodelistConstants.IsCountRequest(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            Check if the specified <c>CodelistRefBean</c> is for the special COUNT request
+            </summary>
+            <param name="codeListRef">
+            The <c>CodelistRefBean</c> object. It should have Id and Agency set. Version is ignored. 
+            </param>
+            <returns>
+            True if the <c>CodelistRefBean</c> ID and Agency matches the custom <see cref="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.CountCodeList"/> and <see cref="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.Agency"/> . Else false 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.CustomCodelistConstants.IsTimeDimensionRequest(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            Check if the specified <c>CodelistRefBean</c> is for the special Time Dimension request
+            </summary>
+            <param name="codeListRef">
+            The <c>CodelistRefBean</c> object. It should have Id and Agency set. Version is ignored. 
+            </param>
+            <returns>
+            True if the <c>CodelistRefBean</c> ID and Agency matches the custom <see cref="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.TimePeriodCodeList"/> and <see cref="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.Agency"/> . Else false 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.CodeListHelper">
+            <summary>
+            This class contains helper method for codelist retrieval engines
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.CodeListHelper.GetFirstCodeList(System.Collections.Generic.ISet{Org.Sdmxsource.Sdmx.Api.Model.Mutable.Codelist.ICodelistMutableObject})">
+            <summary>
+            Gets the first codelist from <paramref name="codeLists"/> if any
+            </summary>
+            <param name="codeLists">
+            The code lists.
+            </param>
+            <returns>
+            The first codelist from <paramref name="codeLists"/>; otherwise null
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.ConstantCodeListRetrievalEngine">
+            <summary>
+            Codelist with a single constant code retrieval engine
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.ICodeListRetrievalEngine">
+            <summary>
+            Interface for retrieving codelists
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.ICodeListRetrievalEngine.GetCodeList(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Retrieve Codelist
+            </summary>
+            <param name="info">
+            The current StructureRetrieval state 
+            </param>
+            <returns>
+            A <see cref="!:CodeListBean"/> 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.ConstantCodeListRetrievalEngine.GetCodeList(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Retrieve Codelist
+            </summary>
+            <param name="info">
+            The current StructureRetrieval state 
+            </param>
+            <returns>
+            A <see cref="!:CodeListBean"/> 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.ConstantTimeDimensionCodeListRetrievalEngine">
+            <summary>
+            Constant mapping time dimension code retrieval
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.ConstantTimeDimensionCodeListRetrievalEngine.GetCodeList(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Retrieve Codelist
+            </summary>
+            <param name="info">
+            The current StructureRetrieval state 
+            </param>
+            <returns>
+            A <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.Codelist.ICodelistMutableObject"/> 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.CountCodeListRetrievalEngine">
+            <summary>
+            The COUNT code list retrieval
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.CountCodeListRetrievalEngine.GetCodeList(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Retrieve Codelist
+            </summary>
+            <param name="info">
+            The current StructureRetrieval state 
+            </param>
+            <returns>
+            A <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.Codelist.ICodelistMutableObject"/> 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.CountCodeListRetrievalEngine.ExecuteSql(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Execute the <see cref="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.SqlQuery"/> against the DDB and get a single value
+            </summary>
+            <param name="info">
+            The current Structure retrieval state 
+            </param>
+            <returns>
+            The scalar value 
+            </returns>
+            <exception cref="T:System.Data.Common.DbException">
+            DDB communication error
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.CountCodeListRetrievalEngine.GetXsMeasureCount(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Get CrossSectional Measure count.
+            </summary>
+            <param name="info">
+            The current Structure retrieval state 
+            </param>
+            <returns>
+            The CrossSectional Measure count. 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.PartialCodeListRetrievalEngine">
+            <summary>
+            This <see cref="T:Estat.Nsi.StructureRetriever.Engines.ICodeListRetrievalEngine"/> retrieves partial codelists from DDB and Mastore.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.PartialCodeListRetrievalEngine.GetCodeList(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Retrieve Codelist
+            </summary>
+            <param name="info">
+            The current StructureRetrieval state 
+            </param>
+            <returns>
+            A <see cref="!:CodeListBean"/> 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.AllResolver">
+            <summary>
+            The all resolver.
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.ResolverBase">
+            <summary>
+                The resolver base class.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.ResolverBase._log">
+            <summary>
+                The _log
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.ResolverBase._crossReferenceManager">
+            <summary>
+                The _cross reference manager
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ResolverBase.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.ResolverBase"/> class.
+            </summary>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="crossReferenceManager"/> is null.
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ResolverBase.GetDescendantsReference(System.Boolean,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject},Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject)">
+            <summary>
+            Gets the descendants reference.
+            </summary>
+            <param name="returnStub">
+            if set to <c>true</c> [return stub].
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+            The cross reference mutable retrieval manager.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+            <param name="maintainableMutableObject">
+            The maintainable mutable object.
+            </param>
+            <returns>
+            The descendants in <see cref="T:System.Collections.Generic.IList`1"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ResolverBase.GetParentsAndSiblingsReference(System.Boolean,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject},Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IIdentifiableMutableObject)">
+            <summary>
+            Gets the parents and siblings reference.
+            </summary>
+            <param name="returnStub">
+            if set to <c>true</c> [return stub].
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+            The cross reference mutable retrieval manager.
+            </param>
+            <param name="allowedDataflow">
+            The allowed dataflow.
+            </param>
+            <param name="maintainableMutableObject">
+            The maintainable mutable object.
+            </param>
+            <returns>
+            The parents and siblings in a <see cref="T:System.Collections.Generic.IList`1"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ResolverBase.Resolve(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Func{Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject}})">
+            <summary>
+            Resolve references of the specified <paramref name="mutableObjects"/> using the specified
+                <paramref name="getReference"/>
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="getReference">
+            The method to retrieve cross reference
+            </param>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Engines.Resolver.ResolverBase.CrossReferenceManager">
+            <summary>
+                Gets the cross reference manager
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.IResolver">
+            <summary>
+                The Resolver interface.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.IResolver.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolves the references of the specified mutable objects.
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            if set to <c>true</c> return stub references.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.AllResolver.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.AllResolver"/> class.
+            </summary>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="crossReferenceManager"/> is null.
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.AllResolver.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolves the references of the specified mutable objects.
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            if set to <c>true</c> return stub references.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.AllResolver.ResolveAll(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolve children of the specified <paramref name="mutableObjects"/> using the specified parameters
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            Set to true to return only stubs.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+            The cross reference mutable retrieval engine
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.ChildrenResolver">
+            <summary>
+                The Children cross resolve references implementation.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ChildrenResolver.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.ChildrenResolver"/> class.
+            </summary>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="crossReferenceManager"/> is null.
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ChildrenResolver.ResolveChildren(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolve children of the specified <paramref name="mutableObjects"/> using the specified parameters
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            Set to true to return only stubs.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+            The cross reference mutable retrieval engine
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ChildrenResolver.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolves the references of the specified mutable objects.
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            if set to <c>true</c> return stub references.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.DescendantsResolver">
+            <summary>
+            The descendants resolver.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.DescendantsResolver.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.DescendantsResolver"/> class.
+            </summary>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="crossReferenceManager"/> is null.
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.DescendantsResolver.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolves the references of the specified mutable objects.
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            if set to <c>true</c> return stub references.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.DescendantsResolver.ResolveDescendants(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolve children of the specified <paramref name="mutableObjects"/> using the specified parameters
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            Set to true to return only stubs.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+            The cross reference mutable retrieval engine
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.NoneResolver">
+            <summary>
+                The none reference resolver.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.NoneResolver.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolves the references of the specified mutable objects.
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            if set to <c>true</c> return stub references.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.ParentsAndSiblingsResolver">
+            <summary>
+            The parents and siblings resolver.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ParentsAndSiblingsResolver.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.ParentsAndSiblingsResolver"/> class.
+            </summary>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="crossReferenceManager"/> is null.
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ParentsAndSiblingsResolver.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolves the references of the specified mutable objects.
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            if set to <c>true</c> return stub references.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ParentsAndSiblingsResolver.ResolveParentsAndSiblings(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolve parents of the specified <paramref name="mutableObjects"/> using the specified
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            The return Stub.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+            The cross Reference Mutable Retrieval Manager.
+            </param>
+            <param name="allowedDataflow">
+            The allowed Dataflow.
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.ParentsResolver">
+            <summary>
+            The parents resolver.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ParentsResolver.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.ParentsResolver"/> class.
+            </summary>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="crossReferenceManager"/> is null.
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ParentsResolver.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolves the references of the specified mutable objects.
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            if set to <c>true</c> return stub references.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.ParentsResolver.ResolveParents(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolve parents of the specified <paramref name="mutableObjects"/> using the specified
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            The return Stub.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+            The cross Reference Mutable Retrieval Manager.
+            </param>
+            <param name="allowedDataflow">
+            The allowed Dataflow.
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver">
+            <summary>
+                The specific resolver.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver._structureTypes">
+            <summary>
+                The _structure types
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureType[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver"/> class.
+            </summary>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <param name="structureTypes">
+            The specific object structure Types.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="crossReferenceManager"/> is null.
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolves the references of the specified mutable objects.
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="returnStub">
+            if set to <c>true</c> return stub references.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.ResolveSpecific(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureType},System.Boolean,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Resolve the specified <paramref name="specificStructureReferences"/> only reference from
+                <paramref name="mutableObjects"/>
+            </summary>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="specificStructureReferences">
+            The specific structure reference.
+            </param>
+            <param name="returnStub">
+            The return Stub.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+            The cross Reference Mutable Retrieval Manager.
+            </param>
+            <param name="allowedDataflow">
+            The allowed Dataflow.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.GetFunc(Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject},Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode)">
+            <summary>
+            Returns the method that retrieves the 
+            </summary>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <param name="returnStub">
+            The return stub.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+            <param name="relationNode">
+            The relation node.
+            </param>
+            <returns>
+            The function that returns 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.GetSpecificObjects(Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject,Org.Sdmxsource.Sdmx.Api.Constants.BaseConstantType{Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureEnumType},System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Returns specific structures of the specified type <paramref name="specificStructureType"/> related to the <paramref name="maintainable"/>
+            </summary>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <param name="maintainable">
+            The maintainable.
+            </param>
+            <param name="specificStructureType">
+            The specific structure type.
+            </param>
+            <param name="returnStub">
+            The return stub.
+            </param>
+            <param name="allowedDataflows">
+            The allowed dataflows.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.ProcessNode(Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject,Org.Sdmxsource.Sdmx.Api.Constants.BaseConstantType{Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureEnumType},System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject},Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode,System.Collections.Generic.ICollection{Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject},System.Collections.Generic.Stack{Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject})">
+            <summary>
+            Processes the node.
+            </summary>
+            <param name="crossReferenceManager">The cross reference manager.</param>
+            <param name="maintainable">The maintainable.</param>
+            <param name="specificStructureType">Type of the specific structure.</param>
+            <param name="returnStub">if set to <c>true</c> [return stub].</param>
+            <param name="allowedDataflows">The allowed dataflows.</param>
+            <param name="rootNode">The root node.</param>
+            <param name="specificObjects">The specific objects.</param>
+            <param name="stack">The stack.</param>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationType">
+            <summary>
+                The relation type
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationType.Parent">
+            <summary>
+                The parent
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationType.Descendant">
+            <summary>
+                The descendant
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder">
+            <summary>
+            The relation builder.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder._categorySchemeToCategorisation">
+            <summary>
+            The _categorisation to category scheme.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder._categorisationToDataflow">
+            <summary>
+            The _categorisation to dataflow.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder._codeListToDsd">
+            <summary>
+            The _code list to DSD.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder._conceptSchemeToDsd">
+            <summary>
+            The _concept scheme to DSD.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder._dataflowToCategorisation">
+            <summary>
+            The _dataflow to categorisation.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder._dataflowToDsd">
+            <summary>
+            The _dataflow to DSD.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder._dsdToDataflow">
+            <summary>
+            The DSD to dataflow.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder"/> class.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationBuilder.Build(Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureEnumType,Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureEnumType)">
+            <summary>
+            Returns the list of next hope's for getting from <paramref name="source"/> to <paramref name="destination"/>
+            </summary>
+            <param name="source">
+            The source.
+            </param>
+            <param name="destination">
+            The destination.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode">
+            <summary>
+            The relation node.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode._destType">
+            <summary>
+                The _destination type
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode._relationType">
+            <summary>
+                The _relation type
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode._sourceType">
+            <summary>
+                The _source type
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode.#ctor(Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationType,Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureEnumType,Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureEnumType)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode"/> class.
+            </summary>
+            <param name="relationType">
+            Type of the relation.
+            </param>
+            <param name="sourceType">
+            Type of the source.
+            </param>
+            <param name="destType">
+            Type of the destination.
+            </param>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode.DestType">
+            <summary>
+                Gets the destination type
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode.RelationType">
+            <summary>
+                Gets the relation type
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Engines.Resolver.SpecificResolver.RelationNode.SourceType">
+            <summary>
+                Gets the source type
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.SimpleCodeListRetrievalEngine">
+            <summary>
+            A simple mapping store codelists retrieval engine
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.SimpleCodeListRetrievalEngine.GetCodeList(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Retrieve Codelist
+            </summary>
+            <param name="info">
+            The current StructureRetrieval state 
+            </param>
+            <returns>
+            A <see cref="!:CodeListBean"/> 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.TimeDimensionCodeListHelper">
+            <summary>
+            A collection of helper methods for Time Dimension Codelist
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.TimeDimensionCodeListHelper.SetupTimeCodelist(Org.Sdmxsource.Sdmx.Api.Model.Mutable.Codelist.ICodeMutableObject,Org.Sdmxsource.Sdmx.Api.Model.Mutable.Codelist.ICodeMutableObject,Org.Sdmxsource.Sdmx.Api.Model.Mutable.Codelist.ICodelistMutableObject)">
+            <summary>
+            Setup a CodelistBean object as a TimeDimension codelist containing two codes, startTime and endTime and using as codelist id the <see cref="F:Estat.Nsi.StructureRetriever.CustomCodelistConstants.TimePeriodCodeList"/> .
+            </summary>
+            <param name="startCode">
+            The code that will contain the start Time period 
+            </param>
+            <param name="endCode">
+            The code that will contain the end Time period 
+            </param>
+            <param name="timeCodeList">
+            The codelist to setup 
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.TimeDimensionCodeListHelper.BuildTimeCodelist(Org.Sdmxsource.Sdmx.Api.Model.Base.ISdmxDate,Org.Sdmxsource.Sdmx.Api.Model.Base.ISdmxDate)">
+            <summary>
+            Builds the time codelist.
+            </summary>
+            <param name="minPeriod">The minimum period.</param>
+            <param name="maxPeriod">The maximum period.</param>
+            <returns>the time codelist.</returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.TimeDimensionCodeListRetrievalEngine">
+            <summary>
+            Time Dimension start and optionally end code list retrieval engine
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.TimeDimensionCodeListRetrievalEngine.GetCodeList(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Retrieve Codelist
+            </summary>
+            <param name="info">
+            The current StructureRetrieval state 
+            </param>
+            <returns>
+            A <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.Codelist.ICodelistMutableObject"/> 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Engines.TranscodedCodeListRetrievalEngine">
+            <summary>
+            Codelist retrieval engine that gets the codelist from transcoding configuration. It implies that no criteria
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Engines.TranscodedCodeListRetrievalEngine._isTranscoded">
+            <summary>
+            The _is transcoded.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.TranscodedCodeListRetrievalEngine.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Engines.TranscodedCodeListRetrievalEngine"/> class.
+            </summary>
+            <param name="isTranscoded">
+            The is transcoded.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.TranscodedCodeListRetrievalEngine.GetCodeList(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Retrieve Codelist
+            </summary>
+            <param name="info">
+            The current StructureRetrieval state 
+            </param>
+            <returns>
+            A <see cref="!:CodeListBean"/> 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Engines.TranscodedCodeListRetrievalEngine.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:Estat.Nsi.StructureRetriever.Engines.TranscodedCodeListRetrievalEngine"/>.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents the current <see cref="T:Estat.Nsi.StructureRetriever.Engines.TranscodedCodeListRetrievalEngine"/>.
+            </returns>
+            <filterpriority>2</filterpriority>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.ErrorMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.ErrorMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.ErrorMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.ErrorMessages.ErrorNoRefsInRequest">
+            <summary>
+              Looks up a localized string similar to RegistryInterface QueryStructureRequest.Refs is null or empty.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.ErrorMessages.ErrorNotSupportedFormat1">
+            <summary>
+              Looks up a localized string similar to &quot;{0} structure requests are not supported&quot;.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.ErrorMessages.ErrorNullQueryStructureRequest">
+            <summary>
+              Looks up a localized string similar to RegistryInterface QueryStructureRequest is null.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.ErrorMessages.ErrorRetrievingMappingSetFormat4">
+            <summary>
+              Looks up a localized string similar to An error occured while trying to retrieve mapping set for dataflow: {0}+{1}+{2}: 
+            {3}.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.ErrorMessages.WarningFormat5">
+            <summary>
+              Looks up a localized string similar to {4}: {0} with id: &apos;{1}&apos;, version: &apos;{2}&apos;, agencyID: &apos;{3}&apos;.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.ErrorMessages.ZeroCodesFoundFormat3">
+            <summary>
+              Looks up a localized string similar to Zero codes found. Check for missing transcoding rules at Mapping Set {0}, Component {1} for Dataflow {2}.
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Factory.AuthAdvancedMutableStructureSearchManagerFactory">
+            <summary>
+            The authorization aware advanced mutable structure search manager factory.
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Factory.StructureSearchManagerFactoryBase`1">
+            <summary>
+            The structure search manager base.
+            </summary>
+            <typeparam name="TStructureSearch">
+            The structure search type
+            </typeparam>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Factory.IStructureSearchManagerFactory`1">
+            <summary>
+            The StructureSearchManagerFactory interface.
+            </summary>
+            <typeparam name="TStructureSearch">
+            The type of the structure search manager.
+            </typeparam>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.IStructureSearchManagerFactory`1.GetStructureSearchManager``1(``0,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            Returns an instance of the structure search manager created using the specified
+                <paramref name="settings"/>
+            </summary>
+            <typeparam name="T">
+            The type of the settings
+            </typeparam>
+            <param name="settings">
+            The settings.
+            </param>
+            <param name="sdmxSchemaVersion">
+            The SDMX Schema Version.
+            </param>
+            <returns>
+            The structure search manager.
+            </returns>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Factory.StructureSearchManagerFactoryBase`1._factoryMethod">
+            <summary>
+                The user provided factory method.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.StructureSearchManagerFactoryBase`1.#ctor(System.Func{System.Object,`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Factory.StructureSearchManagerFactoryBase`1"/> class.
+            </summary>
+            <param name="factoryMethod">
+            The factory method.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.StructureSearchManagerFactoryBase`1.GetStructureSearchManager``1(``0,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            Returns an instance of the structure search manager created using the specified
+                <paramref name="settings"/>
+            </summary>
+            <typeparam name="T">
+            The type of the settings
+            </typeparam>
+            <param name="settings">
+            The settings.
+            </param>
+            <param name="sdmxSchemaVersion">
+            The SDMX Schema Version.
+            </param>
+            <returns>
+            The structure search manager.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.StructureSearchManagerFactoryBase`1.GetFactories">
+            <summary>
+                Gets the factories.
+            </summary>
+            <returns>The type based dictionary.</returns>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Factory.AuthAdvancedMutableStructureSearchManagerFactory._factoryMethods">
+            <summary>
+                The default factory methods.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AuthAdvancedMutableStructureSearchManagerFactory.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Factory.AuthAdvancedMutableStructureSearchManagerFactory"/> class.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AuthAdvancedMutableStructureSearchManagerFactory.#ctor(System.Func{System.Object,Estat.Sdmxsource.Extension.Manager.IAuthAdvancedMutableStructureSearchManager})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Factory.AuthAdvancedMutableStructureSearchManagerFactory"/> class.
+            </summary>
+            <param name="factoryMethod">
+            The factory method.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AuthAdvancedMutableStructureSearchManagerFactory.GetFactories">
+            <summary>
+                Gets the factories.
+            </summary>
+            <returns>The type based dictionary.</returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AuthAdvancedMutableStructureSearchManagerFactory.OnConnectionStringSettings(System.Object,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            The on connection string settings factory method.
+            </summary>
+            <param name="settings">
+            The settings.
+            </param>
+            <param name="sdmxSchema">
+            The SDMX schema.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.Mutable.IMutableStructureSearchManager"/>.
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Factory.AuthMutableStructureSearchManagerFactory">
+            <summary>
+            The authorization mutable structure search manager factory.
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Factory.IAuthMutableStructureSearchManagerFactory">
+            <summary>
+                The MutableRetrievalManagerFactory interface.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Factory.AuthMutableStructureSearchManagerFactory._factoryMethods">
+            <summary>
+                The default factory methods.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AuthMutableStructureSearchManagerFactory.#ctor(System.Func{System.Object,Estat.Sdmxsource.Extension.Manager.IAuthMutableStructureSearchManager})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Factory.AuthMutableStructureSearchManagerFactory"/> class.
+            </summary>
+            <param name="factoryMethod">
+            The factory method.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AuthMutableStructureSearchManagerFactory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Factory.AuthMutableStructureSearchManagerFactory"/> class.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AuthMutableStructureSearchManagerFactory.GetFactories">
+            <summary>
+                Gets the factories.
+            </summary>
+            <returns>The type based dictionary.</returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AuthMutableStructureSearchManagerFactory.OnConnectionStringSettings(System.Object,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            The on connection string settings factory method.
+            </summary>
+            <param name="settings">
+            The settings.
+            </param>
+            <param name="sdmxSchema">
+            The SDMX schema.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.Mutable.IMutableStructureSearchManager"/>.
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Factory.AdvancedMutableStructureSearchManagerFactory">
+            <summary>
+            The advanced mutable structure search manager factory.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Factory.AdvancedMutableStructureSearchManagerFactory._factoryMethods">
+            <summary>
+                The default factory methods.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AdvancedMutableStructureSearchManagerFactory.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Factory.AdvancedMutableStructureSearchManagerFactory"/> class.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AdvancedMutableStructureSearchManagerFactory.#ctor(System.Func{System.Object,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.Mutable.IAdvancedMutableStructureSearchManager})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Factory.AdvancedMutableStructureSearchManagerFactory"/> class.
+            </summary>
+            <param name="factoryMethod">
+            The factory method.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AdvancedMutableStructureSearchManagerFactory.GetFactories">
+            <summary>
+                Gets the factories.
+            </summary>
+            <returns>The type based dictionary.</returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.AdvancedMutableStructureSearchManagerFactory.OnConnectionStringSettings(System.Object,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            The on connection string settings factory method.
+            </summary>
+            <param name="settings">
+            The settings.
+            </param>
+            <param name="sdmxSchema">
+            The SDMX schema.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.Mutable.IMutableStructureSearchManager"/>.
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Factory.IMutableStructureSearchManagerFactory">
+            <summary>
+                The MutableRetrievalManagerFactory interface.
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Factory.IResolverFactory">
+            <summary>
+            The <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.IResolver"/> Factory interface.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.IResolverFactory.GetResolver(Org.Sdmxsource.Sdmx.Api.Constants.StructureReferenceDetail,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureType[])">
+            <summary>
+            Returns the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.IResolver"/> for the specified <paramref name="referenceDetailType"/>.
+            </summary>
+            <param name="referenceDetailType">Type of the reference detail.</param>
+            <param name="crossReferenceManager">The cross reference manager.</param>
+            <param name="specificStructureTypes">The specific object structure types.</param>
+            <returns>The <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.IResolver"/> for the specified <paramref name="referenceDetailType"/>; otherwise null</returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Factory.MutableStructureSearchManagerFactory">
+            <summary>
+            The mutable structure search manager factory.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Factory.MutableStructureSearchManagerFactory._factoryMethods">
+            <summary>
+                The default factory methods.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.MutableStructureSearchManagerFactory.#ctor(System.Func{System.Object,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.Mutable.IMutableStructureSearchManager})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Factory.MutableStructureSearchManagerFactory"/> class. 
+            </summary>
+            <param name="factoryMethod">
+            The factory Method.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.MutableStructureSearchManagerFactory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Factory.MutableStructureSearchManagerFactory"/> class. 
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.MutableStructureSearchManagerFactory.GetFactories">
+            <summary>
+                Gets the factories.
+            </summary>
+            <returns>The type based dictionary.</returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.MutableStructureSearchManagerFactory.OnConnectionStringSettings(System.Object,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            The on connection string settings factory method.
+            </summary>
+            <param name="settings">
+            The settings.
+            </param>
+            <param name="sdmxSchema">
+            The SDMX schema.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.Mutable.IMutableStructureSearchManager"/>.
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Factory.ResolverFactory">
+            <summary>
+            The resolver factory.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Factory.ResolverFactory.GetResolver(Org.Sdmxsource.Sdmx.Api.Constants.StructureReferenceDetail,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,Org.Sdmxsource.Sdmx.Api.Constants.SdmxStructureType[])">
+            <summary>
+            Returns the <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.IResolver"/> for the specified <paramref name="referenceDetailType"/>.
+            </summary>
+            <param name="referenceDetailType">Type of the reference detail.</param>
+            <param name="crossReferenceManager">The cross reference manager.</param>
+            <param name="specificStructureTypes">The specific object structure types.</param>
+            <returns>The <see cref="T:Estat.Nsi.StructureRetriever.Engines.Resolver.IResolver"/> for the specified <paramref name="referenceDetailType"/>; otherwise null</returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.AdvancedStructureRetriever">
+            <summary>
+            The advanced mutable structure search manager.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AdvancedStructureRetriever._authAdvancedMutableStructureSearchManager">
+            <summary>
+            The AUTH advanced mutable structure search manager.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AdvancedStructureRetriever.#ctor(System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AdvancedStructureRetriever"/> class. 
+            </summary>
+            <param name="connectionStringSettings">
+            The connection String Settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AdvancedStructureRetriever.#ctor(Estat.Nsi.StructureRetriever.Factory.IStructureSearchManagerFactory{Estat.Sdmxsource.Extension.Manager.IAuthAdvancedMutableStructureSearchManager},System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AdvancedStructureRetriever"/> class. 
+            </summary>
+            <param name="factory">
+            The factory.
+            </param>
+            <param name="connectionStringSettings">
+            The connection String Settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AdvancedStructureRetriever.GetMaintainables(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.Complex.IComplexStructureQuery)">
+            <summary>
+            The get maintainables.
+            </summary>
+            <param name="structureQuery">
+            The structure query.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/>.
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever">
+            <summary>
+            The AUTH advanced mutable structure search manager.
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedMutableStructureSearchManagerBase">
+            <summary>
+            The base class for <see cref="T:Estat.Sdmxsource.Extension.Manager.IAuthAdvancedMutableStructureSearchManager"/>
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedMutableStructureSearchManagerBase.PopulateMutables(Estat.Sdmxsource.Extension.Manager.IAuthAdvancedSdmxMutableObjectRetrievalManager,Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.Complex.IComplexStructureQuery,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject},Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager)">
+            <summary>
+            Retrieve the structures referenced by <paramref name="structureQuery" /> and populate the
+            <paramref name="mutableObjects" />
+            </summary>
+            <param name="retrievalManager">The retrieval manager.</param>
+            <param name="mutableObjects">The mutable objects.</param>
+            <param name="structureQuery">The structure query.</param>
+            <param name="allowedDataflows">The allowed Dataflows.</param>
+            <param name="crossReferenceMutableRetrievalManager">The cross reference mutable retrieval manager.</param>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever._log">
+            <summary>
+                The log.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever._resolverFactory">
+            <summary>
+                The _resolver factory
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever._crossReferenceManagerFactory">
+            <summary>
+            The _cross reference manager factory.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever._retrievalManager">
+            <summary>
+            The _retrieval manager.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever._database">
+            <summary>
+            The _database.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever._retrievalFactory">
+            <summary>
+            The _retrieval factory.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever.#cctor">
+            <summary>
+                Initializes static members of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever"/> class.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever.#ctor(System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever"/> class.
+            </summary>
+            <param name="connectionStringSettings">
+            The connection string settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever.#ctor(Estat.Sri.MappingStoreRetrieval.Factory.IAuthAdvancedMutableRetrievalManagerFactory,Estat.Sri.MappingStoreRetrieval.Factory.IAuthCrossRetrievalManagerFactory,System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever"/> class.
+            </summary>
+            <param name="mutableRetrievalManagerFactory">
+            The mutable retrieval manager factory.
+            </param>
+            <param name="crossReferenceManagerFactory">
+            The cross reference manager factory.
+            </param>
+            <param name="connectionStringSettings">
+            The connection string settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever.GetMaintainables(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.Complex.IComplexStructureQuery,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Process the specified <paramref name="structureQuery"/> returning an
+                <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/> container which contains the Maintainable
+                Structure hat correspond to the <paramref name="structureQuery"/> query parameters.
+            </summary>
+            <param name="structureQuery">
+            The structure query.
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthAdvancedStructureRetriever.GetDetails(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.Complex.IComplexStructureQuery,Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Get details specified in <paramref name="structureQuery"/> of the specified <paramref name="mutableObjects"/>
+            </summary>
+            <param name="structureQuery">
+            The structure query.
+            </param>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+            The cross Reference Mutable Retrieval Manager.
+            </param>
+            <param name="allowedDataflow">
+            The allowed Dataflow.
+            </param>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented value at <see cref="T:Org.Sdmxsource.Sdmx.Api.Constants.StructureReferenceDetail"/> of <paramref name="structureQuery"/>
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Invalid value at <see cref="T:Org.Sdmxsource.Sdmx.Api.Constants.StructureReferenceDetail"/> of <paramref name="structureQuery"/>
+            </exception>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.AuthCategorisationV20MutableStructureSearchManager">
+            <summary>
+                The categorisation SDMX v2.0 mutable structure search manager.
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase">
+            <summary>
+                The AUTH mutable structure search manager base class.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase._complexQueryBuilder">
+            <summary>
+            The _complex query builder
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase._log">
+            <summary>
+                The log.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase._resolverFactory">
+            <summary>
+                The _resolver factory
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase._retrievalAdvancedManager">
+            <summary>
+            The advanced retrieval advanced manager
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase._advancedMutableRetrievalManagerFactory">
+            <summary>
+            The advanced mutable retrieval manager factory
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase._crossReferenceManager">
+            <summary>
+                The cross reference manager.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase._database">
+            <summary>
+                The _database.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase.#cctor">
+            <summary>
+                Initializes static members of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase.#ctor(Estat.Sri.MappingStoreRetrieval.Factory.IAuthAdvancedMutableRetrievalManagerFactory,Estat.Sri.MappingStoreRetrieval.Factory.IAuthCrossRetrievalManagerFactory,System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase"/> class.
+            </summary>
+            <param name="mutableRetrievalManagerFactory">
+            The mutable retrieval manager factory.
+            </param>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <param name="connectionStringSettings">
+            The connection string settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase.#ctor(System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase"/> class.
+            </summary>
+            <param name="connectionStringSettings">
+            The connection string settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthSdmxMutableObjectRetrievalManager,Estat.Sri.MappingStoreRetrieval.Factory.IAuthCrossRetrievalManagerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase"/> class.
+            </summary>
+            <param name="fullRetrievalManager">
+            The full retrieval manager. Used for <see cref="F:Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType.Full"/> or
+                <see cref="F:Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType.ReferencedStubs"/>
+            </param>
+            <param name="crossReferenceManager">
+            The cross reference manager. Set it to be able to retrieve cross references. Used for
+                <see cref="F:Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType.Full"/>
+                .
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase.GetLatest(Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Returns the latest version of the maintainable for the given maintainable input
+            </summary>
+            <param name="maintainableObject">
+            The maintainable Object.
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase.GetMaintainables(Org.Sdmxsource.Sdmx.Api.Model.Query.IRestStructureQuery,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Returns a set of maintainable that match the given query parameters
+            </summary>
+            <param name="structureQuery">
+            The structure Query.
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="structureQuery"/> is null
+            </exception>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase.RetrieveStructures(System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference},System.Boolean,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Retrieves all structures that match the given query parameters in the list of query objects.  The list
+                must contain at least one StructureQueryObject.
+            </summary>
+            <param name="queries">
+            The queries.
+            </param>
+            <param name="resolveReferences">
+            - if set to true then any cross referenced structures will also be available in the SdmxObjects container
+            </param>
+            <param name="returnStub">
+            - if set to true then only stubs of the returned objects will be returned.
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase.PopulateMutables(Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference},System.Boolean,Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Retrieve the structures referenced by <paramref name="queries"/> and populate the
+                <paramref name="mutableObjects"/>
+            </summary>
+            <param name="mutableObjects">
+                The mutable objects.
+            </param>
+            <param name="queries">
+                The queries.
+            </param>
+            <param name="returnLatest">
+                The return Latest.
+            </param>
+            <param name="returnStub">
+                The return Stub.
+            </param>
+            <param name="allowedDataflows">
+                The allowed Dataflows.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase.PopulateMutables(Estat.Sdmxsource.Extension.Manager.IAuthAdvancedSdmxMutableObjectRetrievalManager,Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference},System.Boolean,Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject},Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager)">
+            <summary>
+            Retrieve the structures referenced by <paramref name="queries"/> and populate the
+                <paramref name="mutableObjects"/>
+            </summary>
+            <param name="retrievalManager">
+                The retrieval manager.
+            </param>
+            <param name="mutableObjects">
+                The mutable objects.
+            </param>
+            <param name="queries">
+                The queries.
+            </param>
+            <param name="returnLatest">
+                The return Latest.
+            </param>
+            <param name="returnStub">
+                The return Stub.
+            </param>
+            <param name="allowedDataflows">
+                The allowed Dataflows.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+                The cross reference mutable retrieval manager.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManagerBase.GetDetails(Org.Sdmxsource.Sdmx.Api.Model.Query.IRestStructureQuery,Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Get details specified in <paramref name="structureQuery"/> of the specified <paramref name="mutableObjects"/>
+            </summary>
+            <param name="structureQuery">
+            The structure query.
+            </param>
+            <param name="mutableObjects">
+            The mutable objects.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+            The cross Reference Mutable Retrieval Manager.
+            </param>
+            <param name="allowedDataflow">
+            The allowed Dataflow.
+            </param>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented value at <see cref="T:Org.Sdmxsource.Sdmx.Api.Constants.StructureReferenceDetail"/> of <paramref name="structureQuery"/>
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Invalid value at <see cref="T:Org.Sdmxsource.Sdmx.Api.Constants.StructureReferenceDetail"/> of <paramref name="structureQuery"/>
+            </exception>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthCategorisationV20MutableStructureSearchManager._log">
+            <summary>
+                The _log.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthCategorisationV20MutableStructureSearchManager.#ctor(Estat.Sri.MappingStoreRetrieval.Factory.IAuthAdvancedMutableRetrievalManagerFactory,Estat.Sri.MappingStoreRetrieval.Factory.IAuthCrossRetrievalManagerFactory,System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthCategorisationV20MutableStructureSearchManager"/> class. 
+            </summary>
+            <param name="mutableRetrievalManagerFactory">
+            The mutable retrieval manager factory.
+            </param>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <param name="connectionStringSettings">
+            The connection string settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthCategorisationV20MutableStructureSearchManager.#ctor(System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthCategorisationV20MutableStructureSearchManager"/> class. 
+            </summary>
+            <param name="connectionStringSettings">
+            The connection string settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthCategorisationV20MutableStructureSearchManager.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthSdmxMutableObjectRetrievalManager,Estat.Sri.MappingStoreRetrieval.Factory.IAuthCrossRetrievalManagerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthCategorisationV20MutableStructureSearchManager"/> class. 
+            </summary>
+            <param name="fullRetrievalManager">
+            The full retrieval manager. Used for <see cref="F:Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType.Full"/> or
+                <see cref="F:Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType.ReferencedStubs"/>
+            </param>
+            <param name="crossReferenceManager">
+            The cross reference manager. Set it to be able to retrieve cross references. Used for
+                <see cref="F:Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType.Full"/>
+                .
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthCategorisationV20MutableStructureSearchManager.PopulateMutables(Estat.Sdmxsource.Extension.Manager.IAuthAdvancedSdmxMutableObjectRetrievalManager,Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference},System.Boolean,Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject},Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager)">
+            <summary>
+            Retrieve the <paramref name="queries"/> and populate the <paramref name="mutableObjects"/>
+            </summary>
+            <param name="retrievalManager">
+                The retrieval manager.
+            </param>
+            <param name="mutableObjects">
+                The mutable objects.
+            </param>
+            <param name="queries">
+                The structure queries
+            </param>
+            <param name="returnLatest">
+                Set to <c>true</c> to retrieve the latest; otherwise set to <c>false</c> to retrieve all versions
+            </param>
+            <param name="returnStub">
+                Set to <c>true</c> to retrieve artefacts as stubs; otherwise set to <c>false</c> to retrieve full artefacts.
+            </param>
+            <param name="allowedDataflows">
+                The allowed dataflows.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+                The cross-reference manager
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManager">
+            <summary>
+                The mutable structure search manager implementation.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManager.#ctor(Estat.Sri.MappingStoreRetrieval.Factory.IAuthAdvancedMutableRetrievalManagerFactory,Estat.Sri.MappingStoreRetrieval.Factory.IAuthCrossRetrievalManagerFactory,System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManager"/> class.
+            </summary>
+            <param name="mutableRetrievalManagerFactory">
+            The mutable retrieval manager factory.
+            </param>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <param name="connectionStringSettings">
+            The connection string settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManager.#ctor(System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManager"/> class.
+            </summary>
+            <param name="connectionStringSettings">
+            The connection string settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManager.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthSdmxMutableObjectRetrievalManager,Estat.Sri.MappingStoreRetrieval.Factory.IAuthCrossRetrievalManagerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthMutableStructureSearchManager"/> class.
+            </summary>
+            <param name="fullRetrievalManager">
+            The full retrieval manager. Used for <see cref="!:StructureQueryDetail.Full"/> or
+                <see cref="!:StructureQueryDetail.ReferencedStubs"/>
+            </param>
+            <param name="crossReferenceManager">
+            The cross reference manager. Set it to be able to retrieve cross references. Used for
+                <see cref="!:StructureQueryDetail.Full"/>
+                .
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverV21">
+            <summary>
+                The <c>SDMX v2.1</c> mutable structure search manager. Use with REST
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverV21.#ctor(Estat.Sri.MappingStoreRetrieval.Factory.IAuthAdvancedMutableRetrievalManagerFactory,Estat.Sri.MappingStoreRetrieval.Factory.IAuthCrossRetrievalManagerFactory,System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverV21"/> class. 
+            </summary>
+            <param name="mutableRetrievalManagerFactory">
+            The mutable retrieval manager factory.
+            </param>
+            <param name="crossReferenceManager">
+            The cross reference manager.
+            </param>
+            <param name="connectionStringSettings">
+            The connection string settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverV21.#ctor(System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverV21"/> class. 
+            </summary>
+            <param name="connectionStringSettings">
+            The connection string settings.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverV21.#ctor(Estat.Sdmxsource.Extension.Manager.IAuthSdmxMutableObjectRetrievalManager,Estat.Sri.MappingStoreRetrieval.Factory.IAuthCrossRetrievalManagerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverV21"/> class. 
+            </summary>
+            <param name="fullRetrievalManager">
+            The full retrieval manager. Used for <see cref="F:Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType.Full"/> or
+                <see cref="F:Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType.ReferencedStubs"/>
+            </param>
+            <param name="crossReferenceManager">
+            The cross reference manager. Set it to be able to retrieve cross references. Used for
+                <see cref="F:Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType.Full"/>
+                .
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverV21.GetLatest(Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Returns the latest version of the maintainable for the given maintainable input
+            </summary>
+            <param name="maintainableObject">
+            The maintainable Object.
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverV21.GetMaintainables(Org.Sdmxsource.Sdmx.Api.Model.Query.IRestStructureQuery,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Returns a set of maintainable that match the given query parameters
+            </summary>
+            <param name="structureQuery">
+            The structure Query.
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="structureQuery"/> is null
+            </exception>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverV21.RetrieveStructures(System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference},System.Boolean,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Retrieves all structures that match the given query parameters in the list of query objects.  The list
+                must contain at least one StructureQueryObject.
+            </summary>
+            <param name="queries">
+            The queries.
+            </param>
+            <param name="resolveReferences">
+            - if set to true then any cross referenced structures will also be available in the SdmxObjects container
+            </param>
+            <param name="returnStub">
+            - if set to true then only stubs of the returned objects will be returned.
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/>.
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableDataV20">
+            <summary>
+            This is an implementation of <see cref="T:Estat.Sdmxsource.Extension.Manager.IAuthMutableStructureSearchManager"/> interface that can retrieve available data from DDB and dataflows with complete mapping set.
+            </summary>
+            <example>
+            Code example for C# 
+            <code source="ReUsingExamples\StructureRetriever\ReUsingStructureRetriever.cs" lang="cs">
+            </code>
+            </example>
+            <remarks>
+            It's main job is to retrieve structural metadata from Mapping Store. It can be used with any v3.0 or higher "Mapping Store" complying with the database design specified there. This implementation supports the following special case in order to retrieve a subset of codes for a dimension that can be constrained by the values of other dimensions: If the <c>QueryStructureRequest</c> contains a <c>CodelistRef</c> and <c>DataflowRef</c> with constrains with one <c>Member</c> without <c>MemberValue</c> and optionally any number <c>Member</c> with <c>MemberValue</c> then the this implementation will retrieve the subset of the requested codelist that is used by the dimension referenced in the member without member value, used by the specified dataflow and constrained by the dimension values defined with Member and MemberValues.
+            </remarks>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableDataV20._logger">
+            <summary>
+              The logger object which will be used to log information,warning and error messages
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableDataV20._specialRequestManager">
+            <summary>
+              This field holds the <see cref="T:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager"/> which manages all special requests
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableDataV20._structureRetrievalInfoBuilder">
+            <summary>
+              This field holds the builder for <see cref="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableDataV20._connectionStringSettings">
+            <summary>
+              The connection to the "Mapping Store",from which the SDMX Structural metadata will be retrieved
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableDataV20.#ctor(System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableDataV20"/> class. 
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            defaultHeader is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            connectionStringSettings is null
+            </exception>
+            <exception cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException">
+            Could not establish a connection to the mapping store DB
+              <see cref="P:Estat.Nsi.StructureRetriever.StructureRetrieverException.ErrorType"/>
+              is set to
+              <see cref="F:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes.MappingStoreConnectionError"/>
+            </exception>
+            <param name="connectionStringSettings">
+                The connection to the "Mapping Store", from which the SDMX Structural metadata will be retrieved 
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            defaultHeader or connectionStringSettings is null
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableDataV20.PopulateMutables(Estat.Sdmxsource.Extension.Manager.IAuthAdvancedSdmxMutableObjectRetrievalManager,Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference},System.Boolean,Org.Sdmxsource.Sdmx.Api.Constants.StructureQueryDetailEnumType,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject},Estat.Sdmxsource.Extension.Manager.IAuthCrossReferenceMutableRetrievalManager)">
+            <summary>
+            Retrieve the <paramref name="queries"/> and populate the <paramref name="mutableObjects"/>
+            </summary>
+            <param name="retrievalManager">
+                The retrieval manager.
+            </param>
+            <param name="mutableObjects">
+                The mutable objects.
+            </param>
+            <param name="queries">
+                The structure queries
+            </param>
+            <param name="returnLatest">
+                Set to <c>true</c> to retrieve the latest; otherwise set to <c>false</c> to retrieve all versions
+            </param>
+            <param name="returnStub">
+                Set to <c>true</c> to retrieve artefacts as stubs; otherwise set to <c>false</c> to retrieve full artefacts.
+            </param>
+            <param name="allowedDataflows">
+                The allowed dataflows.
+            </param>
+            <param name="crossReferenceMutableRetrievalManager">
+                The cross-reference manager
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableDataV20.ProcessReference(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo,Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects)">
+            <summary>
+            Process the <paramref name="current"/> and populate the <paramref name="mutableObjects"/>
+            </summary>
+            <param name="av">
+            The current Structure Retrieval state
+            </param>
+            <param name="current">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/> codelist request 
+            </param>
+            <param name="mutableObjects">The output mutable objects</param>
+            <returns>
+            <c>true</c> if the partial codelist is found found is larger than 0. Else <c>false</c> 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableData">
+            <summary>
+                This is an implementation of "IStructureRetriever" interface that can retrieve available data from DDB and dataflows with complete mapping set.
+            </summary>
+            <example>
+                Code example for C#
+                <code source="ReUsingExamples\StructureRetriever\ReUsingStructureRetriever.cs" lang="cs">
+            </code>
+            </example>
+            <remarks>
+                It's main job is to retrieve structural metadata from Mapping Store. It can be used with any v2.6 or higher "Mapping Store" complying with the database design specified there. This implementation supports the following special case in order to retrieve a subset of codes for a dimension that can be constrained by the values of other dimensions: If the <c>QueryStructureRequest</c> contains a <c>CodelistRef</c> and <c>DataflowRef</c> with constrains with one <c>Member</c> without <c>MemberValue</c> and optionally any number <c>Member</c> with <c>MemberValue</c> then the this implementation will retrieve the subset of the requested codelist that is used by the dimension referenced in the member without member value, used by the specified dataflow and constrained by the dimension values defined with Member and MemberValues.
+            </remarks>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableData._authStructureRetriever">
+            <summary>
+                The authorization structure retriever.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableData.#ctor(System.Configuration.ConnectionStringSettings,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableData"/> class. 
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            defaultHeader is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            connectionStringSettings is null
+            </exception>
+            <exception cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException">
+            Could not establish a connection to the mapping store DB
+                <see cref="P:Estat.Nsi.StructureRetriever.StructureRetrieverException.ErrorType"/>
+                is set to
+                <see cref="F:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes.MappingStoreConnectionError"/>
+            </exception>
+            <param name="connectionStringSettings">
+            The connection to the "Mapping Store", from which the SDMX Structural metadata will be retrieved
+            </param>
+            <param name="sdmxSchema">
+            The SDMX Schema.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            defaultHeader or connectionStringSettings is null
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableData.GetLatest(Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Returns the latest version of the maintainable for the given maintainable input
+            </summary>
+            <param name="maintainableObject">
+            The maintainable Object.
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableData.GetMaintainables(Org.Sdmxsource.Sdmx.Api.Model.Query.IRestStructureQuery,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Returns a set of maintainable that match the given query parameters
+            </summary>
+            <param name="structureQuery">
+            The structure Query.
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.AuthStructureRetrieverAvailableData.RetrieveStructures(System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference},System.Boolean,System.Boolean,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject})">
+            <summary>
+            Retrieves all structures that match the given query parameters in the list of query objects.  The list
+                must contain at least one StructureQueryObject.
+            </summary>
+            <param name="queries">
+            The queries.
+            </param>
+            <param name="resolveReferences">
+            - if set to true then any cross referenced structures will also be available in the SdmxObjects container
+            </param>
+            <param name="returnStub">
+            - if set to true then only stubs of the returned objects will be returned.
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/>.
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.ISpecialRequestManager">
+            <summary>
+            The special request manager interface.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.ISpecialRequestManager.RetrieveAvailableData(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Retrieve the codelist that is referenced by the given <paramref name="codelistRef"/> . 
+            </summary>
+            <param name="codelistRef">
+            The codelist reference containing the id, agency and version of the requested dimension. Can be empty for time dimension 
+            </param>
+            <param name="info">
+            The current structure retrieval state. 
+            </param>
+            <returns>
+            The partial codelist 
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="codelistRef"/>
+              is null
+            </exception>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager">
+            <summary>
+            A special request manager
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager._componentSqlBuilder">
+            <summary>
+              SQL Code builder for getting component codelist
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager._constantCodeListRetrieval">
+            <summary>
+              Constant code codelist retrieval engine
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager._constantTimeDimensionCodeListRetrieval">
+            <summary>
+              Constant code time dimension value retrieval engine
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager._countCodeListRetrieval">
+            <summary>
+              Count codelist retrieval engine
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager._countSqlBuilder">
+            <summary>
+              SQL Code builder for getting the COUNT
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager._partialCodeListRetrieval">
+            <summary>
+              partial codelist retrieval engine
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager._simpleCodeListRetrieval">
+            <summary>
+              simple codelist retrieval engine (for unmapped measure dimension)
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager._timeDimensionCodeListRetrieval">
+            <summary>
+              Ttime dimension value retrieval engine
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager._transcodedCodeListRetrieval">
+            <summary>
+              transcoded codelist retrieval engine
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager._localCodeListRetrieval">
+            <summary>
+              local codelist retrieval engine 
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager.RetrieveAvailableData(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Retrieve the codelist that is referenced by the given <paramref name="codelistRef"/> . The codelist
+            </summary>
+            <param name="codelistRef">
+            The codelist reference containing the id, agency and version of the requested dimension. Can be empty for time dimension 
+            </param>
+            <param name="info">
+            The current structure retrieval state. 
+            </param>
+            <returns>
+            The partial codelist 
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="codelistRef"/>
+              is null
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager.Execute(Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo,Estat.Nsi.StructureRetriever.Engines.ICodeListRetrievalEngine,Estat.Nsi.StructureRetriever.Builders.ISqlBuilder)">
+            <summary>
+            Execute the specified <paramref name="sqlBuilder"/>, if not null and <paramref name="codeListRetrievalEngine"/>
+            </summary>
+            <param name="info">
+            The current codelist retrieval information
+            </param>
+            <param name="codeListRetrievalEngine">
+            The code list retrieval engine.
+            </param>
+            <param name="sqlBuilder">
+            The sql builder.
+            </param>
+            <returns>
+            The partial codelist 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.SpecialRequestManager.IsRequestedComponentCodelist(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo)">
+            <summary>
+            Check if the requested Component is set and if the requested codelist ref is for that component
+            </summary>
+            <param name="codelistRef">
+            The requested codelistRef 
+            </param>
+            <param name="structureRetrievalInfo">
+            The current structure retrieval state 
+            </param>
+            <returns>
+            The is requested component codelist. 
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Manager.StructureRetrieverAvailableData">
+            <summary>
+                This is an implementation of "IStructureRetriever" interface that can retrieve available data from DDB and dataflows with complete mapping set.
+            </summary>
+            <example>
+                Code example for C#
+                <code source="ReUsingExamples\StructureRetriever\ReUsingStructureRetriever.cs" lang="cs">
+            </code>
+            </example>
+            <remarks>
+                It's main job is to retrieve structural metadata from Mapping Store. It can be used with any v2.6 or higher "Mapping Store" complying with the database design specified there. This implementation supports the following special case in order to retrieve a subset of codes for a dimension that can be constrained by the values of other dimensions: If the <c>QueryStructureRequest</c> contains a <c>CodelistRef</c> and <c>DataflowRef</c> with constrains with one <c>Member</c> without <c>MemberValue</c> and optionally any number <c>Member</c> with <c>MemberValue</c> then the this implementation will retrieve the subset of the requested codelist that is used by the dimension referenced in the member without member value, used by the specified dataflow and constrained by the dimension values defined with Member and MemberValues.
+            </remarks>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Manager.StructureRetrieverAvailableData._authStructureRetriever">
+            <summary>
+                The authorization structure retriever.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.StructureRetrieverAvailableData.#ctor(System.Configuration.ConnectionStringSettings,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Manager.StructureRetrieverAvailableData"/> class.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            defaultHeader is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            connectionStringSettings is null
+            </exception>
+            <exception cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException">
+            Could not establish a connection to the mapping store DB
+                <see cref="P:Estat.Nsi.StructureRetriever.StructureRetrieverException.ErrorType"/>
+                is set to
+                <see cref="F:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes.MappingStoreConnectionError"/>
+            </exception>
+            <param name="connectionStringSettings">
+            The connection to the "Mapping Store", from which the SDMX Structural metadata will be retrieved
+            </param>
+            <param name="sdmxSchema">
+            The SDMX Schema.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            defaultHeader or connectionStringSettings is null
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.StructureRetrieverAvailableData.GetLatest(Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject)">
+            <summary>
+            Returns the latest version of the maintainable for the given maintainable input
+            </summary>
+            <param name="maintainableObject">
+            The maintainable Object.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IMaintainableMutableObject"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.StructureRetrieverAvailableData.GetMaintainables(Org.Sdmxsource.Sdmx.Api.Model.Query.IRestStructureQuery)">
+            <summary>
+            Returns a set of maintainable that match the given query parameters
+            </summary>
+            <param name="structureQuery">
+            The structure Query.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Manager.StructureRetrieverAvailableData.RetrieveStructures(System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference},System.Boolean,System.Boolean)">
+            <summary>
+            Retrieves all structures that match the given query parameters in the list of query objects.  The list
+                must contain at least one StructureQueryObject.
+            </summary>
+            <param name="queries">
+            The queries.
+            </param>
+            <param name="resolveReferences">
+            - if set to true then any cross referenced structures will also be available in the SdmxObjects container
+            </param>
+            <param name="returnStub">
+            - if set to true then only stubs of the returned objects will be returned.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Mutable.IMutableObjects"/>.
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Model.ComponentInfo">
+            <summary>
+            A value object class for holding component related information
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.ComponentInfo._codelistRef">
+            <summary>
+              A reference to the code list used by the component
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.ComponentInfo.CodelistRef">
+            <summary>
+              Gets the reference to the code list used by the component
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.ComponentInfo.ComponentMapping">
+            <summary>
+              Gets or sets the <see cref="T:Estat.Sri.MappingStoreRetrieval.Engine.Mapping.IComponentMapping"/> information of the component
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.ComponentInfo.Mapping">
+            <summary>
+              Gets or sets the <see cref="T:Estat.Sri.MappingStoreRetrieval.Model.MappingStoreModel.MappingEntity"/> used by the component
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo">
+            <summary>
+            This class holds the current StructureRetrieval state
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._allowedDataflows">
+            <summary>
+              Get or Set the collection of allowed dataflows
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._connectionStringSettings">
+            <summary>
+              The MADB connection settings
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._criteria">
+            <summary>
+              This field holds the dataflowRef constrains
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._logger">
+            <summary>
+              The logger object to be used
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._xsMeasureDimensionConstraints">
+            <summary>
+              The list of XS measures at the constraint or all XS measures.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._componentMapping">
+            <summary>
+              This field holds the mapping between the component name and the ComponentInfo
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._codelistRef">
+            <summary>
+             Gets or sets the requested codelist reference.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._innerSqlQuery">
+            <summary>
+              The dataset SQL Query
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._mappingSet">
+            <summary>
+              This field holds the mappingSet of the dataflow specified in the constructor
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._mastoreAccess">
+            <summary>
+              The Structure access object used to get structural metadata from Mapping Store
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._measureComponent">
+            <summary>
+              This field holds the measure component name in case it is not mapped. Otherwise it is null.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._referencePeriod">
+            <summary>
+              This field holds the ReferencePeriod
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._requestedComponent">
+            <summary>
+              The field contains the requested component
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._sqlQuery">
+            <summary>
+              The <see cref="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._sqlQuery"/> to execute on DDB
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._timeDimension">
+            <summary>
+              This field holds the name of the TimeDimension
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._timeMapping">
+            <summary>
+              This field holds the mapping used by the time dimension
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._timeTranscoder">
+            <summary>
+              This field holds the transcoder used by the time dimension
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._requestedComponentInfo">
+            <summary>
+            The requested component <see cref="T:Estat.Nsi.StructureRetriever.Model.ComponentInfo"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._frequencyInfo">
+            <summary>
+            Gets or sets the frequency mapping
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.#ctor(log4net.ILog,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject},System.Configuration.ConnectionStringSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo"/> class. 
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo"/> class. Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo"/> class.
+            </summary>
+            <param name="logger">
+            The logger. 
+            </param>
+            <param name="allowedDataflows">
+            The allowed Dataflows. 
+            </param>
+            <param name="connectionStringSettings">
+            The connection String Settings. 
+            </param>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.AllowedDataflows">
+            <summary>
+              Gets the collection of allowed dataflows
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.ComponentMapping">
+            <summary>
+              Gets the mapping between the component name and the ComponentInfo
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.ConnectionStringSettings">
+            <summary>
+              Gets the MADB connection settings
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.CodelistRef">
+            <summary>
+             Gets or sets the requested codelist reference.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.Criteria">
+            <summary>
+              Gets the dataflowRef constrains
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.InnerSqlQuery">
+            <summary>
+              Gets or sets the dataset SQL Query
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.Logger">
+            <summary>
+              Gets the logger object to be used
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.MappingSet">
+            <summary>
+              Gets or sets the mappingSet of the dataflow specified in the constructor
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.MastoreAccess">
+            <summary>
+              Gets or sets the Structure access object used to get structural metadata from Mapping Store
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.MeasureComponent">
+            <summary>
+              Gets or sets the measure component name in case it is not mapped. Otherwise it is null.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.ReferencePeriod">
+            <summary>
+              Gets or sets the ReferencePeriod
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.RequestedComponent">
+            <summary>
+              Gets or sets the requested component
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.SqlQuery">
+            <summary>
+              Gets or sets the <see cref="F:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo._sqlQuery"/> to execute on DDB
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.TimeDimension">
+            <summary>
+              Gets or sets the name of the TimeDimension
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.TimeMapping">
+            <summary>
+              Gets or sets the mapping used by the time dimension
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.TimeTranscoder">
+            <summary>
+              Gets or sets the transcoder used by the time dimension
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.XSMeasureDimensionConstraints">
+            <summary>
+              Gets the list of XS measures at the constraint or all XS measures.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.RequestedComponentInfo">
+            <summary>
+            Gets or sets the Requested Component <see cref="T:Estat.Nsi.StructureRetriever.Model.ComponentInfo"/>.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.Model.StructureRetrievalInfo.FrequencyInfo">
+            <summary>
+            Gets or sets the frequency mapping
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes">
+            <summary>
+            This enumeration contains the StructureRetrieverException error types.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes.ParsingError">
+            <summary>
+              Error parsing the input RegistryInterfaceBean
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes.MappingStoreTimeout">
+            <summary>
+              The mapping store DB takes too long to respond
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes.MappingStoreConnectionError">
+            <summary>
+              Could not establish a connection to the mapping store DB
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes.MappingStoreInvalidCredentials">
+            <summary>
+              Could not establish a connection to the mapping store DB, invalid credentials
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes.MissingStructure">
+            <summary>
+              Requested structure not found
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes.MissingStructureRef">
+            <summary>
+              A reference of the requested structure was not found and IsResolveReferences = true
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes.DdbConnectionError">
+            <summary>
+              Could not establish a connection to the dissemination DB
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.StructureRetriever.StructureRetrieverException">
+            <summary>
+            This is an exception thrown while retrieving structural metadata
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.StructureRetrieverException.#ctor(Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. 
+            Initializes a new instance of the StructureRetrieverException class wiith a specified Error Type
+            </summary>
+            <param name="errorType">
+            The error type of error 
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.StructureRetrieverException.#ctor(Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. 
+            Initializes a new instance of the StructureRetrieverException class wiith a specified Error Type and error message
+            </summary>
+            <param name="errorType">
+            The error type of error 
+            </param>
+            <param name="message">
+            A message that describes the error. 
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.StructureRetrieverException.#ctor(Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. 
+            Initializes a new instance of the StructureRetrieverException class wiith a specified Error Type, error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="errorType">
+            The error type of error 
+            </param>
+            <param name="message">
+            A message that describes the error. 
+            </param>
+            <param name="innerException">
+            The inner exception reference. 
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.StructureRetrieverException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. 
+              Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. Initializes a new instance of the <see cref="T:System.Exception"/> class.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.StructureRetrieverException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. 
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. Initializes a new instance of the <see cref="T:System.Exception"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">
+            The error message that explains the reason for the exception. 
+            </param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no inner exception is specified. 
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.StructureRetrieverException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. 
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. Initializes a new instance of the <see cref="T:System.Exception"/> class with a specified error message.
+            </summary>
+            <param name="message">
+            The message that describes the error. 
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.StructureRetrieverException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. 
+            Initializes a new instance of the <see cref="T:Estat.Nsi.StructureRetriever.StructureRetrieverException"/> class. Initializes a new instance of the <see cref="T:System.Exception"/> class with serialized data.
+            </summary>
+            <param name="info">
+            The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown. 
+            </param>
+            <param name="context">
+            The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination. 
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            The
+              <paramref name="info"/>
+              parameter is null.
+            </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">
+            The class name is null or
+              <see cref="P:System.Exception.HResult"/>
+              is zero (0).
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.StructureRetriever.StructureRetrieverException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            When overridden in a derived class, sets the <see cref="T:System.Runtime.Serialization.SerializationInfo"/> with information about the exception.
+            </summary>
+            <param name="info">
+            The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown. 
+            </param>
+            <param name="context">
+            The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination. 
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            The
+              <paramref name="info"/>
+              parameter is a null reference (Nothing in Visual Basic).
+            </exception>
+            <filterpriority>2</filterpriority>
+            <PermissionSet>
+              <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Read="*AllFiles*" PathDiscovery="*AllFiles*"/>
+              <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="SerializationFormatter"/>
+            </PermissionSet>
+        </member>
+        <member name="P:Estat.Nsi.StructureRetriever.StructureRetrieverException.ErrorType">
+            <summary>
+              Gets or sets type of error
+            </summary>
+        </member>
+    </members>
+</doc>

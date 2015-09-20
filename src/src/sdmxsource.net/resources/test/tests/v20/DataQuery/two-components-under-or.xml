@@ -1,0 +1,26 @@
+<QueryMessage xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message">
+	<Header>
+		<ID>Query</ID>
+		<Test>true</Test>
+		<Truncated>false</Truncated>
+		<Prepared>2012-07-23T16:15:20</Prepared>
+		<Sender id="OECD" />
+	</Header>
+	<Query>
+		<DataWhere xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query">
+			<And>
+				<Dataflow>SSTSCONS_PROD_QT</Dataflow>
+				<Or>
+					<And>
+						<Dimension id="REF_AREA">LU</Dimension>
+						<Dimension id="FREQ">A</Dimension>
+					</And>
+					<And>
+						<Dimension id="REF_AREA">IT</Dimension>
+						<Dimension id="FREQ">Q</Dimension>
+					</And>
+				</Or>
+			</And>
+		</DataWhere>
+	</Query>
+</QueryMessage>

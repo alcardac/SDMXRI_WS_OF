@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Estat.Nsi.StructureRetriever.AvailableDataRetriever" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gMAKAQQAIAQAAQAhAA4AAAEBIDEABVAAAAAAAAABCgA=</HashCode>
+      <FileName>AvailableDataRetriever.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.StructureRetriever.CustomCodelistConstants" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEAIAgAAAAQAAQAAABAAAAAAAAgAAIABACAAABBAAA=</HashCode>
+      <FileName>CustomCodelistConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.StructureRetriever.ErrorMessages" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQBQAQEACAAAAAAAgIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.StructureRetriever.ReferenceStack" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIQIAAAAAAAAAAUAAQCAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ReferenceStack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.StructureRetriever.StructureRetrieverAvailableData" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQAAAFABBESAQABKAAAEAICACogAQoAAAEMAAAMA=</HashCode>
+      <FileName>StructureRetrieverAvailableData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Estat.Nsi.StructureRetriever.StructureRetrieverException" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StructureRetrieverException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.StructureRetriever.StructureRetrieverTestImpl" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>StructureRetrieverTestImpl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Estat.Nsi.StructureRetriever.IStructureRetriever" Collapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>IStructureRetriever.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Estat.Nsi.StructureRetriever.StructureRetrieverErrorTypes" Collapsed="true">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAADAAAAAAEAAAAAAAAIAACAAAAAAAACAA=</HashCode>
+      <FileName>StructureRetrieverErrorTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

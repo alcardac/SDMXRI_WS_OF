@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>IDREF1</ID>
+    <Test>false</Test>
+    <Prepared>2013-04-18T12:38:39.4023438+03:00</Prepared>
+    <Sender id="Unknown" />
+    <Receiver id="Unknown" />
+  </Header>
+  <Structures>
+    
+    <DataStructures xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <DataStructure id="WDI" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=SDMXSOURCE:WDI(1.0)" agencyID="SDMXSOURCE" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">World Development Indicators</Name>
+        <DataStructureComponents>
+          <DimensionList id="DimensionDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DimensionDescriptor=SDMXSOURCE:WDI(1.0).DimensionDescriptor">
+            <Dimension id="COUNTRY" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimensions=SDMXSOURCE:WDI(1.0).COUNTRY" position="1">
+              <ConceptIdentity>
+                <Ref id="COUNTRY" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMXSOURCE" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_COUNTRY" version="1.0" agencyID="SDMXSOURCE" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+            <Dimension id="INDICATOR" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimensions=SDMXSOURCE:WDI(1.0).INDICATOR" position="2">
+              <ConceptIdentity>
+                <Ref id="INDICATOR" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMXSOURCE" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_INDICATOR" version="1.0" agencyID="SDMXSOURCE" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+            <TimeDimension id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.datastructure.TimeDimension=SDMXSOURCE:WDI(1.0).TIME_PERIOD" position="3">
+              <ConceptIdentity>
+                <Ref id="TIME" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMXSOURCE" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <TextFormat />
+              </LocalRepresentation>
+            </TimeDimension>
+          </DimensionList>
+          <MeasureList id="MeasureDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDescriptor=SDMXSOURCE:WDI(1.0).MeasureDescriptor">
+            <PrimaryMeasure id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.PrimaryMeasure=SDMXSOURCE:WDI(1.0).OBS_VALUE">
+              <ConceptIdentity>
+                <Ref id="OBS_VALUE" maintainableParentID="CONCEPTS" maintainableParentVersion="1.0" agencyID="SDMXSOURCE" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+            </PrimaryMeasure>
+          </MeasureList>
+        </DataStructureComponents>
+      </DataStructure>
+    </DataStructures>
+  </Structures>
+</Structure>

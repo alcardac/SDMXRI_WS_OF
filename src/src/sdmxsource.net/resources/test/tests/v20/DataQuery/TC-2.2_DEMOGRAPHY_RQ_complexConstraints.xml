@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QueryMessage xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:query="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://katharma.agilis-sa.gr/SDMXML/SDMXMessage.xsd">
+  <Header>
+    <ID>DEMOGRAPHY_RQ</ID>
+    <Test>true</Test>
+    <Name xml:lang="it">DEMOGRAPHY_RQ</Name>
+    <Prepared>2008-05-06T12:01:00</Prepared>
+    <Sender id="4D0"/>
+    <Receiver id="IT1"/>
+  </Header>
+  <Query>
+    <query:DataWhere>
+      <query:And>
+        <query:Dimension id="FREQ">A</query:Dimension>
+  	    <query:Time>
+                 <query:StartTime>1920-01</query:StartTime>
+                 <query:EndTime>1940-01</query:EndTime>
+              </query:Time>
+          <query:DataProvider>IT1</query:DataProvider>
+          <query:Dataflow>DEMOGRAPHY_RQ</query:Dataflow>
+        <query:Or>
+          <query:Dimension id="SEX">F</query:Dimension>
+          <query:Dimension id="SEX">M</query:Dimension>
+        </query:Or>
+        <query:Or>
+          <query:Dimension id="COUNTRY">ES</query:Dimension>
+          <query:Dimension id="COUNTRY">GR</query:Dimension>
+          <query:Dimension id="COUNTRY">HU</query:Dimension>
+          <query:Dimension id="COUNTRY">DE</query:Dimension>
+        </query:Or>
+      </query:And>
+    </query:DataWhere>
+  </Query>
+</QueryMessage>

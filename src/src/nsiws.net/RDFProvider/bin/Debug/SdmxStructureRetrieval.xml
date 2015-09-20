@@ -1,0 +1,1747 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SdmxStructureRetrieval</name>
+    </assembly>
+    <members>
+        <member name="T:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.ICrossReferenceResolverEngine">
+            <summary>
+                The purpose of the ICrossReferenceResolverEngine is to resolve cross references for beans, either MaintainableBeans,
+                beans within a <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects"/> container, ProvisionBeans, and RegistrationBeans.
+            </summary>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.ICrossReferenceResolverEngine.GetMissingAgencies(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+            For the included <paramref name="sdmxObjects"/>, returns a map of agency URN to maintainable Bean that references the agency
+            </summary>
+            <param name="sdmxObjects">
+            The included <c>SDMX</c> objects
+            </param>
+            <param name="retrievalManager">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager"/>
+            </param>
+            <returns>
+            The included <paramref name="sdmxObjects"/>, returns a map of agency URN to maintainable Bean that references the agency
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.ICrossReferenceResolverEngine.GetMissingCrossReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects,System.Int32,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+            Gets a Dictionary of <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IIdentifiableObject"/> alongside any cross references they declare that could not be found in the set of
+                <paramref name="beans"/>
+                provided, and the <paramref name="retrievalManager"/> (if given).
+                <p/>
+                <b>NOTE :</b>An empty Map is returned if all cross references are present.
+            </summary>
+            <param name="beans">
+            - the objects to return the Map of missing references for
+            </param>
+            <param name="numberLevelsDeep">
+            references, an argument of 0 (zero) implies there is no limit, and the resolver engine will continue re-cursing  until it has found every directly and indirectly referenced
+            </param>
+            <param name="retrievalManager">
+            - Used to resolve the structure references. Can be null, if supplied this is used to resolve any references that do not exist in the supplied beans
+            </param>
+            <returns>
+            Map of IIdentifiableObject with a Set of CrossReferences that could not be resolved for the IIdentifiableObject - an empty Map is returned if all cross references are present
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.ICrossReferenceResolverEngine.ResolveCrossReference(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.ICrossReference,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+            Resolves a reference from <paramref name="crossReference"/>
+            </summary>
+            <param name="crossReference">
+            The cross reference instance
+            </param>
+            <param name="structRetrievalManager">
+            The structure Retrieval Manager.
+            </param>
+            <returns>
+            a reference from <paramref name="crossReference"/>
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.ICrossReferenceResolverEngine.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects,System.Boolean,System.Int32,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+            Resolves all references and returns a Map containing all the input beans and the objects that are cross referenced,
+                the Map's key set contains the Identifiable that is the referencing object and the Map's value collection contains the referenced artifacts.
+            </summary>
+            <param name="beans">
+            - the <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects"/> container, containing all the beans to check references for
+            </param>
+            <param name="resolveAgencies">
+            - if true the resolver engine will also attempt to resolve referenced agencies
+            </param>
+            <param name="numberLevelsDeep">
+            references, an argument of 0 (zero) implies there is no limit, and the resolver engine will continue re-cursing until it has found every directly and indirectly referenced artifact. Note that there is no risk of infinite recursion in calling this.
+            </param>
+            <param name="retrievalManager">
+            - Used to resolve the structure references. Can be null, if supplied this is used to resolve any references that do not exist in the supplied beans
+            </param>
+            <returns>
+            Map of referencing versus  references
+            </returns>
+            <exception cref="T:Org.Sdmxsource.Sdmx.Api.Exception.CrossReferenceException">
+            - if any of the references could not be resolved
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.ICrossReferenceResolverEngine.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IMaintainableObject,System.Boolean,System.Int32,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+            Returns a set of IdentifiableBeans that the IMaintainableObject cross references
+            </summary>
+            <param name="bean">
+            The bean.
+            </param>
+            <param name="resolveAgencies">
+            - if true will also resolve the agencies
+            </param>
+            <param name="numberLevelsDeep">
+            references, an argument of 0 (zero) implies there is no limit, and the resolver engine will continue re-cursing until it has found every directly and indirectly referenced artifact. Note that there is no risk of infinite recursion in calling this.
+            </param>
+            <param name="retrievalManager">
+            - Used to resolve the structure references. Can be null, if supplied this is used to resolve any references that do not exist in the supplied beans
+            </param>
+            <exception cref="T:Org.Sdmxsource.Sdmx.Api.Exception.CrossReferenceException">
+            - if any of the references could not be resolved
+            </exception>
+            <returns>
+            a set of IdentifiableBeans that the IMaintainableObject cross references
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.ICrossReferenceResolverEngine.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry.IRegistrationObject,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.IProvisionRetrievalManager)">
+            <summary>
+            Returns a set of IdentifiableBeans that are directly referenced from this registration
+            </summary>
+            <param name="registation">
+            - the registration to resolve the references for
+            </param>
+            <param name="structRetrievalManager">
+            - Used to resolve the structure references. can be null if level = 1 and registration is linked to a provision (as only the provision manager is needed)
+            </param>
+            <param name="provRetrievalManager">
+            - Used to resolve the provision references. Can be null if registration is not linked to a provision
+            </param>
+            <returns>
+            a set of IdentifiableBeans that are directly referenced from this registration
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.ICrossReferenceResolverEngine.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry.IProvisionAgreementObject,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+            Returns a set of structures that are directly referenced from this provision
+            </summary>
+            <param name="provision">
+            - the provision to resolve the references for
+            </param>
+            <param name="structRetrievalManager">
+            - must not be null as this will be used to resolve the references
+            </param>
+            <returns>
+            a set of structures that are directly referenced from this provision
+            </returns>
+        </member>
+        <member name="T:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore">
+            <summary>
+              The <see cref="T:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.ICrossReferenceResolverEngine"/> implementation
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore._log">
+            <summary>
+              The log.
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore._agencies">
+            <summary>
+              The agencies.
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore._crossReferences">
+            <summary>
+              The cross references.
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore._allIdentifiables">
+            <summary>
+            The map that contains all identifiable objet, with URN used a key.
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore._maintianables">
+            <summary>
+              The set of maintainable artifact
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore._resolveAgencies">
+            <summary>
+              The resolve agencies.
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore._structureRetrievalManager">
+            <summary>
+              The structure retrieval manager.
+            </summary>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.#ctor">
+            <summary>
+              Initializes a new instance of the <see cref="T:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore"/> class.
+            </summary>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.#ctor(Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+              Initializes a new instance of the <see cref="T:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore"/> class.
+            </summary>
+            <param name="structureRetrievalManager"> The structure retrieval manager. </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.GetMissingAgencies(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+              For the included <paramref name="sdmxObjects"/>, returns a map of agency URN to maintainable Bean that references the agency
+            </summary>
+            <param name="sdmxObjects"> The included <c>SDMX</c> objects </param>
+            <param name="retrievalManager"> The <see cref="T:Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager"/> </param>
+            <returns> The included <paramref name="sdmxObjects"/> , returns a map of agency URN to maintainable Bean that references the agency </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.GetMissingCrossReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects,System.Int32,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+              Gets a Dictionary of <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IIdentifiableObject"/> alongside any cross references they declare that could not be found in the set of
+              <paramref name="beans"/>
+              provided, and the <paramref name="retrievalManager"/> (if given).
+              <p/>
+              <b>NOTE :</b>An empty Map is returned if all cross references are present.
+            </summary>
+            <param name="beans"> - the objects to return the Map of missing references for </param>
+            <param name="numberLevelsDeep"> references, an argument of 0 (zero) implies there is no limit, and the resolver engine will continue re-cursing until it has found every directly and indirectly referenced </param>
+            <param name="retrievalManager"> - Used to resolve the structure references. Can be null, if supplied this is used to resolve any references that do not exist in the supplied sdmxObjects </param>
+            <returns> Map of IIdentifiableObject with a Set of CrossReferences that could not be resolved for the IIdentifiableObject - an empty Map is returned if all cross references are present </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResolveCrossReference(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.ICrossReference,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+              Resolves a reference from <paramref name="crossReference" />
+            </summary>
+            <param name="crossReference"> The cross reference instance </param>
+            <param name="structRetrievalManager"> The structure Retrieval Manager. </param>
+            <returns> a reference from <paramref name="crossReference" /> </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry.IProvisionAgreementObject,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+              Returns a set of structures that are directly referenced from this provision
+            </summary>
+            <param name="provision"> - the provision to resolve the references for </param>
+            <param name="structRetrievalManager"> - must not be null as this will be used to resolve the references </param>
+            <returns> a set of structures that are directly referenced from this provision </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry.IRegistrationObject,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.IProvisionRetrievalManager)">
+            <summary>
+              Returns a set of IdentifiableBeans that are directly referenced from this registration
+            </summary>
+            <param name="registation"> - the registration to resolve the references for </param>
+            <param name="structRetrievalManager"> - Used to resolve the structure references. can be null if level = 1 and registration is linked to a provision (as only the provision manager is needed) </param>
+            <param name="provRetrievalManager"> - Used to resolve the provision references. Can be null if registration is not linked to a provision </param>
+            <returns> a set of IdentifiableBeans that are directly referenced from this registration </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects,System.Boolean,System.Int32,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+              Resolves all references and returns a Map containing all the input sdmxObjects and the objects that are cross referenced,
+              the Map's key set contains the Identifiable that is the referencing object and the Map's value collection contains the referenced artifacts.
+            </summary>
+            <param name="beans"> - the <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects"/> container, containing all the sdmxObjects to check references for </param>
+            <param name="resolveAgencies"> - if true the resolver engine will also attempt to resolve referenced agencies </param>
+            <param name="numberLevelsDeep"> references, an argument of 0 (zero) implies there is no limit, and the resolver engine will continue re-cursing until it has found every directly and indirectly referenced artifact. Note that there is no risk of infinite recursion in calling this. </param>
+            <param name="retrievalManager"> - Used to resolve the structure references. Can be null, if supplied this is used to resolve any references that do not exist in the supplied sdmxObjects </param>
+            <returns> Map of referencing versus references </returns>
+            <exception cref="T:Org.Sdmxsource.Sdmx.Api.Exception.CrossReferenceException">- if any of the references could not be resolved</exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IMaintainableObject,System.Boolean,System.Int32,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+              Returns a set of IdentifiableBeans that the IMaintainableObject cross references
+            </summary>
+            <param name="bean"> The bean. </param>
+            <param name="resolveAgencies"> - if true will also resolve the agencies </param>
+            <param name="numberLevelsDeep"> references, an argument of 0 (zero) implies there is no limit, and the resolver engine will continue re-cursing until it has found every directly and indirectly referenced artifact. Note that there is no risk of infinite recursion in calling this. </param>
+            <param name="retrievalManager"> - Used to resolve the structure references. Can be null, if supplied this is used to resolve any references that do not exist in the supplied sdmxObjects </param>
+            <exception cref="T:Org.Sdmxsource.Sdmx.Api.Exception.CrossReferenceException">- if any of the references could not be resolved</exception>
+            <returns> a set of IdentifiableBeans that the IMaintainableObject cross references </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.SetStructureRetrievalManager(Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+              The set structure retrieval manager.
+            </summary>
+            <param name="structureRetrievalManager0"> The structure retrieval manager 0. </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.CountValues(System.Collections.Generic.IDictionary{Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IIdentifiableObject,System.Collections.Generic.ISet{Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IIdentifiableObject}})">
+            <summary>
+              The count values.
+            </summary>
+            <param name="map"> The map. </param>
+            <returns> The <see cref="T:System.Int32"/> . </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.HandleMissingReference(Org.Sdmxsource.Sdmx.Api.Exception.CrossReferenceException,System.Collections.Generic.IDictionary{Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IIdentifiableObject,System.Collections.Generic.ISet{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.ICrossReference}})">
+            <summary>
+              Handles a missing reference either by throwing an exception, if the populateMissingMap, or by populating the map, if both the map is not null and the reference exception has reference to the
+              cross referenced artefact.
+            </summary>
+            <param name="e"> The e. </param>
+            <param name="populateMissingMap"> The populate Missing Map. </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResetMaps">
+            <summary>
+              The reset maps.
+            </summary>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResolveMaintainableFromLocalMaps(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.ICrossReference)">
+            <summary>
+              The resolve maintainable from local maps.
+            </summary>
+            <param name="queryObject"> The query object. </param>
+            <returns> The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IMaintainableObject"/> . </returns>
+            <exception cref="T:Org.Sdmxsource.Sdmx.Api.Exception.CrossReferenceException">Missing parameters - Invalid
+              <see cref="P:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject.MaintainableId"/>
+              at
+              <paramref name="queryObject"/>
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects,System.Boolean,System.Int32,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager,System.Collections.Generic.IDictionary{Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IIdentifiableObject,System.Collections.Generic.ISet{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.ICrossReference}})">
+            <summary>
+              The resolve references.
+            </summary>
+            <param name="beans"> The sdmxObjects. </param>
+            <param name="resolveAgencies"> The resolve agencies 0. </param>
+            <param name="numberLevelsDeep"> The number levels deep. </param>
+            <param name="retrievalManager"> The retrieval manager. </param>
+            <param name="populateMap"> The populate map. </param>
+            <returns> The <see cref="T:System.Collections.Generic.IDictionary`2"/> . </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResolveReferencesInternal(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager,System.Collections.Generic.IDictionary{Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IIdentifiableObject,System.Collections.Generic.ISet{Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.ICrossReference}})">
+            <summary>
+              The resolve references internal.
+            </summary>
+            <param name="sdmxObjects"> The sdmxObjects. </param>
+            <param name="retrievalManager"> The retrieval manager. </param>
+            <param name="populateMissingMap"> The populate missing map. </param>
+            <returns> The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IIdentifiableObject"/> dictionary. </returns>
+            <exception cref="T:Org.Sdmxsource.Sdmx.Api.Exception.CrossReferenceException">Reference error</exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResoveAgency(Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IMaintainableObject,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+              The resolve agency.
+            </summary>
+            <param name="maintainable"> The maintainable. </param>
+            <param name="sdmxObjectRetrievalManager"> </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.ResoveAgency(System.String,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+              The resolve agency.
+            </summary>
+            <param name="agencyId"> The agency id. </param>
+            <returns> The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IAgency"/> . </returns>
+            <exception cref="T:Org.Sdmxsource.Sdmx.Api.Exception.SdmxReferenceException">
+              <see cref="P:Org.Sdmxsource.Sdmx.Api.Constants.ExceptionCode.ReferenceErrorUnresolvable"/>
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.StoreRef(Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ISdmxObject,Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IIdentifiableObject)">
+            <summary>
+              The store ref.
+            </summary>
+            <param name="referencedFrom"> The referenced from. </param>
+            <param name="reference"> The reference. </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.AddObjectsToMap(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects)">
+            <summary>
+            Add the specified <paramref name="sdmxObjects"/> to map.
+            </summary>
+            <param name="sdmxObjects">
+            The SDMX objects.
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.AddMaintainableToMap(Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IMaintainableObject)">
+            <summary>
+            Add <paramref name="maintainable"/> to map.
+            </summary>
+            <param name="maintainable">
+            The maintainable.
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Engine.CrossReferenceResolverEngineCore.AgencyRef(System.String)">
+            <summary>
+            The agency ref.
+            </summary>
+            <param name="agencyId">
+            The agency id
+            </param>
+            <returns>
+            The IStructureReference
+            </returns>
+        </member>
+        <member name="T:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager">
+            <summary>
+                The local retrieval manager provides interfaces to retrieve structures off an in memory storage of the ISdmxObjects.
+                <p />
+                This class is able to updated its cache as if it were a local storage with the interface methods provided by the StructurePersistenceManager.
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager._log">
+            <summary>
+                The log.
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager._serviceRetrievalManager">
+            <summary>
+            The service retrieval manager
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager._crossRefControl">
+            <summary>
+                The cross ref control.
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager._sdmxObjects">
+            <summary>
+                The beans.
+            </summary>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager"/> class.
+                Default constructor
+            </summary>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.#ctor(Org.Sdmxsource.Sdmx.Api.Util.IReadableDataLocation,Org.Sdmxsource.Sdmx.Api.Manager.Parse.IStructureParsingManager,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.CrossReference.ICrossReferencedRetrievalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager"/> class.
+                Create an in memory retrieval manager using a URI as a seed, the URI may reference a file (local or external on the web) or be a SDMX REST query
+            </summary>
+            <param name="seed">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Util.IReadableDataLocation"/> which points to structural metadata.
+            </param>
+            <param name="structureParsingManager">
+            The structure Parsing Manager.
+            </param>
+            <param name="crossReferenceRetrievalManager">
+            The cross Reference Retrieval Manager.
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.#ctor(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.CrossReference.ICrossReferencedRetrievalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager"/> class.
+            </summary>
+            <param name="objects">
+            The beans 0.
+            </param>
+            <param name="crossReferenceRetrievalManager">
+            The cross Reference Retrieval Manager.
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.#ctor(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager"/> class.
+            </summary>
+            <param name="objects">
+            The beans 0.
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.#ctor(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects,Org.Sdmxsource.Sdmx.Api.Manager.Parse.IStructureParsingManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager"/> class.
+            </summary>
+            <param name="objects">
+            The beans 0.
+            </param>
+            <param name="structureParsingManager">
+            The structure Parsing Manager.
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.DeleteStructure(Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IMaintainableObject)">
+            <summary>
+            Deletes the maintainable structures in the supplied objects
+            </summary>
+            <param name="maintainable">
+            The maintainable.
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.DeleteStructures(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects)">
+            <summary>
+            The delete structures.
+            </summary>
+            <param name="beans0">
+            The beans 0.
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.SetServiceRetrievalManager(Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.IServiceRetrievalManager)">
+            <summary>
+            If set then will be used to create stubs
+            </summary>
+            <param name="serviceRetrievalManager">
+            The service retrieval manager
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetAgency(System.String)">
+            <summary>
+            The get agency.
+            </summary>
+            <param name="id">
+            The id.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IAgency"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetAgencySchemeObject(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get agency scheme bean.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IAgencyScheme"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetAgencySchemeObject(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single agency scheme , this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IAgencyScheme"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetAgencySchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get agency scheme beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.ISet`1"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetAgencySchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns AgencySchemeObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all AgencySchemeObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetAttachmentConstraint(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get attachment constraint.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry.IAttachmentConstraintObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetAttachmentConstraint(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single attachment constraint, this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry.IAttachmentConstraintObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetAttachmentConstraints(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get attachment constraints.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.ISet`1"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetAttachmentConstraints(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns AttachmentConstraintBeans that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all CodelistObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCategorisation(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get categorisation.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.CategoryScheme.ICategorisationObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCategorisation(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single Categorisation, this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.CategoryScheme.ICategorisationObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCategorisationObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get categorisation beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCategorisationObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns CategorisationObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all CodelistObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCategoryScheme(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get category scheme.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.CategoryScheme.ICategorySchemeObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCategoryScheme(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single CategoryScheme , this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.CategoryScheme.ICategorySchemeObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCategorySchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get category scheme beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCategorySchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns CategorySchemeObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all CategorySchemeObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCodelist(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get codelist.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Codelist.ICodelistObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCodelist(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single CodeList , this expects the reference object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Codelist.ICodelistObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCodelistObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get codelist beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetCodelistObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns CodelistObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all CodelistObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetConceptScheme(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get concept scheme.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.ConceptScheme.IConceptSchemeObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetConceptScheme(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single ConceptScheme , this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.ConceptScheme.IConceptSchemeObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetConceptSchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get concept scheme beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetConceptSchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns ConceptSchemeObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all ConceptSchemeObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetContentConstraint(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get content constraint.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry.IContentConstraintObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetContentConstraint(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single content constraint, this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry.IContentConstraintObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetContentConstraints(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get content constraints.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetContentConstraints(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns ContentConstraintObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all CodelistObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataConsumerSchemeObject(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get data consumer scheme bean.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IDataConsumerScheme"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataConsumerSchemeObject(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single data consumer scheme , this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IDataConsumerScheme"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataConsumerSchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get data consumer scheme beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataConsumerSchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns DataConsumerSchemeObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all DataConsumerSchemeObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataProviderSchemeObject(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get data provider scheme bean.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IDataProviderScheme"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataProviderSchemeObject(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single data provider scheme , this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IDataProviderScheme"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataProviderSchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get data provider scheme beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataProviderSchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns DataProviderSchemeObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all DataProviderSchemeObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataStructure(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get data structure.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure.IDataStructureObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataStructure(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single DataStructure.
+            This expects the ref object to contain all the attributes required to uniquely identify the object.
+            If version information is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure.IDataStructureObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataStructureObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get data structure beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataStructureObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns DataStructureObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all DataStructureObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataflow(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get dataflow.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure.IDataflowObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataflow(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single Dataflow , this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure.IDataflowObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataflowObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get dataflow beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetDataflowObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns DataflowObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all DataflowObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetHierarchicCodeList(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get hierarchic code list.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Codelist.IHierarchicalCodelistObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetHierarchicCodeList(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single HierarchicCodeList , this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Codelist.IHierarchicalCodelistObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetHierarchicCodeListObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get hierarchic code list beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetHierarchicCodeListObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns HierarchicalCodelistObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all HierarchicalCodelistObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMaintainable(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference,System.Boolean)">
+            <summary>
+            Gets a maintainable defined by the StructureQueryObject parameter.
+                <p/>
+                Expects only ONE maintainable to be returned from this query
+            </summary>
+            <param name="sRref">
+            The query.
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IMaintainableObject"/> .
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMaintainableWithReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference)">
+            <summary>
+            The get maintainable with references.
+            </summary>
+            <param name="query">
+            The query.
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMetadataStructure(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get metadata structure.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.MetadataStructure.IMetadataStructureDefinitionObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMetadataStructure(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single MetadataStructure , this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.MetadataStructure.IMetadataStructureDefinitionObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMetadataStructureObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get metadata structure beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMetadataStructureObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns MetadataStructureObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all MetadataStructureObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMetadataflow(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get metadataflow.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.MetadataStructure.IMetadataFlow"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMetadataflow(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single Metadataflow , this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.MetadataStructure.IMetadataFlow"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMetadataflowObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get metadataflow beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMetadataflowObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns MetadataFlowObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all MetadataFlowObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetObjects">
+            <summary>
+                Returns a copy of the underlying beans for this retrieval Manager
+            </summary>
+            <returns>
+                The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetOrganisationUnitScheme(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get organisation unit scheme.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IOrganisationUnitSchemeObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetOrganisationUnitScheme(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a single organisation unit scheme, this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IOrganisationUnitSchemeObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetOrganisationUnitSchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get organisation unit scheme beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetOrganisationUnitSchemeObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns OrganisationUnitSchemeObjects that match the parameters in the ref object.  If the ref object is null or 
+            has no attributes set, then this will be interpreted as a search for all OrganisationUnitSchemeObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetProcessObject(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get process bean.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Process.IProcessObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetProcessObject(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a process bean, this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Process.IProcessObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetProcessObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get process beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetProcessObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns ProcessObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all ProcessObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetProvisionAgreementObject(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get provision agreement bean.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry.IProvisionAgreementObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetProvisionAgreementObject(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a provision agreement bean, this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Registry.IProvisionAgreementObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetProvisionAgreementObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get provision agreement beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetProvisionAgreementObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns ProvisionAgreementObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all ProvisionAgreementObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetReportingTaxonomy(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get reporting taxonomy.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.CategoryScheme.IReportingTaxonomyObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetReportingTaxonomy(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a reporting taxonomy bean, this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+             If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.CategoryScheme.IReportingTaxonomyObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetReportingTaxonomyObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get reporting taxonomy beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetReportingTaxonomyObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns ReportingTaxonomyObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all ReportingTaxonomyObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetStructureSet(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get structure set.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Mapping.IStructureSetObject"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetStructureSet(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean)">
+            <summary>
+            Returns a structure set bean, this expects the ref object to contain
+            all the attributes required to uniquely identify the object.  If version information
+            is missing then the latest version is assumed.
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, this is expected to uniquely identify one object
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Mapping.IStructureSetObject"/> .
+            </returns>
+            <exception cref="T:System.NotImplementedException">
+            Not implemented.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetStructureSetObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            The get structure set beans.
+            </summary>
+            <param name="xref">
+            The maintainable reference..
+            </param>
+            <returns>
+            The <see cref="!:ISet"/>.
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetStructureSetObjects(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,System.Boolean,System.Boolean)">
+            <summary>
+            Returns StructureSetObjects that match the parameters in the ref object.  If the ref object is null or
+            has no attributes set, then this will be interpreted as a search for all StructureSetObjects
+            </summary>
+            <param name="xref">
+            The reference object defining the search parameters, can be empty or null
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            Set of sdmxObjects that match the search criteria
+            </returns>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.SaveStructure(Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IMaintainableObject)">
+            <summary>
+            Saves the maintainable
+            </summary>
+            <param name="maintainable">
+            The maintainable.
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.SaveStructures(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects)">
+            <summary>
+            The save structures.
+            </summary>
+            <param name="beans0">
+            The beans 0.
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.GetMaintainables(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IStructureReference)">
+            <summary>
+            The get maintainables.
+            </summary>
+            <param name="query">
+            The query.
+            </param>
+            <returns>
+            The <see cref="T:System.Collections.Generic.ISet`1"/>.
+            </returns>
+            <exception cref="T:Org.Sdmxsource.Sdmx.Api.Exception.SdmxNotImplementedException">
+            <paramref name="query"/> is not for a maintainable.
+            </exception>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.ResolveReferences(Org.Sdmxsource.Sdmx.Api.Model.Objects.ISdmxObjects)">
+            <summary>
+            The resolve references.
+            </summary>
+            <param name="beans0">
+            The beans 0.
+            </param>
+        </member>
+        <member name="T:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.ResultExtractor`1">
+            <summary>
+            TODO
+            </summary>
+            <typeparam name="T">
+            The maintainable object
+            </typeparam>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.ResultExtractor`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:ResultExtractor"/> class.
+                Default constructor
+            </summary>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.ResultExtractor`1.#ctor(Org.Sdmxsource.Sdmx.Util.Objects.MaintainableUtil{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="!:ResultExtractor"/> class.
+            </summary>
+            <param name="maintainableUtil">
+            The maintainable util
+            </param>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.Structureretrieval.Manager.InMemoryRetrievalManager.ResultExtractor`1.FilterResults(System.Collections.Generic.ISet{`0},System.Boolean,System.Boolean)">
+            <summary>
+            TODO
+            </summary>
+            <param name="results">
+            The results set
+            </param>
+            <param name="returnLatest">
+            If true then the latest versions of the structures that match the query will be returned.  If version information is supplied
+            then it will be ignored
+            </param>
+            <param name="returnStub">
+            If true then a stub object will be returned
+            </param>
+            <returns>
+            The set of maintainable objects
+            </returns>
+        </member>
+        <member name="T:Org.Sdmxsource.Sdmx.StructureRetrieval.Manager.AbstractRetrievalManager">
+            <summary>
+                The abstract retrieval manager.
+            </summary>
+        </member>
+        <member name="F:Org.Sdmxsource.Sdmx.StructureRetrieval.Manager.AbstractRetrievalManager._sdmxObjectRetrievalManager">
+            <summary>
+                The _sdmx object retrieval manager.
+            </summary>
+        </member>
+        <member name="M:Org.Sdmxsource.Sdmx.StructureRetrieval.Manager.AbstractRetrievalManager.#ctor(Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.ISdmxObjectRetrievalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Org.Sdmxsource.Sdmx.StructureRetrieval.Manager.AbstractRetrievalManager"/> class.
+            </summary>
+            <param name="sdmxObjectRetrievalManager">
+            The sdmx object retrieval manager.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="sdmxObjectRetrievalManager"/> is null
+            </exception>
+        </member>
+        <member name="P:Org.Sdmxsource.Sdmx.StructureRetrieval.Manager.AbstractRetrievalManager.SdmxObjectRetrievalManager">
+            <summary>
+                Gets the sdmx object retrieval manager.
+            </summary>
+        </member>
+    </members>
+</doc>

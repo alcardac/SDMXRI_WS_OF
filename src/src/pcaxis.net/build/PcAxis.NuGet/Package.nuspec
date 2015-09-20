@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>PcAxis.NuGet</id>
+    <version>1.0.0</version>
+    <title>PcAxis.NuGet</title>
+    <authors>Intrasoft-Intl. S.A.</authors>
+    <owners></owners>
+    <description>
+      A long description of the package. This shows up in the right pane of the Add Package Dialog as well as in the Package Manager Console when listing packages using the Get-Package command.
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      A short description of the package. If specified, this shows up in the middle pane of the Add Package Dialog. If not specified, a truncated version of the description is used instead.
+    </summary>
+    <language>en-US</language>
+      <requireLicenseAcceptance>false</requireLicenseAcceptance>
+      <licenseUrl>http://opensource.org/licenses/EUPL-1.1</licenseUrl>
+      <copyright>Copyright  2012-2014</copyright>
+      <dependencies>
+      
+    </dependencies>
+    <references></references>
+    <tags></tags>
+  </metadata>
+  <files>
+      <file src="bin\Debug\PcAxis*.dll" target="lib\net20" />
+      <file src="bin\Debug\edtftp*.dll" target="lib\net20" />
+      <file src="bin\Debug\PcAxis*.xml" target="lib\net20" />
+      <file src="bin\Debug\PcAxis*.pdb" target="lib\net20" />
+
+      <file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />
+  </files>
+</package>

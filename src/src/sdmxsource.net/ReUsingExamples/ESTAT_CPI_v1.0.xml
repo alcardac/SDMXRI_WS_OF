@@ -1,0 +1,2726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Structure xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common"
+    xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://katharma.agilis-sa.gr/SDMXML/SDMXMessage.xsd">
+    <Header>
+	<ID>ESTAT_CPI</ID>
+        <Test>true</Test>
+        <Truncated>false</Truncated>
+        <Name xml:lang="en">Consumer Price Index DSD</Name>
+	<Prepared>2007-10-10T18:36:00+02:00</Prepared>
+        <Sender id="ESTAT">
+            <Name xml:lang="en">Statistical Office of the European Communities</Name>
+        </Sender>
+	<Extracted>2007-10-10T18:36:00+02:00</Extracted>
+    </Header>
+    
+    <CodeLists>
+
+	<structure:CodeList id="CL_AREA_EE" agencyID="ECB" isFinal="true" version="1.0">
+            <structure:Name xml:lang="en">Area code list</structure:Name>
+            <structure:Code value="1A">
+                <structure:Description xml:lang="en">International organisations</structure:Description>
+            </structure:Code>
+            <structure:Code value="1B">
+                <structure:Description xml:lang="en">UN organisations</structure:Description>
+            </structure:Code>
+            <structure:Code value="1C">
+                <structure:Description xml:lang="en">International Monetary Fund</structure:Description>
+            </structure:Code>
+            <structure:Code value="1D">
+                <structure:Description xml:lang="en">World Trade Organisation</structure:Description>
+            </structure:Code>
+            <structure:Code value="1E">
+                <structure:Description xml:lang="en">International Bank for Reconstruction and Development</structure:Description>
+            </structure:Code>
+            <structure:Code value="1F">
+                <structure:Description xml:lang="en">International Development Association</structure:Description>
+            </structure:Code>
+            <structure:Code value="1G">
+                <structure:Description xml:lang="en">Other UN Organisations (includes 1H, 1J-1T)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1H">
+                <structure:Description xml:lang="en"
+                >UNESCO (United Nations Educational, Scientific and Cultural Organisati on)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1J">
+                <structure:Description xml:lang="en">FAO (Food and Agriculture Organisation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1K">
+                <structure:Description xml:lang="en">WHO (World Health Organisation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1L">
+                <structure:Description xml:lang="en">IFAD (International Fund for Agricultural Development)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1M">
+                <structure:Description xml:lang="en">IFC (International Finance Corporation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1N">
+                <structure:Description xml:lang="en">MIGA (Multilateral Investment Guarantee Agency)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1O">
+                <structure:Description xml:lang="en">UNICEF (United Nations Children Fund)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1P">
+                <structure:Description xml:lang="en">UNHCR (United Nations High Commissioner for Refugees)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1Q">
+                <structure:Description xml:lang="en">UNRWA (United Nations Relief and Works Agency for Palestine)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1R">
+                <structure:Description xml:lang="en">IAEA (International Atomic Energy Agency)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1S">
+                <structure:Description xml:lang="en">ILO (International Labour Organisation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1T">
+                <structure:Description xml:lang="en">ITU (International Telecommunication Union)</structure:Description>
+            </structure:Code>
+            <structure:Code value="1Z">
+                <structure:Description xml:lang="en">Rest of UN Organisations n.i.e.</structure:Description>
+            </structure:Code>
+            <structure:Code value="4A">
+                <structure:Description xml:lang="en">European Community Institutions, Organs and Organisms</structure:Description>
+            </structure:Code>
+            <structure:Code value="4B">
+                <structure:Description xml:lang="en">EMS (European Monetary System)</structure:Description>
+            </structure:Code>
+            <structure:Code value="4C">
+                <structure:Description xml:lang="en">European Investment Bank</structure:Description>
+            </structure:Code>
+            <structure:Code value="4D">
+                <structure:Description xml:lang="en">European Commission</structure:Description>
+            </structure:Code>
+            <structure:Code value="4E">
+                <structure:Description xml:lang="en">European Development Fund</structure:Description>
+            </structure:Code>
+            <structure:Code value="4F">
+                <structure:Description xml:lang="en">European Central Bank</structure:Description>
+            </structure:Code>
+            <structure:Code value="4G">
+                <structure:Description xml:lang="en">EIF (European Investment Fund)</structure:Description>
+            </structure:Code>
+            <structure:Code value="4H">
+                <structure:Description xml:lang="en">European Community of Steel and Coal</structure:Description>
+            </structure:Code>
+            <structure:Code value="4J">
+                <structure:Description xml:lang="en">Other EC Institutions, Organs and Organisms covered by General budget</structure:Description>
+            </structure:Code>
+            <structure:Code value="4K">
+                <structure:Description xml:lang="en">European Parliament</structure:Description>
+            </structure:Code>
+            <structure:Code value="4L">
+                <structure:Description xml:lang="en">European Council</structure:Description>
+            </structure:Code>
+            <structure:Code value="4M">
+                <structure:Description xml:lang="en">Court of Justice</structure:Description>
+            </structure:Code>
+            <structure:Code value="4N">
+                <structure:Description xml:lang="en">Court of Auditors</structure:Description>
+            </structure:Code>
+            <structure:Code value="4P">
+                <structure:Description xml:lang="en">Economic and Social Committee</structure:Description>
+            </structure:Code>
+            <structure:Code value="4Q">
+                <structure:Description xml:lang="en">Committee of Regions</structure:Description>
+            </structure:Code>
+            <structure:Code value="4Z">
+                <structure:Description xml:lang="en">Other European Community Institutions, Organs and Organisms</structure:Description>
+            </structure:Code>
+            <structure:Code value="5A">
+                <structure:Description xml:lang="en">Organisation for Economic Cooperation and Development</structure:Description>
+            </structure:Code>
+            <structure:Code value="5B">
+                <structure:Description xml:lang="en">Bank for International Settlements</structure:Description>
+            </structure:Code>
+            <structure:Code value="5C">
+                <structure:Description xml:lang="en">Inter-American Development Bank</structure:Description>
+            </structure:Code>
+            <structure:Code value="5D">
+                <structure:Description xml:lang="en">African Development Bank</structure:Description>
+            </structure:Code>
+            <structure:Code value="5E">
+                <structure:Description xml:lang="en">Asian Development Bank</structure:Description>
+            </structure:Code>
+            <structure:Code value="5F">
+                <structure:Description xml:lang="en">European Bank for Reconstruction and Development</structure:Description>
+            </structure:Code>
+            <structure:Code value="5G">
+                <structure:Description xml:lang="en">IIC (Inter-American Investment Corporation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5H">
+                <structure:Description xml:lang="en">NIB (Nordic Investment Bank)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5J">
+                <structure:Description xml:lang="en">IBEC (International Bank for Economic Co-operation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5K">
+                <structure:Description xml:lang="en">IIB (International Investment Bank)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5L">
+                <structure:Description xml:lang="en">CDB (Caribbean Development Bank)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5M">
+                <structure:Description xml:lang="en">AMF (Arab Monetary Fund)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5N">
+                <structure:Description xml:lang="en">BADEA (Banque arabe pour le développement économique en Afrique)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5P">
+                <structure:Description xml:lang="en">CASDB (Central African States Development Bank)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5Q">
+                <structure:Description xml:lang="en">African Development Fund</structure:Description>
+            </structure:Code>
+            <structure:Code value="5R">
+                <structure:Description xml:lang="en">Asian Development Fund</structure:Description>
+            </structure:Code>
+            <structure:Code value="5S">
+                <structure:Description xml:lang="en">Fonds spécial unifié de développement</structure:Description>
+            </structure:Code>
+            <structure:Code value="5T">
+                <structure:Description xml:lang="en">CABEI (Central American Bank for Economic Integration)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5U">
+                <structure:Description xml:lang="en">ADC (Andean Development Corporation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5V">
+                <structure:Description xml:lang="en">Other International Organisations (financial institutions)</structure:Description>
+            </structure:Code>
+            <structure:Code value="5Z">
+                <structure:Description xml:lang="en">Other International Financial Organisations n.i.e.</structure:Description>
+            </structure:Code>
+            <structure:Code value="6A">
+                <structure:Description xml:lang="en">Other International Organisations (non-financial institutions)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6B">
+                <structure:Description xml:lang="en">NATO (North Atlantic Treaty Organisation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6C">
+                <structure:Description xml:lang="en">Council of Europe</structure:Description>
+            </structure:Code>
+            <structure:Code value="6D">
+                <structure:Description xml:lang="en">ICRC (International Committee of the Red Cross)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6E">
+                <structure:Description xml:lang="en">ESA (European Space Agency)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6F">
+                <structure:Description xml:lang="en">EPO (European Patent Office)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6G">
+                <structure:Description xml:lang="en">EUROCONTROL (European Organisation for the Safety of Air Navigation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6H">
+                <structure:Description xml:lang="en">EUTELSAT (European Telecommunications Satellite Organisation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6J">
+                <structure:Description xml:lang="en">INTELSAT (International Telecommunications Satellite Organisation)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6K">
+                <structure:Description xml:lang="en"
+                >EBU/UER (European Broadcasting Union/Union européenne de radio-télévis ion)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6L">
+                <structure:Description xml:lang="en"
+                >EUMETSAT (European Organisation for the Exploitation of Meteorological  Satellites)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6M">
+                <structure:Description xml:lang="en">ESO (European Southern Observatory)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6N">
+                <structure:Description xml:lang="en">ECMWF (European Centre for Medium-Range Weather Forecasts)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6O">
+                <structure:Description xml:lang="en">EMBL (European Molecular Biology Laboratory)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6P">
+                <structure:Description xml:lang="en">CERN (European Organisation for Nuclear Research)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6Q">
+                <structure:Description xml:lang="en">IOM (International Organisation for Migration)</structure:Description>
+            </structure:Code>
+            <structure:Code value="6Z">
+                <structure:Description xml:lang="en">Other International Non-Financial Organisations n.i.e.</structure:Description>
+            </structure:Code>
+            <structure:Code value="7Z">
+                <structure:Description xml:lang="en">International Organisations excluding Eur.Community Institutions (4A)</structure:Description>
+            </structure:Code>
+            <structure:Code value="A0">
+                <structure:Description xml:lang="en">Other EEA countries (all countries excluding the reference area)</structure:Description>
+            </structure:Code>
+            <structure:Code value="A1">
+                <structure:Description xml:lang="en">World (all entities)</structure:Description>
+            </structure:Code>
+            <structure:Code value="A2">
+                <structure:Description xml:lang="en">EUR12 (Intra Eur12)</structure:Description>
+            </structure:Code>
+            <structure:Code value="A3">
+                <structure:Description xml:lang="en">Belgo-Luxembourg Economic Union</structure:Description>
+            </structure:Code>
+            <structure:Code value="A4">
+                <structure:Description xml:lang="en">Extra EUR12</structure:Description>
+            </structure:Code>
+            <structure:Code value="A5">
+                <structure:Description xml:lang="en">European Free Trade Association</structure:Description>
+            </structure:Code>
+            <structure:Code value="A6">
+                <structure:Description xml:lang="en">European Economic Area</structure:Description>
+            </structure:Code>
+            <structure:Code value="A7">
+                <structure:Description xml:lang="en">Extra EEA</structure:Description>
+            </structure:Code>
+            <structure:Code value="A8">
+                <structure:Description xml:lang="en">OECD countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="A9">
+                <structure:Description xml:lang="en">Countries from Central and Eastern Europe</structure:Description>
+            </structure:Code>
+            <structure:Code value="AD">
+                <structure:Description xml:lang="en">Andorra</structure:Description>
+            </structure:Code>
+            <structure:Code value="AE">
+                <structure:Description xml:lang="en">United Arab Emirates</structure:Description>
+            </structure:Code>
+            <structure:Code value="AF">
+                <structure:Description xml:lang="en">Afghanistan</structure:Description>
+            </structure:Code>
+            <structure:Code value="AG">
+                <structure:Description xml:lang="en">Antigua and Barbuda</structure:Description>
+            </structure:Code>
+            <structure:Code value="AI">
+                <structure:Description xml:lang="en">Anguilla</structure:Description>
+            </structure:Code>
+            <structure:Code value="AL">
+                <structure:Description xml:lang="en">Albania</structure:Description>
+            </structure:Code>
+            <structure:Code value="AM">
+                <structure:Description xml:lang="en">Armenia</structure:Description>
+            </structure:Code>
+            <structure:Code value="AN">
+                <structure:Description xml:lang="en">Netherlands Antilles</structure:Description>
+            </structure:Code>
+            <structure:Code value="AO">
+                <structure:Description xml:lang="en">Angola</structure:Description>
+            </structure:Code>
+            <structure:Code value="AQ">
+                <structure:Description xml:lang="en">Antarctica</structure:Description>
+            </structure:Code>
+            <structure:Code value="AR">
+                <structure:Description xml:lang="en">Argentina</structure:Description>
+            </structure:Code>
+            <structure:Code value="AS">
+                <structure:Description xml:lang="en">American Samoa</structure:Description>
+            </structure:Code>
+            <structure:Code value="AT">
+                <structure:Description xml:lang="en">Austria</structure:Description>
+            </structure:Code>
+            <structure:Code value="AU">
+                <structure:Description xml:lang="en">Australia</structure:Description>
+            </structure:Code>
+            <structure:Code value="AW">
+                <structure:Description xml:lang="en">Aruba</structure:Description>
+            </structure:Code>
+            <structure:Code value="AX">
+                <structure:Description xml:lang="en">Aland Islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="AZ">
+                <structure:Description xml:lang="en">Azerbaijan</structure:Description>
+            </structure:Code>
+            <structure:Code value="B1">
+                <structure:Description xml:lang="en">North American Free Trade Association</structure:Description>
+            </structure:Code>
+            <structure:Code value="B2">
+                <structure:Description xml:lang="en">Latin America</structure:Description>
+            </structure:Code>
+            <structure:Code value="B3">
+                <structure:Description xml:lang="en">Countries for the Association of South-East Asian Nations</structure:Description>
+            </structure:Code>
+            <structure:Code value="B4">
+                <structure:Description xml:lang="en">Organization of Petroleum Exporting Countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="B5">
+                <structure:Description xml:lang="en">African, Caribbean and Pacific countries (Lomé convention)</structure:Description>
+            </structure:Code>
+            <structure:Code value="B6">
+                <structure:Description xml:lang="en">African ACP countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="B7">
+                <structure:Description xml:lang="en">Caribbean ACP countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="B8">
+                <structure:Description xml:lang="en">Pacific ACP countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="B9">
+                <structure:Description xml:lang="en">Core Newly Industrializing Countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="BA">
+                <structure:Description xml:lang="en">Bosnia and Herzegovina</structure:Description>
+            </structure:Code>
+            <structure:Code value="BB">
+                <structure:Description xml:lang="en">Barbados</structure:Description>
+            </structure:Code>
+            <structure:Code value="BD">
+                <structure:Description xml:lang="en">Bangladesh</structure:Description>
+            </structure:Code>
+            <structure:Code value="BE">
+                <structure:Description xml:lang="en">Belgium</structure:Description>
+            </structure:Code>
+            <structure:Code value="BF">
+                <structure:Description xml:lang="en">Burkina Faso</structure:Description>
+            </structure:Code>
+            <structure:Code value="BG">
+                <structure:Description xml:lang="en">Bulgaria</structure:Description>
+            </structure:Code>
+            <structure:Code value="BH">
+                <structure:Description xml:lang="en">Bahrain</structure:Description>
+            </structure:Code>
+            <structure:Code value="BI">
+                <structure:Description xml:lang="en">Burundi</structure:Description>
+            </structure:Code>
+            <structure:Code value="BJ">
+                <structure:Description xml:lang="en">Benin</structure:Description>
+            </structure:Code>
+            <structure:Code value="BM">
+                <structure:Description xml:lang="en">Bermuda</structure:Description>
+            </structure:Code>
+            <structure:Code value="BN">
+                <structure:Description xml:lang="en">Brunei Darussalam</structure:Description>
+            </structure:Code>
+            <structure:Code value="BO">
+                <structure:Description xml:lang="en">Bolivia</structure:Description>
+            </structure:Code>
+            <structure:Code value="BR">
+                <structure:Description xml:lang="en">Brazil</structure:Description>
+            </structure:Code>
+            <structure:Code value="BS">
+                <structure:Description xml:lang="en">Bahamas</structure:Description>
+            </structure:Code>
+            <structure:Code value="BT">
+                <structure:Description xml:lang="en">Bhutan</structure:Description>
+            </structure:Code>
+            <structure:Code value="BV">
+                <structure:Description xml:lang="en">Bouvet Island</structure:Description>
+            </structure:Code>
+            <structure:Code value="BW">
+                <structure:Description xml:lang="en">Botswana</structure:Description>
+            </structure:Code>
+            <structure:Code value="BY">
+                <structure:Description xml:lang="en">Belarus</structure:Description>
+            </structure:Code>
+            <structure:Code value="BZ">
+                <structure:Description xml:lang="en">Belize</structure:Description>
+            </structure:Code>
+            <structure:Code value="C1">
+                <structure:Description xml:lang="en">Asian NICs of the second wave of industrialization</structure:Description>
+            </structure:Code>
+            <structure:Code value="C2">
+                <structure:Description xml:lang="en">Latin American NICs of the second wave of industrialization</structure:Description>
+            </structure:Code>
+            <structure:Code value="C3">
+                <structure:Description xml:lang="en">Mediterranean Basin countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="C4">
+                <structure:Description xml:lang="en">Offshore financial centers</structure:Description>
+            </structure:Code>
+            <structure:Code value="C5">
+                <structure:Description xml:lang="en">French Franc zone</structure:Description>
+            </structure:Code>
+            <structure:Code value="C6">
+                <structure:Description xml:lang="en">Community of Independant States</structure:Description>
+            </structure:Code>
+            <structure:Code value="C7">
+                <structure:Description xml:lang="en">Maghreb countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="C8">
+                <structure:Description xml:lang="en">Mashrek Countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="C9">
+                <structure:Description xml:lang="en">Mercado comun de los paises del cono sur</structure:Description>
+            </structure:Code>
+            <structure:Code value="CA">
+                <structure:Description xml:lang="en">Canada</structure:Description>
+            </structure:Code>
+            <structure:Code value="CC">
+                <structure:Description xml:lang="en">Cocos (Keeling) Islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="CD">
+                <structure:Description xml:lang="en">Democratic Republic of the Congo</structure:Description>
+            </structure:Code>
+            <structure:Code value="CF">
+                <structure:Description xml:lang="en">Central African Republic</structure:Description>
+            </structure:Code>
+            <structure:Code value="CG">
+                <structure:Description xml:lang="en">Congo</structure:Description>
+            </structure:Code>
+            <structure:Code value="CH">
+                <structure:Description xml:lang="en">Switzerland</structure:Description>
+            </structure:Code>
+            <structure:Code value="CI">
+                <structure:Description xml:lang="en">Côte d`Ivoire</structure:Description>
+            </structure:Code>
+            <structure:Code value="CK">
+                <structure:Description xml:lang="en">Cook Islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="CL">
+                <structure:Description xml:lang="en">Chile</structure:Description>
+            </structure:Code>
+            <structure:Code value="CM">
+                <structure:Description xml:lang="en">Cameroon</structure:Description>
+            </structure:Code>
+            <structure:Code value="CN">
+                <structure:Description xml:lang="en">China</structure:Description>
+            </structure:Code>
+            <structure:Code value="CO">
+                <structure:Description xml:lang="en">Colombia</structure:Description>
+            </structure:Code>
+            <structure:Code value="CR">
+                <structure:Description xml:lang="en">Costa Rica</structure:Description>
+            </structure:Code>
+            <structure:Code value="CS">
+                <structure:Description xml:lang="en">Serbia and Montenegro</structure:Description>
+            </structure:Code>
+            <structure:Code value="CU">
+                <structure:Description xml:lang="en">Cuba</structure:Description>
+            </structure:Code>
+            <structure:Code value="CV">
+                <structure:Description xml:lang="en">Cape Verde</structure:Description>
+            </structure:Code>
+            <structure:Code value="CX">
+                <structure:Description xml:lang="en">Christmas Island</structure:Description>
+            </structure:Code>
+            <structure:Code value="CY">
+                <structure:Description xml:lang="en">Cyprus</structure:Description>
+            </structure:Code>
+            <structure:Code value="CZ">
+                <structure:Description xml:lang="en">Czech Republic</structure:Description>
+            </structure:Code>
+            <structure:Code value="D0">
+                <structure:Description xml:lang="en">EU (changing composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="D1">
+                <structure:Description xml:lang="en">Asia-Pacific Economic Co-operation</structure:Description>
+            </structure:Code>
+            <structure:Code value="D2">
+                <structure:Description xml:lang="en">EU 15 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="D3">
+                <structure:Description xml:lang="en">EU 25 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="D4">
+                <structure:Description xml:lang="en">Extra-EU 15 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="D5">
+                <structure:Description xml:lang="en">Extra-EU 25 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="D6">
+                <structure:Description xml:lang="en">Candidate Countries (CCs)</structure:Description>
+            </structure:Code>
+            <structure:Code value="D7">
+                <structure:Description xml:lang="en">Mediterranean countries in the Euro-Mediterranean Partnership</structure:Description>
+            </structure:Code>
+            <structure:Code value="D8">
+                <structure:Description xml:lang="en">New EU Member States 2004 (CY,CZ,EE,HU,LV,LT,MT,PL,SK,SI)</structure:Description>
+            </structure:Code>
+            <structure:Code value="D9">
+                <structure:Description xml:lang="en">Extra-EU (changing composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="DE">
+                <structure:Description xml:lang="en">Germany</structure:Description>
+            </structure:Code>
+            <structure:Code value="DJ">
+                <structure:Description xml:lang="en">Djibouti</structure:Description>
+            </structure:Code>
+            <structure:Code value="DK">
+                <structure:Description xml:lang="en">Denmark</structure:Description>
+            </structure:Code>
+            <structure:Code value="DM">
+                <structure:Description xml:lang="en">Dominica</structure:Description>
+            </structure:Code>
+            <structure:Code value="DO">
+                <structure:Description xml:lang="en">Dominican Republic</structure:Description>
+            </structure:Code>
+            <structure:Code value="DZ">
+                <structure:Description xml:lang="en">Algeria</structure:Description>
+            </structure:Code>
+            <structure:Code value="E1">
+                <structure:Description xml:lang="en">Europe</structure:Description>
+            </structure:Code>
+            <structure:Code value="E2">
+                <structure:Description xml:lang="en">Other European countries (not EU nor EFTA)</structure:Description>
+            </structure:Code>
+            <structure:Code value="E3">
+                <structure:Description xml:lang="en">Baltic countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="E4">
+                <structure:Description xml:lang="en">Africa</structure:Description>
+            </structure:Code>
+            <structure:Code value="E5">
+                <structure:Description xml:lang="en">North Africa countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="E6">
+                <structure:Description xml:lang="en">Central and South Africa countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="E7">
+                <structure:Description xml:lang="en">America</structure:Description>
+            </structure:Code>
+            <structure:Code value="E8">
+                <structure:Description xml:lang="en">North American countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="E9">
+                <structure:Description xml:lang="en">Central American countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="EC">
+                <structure:Description xml:lang="en">Ecuador</structure:Description>
+            </structure:Code>
+            <structure:Code value="EE">
+                <structure:Description xml:lang="en">Estonia</structure:Description>
+            </structure:Code>
+            <structure:Code value="EG">
+                <structure:Description xml:lang="en">Egypt</structure:Description>
+            </structure:Code>
+            <structure:Code value="EH">
+                <structure:Description xml:lang="en">Western Sahara</structure:Description>
+            </structure:Code>
+            <structure:Code value="ER">
+                <structure:Description xml:lang="en">Eritrea</structure:Description>
+            </structure:Code>
+            <structure:Code value="ES">
+                <structure:Description xml:lang="en">Spain</structure:Description>
+            </structure:Code>
+            <structure:Code value="ET">
+                <structure:Description xml:lang="en">Ethiopia</structure:Description>
+            </structure:Code>
+            <structure:Code value="F1">
+                <structure:Description xml:lang="en">South American countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="F2">
+                <structure:Description xml:lang="en">Asia</structure:Description>
+            </structure:Code>
+            <structure:Code value="F3">
+                <structure:Description xml:lang="en">Near and Middle East countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="F4">
+                <structure:Description xml:lang="en">Gulf Arabian Countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="F5">
+                <structure:Description xml:lang="en">Other Near and Middle East countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="F6">
+                <structure:Description xml:lang="en">Other Asian countries</structure:Description>
+            </structure:Code>
+            <structure:Code value="F7">
+                <structure:Description xml:lang="en">Australia, Oceania and other territories</structure:Description>
+            </structure:Code>
+            <structure:Code value="F8">
+                <structure:Description xml:lang="en">Australian Oceania</structure:Description>
+            </structure:Code>
+            <structure:Code value="F9">
+                <structure:Description xml:lang="en">American Oceania</structure:Description>
+            </structure:Code>
+            <structure:Code value="FI">
+                <structure:Description xml:lang="en">Finland</structure:Description>
+            </structure:Code>
+            <structure:Code value="FJ">
+                <structure:Description xml:lang="en">Fiji</structure:Description>
+            </structure:Code>
+            <structure:Code value="FK">
+                <structure:Description xml:lang="en">Falkland Islands (Malvinas)</structure:Description>
+            </structure:Code>
+            <structure:Code value="FM">
+                <structure:Description xml:lang="en">Micronesia, Federated States of</structure:Description>
+            </structure:Code>
+            <structure:Code value="FO">
+                <structure:Description xml:lang="en">Faroe Islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="FR">
+                <structure:Description xml:lang="en">France</structure:Description>
+            </structure:Code>
+            <structure:Code value="G1">
+                <structure:Description xml:lang="en">New Zealand Oceania</structure:Description>
+            </structure:Code>
+            <structure:Code value="G2">
+                <structure:Description xml:lang="en">Polar regions</structure:Description>
+            </structure:Code>
+            <structure:Code value="GA">
+                <structure:Description xml:lang="en">Gabon</structure:Description>
+            </structure:Code>
+            <structure:Code value="GB">
+                <structure:Description xml:lang="en">United Kingdom</structure:Description>
+            </structure:Code>
+            <structure:Code value="GD">
+                <structure:Description xml:lang="en">Grenada</structure:Description>
+            </structure:Code>
+            <structure:Code value="GE">
+                <structure:Description xml:lang="en">Georgia</structure:Description>
+            </structure:Code>
+            <structure:Code value="GF">
+                <structure:Description xml:lang="en">French Guiana</structure:Description>
+            </structure:Code>
+            <structure:Code value="GG">
+                <structure:Description xml:lang="en"
+                >Guernsey (No official ISO 3166-1 country code, exceptionnally reserved  code elements)</structure:Description>
+            </structure:Code>
+            <structure:Code value="GH">
+                <structure:Description xml:lang="en">Ghana</structure:Description>
+            </structure:Code>
+            <structure:Code value="GI">
+                <structure:Description xml:lang="en">Gibraltar</structure:Description>
+            </structure:Code>
+            <structure:Code value="GL">
+                <structure:Description xml:lang="en">Greenland</structure:Description>
+            </structure:Code>
+            <structure:Code value="GM">
+                <structure:Description xml:lang="en">Gambia</structure:Description>
+            </structure:Code>
+            <structure:Code value="GN">
+                <structure:Description xml:lang="en">Guinea</structure:Description>
+            </structure:Code>
+            <structure:Code value="GP">
+                <structure:Description xml:lang="en">Guadeloupe</structure:Description>
+            </structure:Code>
+            <structure:Code value="GQ">
+                <structure:Description xml:lang="en">Equatorial Guinea</structure:Description>
+            </structure:Code>
+            <structure:Code value="GR">
+                <structure:Description xml:lang="en">Greece</structure:Description>
+            </structure:Code>
+            <structure:Code value="GS">
+                <structure:Description xml:lang="en">South Georgia and the South Sandwich Islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="GT">
+                <structure:Description xml:lang="en">Guatemala</structure:Description>
+            </structure:Code>
+            <structure:Code value="GU">
+                <structure:Description xml:lang="en">Guam</structure:Description>
+            </structure:Code>
+            <structure:Code value="GW">
+                <structure:Description xml:lang="en">Guinea-Bissau</structure:Description>
+            </structure:Code>
+            <structure:Code value="GY">
+                <structure:Description xml:lang="en">Guyana</structure:Description>
+            </structure:Code>
+            <structure:Code value="H0">
+                <structure:Description xml:lang="en">EEA except the euro area and reference area</structure:Description>
+            </structure:Code>
+            <structure:Code value="HK">
+                <structure:Description xml:lang="en">Hong Kong</structure:Description>
+            </structure:Code>
+            <structure:Code value="HM">
+                <structure:Description xml:lang="en">Heard Island and McDonald Islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="HN">
+                <structure:Description xml:lang="en">Honduras</structure:Description>
+            </structure:Code>
+            <structure:Code value="HR">
+                <structure:Description xml:lang="en">Croatia</structure:Description>
+            </structure:Code>
+            <structure:Code value="HT">
+                <structure:Description xml:lang="en">Haiti</structure:Description>
+            </structure:Code>
+            <structure:Code value="HU">
+                <structure:Description xml:lang="en">Hungary</structure:Description>
+            </structure:Code>
+            <structure:Code value="I1">
+                <structure:Description xml:lang="en">Euro area 11 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="I2">
+                <structure:Description xml:lang="en">Euro area 12 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="I3">
+                <structure:Description xml:lang="en">Euro area 13 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="I4">
+                <structure:Description xml:lang="en">Euro area 15 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="ID">
+                <structure:Description xml:lang="en">Indonesia</structure:Description>
+            </structure:Code>
+            <structure:Code value="IE">
+                <structure:Description xml:lang="en">Ireland</structure:Description>
+            </structure:Code>
+            <structure:Code value="IL">
+                <structure:Description xml:lang="en">Israel</structure:Description>
+            </structure:Code>
+            <structure:Code value="IM">
+                <structure:Description xml:lang="en">Isle of Man</structure:Description>
+            </structure:Code>
+            <structure:Code value="IN">
+                <structure:Description xml:lang="en">India</structure:Description>
+            </structure:Code>
+            <structure:Code value="IO">
+                <structure:Description xml:lang="en">British Indian Ocean territory</structure:Description>
+            </structure:Code>
+            <structure:Code value="IQ">
+                <structure:Description xml:lang="en">Iraq</structure:Description>
+            </structure:Code>
+            <structure:Code value="IR">
+                <structure:Description xml:lang="en">Iran, Islamic Republic of</structure:Description>
+            </structure:Code>
+            <structure:Code value="IS">
+                <structure:Description xml:lang="en">Iceland</structure:Description>
+            </structure:Code>
+            <structure:Code value="IT">
+                <structure:Description xml:lang="en">Italy</structure:Description>
+            </structure:Code>
+            <structure:Code value="J1">
+                <structure:Description xml:lang="en">Extra-Euro area 11 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="J2">
+                <structure:Description xml:lang="en">Extra-Euro area 12 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="J3">
+                <structure:Description xml:lang="en">Extra-Euro area 13 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="J4">
+                <structure:Description xml:lang="en">Extra-Euro area 15 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="JE">
+                <structure:Description xml:lang="en"
+                >Jersey (No official ISO 3166-1 country code, exceptionnally reserved c ode elements)</structure:Description>
+            </structure:Code>
+            <structure:Code value="JM">
+                <structure:Description xml:lang="en">Jamaica</structure:Description>
+            </structure:Code>
+            <structure:Code value="JO">
+                <structure:Description xml:lang="en">Jordan</structure:Description>
+            </structure:Code>
+            <structure:Code value="JP">
+                <structure:Description xml:lang="en">Japan</structure:Description>
+            </structure:Code>
+            <structure:Code value="K1">
+                <structure:Description xml:lang="en">EU member states not belonging to Euro area 11 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="K2">
+                <structure:Description xml:lang="en">EU member states not belonging to Euro area 12 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="K3">
+                <structure:Description xml:lang="en">EU member states not belonging to Euro area 13 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="K4">
+                <structure:Description xml:lang="en">EU member states not belonging to Euro area 15 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="KE">
+                <structure:Description xml:lang="en">Kenya</structure:Description>
+            </structure:Code>
+            <structure:Code value="KG">
+                <structure:Description xml:lang="en">Kyrgyzstan</structure:Description>
+            </structure:Code>
+            <structure:Code value="KH">
+                <structure:Description xml:lang="en">Cambodia</structure:Description>
+            </structure:Code>
+            <structure:Code value="KI">
+                <structure:Description xml:lang="en">Kiribati</structure:Description>
+            </structure:Code>
+            <structure:Code value="KM">
+                <structure:Description xml:lang="en">Comoros</structure:Description>
+            </structure:Code>
+            <structure:Code value="KN">
+                <structure:Description xml:lang="en">Saint Kitts and Nevis</structure:Description>
+            </structure:Code>
+            <structure:Code value="KP">
+                <structure:Description xml:lang="en">Korea, Democratic People`s Republic of</structure:Description>
+            </structure:Code>
+            <structure:Code value="KR">
+                <structure:Description xml:lang="en">Korea, Republic of</structure:Description>
+            </structure:Code>
+            <structure:Code value="KW">
+                <structure:Description xml:lang="en">Kuwait</structure:Description>
+            </structure:Code>
+            <structure:Code value="KY">
+                <structure:Description xml:lang="en">Cayman Islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="KZ">
+                <structure:Description xml:lang="en">Kazakstan</structure:Description>
+            </structure:Code>
+            <structure:Code value="L0">
+                <structure:Description xml:lang="en">Other EU member states (all countries except the reference area)</structure:Description>
+            </structure:Code>
+            <structure:Code value="L1">
+                <structure:Description xml:lang="en"
+                >Other Euro area 11 member states (fixed composition - all countries ex cept the reference area)</structure:Description>
+            </structure:Code>
+            <structure:Code value="L2">
+                <structure:Description xml:lang="en"
+                >Other Euro area 12 member states (fixed composition - all countries ex cept the reference area)</structure:Description>
+            </structure:Code>
+            <structure:Code value="L3">
+                <structure:Description xml:lang="en"
+                >Other Euro area 13 member states (fixed composition - all countries ex cept the reference area)</structure:Description>
+            </structure:Code>
+            <structure:Code value="L4">
+                <structure:Description xml:lang="en"
+                >Other Euro area 15 member states (fixed composition - all countries ex cept the reference area)</structure:Description>
+            </structure:Code>
+            <structure:Code value="LA">
+                <structure:Description xml:lang="en">Lao People`s Democratic Republic</structure:Description>
+            </structure:Code>
+            <structure:Code value="LB">
+                <structure:Description xml:lang="en">Lebanon</structure:Description>
+            </structure:Code>
+            <structure:Code value="LC">
+                <structure:Description xml:lang="en">Saint Lucia</structure:Description>
+            </structure:Code>
+            <structure:Code value="LI">
+                <structure:Description xml:lang="en">Liechtenstein</structure:Description>
+            </structure:Code>
+            <structure:Code value="LK">
+                <structure:Description xml:lang="en">Sri Lanka</structure:Description>
+            </structure:Code>
+            <structure:Code value="LR">
+                <structure:Description xml:lang="en">Liberia</structure:Description>
+            </structure:Code>
+            <structure:Code value="LS">
+                <structure:Description xml:lang="en">Lesotho</structure:Description>
+            </structure:Code>
+            <structure:Code value="LT">
+                <structure:Description xml:lang="en">Lithuania</structure:Description>
+            </structure:Code>
+            <structure:Code value="LU">
+                <structure:Description xml:lang="en">Luxembourg</structure:Description>
+            </structure:Code>
+            <structure:Code value="LV">
+                <structure:Description xml:lang="en">Latvia</structure:Description>
+            </structure:Code>
+            <structure:Code value="LY">
+                <structure:Description xml:lang="en">Libyan Arab Jamahiriya</structure:Description>
+            </structure:Code>
+            <structure:Code value="M0">
+                <structure:Description xml:lang="en">All areas other than EU 15 and reference/home area</structure:Description>
+            </structure:Code>
+            <structure:Code value="M1">
+                <structure:Description xml:lang="en"
+                >All areas other than Euro area 11 (fixed composition) and reference/ho me area</structure:Description>
+            </structure:Code>
+            <structure:Code value="M2">
+                <structure:Description xml:lang="en"
+                >All areas other than Euro area 12 (fixed composition) and reference/ho me area</structure:Description>
+            </structure:Code>
+            <structure:Code value="M3">
+                <structure:Description xml:lang="en"
+                >All areas other than Euro area 13 (fixed composition) and reference/ho me area</structure:Description>
+            </structure:Code>
+            <structure:Code value="M4">
+                <structure:Description xml:lang="en"
+                >All areas other than Euro area 15 (fixed composition) and reference/ho me area</structure:Description>
+            </structure:Code>
+            <structure:Code value="MA">
+                <structure:Description xml:lang="en">Morocco</structure:Description>
+            </structure:Code>
+            <structure:Code value="MC">
+                <structure:Description xml:lang="en">Monaco</structure:Description>
+            </structure:Code>
+            <structure:Code value="MD">
+                <structure:Description xml:lang="en">Moldova, Republic of</structure:Description>
+            </structure:Code>
+            <structure:Code value="ME">
+                <structure:Description xml:lang="en">Montenegro</structure:Description>
+            </structure:Code>
+            <structure:Code value="MG">
+                <structure:Description xml:lang="en">Madagascar</structure:Description>
+            </structure:Code>
+            <structure:Code value="MH">
+                <structure:Description xml:lang="en">Marshall islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="MK">
+                <structure:Description xml:lang="en">Macedonia, The Former Yugoslav Republic of</structure:Description>
+            </structure:Code>
+            <structure:Code value="ML">
+                <structure:Description xml:lang="en">Mali</structure:Description>
+            </structure:Code>
+            <structure:Code value="MM">
+                <structure:Description xml:lang="en">Myanmar</structure:Description>
+            </structure:Code>
+            <structure:Code value="MN">
+                <structure:Description xml:lang="en">Mongolia</structure:Description>
+            </structure:Code>
+            <structure:Code value="MO">
+                <structure:Description xml:lang="en">Macau</structure:Description>
+            </structure:Code>
+            <structure:Code value="MP">
+                <structure:Description xml:lang="en">Northern Mariana Islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="MQ">
+                <structure:Description xml:lang="en">Martinique</structure:Description>
+            </structure:Code>
+            <structure:Code value="MR">
+                <structure:Description xml:lang="en">Mauritania</structure:Description>
+            </structure:Code>
+            <structure:Code value="MS">
+                <structure:Description xml:lang="en">Montserrat</structure:Description>
+            </structure:Code>
+            <structure:Code value="MT">
+                <structure:Description xml:lang="en">Malta</structure:Description>
+            </structure:Code>
+            <structure:Code value="MU">
+                <structure:Description xml:lang="en">Mauritius</structure:Description>
+            </structure:Code>
+            <structure:Code value="MV">
+                <structure:Description xml:lang="en">Maldives</structure:Description>
+            </structure:Code>
+            <structure:Code value="MW">
+                <structure:Description xml:lang="en">Malawi</structure:Description>
+            </structure:Code>
+            <structure:Code value="MX">
+                <structure:Description xml:lang="en">Mexico</structure:Description>
+            </structure:Code>
+            <structure:Code value="MY">
+                <structure:Description xml:lang="en">Malaysia</structure:Description>
+            </structure:Code>
+            <structure:Code value="MZ">
+                <structure:Description xml:lang="en">Mozambique</structure:Description>
+            </structure:Code>
+            <structure:Code value="N1">
+                <structure:Description xml:lang="en">Intra-Euro area 11 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="N2">
+                <structure:Description xml:lang="en">Intra-Euro area 12 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="N3">
+                <structure:Description xml:lang="en">Intra-Euro area 13 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="N4">
+                <structure:Description xml:lang="en">Intra-Euro area 15 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="NA">
+                <structure:Description xml:lang="en">Namibia</structure:Description>
+            </structure:Code>
+            <structure:Code value="NC">
+                <structure:Description xml:lang="en">New Caledonia</structure:Description>
+            </structure:Code>
+            <structure:Code value="NE">
+                <structure:Description xml:lang="en">Niger</structure:Description>
+            </structure:Code>
+            <structure:Code value="NF">
+                <structure:Description xml:lang="en">Norfolk Island</structure:Description>
+            </structure:Code>
+            <structure:Code value="NG">
+                <structure:Description xml:lang="en">Nigeria</structure:Description>
+            </structure:Code>
+            <structure:Code value="NI">
+                <structure:Description xml:lang="en">Nicaragua</structure:Description>
+            </structure:Code>
+            <structure:Code value="NL">
+                <structure:Description xml:lang="en">Netherlands</structure:Description>
+            </structure:Code>
+            <structure:Code value="NO">
+                <structure:Description xml:lang="en">Norway</structure:Description>
+            </structure:Code>
+            <structure:Code value="NP">
+                <structure:Description xml:lang="en">Nepal</structure:Description>
+            </structure:Code>
+            <structure:Code value="NR">
+                <structure:Description xml:lang="en">Nauru</structure:Description>
+            </structure:Code>
+            <structure:Code value="NU">
+                <structure:Description xml:lang="en">Niue</structure:Description>
+            </structure:Code>
+            <structure:Code value="NZ">
+                <structure:Description xml:lang="en">New Zealand</structure:Description>
+            </structure:Code>
+            <structure:Code value="O1">
+                <structure:Description xml:lang="en">Extra-Euro area 11 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="O2">
+                <structure:Description xml:lang="en">Extra-Euro area 12 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="O3">
+                <structure:Description xml:lang="en">Extra-Euro area 13 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="O4">
+                <structure:Description xml:lang="en">Extra-Euro area 15 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="OM">
+                <structure:Description xml:lang="en">Oman</structure:Description>
+            </structure:Code>
+            <structure:Code value="P1">
+                <structure:Description xml:lang="en">World not allocated (Euro area 11 - fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="P2">
+                <structure:Description xml:lang="en">World not allocated (Euro area 12 - fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="P3">
+                <structure:Description xml:lang="en">World not allocated (Euro area 13 - fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="P4">
+                <structure:Description xml:lang="en">World not allocated (Euro area 15 - fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="PA">
+                <structure:Description xml:lang="en">Panama</structure:Description>
+            </structure:Code>
+            <structure:Code value="PE">
+                <structure:Description xml:lang="en">Peru</structure:Description>
+            </structure:Code>
+            <structure:Code value="PF">
+                <structure:Description xml:lang="en">French Polynesia</structure:Description>
+            </structure:Code>
+            <structure:Code value="PG">
+                <structure:Description xml:lang="en">Papua New Guinea</structure:Description>
+            </structure:Code>
+            <structure:Code value="PH">
+                <structure:Description xml:lang="en">Philippines</structure:Description>
+            </structure:Code>
+            <structure:Code value="PK">
+                <structure:Description xml:lang="en">Pakistan</structure:Description>
+            </structure:Code>
+            <structure:Code value="PL">
+                <structure:Description xml:lang="en">Poland</structure:Description>
+            </structure:Code>
+            <structure:Code value="PM">
+                <structure:Description xml:lang="en">Saint Pierre and Miquelon</structure:Description>
+            </structure:Code>
+            <structure:Code value="PN">
+                <structure:Description xml:lang="en">Pitcairn</structure:Description>
+            </structure:Code>
+            <structure:Code value="PR">
+                <structure:Description xml:lang="en">Puerto Rico</structure:Description>
+            </structure:Code>
+            <structure:Code value="PS">
+                <structure:Description xml:lang="en">Palestinian Territory, Occupied</structure:Description>
+            </structure:Code>
+            <structure:Code value="PT">
+                <structure:Description xml:lang="en">Portugal</structure:Description>
+            </structure:Code>
+            <structure:Code value="PW">
+                <structure:Description xml:lang="en">Palau</structure:Description>
+            </structure:Code>
+            <structure:Code value="PY">
+                <structure:Description xml:lang="en">Paraguay</structure:Description>
+            </structure:Code>
+            <structure:Code value="QA">
+                <structure:Description xml:lang="en">Qatar</structure:Description>
+            </structure:Code>
+            <structure:Code value="R1">
+                <structure:Description xml:lang="en">West Germany</structure:Description>
+            </structure:Code>
+            <structure:Code value="R2">
+                <structure:Description xml:lang="en">East Germany</structure:Description>
+            </structure:Code>
+            <structure:Code value="RE">
+                <structure:Description xml:lang="en">Réunion</structure:Description>
+            </structure:Code>
+            <structure:Code value="RO">
+                <structure:Description xml:lang="en">Romania</structure:Description>
+            </structure:Code>
+            <structure:Code value="RS">
+                <structure:Description xml:lang="en">Serbia</structure:Description>
+            </structure:Code>
+            <structure:Code value="RU">
+                <structure:Description xml:lang="en">Russian Federation</structure:Description>
+            </structure:Code>
+            <structure:Code value="RW">
+                <structure:Description xml:lang="en">Rwanda</structure:Description>
+            </structure:Code>
+            <structure:Code value="S1">
+                <structure:Description xml:lang="en">EU 15 (fixed composition) excluding LU</structure:Description>
+            </structure:Code>
+            <structure:Code value="S2">
+                <structure:Description xml:lang="en">EU 12 (fixed composition) including West Germany</structure:Description>
+            </structure:Code>
+            <structure:Code value="S3">
+                <structure:Description xml:lang="en"
+                    >EU 27 member states, outside the euro area 13, excluding DK, SE, GB (C Y,CZ,EE,HU,LV,LT,MT,PL,SK,RO,BG)</structure:Description>
+            </structure:Code>
+            <structure:Code value="SA">
+                <structure:Description xml:lang="en">Saudi Arabia</structure:Description>
+            </structure:Code>
+            <structure:Code value="SB">
+                <structure:Description xml:lang="en">Solomon Islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="SC">
+                <structure:Description xml:lang="en">Seychelles</structure:Description>
+            </structure:Code>
+            <structure:Code value="SD">
+                <structure:Description xml:lang="en">Sudan</structure:Description>
+            </structure:Code>
+            <structure:Code value="SE">
+                <structure:Description xml:lang="en">Sweden</structure:Description>
+            </structure:Code>
+            <structure:Code value="SG">
+                <structure:Description xml:lang="en">Singapore</structure:Description>
+            </structure:Code>
+            <structure:Code value="SH">
+                <structure:Description xml:lang="en">Saint Helena</structure:Description>
+            </structure:Code>
+            <structure:Code value="SI">
+                <structure:Description xml:lang="en">Slovenia</structure:Description>
+            </structure:Code>
+            <structure:Code value="SJ">
+                <structure:Description xml:lang="en">Svalbard and Jan Mayen</structure:Description>
+            </structure:Code>
+            <structure:Code value="SK">
+                <structure:Description xml:lang="en">Slovakia</structure:Description>
+            </structure:Code>
+            <structure:Code value="SL">
+                <structure:Description xml:lang="en">Sierra Leone</structure:Description>
+            </structure:Code>
+            <structure:Code value="SM">
+                <structure:Description xml:lang="en">San Marino</structure:Description>
+            </structure:Code>
+            <structure:Code value="SN">
+                <structure:Description xml:lang="en">Senegal</structure:Description>
+            </structure:Code>
+            <structure:Code value="SO">
+                <structure:Description xml:lang="en">Somalia</structure:Description>
+            </structure:Code>
+            <structure:Code value="SR">
+                <structure:Description xml:lang="en">Suriname</structure:Description>
+            </structure:Code>
+            <structure:Code value="ST">
+                <structure:Description xml:lang="en">Sao Tome and Principe</structure:Description>
+            </structure:Code>
+            <structure:Code value="SV">
+                <structure:Description xml:lang="en">El Salvador</structure:Description>
+            </structure:Code>
+            <structure:Code value="SY">
+                <structure:Description xml:lang="en">Syrian Arab Republic</structure:Description>
+            </structure:Code>
+            <structure:Code value="SZ">
+                <structure:Description xml:lang="en">Swaziland</structure:Description>
+            </structure:Code>
+            <structure:Code value="T1">
+                <structure:Description xml:lang="en">Euro area 11 (fixed composition) excluding LU</structure:Description>
+            </structure:Code>
+            <structure:Code value="TC">
+                <structure:Description xml:lang="en">Turks and Caicos Islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="TD">
+                <structure:Description xml:lang="en">Chad</structure:Description>
+            </structure:Code>
+            <structure:Code value="TF">
+                <structure:Description xml:lang="en">French Southern Territories</structure:Description>
+            </structure:Code>
+            <structure:Code value="TG">
+                <structure:Description xml:lang="en">Togo</structure:Description>
+            </structure:Code>
+            <structure:Code value="TH">
+                <structure:Description xml:lang="en">Thailand</structure:Description>
+            </structure:Code>
+            <structure:Code value="TJ">
+                <structure:Description xml:lang="en">Tajikistan</structure:Description>
+            </structure:Code>
+            <structure:Code value="TK">
+                <structure:Description xml:lang="en">Tokelau</structure:Description>
+            </structure:Code>
+            <structure:Code value="TL">
+                <structure:Description xml:lang="en">Timor-Leste</structure:Description>
+            </structure:Code>
+            <structure:Code value="TM">
+                <structure:Description xml:lang="en">Turkmenistan</structure:Description>
+            </structure:Code>
+            <structure:Code value="TN">
+                <structure:Description xml:lang="en">Tunisia</structure:Description>
+            </structure:Code>
+            <structure:Code value="TO">
+                <structure:Description xml:lang="en">Tonga</structure:Description>
+            </structure:Code>
+            <structure:Code value="TR">
+                <structure:Description xml:lang="en">Turkey</structure:Description>
+            </structure:Code>
+            <structure:Code value="TT">
+                <structure:Description xml:lang="en">Trinidad and Tobago</structure:Description>
+            </structure:Code>
+            <structure:Code value="TV">
+                <structure:Description xml:lang="en">Tuvalu</structure:Description>
+            </structure:Code>
+            <structure:Code value="TW">
+                <structure:Description xml:lang="en">Taiwan, Province of China</structure:Description>
+            </structure:Code>
+            <structure:Code value="TZ">
+                <structure:Description xml:lang="en">Tanzania, United Republic of</structure:Description>
+            </structure:Code>
+            <structure:Code value="U0">
+                <structure:Description xml:lang="en">EU excluding the euro area and reference area</structure:Description>
+            </structure:Code>
+            <structure:Code value="U2">
+                <structure:Description xml:lang="en">Euro area (changing composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="U3">
+                <structure:Description xml:lang="en">EU member states not belonging to the Euro area</structure:Description>
+            </structure:Code>
+            <structure:Code value="U4">
+                <structure:Description xml:lang="en">Extra Euro area</structure:Description>
+            </structure:Code>
+            <structure:Code value="U5">
+                <structure:Description xml:lang="en">Other Euro area member states (all countries except the reference area )</structure:Description>
+            </structure:Code>
+            <structure:Code value="U6">
+                <structure:Description xml:lang="en">Domestic (home or reference area)</structure:Description>
+            </structure:Code>
+            <structure:Code value="U7">
+                <structure:Description xml:lang="en">Euro area and the reference area</structure:Description>
+            </structure:Code>
+            <structure:Code value="U8">
+                <structure:Description xml:lang="en">All areas other than Euro area and ref./home area</structure:Description>
+            </structure:Code>
+            <structure:Code value="U9">
+                <structure:Description xml:lang="en">All areas other than EU and ref./home area</structure:Description>
+            </structure:Code>
+            <structure:Code value="UA">
+                <structure:Description xml:lang="en">Ukraine</structure:Description>
+            </structure:Code>
+            <structure:Code value="UG">
+                <structure:Description xml:lang="en">Uganda</structure:Description>
+            </structure:Code>
+            <structure:Code value="UM">
+                <structure:Description xml:lang="en">United States Minor outlying islands</structure:Description>
+            </structure:Code>
+            <structure:Code value="US">
+                <structure:Description xml:lang="en">United States</structure:Description>
+            </structure:Code>
+            <structure:Code value="UY">
+                <structure:Description xml:lang="en">Uruguay</structure:Description>
+            </structure:Code>
+            <structure:Code value="UZ">
+                <structure:Description xml:lang="en">Uzbekistan</structure:Description>
+            </structure:Code>
+            <structure:Code value="V1">
+                <structure:Description xml:lang="en">EU 27 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="V2">
+                <structure:Description xml:lang="en">Extra-EU 27 (fixed composition)</structure:Description>
+            </structure:Code>
+            <structure:Code value="VA">
+                <structure:Description xml:lang="en">Holy See (Vatican City State)</structure:Description>
+            </structure:Code>
+            <structure:Code value="VC">
+                <structure:Description xml:lang="en">Saint Vincent and the Grenadines</structure:Description>
+            </structure:Code>
+            <structure:Code value="VE">
+                <structure:Description xml:lang="en">Venezuela</structure:Description>
+            </structure:Code>
+            <structure:Code value="VG">
+                <structure:Description xml:lang="en">Virgin Islands, British</structure:Description>
+            </structure:Code>
+            <structure:Code value="VI">
+                <structure:Description xml:lang="en">Virgin Islands, U.S.</structure:Description>
+            </structure:Code>
+            <structure:Code value="VN">
+                <structure:Description xml:lang="en">Viet Nam</structure:Description>
+            </structure:Code>
+            <structure:Code value="VU">
+                <structure:Description xml:lang="en">Vanuatu</structure:Description>
+            </structure:Code>
+            <structure:Code value="W0">
+                <structure:Description xml:lang="en">Intra-EU (changing composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="W1">
+                <structure:Description xml:lang="en">Gaza and Jericho</structure:Description>
+            </structure:Code>
+            <structure:Code value="W2">
+                <structure:Description xml:lang="en">Intra-Euro area not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="W4">
+                <structure:Description xml:lang="en">Extra-Euro area not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="W5">
+                <structure:Description xml:lang="en">Extra-EU 25 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="W6">
+                <structure:Description xml:lang="en"
+                >Residual for BOP &amp; IIP step 3 ECB needs (J2-DK-GB-SE-4A-D8-CH-CA-US-JP -C4-7Z)</structure:Description>
+            </structure:Code>
+            <structure:Code value="W7">
+                <structure:Description xml:lang="en">Intra-EU 25 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="W8">
+                <structure:Description xml:lang="en">Intra-EU 27 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="W9">
+                <structure:Description xml:lang="en">Extra-EU 27 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="WF">
+                <structure:Description xml:lang="en">Wallis and Futuna</structure:Description>
+            </structure:Code>
+            <structure:Code value="WS">
+                <structure:Description xml:lang="en">Samoa</structure:Description>
+            </structure:Code>
+            <structure:Code value="X0">
+                <structure:Description xml:lang="en">Not applicable</structure:Description>
+            </structure:Code>
+            <structure:Code value="YE">
+                <structure:Description xml:lang="en">Yemen</structure:Description>
+            </structure:Code>
+            <structure:Code value="YT">
+                <structure:Description xml:lang="en">Mayotte</structure:Description>
+            </structure:Code>
+            <structure:Code value="YU">
+                <structure:Description xml:lang="en">Yugoslavia</structure:Description>
+            </structure:Code>
+            <structure:Code value="Z0">
+                <structure:Description xml:lang="en">World not allocated (EU 12)</structure:Description>
+            </structure:Code>
+            <structure:Code value="Z1">
+                <structure:Description xml:lang="en">World not allocated (EU 15)</structure:Description>
+            </structure:Code>
+            <structure:Code value="Z2">
+                <structure:Description xml:lang="en">Intra-EU 12 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="Z3">
+                <structure:Description xml:lang="en">World not allocated (Euro area)</structure:Description>
+            </structure:Code>
+            <structure:Code value="Z4">
+                <structure:Description xml:lang="en">Extra-EU 12 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="Z5">
+                <structure:Description xml:lang="en">World not allocated (geographically)</structure:Description>
+            </structure:Code>
+            <structure:Code value="Z6">
+                <structure:Description xml:lang="en">Intra-EU 15 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="Z7">
+                <structure:Description xml:lang="en"
+                    >Equally-shared control of UCIs (ultimate controlling institutional uni ts of a foreign affiliate) of more than one EU member state</structure:Description>
+            </structure:Code>
+            <structure:Code value="Z8">
+                <structure:Description xml:lang="en">Extra-EU 15 (fixed composition) not allocated</structure:Description>
+            </structure:Code>
+            <structure:Code value="Z9">
+                <structure:Description xml:lang="en">Rest of the World</structure:Description>
+            </structure:Code>
+            <structure:Code value="ZA">
+                <structure:Description xml:lang="en">South Africa</structure:Description>
+            </structure:Code>
+            <structure:Code value="ZM">
+                <structure:Description xml:lang="en">Zambia</structure:Description>
+            </structure:Code>
+            <structure:Code value="ZW">
+                <structure:Description xml:lang="en">Zimbabwe</structure:Description>
+            </structure:Code>
+        </structure:CodeList>
+	    
+	    <structure:CodeList id="CL_AVAILABILITY" agencyID="ESTAT" isFinal="false">
+		<structure:Name xml:lang="en">Organisation availability code list</structure:Name>
+		<structure:Code value = "A">
+			<structure:Description xml:lang="en">Free</structure:Description>
+		</structure:Code>
+		<structure:Code value = "B">
+			<structure:Description xml:lang="en">BIS only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "C">
+			<structure:Description xml:lang="en">BIS and G-10 Central Banks only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "D">
+			<structure:Description xml:lang="en">ESCB only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "E">
+			<structure:Description xml:lang="en">ECB only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "G">
+			<structure:Description xml:lang="en">BIS and ESCB only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "H">
+			<structure:Description xml:lang="en">BIS and ECB only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "I">
+			<structure:Description xml:lang="en">BIS, ECB and Central Banks only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "J">
+			<structure:Description xml:lang="en">(BIS) Low frequency free, high frequency confidential</structure:Description>
+		</structure:Code>
+		<structure:Code value = "K">
+			<structure:Description xml:lang="en">Free, last value not to be published prior to embargo date</structure:Description>
+		</structure:Code>
+		<structure:Code value = "N">
+			<structure:Description xml:lang="en">(BIS) Low frequency free, high frequency ECB only</structure:Description>
+		</structure:Code>
+		<structure:Code value = "O">
+			<structure:Description xml:lang="en">Commission/Eurostat only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "P">
+			<structure:Description xml:lang="en">Commission/Eurostat and ECB only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "Q">
+			<structure:Description xml:lang="en">Commission/Eurostat and ESCB only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "U">
+			<structure:Description xml:lang="en">ECB and MU central banks only, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "W">
+			<structure:Description xml:lang="en">BIS, ECB &amp; G10 NCBs; authorised individuals, strictly confidential</structure:Description>
+		</structure:Code>
+		<structure:Code value = "Z">
+			<structure:Description xml:lang="en">BIS, ECB &amp; NCBs; authorised individuals, strictly confidential</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+	<structure:CodeList id="CL_COLLECTION" agencyID="ECB" isFinal="false">
+		<structure:Name xml:lang="en">Collection indicator code list</structure:Name>
+		<structure:Code value = "A">
+			<structure:Description xml:lang="en">Average of observations through period</structure:Description>
+		</structure:Code>
+		<structure:Code value = "B">
+			<structure:Description xml:lang="en">Beginning of period</structure:Description>
+		</structure:Code>
+		<structure:Code value = "E">
+			<structure:Description xml:lang="en">End of period</structure:Description>
+		</structure:Code>
+		<structure:Code value = "H">
+			<structure:Description xml:lang="en">Highest in period</structure:Description>
+		</structure:Code>
+		<structure:Code value = "L">
+			<structure:Description xml:lang="en">Lowest in period</structure:Description>
+		</structure:Code>
+		<structure:Code value = "M">
+			<structure:Description xml:lang="en">Middle of period</structure:Description>
+		</structure:Code>
+		<structure:Code value = "S">
+			<structure:Description xml:lang="en">Summed through period</structure:Description>
+		</structure:Code>
+		<structure:Code value = "U">
+			<structure:Description xml:lang="en">Unknown</structure:Description>
+		</structure:Code>
+		<structure:Code value = "V">
+			<structure:Description xml:lang="en">Other</structure:Description>
+		</structure:Code>
+		<structure:Code value = "Y">
+			<structure:Description xml:lang="en">Annualised summed</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+	<structure:CodeList id="CL_CPI_ITEM" agencyID="ESTAT" isFinal="false">
+		<structure:Name xml:lang="en">CPI Item Code List</structure:Name>
+		<structure:Code value = "00">
+			<structure:Description xml:lang="en">Overall index</structure:Description>
+		</structure:Code>
+		<structure:Code value = "01">
+			<structure:Description xml:lang="en">FOOD AND NON-ALCOHOLIC BEVERAGES</structure:Description>
+		</structure:Code>
+		<structure:Code value = "011">
+			<structure:Description xml:lang="en">Food</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0111">
+			<structure:Description xml:lang="en">Bread and cereals</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0112">
+			<structure:Description xml:lang="en">Meat</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0113">
+			<structure:Description xml:lang="en">Fish</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0114">
+			<structure:Description xml:lang="en">Milk, cheese and eggs</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0115">
+			<structure:Description xml:lang="en">Oils and fats</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0116">
+			<structure:Description xml:lang="en">Fruit</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0117">
+			<structure:Description xml:lang="en">Vegetables</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0118">
+			<structure:Description xml:lang="en">Sugar, jam, honey, chocolate and confectionery</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0119">
+			<structure:Description xml:lang="en">Food products n.e.c.</structure:Description>
+		</structure:Code>
+		<structure:Code value = "012">
+			<structure:Description xml:lang="en">Non-alcoholic beverages</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0121">
+			<structure:Description xml:lang="en">Coffee, tea and cocoa</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0122">
+			<structure:Description xml:lang="en">Mineral waters, soft drinks, fruit and vegetable juices</structure:Description>
+		</structure:Code>
+		<structure:Code value = "02">
+			<structure:Description xml:lang="en">ALCOHOLIC BEVERAGES, TOBACCO</structure:Description>
+		</structure:Code>
+		<structure:Code value = "021">
+			<structure:Description xml:lang="en">Alcoholic beverages</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0211">
+			<structure:Description xml:lang="en">Spirits</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0212">
+			<structure:Description xml:lang="en">Wine</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0213">
+			<structure:Description xml:lang="en">Beer</structure:Description>
+		</structure:Code>
+		<structure:Code value = "022">
+			<structure:Description xml:lang="en">Tobacco</structure:Description>
+		</structure:Code>
+		<structure:Code value = "03">
+			<structure:Description xml:lang="en">CLOTHING AND FOOTWEAR</structure:Description>
+		</structure:Code>
+		<structure:Code value = "031">
+			<structure:Description xml:lang="en">Clothing</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0311">
+			<structure:Description xml:lang="en">Clothing materials</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0312">
+			<structure:Description xml:lang="en">Garments</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0313">
+			<structure:Description xml:lang="en">Other articles of clothing and clothing accessories</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0314">
+			<structure:Description xml:lang="en">Cleaning, repair and hire of clothing</structure:Description>
+		</structure:Code>
+		<structure:Code value = "032">
+			<structure:Description xml:lang="en">Footwear</structure:Description>
+		</structure:Code>
+		<structure:Code value = "04">
+			<structure:Description xml:lang="en">HOUSING, WATER, ELECTRICITY, GAS AND OTHER FUELS</structure:Description>
+		</structure:Code>
+		<structure:Code value = "041">
+			<structure:Description xml:lang="en">Actual rentals for housing</structure:Description>
+		</structure:Code>
+		<structure:Code value = "043">
+			<structure:Description xml:lang="en">Maintenance and repair of the dwelling</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0431">
+			<structure:Description xml:lang="en">Materials for the maintenance and repair of the dwelling</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0432">
+			<structure:Description xml:lang="en">Services for the maintenance and repair of the dwelling</structure:Description>
+		</structure:Code>
+		<structure:Code value = "044">
+			<structure:Description xml:lang="en">Water supply and misc. services relating to the dwelling</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0441">
+			<structure:Description xml:lang="en">Water supply</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0442">
+			<structure:Description xml:lang="en">Refuse collection</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0443">
+			<structure:Description xml:lang="en">Sewerage collection</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0444">
+			<structure:Description xml:lang="en">Other services relating to the dwelling n.e.c.</structure:Description>
+		</structure:Code>
+		<structure:Code value = "045">
+			<structure:Description xml:lang="en">Electricity, gas and other fuels</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0451">
+			<structure:Description xml:lang="en">Electricity</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0452">
+			<structure:Description xml:lang="en">Gas</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0453">
+			<structure:Description xml:lang="en">Liquid fuels</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0454">
+			<structure:Description xml:lang="en">Solid fuels</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0455">
+			<structure:Description xml:lang="en">Heat energy</structure:Description>
+		</structure:Code>
+		<structure:Code value = "05">
+			<structure:Description xml:lang="en">FURNISHINGS, HOUSEHOLD EQUIPMENT AND ROUTINE HOUSE MAINTENANCE</structure:Description>
+		</structure:Code>
+		<structure:Code value = "051">
+			<structure:Description xml:lang="en">Furniture and furnishings, carpets and other floor coverings</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0511">
+			<structure:Description xml:lang="en">Furniture and furnishings</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0512">
+			<structure:Description xml:lang="en">Carpets and other floor coverings</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0513">
+			<structure:Description xml:lang="en">Repair of furniture, furnishings and floor coverings</structure:Description>
+		</structure:Code>
+		<structure:Code value = "052">
+			<structure:Description xml:lang="en">Household textiles</structure:Description>
+		</structure:Code>
+		<structure:Code value = "053">
+			<structure:Description xml:lang="en">Household appliances</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0531_2">
+			<structure:Description xml:lang="en">Major household appliances, small electric hous. appl.</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0533">
+			<structure:Description xml:lang="en">Repair of household appliances</structure:Description>
+		</structure:Code>
+		<structure:Code value = "054">
+			<structure:Description xml:lang="en">Glassware, tableware and household utensils</structure:Description>
+		</structure:Code>
+		<structure:Code value = "055">
+			<structure:Description xml:lang="en">Tools and equipment for house and garden</structure:Description>
+		</structure:Code>
+		<structure:Code value = "056">
+			<structure:Description xml:lang="en">Goods and services for routine household maintenance</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0561">
+			<structure:Description xml:lang="en">Non-durable household goods</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0562">
+			<structure:Description xml:lang="en">Domestic services and household services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "06">
+			<structure:Description xml:lang="en">HEALTH</structure:Description>
+		</structure:Code>
+		<structure:Code value = "061">
+			<structure:Description xml:lang="en">Medical products, appliances and equipment</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0611">
+			<structure:Description xml:lang="en">Pharmaceutical products</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0612_3">
+			<structure:Description xml:lang="en">Other medical products, therapeutic appliances and equipment</structure:Description>
+		</structure:Code>
+		<structure:Code value = "062">
+			<structure:Description xml:lang="en">Out-patient services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0621_3">
+			<structure:Description xml:lang="en">Medical and paramedical services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0622">
+			<structure:Description xml:lang="en">Dental services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "063">
+			<structure:Description xml:lang="en">Hospital services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "07">
+			<structure:Description xml:lang="en">TRANSPORT</structure:Description>
+		</structure:Code>
+		<structure:Code value = "071">
+			<structure:Description xml:lang="en">Purchase of vehicles</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0711">
+			<structure:Description xml:lang="en">Motor cars</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0711A">
+			<structure:Description xml:lang="en">New cars</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0711B">
+			<structure:Description xml:lang="en">Used cars</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0712_34">
+			<structure:Description xml:lang="en">Motor cycles, bicycles and animal drawn vehicles</structure:Description>
+		</structure:Code>
+		<structure:Code value = "072">
+			<structure:Description xml:lang="en">Operation of personal transport equipment</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0721">
+			<structure:Description xml:lang="en">Spare parts and accessories for personal transport equipment</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0722">
+			<structure:Description xml:lang="en">Fuels and lubricants for personal transport equipment</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0723">
+			<structure:Description xml:lang="en">Maintenance and repair of personal transport equipment</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0724">
+			<structure:Description xml:lang="en">Other services in respect of personal transport equipment</structure:Description>
+		</structure:Code>
+		<structure:Code value = "073">
+			<structure:Description xml:lang="en">Transport services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0731">
+			<structure:Description xml:lang="en">Passenger transport by railway</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0732">
+			<structure:Description xml:lang="en">Passenger transport by road</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0733">
+			<structure:Description xml:lang="en">Passenger transport by air</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0734">
+			<structure:Description xml:lang="en">Passenger transport by sea and inland waterway</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0735">
+			<structure:Description xml:lang="en">Combined passenger transport</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0736">
+			<structure:Description xml:lang="en">Other purchased transport services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "08">
+			<structure:Description xml:lang="en">COMMUNICATION</structure:Description>
+		</structure:Code>
+		<structure:Code value = "081">
+			<structure:Description xml:lang="en">Postal services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0820">
+			<structure:Description xml:lang="en">Telephone and telefax equipment</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0830">
+			<structure:Description xml:lang="en">Telephone and telefax services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "08X">
+			<structure:Description xml:lang="en">Telephone and telefax equipment and tel. and telefax services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "09">
+			<structure:Description xml:lang="en">RECREATION AND CULTURE</structure:Description>
+		</structure:Code>
+		<structure:Code value = "091">
+			<structure:Description xml:lang="en">Audio-visual, photographic and information processing equip.</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0911">
+			<structure:Description xml:lang="en">Equip. for reception, recording &amp; reprod. of sound &amp; pictures</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0912">
+			<structure:Description xml:lang="en">Photographic and cinematographic equip. &amp; optical instruments</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0913">
+			<structure:Description xml:lang="en">Information processing equipment</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0914">
+			<structure:Description xml:lang="en">Recording media</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0915">
+			<structure:Description xml:lang="en">Repair of audio-visual, photographic, info. processing equip.</structure:Description>
+		</structure:Code>
+		<structure:Code value = "092">
+			<structure:Description xml:lang="en">Other major durables for recreation and culture</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0921_2">
+			<structure:Description xml:lang="en">Major durables for in/outdoor recreation incl. musical instr.</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0923">
+			<structure:Description xml:lang="en">Mainten. &amp; repair of other major durab. for recreat. &amp; culture</structure:Description>
+		</structure:Code>
+		<structure:Code value = "093">
+			<structure:Description xml:lang="en">Other recreational items and equipment, gardens and pets</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0931">
+			<structure:Description xml:lang="en">Games, toys and hobbies</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0932">
+			<structure:Description xml:lang="en">Equipment for sport, camping and open-air recreation</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0933">
+			<structure:Description xml:lang="en">Gardens, plants and flowers</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0934_5">
+			<structure:Description xml:lang="en">Pets and related prod. incl. veterinary &amp; other serv. for pets</structure:Description>
+		</structure:Code>
+		<structure:Code value = "094">
+			<structure:Description xml:lang="en">Recreational and cultural services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0941">
+			<structure:Description xml:lang="en">Recreational and sporting services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0942">
+			<structure:Description xml:lang="en">Cultural services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "095">
+			<structure:Description xml:lang="en">Newspapers, books and stationery</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0951">
+			<structure:Description xml:lang="en">Books</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0952">
+			<structure:Description xml:lang="en">Newspapers and periodicals</structure:Description>
+		</structure:Code>
+		<structure:Code value = "0953_4">
+			<structure:Description xml:lang="en">Misc. printed matter and stationery and drawing materials</structure:Description>
+		</structure:Code>
+		<structure:Code value = "096">
+			<structure:Description xml:lang="en">Package holidays</structure:Description>
+		</structure:Code>
+		<structure:Code value = "10">
+			<structure:Description xml:lang="en">EDUCATION</structure:Description>
+		</structure:Code>
+		<structure:Code value = "11">
+			<structure:Description xml:lang="en">RESTAURANTS AND HOTELS</structure:Description>
+		</structure:Code>
+		<structure:Code value = "111">
+			<structure:Description xml:lang="en">Catering services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1111">
+			<structure:Description xml:lang="en">Restaurants, cafés and the like</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1112">
+			<structure:Description xml:lang="en">Canteens</structure:Description>
+		</structure:Code>
+		<structure:Code value = "112">
+			<structure:Description xml:lang="en">Accommodation services</structure:Description>
+		</structure:Code>
+		<structure:Code value = "12">
+			<structure:Description xml:lang="en">MISCELLANEOUS GOODS AND SERVICES</structure:Description>
+		</structure:Code>
+		<structure:Code value = "121">
+			<structure:Description xml:lang="en">Personal care</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1211">
+			<structure:Description xml:lang="en">Hairdressing salons and personal grooming establishments</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1212_3">
+			<structure:Description xml:lang="en">Electric appliances and other appliances etc. for pers. Care</structure:Description>
+		</structure:Code>
+		<structure:Code value = "123">
+			<structure:Description xml:lang="en">Personal effects n.e.c.</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1231">
+			<structure:Description xml:lang="en">Jewellery, clocks and watches</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1232">
+			<structure:Description xml:lang="en">Other personal effects</structure:Description>
+		</structure:Code>
+		<structure:Code value = "124">
+			<structure:Description xml:lang="en">Social protection</structure:Description>
+		</structure:Code>
+		<structure:Code value = "125">
+			<structure:Description xml:lang="en">Insurance</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1252">
+			<structure:Description xml:lang="en">Insurance connected with the dwelling</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1253">
+			<structure:Description xml:lang="en">Insurance connected with health</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1254">
+			<structure:Description xml:lang="en">Insurance connected with transport</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1255">
+			<structure:Description xml:lang="en">Other insurance</structure:Description>
+		</structure:Code>
+		<structure:Code value = "126">
+			<structure:Description xml:lang="en">Financial services n.e.c.</structure:Description>
+		</structure:Code>
+		<structure:Code value = "127">
+			<structure:Description xml:lang="en">Other services n.e.c.</structure:Description>
+		</structure:Code>
+		<structure:Code value = "EMBARGO">
+			<structure:Description xml:lang="en">Embargo date</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+	<structure:CodeList id="CL_CPI_SUFFIX" agencyID="ESTAT" isFinal="false">
+		<structure:Name xml:lang="en">CPI Suffix Code List</structure:Name>
+		<structure:Code value = "CAR">
+			<structure:Description xml:lang="en">Overall national rate of change for the year (y/y-1)</structure:Description>
+		</structure:Code>
+		<structure:Code value = "CAX">
+			<structure:Description xml:lang="en">Overall national index for the whole year</structure:Description>
+		</structure:Code>
+		<structure:Code value = "CPR">
+			<structure:Description xml:lang="en">Overall national rate of change (t/t-12)</structure:Description>
+		</structure:Code>
+		<structure:Code value = "CPX">
+			<structure:Description xml:lang="en">Overall national index</structure:Description>
+		</structure:Code>
+		<structure:Code value = "INDEX">
+			<structure:Description xml:lang="en">Overall index</structure:Description>
+		</structure:Code>
+		<structure:Code value = "WEIGHT">
+			<structure:Description xml:lang="en">Weight of the sub-indices</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+	<structure:CodeList id="CL_FREQ" agencyID="ECB" isFinal="false">
+		<structure:Name xml:lang="en">Frequency code list</structure:Name>
+		<structure:Code value = "A">
+			<structure:Description xml:lang="en">Annual</structure:Description>
+		</structure:Code>
+		<structure:Code value = "B">
+			<structure:Description xml:lang="en">Business (not supported)</structure:Description>
+		</structure:Code>
+		<structure:Code value = "D">
+			<structure:Description xml:lang="en">Daily</structure:Description>
+		</structure:Code>
+		<structure:Code value = "E">
+			<structure:Description xml:lang="en">Event (not supported)</structure:Description>
+		</structure:Code>
+		<structure:Code value = "H">
+			<structure:Description xml:lang="en">Half-yearly</structure:Description>
+		</structure:Code>
+		<structure:Code value = "M">
+			<structure:Description xml:lang="en">Monthly</structure:Description>
+		</structure:Code>
+		<structure:Code value = "Q">
+			<structure:Description xml:lang="en">Quarterly</structure:Description>
+		</structure:Code>
+		<structure:Code value = "W">
+			<structure:Description xml:lang="en">Weekly</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+	<structure:CodeList id="CL_IND_REF_YEAR" agencyID="ESTAT" isFinal="false">
+		<structure:Name xml:lang="en">	Index reference year code list</structure:Name>
+		<structure:Code value = "0000">
+			<structure:Description xml:lang="en">Unspecified</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1980">
+			<structure:Description xml:lang="en">Year 1980</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1981">
+			<structure:Description xml:lang="en">Year 1981</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1982">
+			<structure:Description xml:lang="en">Year 1982</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1983">
+			<structure:Description xml:lang="en">Year 1983</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1984">
+			<structure:Description xml:lang="en">Year 1984</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1985">
+			<structure:Description xml:lang="en">Year 1985</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1986">
+			<structure:Description xml:lang="en">Year 1986</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1987">
+			<structure:Description xml:lang="en">Year 1987</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1988">
+			<structure:Description xml:lang="en">Year 1988</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1989">
+			<structure:Description xml:lang="en">Year 1989</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1990">
+			<structure:Description xml:lang="en">Year 1990</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1991">
+			<structure:Description xml:lang="en">Year 1991</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1992">
+			<structure:Description xml:lang="en">Year 1992</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1993">
+			<structure:Description xml:lang="en">Year 1993</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1994">
+			<structure:Description xml:lang="en">Year 1994</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1995">
+			<structure:Description xml:lang="en">Year 1995</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1996">
+			<structure:Description xml:lang="en">Year 1996</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1997">
+			<structure:Description xml:lang="en">Year 1997</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1998">
+			<structure:Description xml:lang="en">Year 1998</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1999">
+			<structure:Description xml:lang="en">Year 1999</structure:Description>
+		</structure:Code>
+		<structure:Code value = "2000">
+			<structure:Description xml:lang="en">Year 2000</structure:Description>
+		</structure:Code>
+		<structure:Code value = "2001">
+			<structure:Description xml:lang="en">Year 2001</structure:Description>
+		</structure:Code>
+		<structure:Code value = "2002">
+			<structure:Description xml:lang="en">Year 2002</structure:Description>
+		</structure:Code>
+		<structure:Code value = "2003">
+			<structure:Description xml:lang="en">Year 2003</structure:Description>
+		</structure:Code>
+		<structure:Code value = "2004">
+			<structure:Description xml:lang="en">Year 2004</structure:Description>
+		</structure:Code>
+		<structure:Code value = "2005">
+			<structure:Description xml:lang="en">Year 2005</structure:Description>
+		</structure:Code>
+		<structure:Code value = "ABS0">
+			<structure:Description xml:lang="en">Absolute value</structure:Description>
+		</structure:Code>
+		<structure:Code value = "ANR0">
+			<structure:Description xml:lang="en">Annual rate of change</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+	<structure:CodeList id="CL_OBS_CONF" agencyID="ECB" isFinal="false">
+		<structure:Name xml:lang="en">Observation confidentiality code list</structure:Name>
+		<structure:Code value = "C">
+			<structure:Description xml:lang="en">Non-publishable and confidential</structure:Description>
+		</structure:Code>
+		<structure:Code value = "F">
+			<structure:Description xml:lang="en">Free</structure:Description>
+		</structure:Code>
+		<structure:Code value = "N">
+			<structure:Description xml:lang="en">Non-publishable, but non-confidential</structure:Description>
+		</structure:Code>
+		<structure:Code value = "R">
+			<structure:Description xml:lang="en">Confidential statistical information due to identifiable respondents</structure:Description>
+		</structure:Code>
+		<structure:Code value = "D">
+			<structure:Description xml:lang="en">Secondary confidentiality set by the sender, not for publication</structure:Description>
+		</structure:Code>
+		<structure:Code value = "S">
+			<structure:Description xml:lang="en">INTERNAL EUROSTAT?: Secondary confidentiality set and managed  by the: receiver, not for publication</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+	<structure:CodeList id="CL_OBS_STATUS" agencyID="ECB" isFinal="false">
+		<structure:Name xml:lang="en">Observation status code list</structure:Name>
+		<structure:Code value = "A">
+			<structure:Description xml:lang="en">Normal value</structure:Description>
+		</structure:Code>
+		<structure:Code value = "B">
+			<structure:Description xml:lang="en">Break</structure:Description>
+		</structure:Code>
+		<structure:Code value = "E">
+			<structure:Description xml:lang="en">Estimated value</structure:Description>
+		</structure:Code>
+		<structure:Code value = "F">
+			<structure:Description xml:lang="en">Forecast value</structure:Description>
+		</structure:Code>
+		<structure:Code value = "H">
+			<structure:Description xml:lang="en">Missing value; holiday or weekend</structure:Description>
+		</structure:Code>
+		<structure:Code value = "L">
+			<structure:Description xml:lang="en">Missing value; data exist but were not collected</structure:Description>
+		</structure:Code>
+		<structure:Code value = "M">
+			<structure:Description xml:lang="en">Missing value; data cannot exist</structure:Description>
+		</structure:Code>
+		<structure:Code value = "P">
+			<structure:Description xml:lang="en">Provisional value</structure:Description>
+		</structure:Code>
+		<structure:Code value = "S">
+			<structure:Description xml:lang="en">Strike</structure:Description>
+		</structure:Code>
+		<structure:Code value = "Q">
+			<structure:Description xml:lang="en">Missing value; suppressed</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+	<structure:CodeList id="CL_UNIT" agencyID="ECB" isFinal="false">
+		<structure:Name xml:lang="en">Unit code list</structure:Name>
+		<structure:Code value = "ARS">
+			<structure:Description xml:lang="en">Argentine peso</structure:Description>
+		</structure:Code>
+		<structure:Code value = "ATS">
+			<structure:Description xml:lang="en">Austrian Schilling</structure:Description>
+		</structure:Code>
+		<structure:Code value = "AUD">
+			<structure:Description xml:lang="en">Australian Dollar</structure:Description>
+		</structure:Code>
+		<structure:Code value = "BEF">
+			<structure:Description xml:lang="en">Belgian Franc</structure:Description>
+		</structure:Code>
+		<structure:Code value = "BEL">
+			<structure:Description xml:lang="en">Belgian Franc (Financial)</structure:Description>
+		</structure:Code>
+		<structure:Code value = "BGN">
+			<structure:Description xml:lang="en">Bulgarian Lev</structure:Description>
+		</structure:Code>
+		<structure:Code value = "BRL">
+			<structure:Description xml:lang="en">Brazilian real</structure:Description>
+		</structure:Code>
+		<structure:Code value = "CAD">
+			<structure:Description xml:lang="en">Canadian Dollar</structure:Description>
+		</structure:Code>
+		<structure:Code value = "CHF">
+			<structure:Description xml:lang="en">Swiss Franc</structure:Description>
+		</structure:Code>
+		<structure:Code value = "CNY">
+			<structure:Description xml:lang="en">Chinese Yuan Renminbi</structure:Description>
+		</structure:Code>
+		<structure:Code value = "CYP">
+			<structure:Description xml:lang="en">Cypriot Pound</structure:Description>
+		</structure:Code>
+		<structure:Code value = "CZK">
+			<structure:Description xml:lang="en">Czech Koruna</structure:Description>
+		</structure:Code>
+		<structure:Code value = "DAYS">
+			<structure:Description xml:lang="en">Days</structure:Description>
+		</structure:Code>
+		<structure:Code value = "DEM">
+			<structure:Description xml:lang="en">German Mark</structure:Description>
+		</structure:Code>
+		<structure:Code value = "DKK">
+			<structure:Description xml:lang="en">Danish Krone</structure:Description>
+		</structure:Code>	
+		<structure:Code value = "DZD">
+			<structure:Description xml:lang="en">Algerian dinar</structure:Description>
+		</structure:Code>
+		<structure:Code value = "EEK">
+			<structure:Description xml:lang="en">Estonian Kroon</structure:Description>
+		</structure:Code>
+		<structure:Code value = "ESP">
+			<structure:Description xml:lang="en">Spanish Peseta</structure:Description>
+		</structure:Code>
+		<structure:Code value = "EUR">
+			<structure:Description xml:lang="en">Euro</structure:Description>
+		</structure:Code>
+		<structure:Code value = "FIM">
+			<structure:Description xml:lang="en">Finnish Markka</structure:Description>
+		</structure:Code>
+		<structure:Code value = "FRF">
+			<structure:Description xml:lang="en">French Franc</structure:Description>
+		</structure:Code>
+		<structure:Code value = "GBP">
+			<structure:Description xml:lang="en">UK Pound Sterling</structure:Description>
+		</structure:Code>
+		<structure:Code value = "GRD">
+			<structure:Description xml:lang="en">Greek Drachma</structure:Description>
+		</structure:Code>
+		<structure:Code value = "HKD">
+			<structure:Description xml:lang="en">Hong Kong Dollar</structure:Description>
+		</structure:Code>
+		<structure:Code value = "HOURS">
+			<structure:Description xml:lang="en">Hours</structure:Description>
+		</structure:Code>
+		<structure:Code value = "HRK">
+			<structure:Description xml:lang="en">Croatian kuna</structure:Description>
+		</structure:Code>
+		<structure:Code value = "HUF">
+			<structure:Description xml:lang="en">Hungarian Forint</structure:Description>
+		</structure:Code>
+		<structure:Code value = "IDR">
+			<structure:Description xml:lang="en">Indonesian rupiah</structure:Description>
+		</structure:Code>
+		<structure:Code value = "IEP">
+			<structure:Description xml:lang="en">Irish Pound</structure:Description>
+		</structure:Code>
+<structure:Code value = "ILS">
+<structure:Description xml:lang="en">Israeli shekel</structure:Description>
+</structure:Code>
+<structure:Code value = "INR">
+<structure:Description xml:lang="en">Indian Rupee</structure:Description>
+</structure:Code>
+<structure:Code value = "ISK">
+<structure:Description xml:lang="en">Iceland Krona</structure:Description>
+</structure:Code>
+<structure:Code value = "ITL">
+<structure:Description xml:lang="en">Italian Lira</structure:Description>
+</structure:Code>
+<structure:Code value = "JPY">
+<structure:Description xml:lang="en">Japanese Yen</structure:Description>
+</structure:Code>
+<structure:Code value = "KILO">
+<structure:Description xml:lang="en">Kilograms</structure:Description>
+</structure:Code>
+<structure:Code value = "KLITRE">
+<structure:Description xml:lang="en">Kilolitres</structure:Description>
+</structure:Code>
+<structure:Code value = "KRW">
+<structure:Description xml:lang="en">Korean Won (Republic)</structure:Description>
+</structure:Code>
+<structure:Code value = "LITRES">
+<structure:Description xml:lang="en">Litres</structure:Description>
+</structure:Code>
+<structure:Code value = "LKR">
+<structure:Description xml:lang="en">Sri Lanka Rupee</structure:Description>
+</structure:Code>
+<structure:Code value = "LTL">
+<structure:Description xml:lang="en">Lithuanian Litas</structure:Description>
+</structure:Code>
+<structure:Code value = "LUF">
+<structure:Description xml:lang="en">Luxembourg Franc</structure:Description>
+</structure:Code>
+<structure:Code value = "LVL">
+<structure:Description xml:lang="en">Latvian Lats</structure:Description>
+</structure:Code>
+<structure:Code value = "MAD">
+<structure:Description xml:lang="en">Moroccan dirham</structure:Description>
+</structure:Code>
+<structure:Code value = "MAN-DY">
+<structure:Description xml:lang="en">Man Days</structure:Description>
+</structure:Code>
+<structure:Code value = "MAN-YR">
+<structure:Description xml:lang="en">Man Years</structure:Description>
+</structure:Code>
+<structure:Code value = "MONTHS">
+<structure:Description xml:lang="en">Months</structure:Description>
+</structure:Code>
+<structure:Code value = "MTL">
+<structure:Description xml:lang="en">Maltese Lira</structure:Description>
+</structure:Code>
+<structure:Code value = "MXN">
+<structure:Description xml:lang="en">Mexican Peso</structure:Description>
+</structure:Code>
+<structure:Code value = "MXP">
+<structure:Description xml:lang="en">Mexican peso (old)</structure:Description>
+</structure:Code>
+<structure:Code value = "MYR">
+<structure:Description xml:lang="en">Malaysian Ringgit</structure:Description>
+</structure:Code>
+<structure:Code value = "NATCUR">
+<structure:Description xml:lang="en">National Currency</structure:Description>
+</structure:Code>
+<structure:Code value = "NLG">
+<structure:Description xml:lang="en">Netherlands Guilder</structure:Description>
+</structure:Code>
+<structure:Code value = "NOK">
+<structure:Description xml:lang="en">Norwegian krone</structure:Description>
+</structure:Code>
+<structure:Code value = "NZD">
+<structure:Description xml:lang="en">New Zealand Dollar</structure:Description>
+</structure:Code>
+<structure:Code value = "OUNCES">
+<structure:Description xml:lang="en">Ounces</structure:Description>
+</structure:Code>
+<structure:Code value = "PC">
+<structure:Description xml:lang="en">Percent</structure:Description>
+</structure:Code>
+<structure:Code value = "PCPA">
+<structure:Description xml:lang="en">Percent per annum</structure:Description>
+</structure:Code>
+<structure:Code value = "PERS">
+<structure:Description xml:lang="en">Persons</structure:Description>
+</structure:Code>
+<structure:Code value = "PHP">
+<structure:Description xml:lang="en">Philippine peso</structure:Description>
+</structure:Code>
+<structure:Code value = "PLN">
+<structure:Description xml:lang="en">Polish zloty</structure:Description>
+</structure:Code>
+<structure:Code value = "PM">
+<structure:Description xml:lang="en">Per thousand</structure:Description>
+</structure:Code>
+<structure:Code value = "POINTS">
+<structure:Description xml:lang="en">Points</structure:Description>
+</structure:Code>
+<structure:Code value = "PTE">
+<structure:Description xml:lang="en">Portugese Escudo</structure:Description>
+</structure:Code>
+<structure:Code value = "PURE_NUMB">
+<structure:Description xml:lang="en">Pure number</structure:Description>
+</structure:Code>
+<structure:Code value = "ROL">
+<structure:Description xml:lang="en">Romanian leu (old)</structure:Description>
+</structure:Code>
+<structure:Code value = "RUB">
+<structure:Description xml:lang="en">Rouble</structure:Description>
+</structure:Code>
+<structure:Code value = "SAR">
+<structure:Description xml:lang="en">Saudi Riyal</structure:Description>
+</structure:Code>
+<structure:Code value = "SEK">
+<structure:Description xml:lang="en">Swedish Krona</structure:Description>
+</structure:Code>
+<structure:Code value = "SGD">
+<structure:Description xml:lang="en">Singapore Dollar</structure:Description>
+</structure:Code>
+<structure:Code value = "SIT">
+<structure:Description xml:lang="en">Slovenian Tolar</structure:Description>
+</structure:Code>
+<structure:Code value = "SKK">
+<structure:Description xml:lang="en">Slovak Koruna</structure:Description>
+</structure:Code>
+<structure:Code value = "SQ_M">
+<structure:Description xml:lang="en">Square Metres</structure:Description>
+</structure:Code>
+<structure:Code value = "THB">
+<structure:Description xml:lang="en">Thai Bhat</structure:Description>
+</structure:Code>
+<structure:Code value = "TONNES">
+<structure:Description xml:lang="en">Tonnes</structure:Description>
+</structure:Code>
+<structure:Code value = "TRL">
+<structure:Description xml:lang="en">Turkish lira (old)</structure:Description>
+</structure:Code>
+<structure:Code value = "TRY">
+<structure:Description xml:lang="en">Turkish lira</structure:Description>
+</structure:Code>
+<structure:Code value = "TWD">
+<structure:Description xml:lang="en">New Taiwan Dollar</structure:Description>
+</structure:Code>
+<structure:Code value = "UNITS">
+<structure:Description xml:lang="en">Unit described in title</structure:Description>
+</structure:Code>
+<structure:Code value = "USD">
+<structure:Description xml:lang="en">US Dollar</structure:Description>
+</structure:Code>
+<structure:Code value = "XDR">
+<structure:Description xml:lang="en">Special Drawing Rights (S.D.R.)</structure:Description>
+</structure:Code>
+<structure:Code value = "XEU">
+<structure:Description xml:lang="en">European Currency Unit (E.C.U.)</structure:Description>
+</structure:Code>
+<structure:Code value = "ZAR">
+<structure:Description xml:lang="en">South African Rand</structure:Description>
+</structure:Code>
+<structure:Code value = "AFN">
+<structure:Description xml:lang="en">Afghanistan, Afghanis</structure:Description>
+</structure:Code>
+<structure:Code value = "AOA">
+<structure:Description xml:lang="en">Angolan kwanza</structure:Description>
+</structure:Code>
+<structure:Code value = "AZN">
+<structure:Description xml:lang="en">Azerbaijan, manats</structure:Description>
+</structure:Code>
+<structure:Code value = "BYR">
+<structure:Description xml:lang="en">Belarus, Rubles</structure:Description>
+</structure:Code>
+<structure:Code value = "CLP">
+<structure:Description xml:lang="en">Chilean peso</structure:Description>
+</structure:Code>
+<structure:Code value = "COP">
+<structure:Description xml:lang="en">Colombian peso</structure:Description>
+</structure:Code>
+<structure:Code value = "CSD">
+<structure:Description xml:lang="en">Serbian dinar</structure:Description>
+</structure:Code>
+<structure:Code value = "EGP">
+<structure:Description xml:lang="en">Egyptian pound</structure:Description>
+</structure:Code>
+<structure:Code value = "GGP">
+<structure:Description xml:lang="en">Guernsey, Pounds</structure:Description>
+</structure:Code>
+<structure:Code value = "IMP">
+<structure:Description xml:lang="en">Isle of Man, Pounds</structure:Description>
+</structure:Code>
+<structure:Code value = "IQD">
+<structure:Description xml:lang="en">Iraqi dinar</structure:Description>
+</structure:Code>
+<structure:Code value = "IRR">
+<structure:Description xml:lang="en">Iranian rial</structure:Description>
+</structure:Code>
+<structure:Code value = "JEP">
+<structure:Description xml:lang="en">Jersey, Pounds</structure:Description>
+</structure:Code>
+<structure:Code value = "JOD">
+<structure:Description xml:lang="en">Jordanian dinar</structure:Description>
+</structure:Code>
+<structure:Code value = "KPW">
+<structure:Description xml:lang="en">Korean won (North)</structure:Description>
+</structure:Code>
+<structure:Code value = "KWD">
+<structure:Description xml:lang="en">Kuwait dinar</structure:Description>
+</structure:Code>
+<structure:Code value = "LBP">
+<structure:Description xml:lang="en">Lebanese pound</structure:Description>
+</structure:Code>
+<structure:Code value = "LYD">
+<structure:Description xml:lang="en">Libyan dinar</structure:Description>
+</structure:Code>
+<structure:Code value = "MGA">
+<structure:Description xml:lang="en">Madagascar, Ariary</structure:Description>
+</structure:Code>
+<structure:Code value = "MZN">
+<structure:Description xml:lang="en">Mozambique, Meticais</structure:Description>
+</structure:Code>
+<structure:Code value = "PCT">
+<structure:Description xml:lang="en">Percentage of change</structure:Description>
+</structure:Code>
+<structure:Code value = "PEN">
+<structure:Description xml:lang="en">Peru nuevo sol</structure:Description>
+</structure:Code>
+<structure:Code value = "PKR">
+<structure:Description xml:lang="en">Pakistan rupee</structure:Description>
+</structure:Code>
+<structure:Code value = "RON">
+<structure:Description xml:lang="en">Romanian leu</structure:Description>
+</structure:Code>
+<structure:Code value = "SDG">
+<structure:Description xml:lang="en">Sudan, Dinars</structure:Description>
+</structure:Code>
+<structure:Code value = "SPL">
+<structure:Description xml:lang="en">Seborga, Luigini</structure:Description>
+</structure:Code>
+<structure:Code value = "SRD">
+<structure:Description xml:lang="en">Suriname, Dollars</structure:Description>
+</structure:Code>
+<structure:Code value = "SYP">
+<structure:Description xml:lang="en">Syrian pound</structure:Description>
+</structure:Code>
+<structure:Code value = "TJS">
+<structure:Description xml:lang="en">Tajikistan, Somoni</structure:Description>
+</structure:Code>
+<structure:Code value = "TND">
+<structure:Description xml:lang="en">Tunisian dinar</structure:Description>
+</structure:Code>
+<structure:Code value = "TVD">
+<structure:Description xml:lang="en">Tuvalu, Tuvalu Dollars</structure:Description>
+</structure:Code>
+<structure:Code value = "UAH">
+<structure:Description xml:lang="en">Ukraine hryvnia</structure:Description>
+</structure:Code>
+<structure:Code value = "VEB">
+<structure:Description xml:lang="en">Venezuela bolivar</structure:Description>
+</structure:Code>
+<structure:Code value = "XAG">
+<structure:Description xml:lang="en">Silver</structure:Description>
+</structure:Code>
+<structure:Code value = "XPD">
+<structure:Description xml:lang="en">Palladium Ounces</structure:Description>
+</structure:Code>
+<structure:Code value = "XPT">
+<structure:Description xml:lang="en">Platinum, Ounces</structure:Description>
+</structure:Code>
+<structure:Code value = "YEARS">
+<structure:Description xml:lang="en">Years</structure:Description>
+</structure:Code>
+<structure:Code value = "ZWN">
+<structure:Description xml:lang="en">Zimbabwe, Zimbabwe Dollars</structure:Description>
+</structure:Code>
+</structure:CodeList>
+	<structure:CodeList id="CL_UNIT_MULT" agencyID="ESTAT" isFinal="false">
+		<structure:Name xml:lang="en">Unit multiplier code list</structure:Name>
+		<structure:Code value = "0">
+			<structure:Description xml:lang="en">Units</structure:Description>
+		</structure:Code>
+		<structure:Code value = "1">
+			<structure:Description xml:lang="en">Tens</structure:Description>
+		</structure:Code>
+		<structure:Code value = "2">
+			<structure:Description xml:lang="en">Hundreds</structure:Description>
+		</structure:Code>
+		<structure:Code value = "3">
+			<structure:Description xml:lang="en">Thousands</structure:Description>
+		</structure:Code>
+		<structure:Code value = "4">
+			<structure:Description xml:lang="en">Tens of thousands</structure:Description>
+		</structure:Code>
+		<structure:Code value = "6">
+			<structure:Description xml:lang="en">Millions</structure:Description>
+		</structure:Code>
+		<structure:Code value = "9">
+			<structure:Description xml:lang="en">Billions</structure:Description>
+		</structure:Code>
+	</structure:CodeList>
+        <structure:CodeList id="CL_TIME_FORMAT" agencyID="ESTAT" isFinal="true" version="1.0">
+          	<structure:Name xml:lang="en">Time Format</structure:Name>
+           	<structure:Code value="P1Y">
+               		 <structure:Description xml:lang="en">Annual</structure:Description>
+            	</structure:Code>
+            	<structure:Code value="P6M">
+               		 <structure:Description xml:lang="en">Semi-Annual</structure:Description>
+            	</structure:Code>
+           	<structure:Code value="P3M">
+              		  <structure:Description xml:lang="en">Quarterly</structure:Description>
+            	</structure:Code>
+           	<structure:Code value="P1M">
+               		 <structure:Description xml:lang="en">Monthly</structure:Description>
+           	</structure:Code>
+            	<structure:Code value="P7D">
+               		 <structure:Description xml:lang="en">Weekly</structure:Description>
+            	</structure:Code>
+            	<structure:Code value="P1D">
+               		 <structure:Description xml:lang="en">Daily</structure:Description>
+            	</structure:Code>
+            	<structure:Code value="PT1M">
+                	<structure:Description xml:lang="en">Minutely</structure:Description>
+		</structure:Code>
+        </structure:CodeList>
+    
+</CodeLists>
+
+<Concepts>
+<structure:ConceptScheme agencyID="ESTAT" id="USUAL_CONCEPTS" version="1.0">
+	<structure:Name xml:lang="en">Eurostat's usually used Concepts</structure:Name>
+
+	<structure:Concept id="FREQ">
+		<structure:Name xml:lang="en">Frequency</structure:Name>
+		<structure:Description xml:lang="en">Frequency</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="TIME_PERIOD">
+		<structure:Name xml:lang="en">Time period or range</structure:Name>
+		<structure:Description xml:lang="en">Time period or range</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="OBS_VALUE">
+		<structure:Name xml:lang="en">Observation value</structure:Name>
+		<structure:Description xml:lang="en">Observation value</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="TIME_FORMAT">
+		<structure:Name xml:lang="en">Time format code</structure:Name>
+		<structure:Description xml:lang="en">Time format code</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="OBS_STATUS">
+		<structure:Name xml:lang="en">Observation status</structure:Name>
+		<structure:Description xml:lang="en">Observation status</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="OBS_COM">
+		<structure:Name xml:lang="en">Observation comment</structure:Name>
+		<structure:Description xml:lang="en">Observation comment</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="OBS_CONF">
+		<structure:Name xml:lang="en">Observation confidentiality</structure:Name>
+		<structure:Description xml:lang="en">Observation confidentiality</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="OBS_PRE_BREAK">
+		<structure:Name xml:lang="en">Pre-break observation value</structure:Name>
+		<structure:Description xml:lang="en">Pre-break observation value</structure:Description>
+	</structure:Concept>					
+</structure:ConceptScheme>
+
+<structure:ConceptScheme agencyID="ESTAT" id="ESTAT_CONCEPTS" isFinal="true" version="1.0">
+	<structure:Name xml:lang="en">Eurostat Statistical Concepts</structure:Name>
+		
+	<structure:Concept id="AVAILABILITY">
+		<structure:Name xml:lang="en">Availability</structure:Name>
+		<structure:Description xml:lang="en">Availability</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="COLLECTION">
+		<structure:Name xml:lang="en">Collection indicator</structure:Name>
+		<structure:Description xml:lang="en">Collection indicator</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="COMPILATION">
+		<structure:Name xml:lang="en">Compilation</structure:Name>
+		<structure:Description xml:lang="en">Compilation</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="COVERAGE">
+		<structure:Name xml:lang="en">Coverage</structure:Name>
+		<structure:Description xml:lang="en">Coverage</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="IND_REF_YEAR">
+		<structure:Name xml:lang="en">Index Reference Year</structure:Name>
+		<structure:Description xml:lang="en">Index Reference Year</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="REF_AREA">
+		<structure:Name xml:lang="en">Reference area</structure:Name>
+		<structure:Description xml:lang="en">Reference area</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="TITLE">
+		<structure:Name xml:lang="en">Title</structure:Name>
+		<structure:Description xml:lang="en">Title</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="TITLE_COMPL">
+		<structure:Name xml:lang="en">Title complement</structure:Name>
+		<structure:Description xml:lang="en">Title complement</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="UNIT">
+		<structure:Name xml:lang="en">Unit</structure:Name>
+		<structure:Description xml:lang="en">Unit</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="UNIT_MULT">
+		<structure:Name xml:lang="en">Unit multiplier</structure:Name>
+		<structure:Description xml:lang="en">Unit multiplier</structure:Description>
+	</structure:Concept>
+        <structure:Concept id="ADJUSTMENT">
+                <structure:Name xml:lang="en">Adjustment indicator</structure:Name>
+                <structure:Description xml:lang="en">Adjustment indicator</structure:Description>
+	</structure:Concept>
+        <structure:Concept id="BREAKS">
+                <structure:Name xml:lang="en">Breaks</structure:Name>
+                <structure:Description xml:lang="en">Breaks</structure:Description>
+        </structure:Concept>
+ 	<structure:Concept id="DECIMALS">
+                <structure:Name xml:lang="en">Decimals</structure:Name>
+                <structure:Description xml:lang="en">Decimals</structure:Description>
+	</structure:Concept>
+     	<structure:Concept id="DOM_SER_IDS">
+                <structure:Name xml:lang="en">Domestic series ids</structure:Name>
+                <structure:Description xml:lang="en">Domestic series ids</structure:Description>
+	</structure:Concept>
+ 	<structure:Concept id="NAT_TITLE">
+                <structure:Name xml:lang="en">National language title</structure:Name>
+                <structure:Description xml:lang="en">National language title</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="SOURCE_AGENCY">
+                <structure:Name xml:lang="en">Source agency</structure:Name>
+                <structure:Description xml:lang="en">Source agency</structure:Description>
+	</structure:Concept>
+ 	<structure:Concept id="SOURCE_PUB">
+                <structure:Name xml:lang="en">Source publication</structure:Name>
+                <structure:Description xml:lang="en">Source publication</structure:Description>
+	</structure:Concept>
+ 	<structure:Concept id="STS_ACTIVITY">
+                <structure:Name xml:lang="en">Economic Activity code</structure:Name>
+                <structure:Description xml:lang="en">Economic Activity code</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="STS_BASE_YEAR">
+                <structure:Name xml:lang="en">Series variation in short-term statistics</structure:Name>
+                <structure:Description xml:lang="en">Series variation in short-term statistics</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="STS_INDICATOR">
+                <structure:Name xml:lang="en">STS Indicator</structure:Name>
+                <structure:Description xml:lang="en">STS Indicator</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="STS_INSTITUTION">
+                <structure:Name xml:lang="en">Institution originating STS dataflow to ECB</structure:Name>
+                <structure:Description xml:lang="en">Institution originating STS dataflow to ECB</structure:Description>
+	</structure:Concept>
+ 	<structure:Concept id="UNIT_INDEX_BASE">
+                <structure:Name xml:lang="en">Unit index base</structure:Name>
+                <structure:Description xml:lang="en">Unit index base</structure:Description>
+	</structure:Concept>	    
+</structure:ConceptScheme>
+
+<structure:ConceptScheme agencyID="ESTAT" id="CPI_CONCEPTS" version="1.0">
+	<structure:Name xml:lang="en">Consumer Price Index Concepts</structure:Name>
+
+	<structure:Concept id="CPI_ITEM">
+		<structure:Name xml:lang="en">CPI Item</structure:Name>
+		<structure:Description xml:lang="en">CPI Item</structure:Description>
+	</structure:Concept>
+	<structure:Concept id="CPI_SUFFIX">
+		<structure:Name xml:lang="en">CPI Suffix</structure:Name>
+		<structure:Description xml:lang="en">CPI Suffix</structure:Description>
+	</structure:Concept>					
+</structure:ConceptScheme>
+
+</Concepts>
+
+
+    <KeyFamilies>
+
+	    <structure:KeyFamily id="CPI" agencyID="ESTAT" isFinal="true" isExternalReference="false" version="1.0" validFrom="2008-01-01" validTo="2008-12-31">
+		<structure:Name xml:lang="en">Consumer Price Index</structure:Name>
+		<structure:Components>
+			<structure:Dimension conceptRef="FREQ" conceptSchemeRef="USUAL_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_FREQ"  codelistAgency="ECB" codelistVersion="1.0" isFrequencyDimension="true"/>
+			<structure:Dimension conceptRef="REF_AREA" conceptSchemeRef="ESTAT_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_AREA_EE"  codelistAgency="ECB" codelistVersion="1.0"/>
+			<structure:Dimension conceptRef="CPI_ITEM" conceptSchemeRef="CPI_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_CPI_ITEM"  codelistAgency="ESTAT" codelistVersion="1.0"/>
+			<structure:Dimension conceptRef="CPI_SUFFIX" conceptSchemeRef="CPI_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_CPI_SUFFIX"  codelistAgency="ESTAT" codelistVersion="1.0"/>
+			<structure:Dimension conceptRef="IND_REF_YEAR" conceptSchemeRef="ESTAT_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_IND_REF_YEAR"  codelistAgency="ESTAT" codelistVersion="1.0"/>
+			<structure:TimeDimension conceptRef="TIME_PERIOD" conceptSchemeRef="USUAL_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0">
+				<structure:TextFormat textType="String"/>
+			</structure:TimeDimension>
+			<structure:Group id="Sibling">
+				<structure:DimensionRef>REF_AREA</structure:DimensionRef>
+				<structure:DimensionRef>CPI_ITEM</structure:DimensionRef>
+				<structure:DimensionRef>CPI_SUFFIX</structure:DimensionRef>
+				<structure:DimensionRef>IND_REF_YEAR</structure:DimensionRef>				
+			</structure:Group>
+			<structure:PrimaryMeasure conceptRef="OBS_VALUE" conceptSchemeRef="USUAL_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0">
+				<structure:TextFormat textType="Double"/>
+			</structure:PrimaryMeasure> 
+			<structure:Attribute conceptRef="TIME_FORMAT" conceptSchemeRef="USUAL_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_TIME_FORMAT" codelistAgency="ESTAT" codelistVersion="1.0" 
+				isTimeFormat="true" assignmentStatus="Mandatory" attachmentLevel="Series"/>
+			<structure:Attribute conceptRef="OBS_STATUS" conceptSchemeRef="USUAL_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_OBS_STATUS" codelistAgency="ECB" codelistVersion="1.0" 
+				attachmentLevel="Observation" assignmentStatus="Mandatory" crossSectionalAttachObservation="true">
+			</structure:Attribute>
+			<structure:Attribute conceptRef="OBS_CONF" conceptSchemeRef="USUAL_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_OBS_CONF" codelistAgency="ECB" codelistVersion="1.0" 
+				attachmentLevel="Observation" assignmentStatus="Conditional" crossSectionalAttachObservation="true">
+			</structure:Attribute>
+			<structure:Attribute conceptRef="OBS_PRE_BREAK" conceptSchemeRef="USUAL_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				attachmentLevel="Observation" assignmentStatus="Conditional" 
+				crossSectionalAttachObservation="true">
+				<structure:TextFormat textType="String"/>
+			</structure:Attribute>
+			<structure:Attribute conceptRef="TITLE" conceptSchemeRef="ESTAT_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				attachmentLevel="Group" assignmentStatus="Conditional">
+				<structure:TextFormat textType="String"/>
+				<structure:AttachmentGroup>Sibling</structure:AttachmentGroup>
+			</structure:Attribute>
+			<structure:Attribute conceptRef="UNIT" conceptSchemeRef="ESTAT_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_UNIT" codelistAgency="ECB" codelistVersion="1.0" 
+				attachmentLevel="Group" assignmentStatus="Conditional">
+				<structure:AttachmentGroup>Sibling</structure:AttachmentGroup>
+			</structure:Attribute>
+			<structure:Attribute conceptRef="UNIT_MULT" conceptSchemeRef="ESTAT_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0"
+				codelist="CL_UNIT_MULT" codelistAgency="ESTAT" codelistVersion="1.0" 
+				attachmentLevel="Group" assignmentStatus="Conditional">
+				<structure:AttachmentGroup>Sibling</structure:AttachmentGroup>
+			</structure:Attribute>
+			<structure:Attribute conceptRef="COLLECTION" conceptSchemeRef="ESTAT_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_COLLECTION" codelistAgency="ECB" codelistVersion="1.0" 
+				attachmentLevel="Series" assignmentStatus="Conditional">
+			</structure:Attribute>
+			<structure:Attribute conceptRef="AVAILABILITY" conceptSchemeRef="ESTAT_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				codelist="CL_AVAILABILITY" codelistAgency="ESTAT" codelistVersion="1.0" 
+				attachmentLevel="Series" assignmentStatus="Conditional">
+			</structure:Attribute>
+			<structure:Attribute conceptRef="TITLE_COMPL" conceptSchemeRef="ESTAT_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				attachmentLevel="Group" assignmentStatus="Conditional">
+				<structure:TextFormat textType="String"/>
+				<structure:AttachmentGroup>Sibling</structure:AttachmentGroup>
+			</structure:Attribute>
+			<structure:Attribute conceptRef="COMPILATION" conceptSchemeRef="ESTAT_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				attachmentLevel="Group" assignmentStatus="Conditional">
+				<structure:TextFormat textType="String"/>
+				<structure:AttachmentGroup>Sibling</structure:AttachmentGroup>
+			</structure:Attribute>
+			<structure:Attribute conceptRef="COVERAGE" conceptSchemeRef="ESTAT_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				attachmentLevel="Group" assignmentStatus="Conditional">
+				<structure:TextFormat textType="String"/>
+				<structure:AttachmentGroup>Sibling</structure:AttachmentGroup>
+			</structure:Attribute>
+			<structure:Attribute conceptRef="OBS_COM" conceptSchemeRef="USUAL_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="1.0" 
+				attachmentLevel="Observation" assignmentStatus="Conditional">
+				<structure:TextFormat textType="String"/>
+			</structure:Attribute>
+		</structure:Components>
+	</structure:KeyFamily>
+	    
+    </KeyFamilies>
+</Structure>

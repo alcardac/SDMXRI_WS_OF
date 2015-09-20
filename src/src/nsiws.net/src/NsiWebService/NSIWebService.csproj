@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7402211-F6B6-4818-82C3-6265E71F53A5}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Estat.Nsi.DataDisseminationWS</RootNamespace>
+    <AssemblyName>NSIWebService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\tasos\AppData\Roaming\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\NSIWebService.XML</DocumentationFile>
+    <DeployIisAppPath>Default Web Site/NSIWebService</DeployIisAppPath>
+    <!--<ExcludeFilesFromDeployment>bin\System.Data.SQLite.dll</ExcludeFilesFromDeployment>-->
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\NSIWebService.XML</DocumentationFile>
+    <!--<ExcludeFilesFromDeployment>bin\System.Data.SQLite.dll</ExcludeFilesFromDeployment>-->
+  </PropertyGroup>
+  <!-- Added to copy SQLite DLL when publish needed by PC Axis -->
+  <Target Name="SQLiteDLL">
+    <ItemGroup>
+      <_SQLiteDLL Include="..\..\lib\**\System.Data.SQLite.dll" />
+      <FilesForPackagingFromProject Include="%(_SQLiteDLL.Identity)">
+        <DestinationRelativePath>bin\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <CopyAllFilesToSingleFolderForPackageDependsOn>
+            SQLiteDLL;
+            $(CopyAllFilesToSingleFolderForPackageDependsOn);
+        </CopyAllFilesToSingleFolderForPackageDependsOn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V10">
+      <HintPath>..\..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V20">
+      <HintPath>..\..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V21">
+      <HintPath>..\..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxApi">
+      <HintPath>..\..\..\..\lib\SdmxApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxDataParser">
+      <HintPath>..\..\..\..\lib\SdmxDataParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxEdiParser">
+      <HintPath>..\..\..\..\lib\SdmxEdiParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxObjects">
+      <HintPath>..\..\..\..\lib\SdmxObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxParseBase">
+      <HintPath>..\..\..\..\lib\SdmxParseBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxQueryBuilder">
+      <HintPath>..\..\..\..\lib\SdmxQueryBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxSourceUtil">
+      <HintPath>..\..\..\..\lib\SdmxSourceUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureMutableParser">
+      <HintPath>..\..\..\..\lib\SdmxStructureMutableParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureParser">
+      <HintPath>..\..\..\..\lib\SdmxStructureParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureRetrieval">
+      <HintPath>..\..\..\..\lib\SdmxStructureRetrieval.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxXmlConstants">
+      <HintPath>..\..\..\..\lib\SdmxXmlConstants.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="TabularWriters">
+      <HintPath>..\..\..\..\lib\TabularWriters.dll</HintPath>
+    </Reference>
+    <Reference Include="Xml.Schema.Linq">
+      <HintPath>..\..\..\..\lib\Xml.Schema.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="image\bgTopRight.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="style\main.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Builder\WebServiceInfoBuilder.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NSIEstatV20Service.asmx.cs">
+      <DependentUpon>NSIEstatV20Service.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NSIStdV20Service.asmx.cs">
+      <DependentUpon>NSIStdV20Service.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlStreamWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="NSIStdV20Service.asmx" />
+    <Content Include="sdmx_org\SDMXCommon.xsd" />
+    <Content Include="sdmx_org\SDMXCompactData.xsd" />
+    <Content Include="sdmx_org\SDMXCrossSectionalData.xsd" />
+    <Content Include="sdmx_org\SDMXGenericData.xsd" />
+    <Content Include="sdmx_org\SDMXGenericMetadata.xsd" />
+    <Content Include="sdmx_org\SDMXMessage.xsd" />
+    <Content Include="sdmx_org\SDMXMetadataReport.xsd" />
+    <Content Include="sdmx_org\SDMXQuery.xsd" />
+    <Content Include="sdmx_org\SDMXRegistry.xsd" />
+    <Content Include="sdmx_org\SDMXStructure.xsd" />
+    <Content Include="sdmx_org\SDMXUtilityData.xsd" />
+    <Content Include="sdmx_org\xml.xsd" />
+    <Content Include="NSIEstatV20Service.asmx" />
+    <Content Include="sdmx_estat\SDMXCommon.xsd" />
+    <Content Include="sdmx_estat\SDMXCompactData.xsd" />
+    <Content Include="sdmx_estat\SDMXCrossSectionalData.xsd" />
+    <Content Include="sdmx_estat\SDMXGenericData.xsd" />
+    <Content Include="sdmx_estat\SDMXGenericMetadata.xsd" />
+    <Content Include="sdmx_estat\SDMXMessage.xsd" />
+    <Content Include="sdmx_estat\SDMXMetadataReport.xsd" />
+    <Content Include="sdmx_estat\SDMXQuery.xsd" />
+    <Content Include="sdmx_estat\SDMXRegistry.xsd" />
+    <Content Include="sdmx_estat\SDMXStructure.xsd" />
+    <Content Include="sdmx_estat\SDMXUtilityData.xsd" />
+    <Content Include="sdmx_estat\xml.xsd" />
+    <Content Include="sdmx_org\NSI.wsdl" />
+    <Content Include="sdmx_estat\NSI.wsdl" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <Content Include="sdmxv21\schemas\xml.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\schemas\XMLSchema.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMX-WS.wsdl" />
+    <Content Include="sdmxv21\SDMXCommon.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXCommonReferences.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXDataGeneric.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXDataGenericBase.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXDataGenericTimeSeries.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXDataStructureSpecific.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXDataStructureSpecificBase.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXDataStructureSpecificTimeSeries.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXMessage.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXMessageFooter.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXMetadataGeneric.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXMetadataStructureSpecific.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQuery.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryBase.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryCategorisation.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryCategory.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryCodelist.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryConcept.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryConstraint.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryData.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryDataflow.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryDataStructure.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryHierarchicalCodelist.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryMetadata.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryMetadataflow.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryMetadataStructure.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryOrganisation.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryProcess.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryProvisionAgreement.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryReportingTaxonomy.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQuerySchema.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryStructures.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXQueryStructureSet.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXRegistry.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXRegistryBase.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXRegistryRegistration.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXRegistryStructure.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXRegistrySubscription.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructure.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureBase.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureCategorisation.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureCategory.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureCodelist.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureConcept.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureConstraint.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureDataflow.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureDataStructure.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureHierarchicalCodelist.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureMetadataflow.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureMetadataStructure.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureOrganisation.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureProcess.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureProvisionAgreement.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureReportingTaxonomy.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\SDMXStructureStructureSet.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="sdmxv21\xml.xsd">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{925f2a0d-1919-4639-a7bb-6ff128ea6bf2}</Project>
+      <Name>Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AuthModule\Estat.Nsi.AuthModule.csproj">
+      <Project>{FA5E8AA2-8E62-49A3-BBCA-7CBEF6F31B04}</Project>
+      <Name>Estat.Nsi.AuthModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSIWebServices\NsiWsRest.csproj">
+      <Project>{475EFEEB-CD14-482B-AB59-2CEA2F565FA9}</Project>
+      <Name>NsiWsRest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NsiWsSoapJavaWsdl\NsiWsSoap.csproj">
+      <Project>{15B3E0D2-6217-493A-A690-158C497F5318}</Project>
+      <Name>NsiWsSoap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxSoapExtension\SdmxSoapValidatorExtension.csproj">
+      <Project>{15567B17-4694-4C26-B4E5-6B9CE2915D75}</Project>
+      <Name>SdmxSoapValidatorExtension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StaticWsdlLoader\StaticWsdlLoader.csproj">
+      <Project>{57BA2B94-E1AA-491D-ABFD-969C26666E2D}</Project>
+      <Name>StaticWsdlLoader</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Messages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  -->
+  <Target Name="BeforeBuild">
+    <MakeDir Directories="$(OutputPath)\win32" />
+    <MakeDir Directories="$(OutputPath)\x64" />
+    <Copy SourceFiles="$(SolutionDir)\lib\win32\System.Data.SQLite.dll" DestinationFolder="$(OutputPath)\win32" />
+    <Copy SourceFiles="$(SolutionDir)\lib\x64\System.Data.SQLite.dll" DestinationFolder="$(OutputPath)\x64" />
+  </Target>
+  <Target Name="AfterBuild">
+    <Delete Files="$(OutputPath)\System.Data.Sqlite.dll" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349C5851-65DF-11DA-9384-00065B846F21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+    <MonoDevelop>
+      <Properties VerifyCodeBehindFields="true" VerifyCodeBehindEvents="true">
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="true" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

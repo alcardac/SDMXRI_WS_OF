@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>true</Test>
+    <Prepared>2013-09-10T09:08:15.6668+02:00</Prepared>
+    <Sender id="EUROSTAT" />
+    <Receiver id="unknown" />
+  </Header>
+  <Structures>
+    <Codelists xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <Codelist id="CL_AGE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_AGE(1.0)" agencyID="ESTAT" version="1.0" validFrom="2008-04-01T00:00:00" validTo="2008-12-31T00:00:00" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Age code list</Name>
+        <Code id="TOT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).TOT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Total</Name>
+        </Code>
+        <Code id="001" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).001">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Under 5 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="002" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).002">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">5 to 9 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="003" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).003">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">10 to 14 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="004" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).004">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">15 to 19 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="005" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).005">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">20 to 24 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="006" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).006">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">25 to 29 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="007" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).007">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">30 to 34 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="008" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).008">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">35 to 39 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="009" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).009">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">40 to 44 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="010" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).010">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">45 to 49 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="011" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).011">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">50 to 54 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="012" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).012">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">55 to 59 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="013" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).013">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">60 to 64 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="014" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).014">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">65 to 69 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="015" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).015">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">70 to 74 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="016" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).016">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">75 to 79 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="017" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).017">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">80 to 84 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="018" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).018">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">85 to 89 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="019" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).019">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">90 to 94 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="020" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).020">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">95 to 99 years</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="021" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_AGE(1.0).021">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">100 years and over</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_CAS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_CAS(1.0)" agencyID="ESTAT" version="1.0" validFrom="2008-04-01T00:00:00" validTo="2008-12-31T00:00:00" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Current activity status code list</Name>
+        <Code id="TOT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_CAS(1.0).TOT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Total</Name>
+        </Code>
+        <Code id="001" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_CAS(1.0).001">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Persons aged 15 years and over</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="002" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_CAS(1.0).002">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Economically active</Name>
+          <Parent>
+            <Ref id="001" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="003" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_CAS(1.0).003">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Employed</Name>
+          <Parent>
+            <Ref id="002" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="004" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_CAS(1.0).004">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unemployed</Name>
+          <Parent>
+            <Ref id="002" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="005" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_CAS(1.0).005">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Not economically active</Name>
+          <Parent>
+            <Ref id="001" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="NST" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_CAS(1.0).NST">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Not stated (of the persons aged 15 years or over)</Name>
+          <Parent>
+            <Ref id="001" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="NAP" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_CAS(1.0).NAP">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Not applicable (persons below 15 years of age)</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_GEO" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_GEO(2.0)" agencyID="ESTAT" version="2.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Geographical code list</Name>
+        <Code id="CZ" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Česká republika</Name>
+        </Code>
+        <Code id="CZ0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ0">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Česká republika</Name>
+          <Parent>
+            <Ref id="CZ" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ02" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ02">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Střední Čechy</Name>
+          <Parent>
+            <Ref id="CZ0" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ020" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ020">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Středočeský kraj</Name>
+          <Parent>
+            <Ref id="CZ02" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ020513482" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ020513482">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Vysoký Újezd</Name>
+          <Parent>
+            <Ref id="CZ020" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ020529303" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ020529303">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Benešov</Name>
+          <Parent>
+            <Ref id="CZ020" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ03" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ03">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Jihozápad</Name>
+          <Parent>
+            <Ref id="CZ0" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ031" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ031">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Jihočeský kraj</Name>
+          <Parent>
+            <Ref id="CZ03" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ031529729" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ031529729">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Kvítkovice</Name>
+          <Parent>
+            <Ref id="CZ031" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ031535176" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ031535176">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Planá</Name>
+          <Parent>
+            <Ref id="CZ031" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ032" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ032">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Plzeňský kraj</Name>
+          <Parent>
+            <Ref id="CZ03" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ032553425" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ032553425">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Domažlice</Name>
+          <Parent>
+            <Ref id="CZ032" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="CZ032553433" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_GEO(2.0).CZ032553433">
+          <Name xml:lang="cs" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Babylon</Name>
+          <Parent>
+            <Ref id="CZ032" xmlns="" />
+          </Parent>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_SEX" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_SEX(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Sex code list</Name>
+        <Code id="002" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.0).002">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Female</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="001" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.0).001">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Male</Name>
+          <Parent>
+            <Ref id="TOT" xmlns="" />
+          </Parent>
+        </Code>
+        <Code id="TOT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.0).TOT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Total</Name>
+        </Code>
+      </Codelist>
+    </Codelists>
+    <Concepts xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <ConceptScheme id="CENSUSHUB_CONCEPTS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=ESTAT:CENSUSHUB_CONCEPTS(1.2)" agencyID="ESTAT" version="1.2" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">CensusHub domain concept scheme</Name>
+        <Concept id="AGE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CENSUSHUB_CONCEPTS(1.2).AGE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Age</Name>
+        </Concept>
+        <Concept id="CAS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CENSUSHUB_CONCEPTS(1.2).CAS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Current activity status</Name>
+        </Concept>
+        <Concept id="GEO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CENSUSHUB_CONCEPTS(1.2).GEO">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Geographical area</Name>
+        </Concept>
+        <Concept id="SEX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CENSUSHUB_CONCEPTS(1.2).SEX">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Sex</Name>
+        </Concept>
+        <Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:CENSUSHUB_CONCEPTS(1.2).OBS_VALUE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation value</Name>
+        </Concept>
+      </ConceptScheme>
+    </Concepts>
+    <DataStructures xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <DataStructure id="CENSUSHUB_TEST" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ESTAT:CENSUSHUB_TEST(1.2)" agencyID="ESTAT" version="1.2" isFinal="false">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">CensusHub Data Structure Definition</Name>
+        <DataStructureComponents>
+          <DimensionList id="DimensionDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DimensionDescriptor=ESTAT:CENSUSHUB_TEST(1.2).DimensionDescriptor">
+            <Dimension id="AGE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:CENSUSHUB_TEST(1.2).AGE" position="1">
+              <ConceptIdentity>
+                <Ref id="AGE" maintainableParentID="CENSUSHUB_CONCEPTS" maintainableParentVersion="1.2" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_AGE" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+            <Dimension id="CAS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:CENSUSHUB_TEST(1.2).CAS" position="2">
+              <ConceptIdentity>
+                <Ref id="CAS" maintainableParentID="CENSUSHUB_CONCEPTS" maintainableParentVersion="1.2" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_CAS" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+            <Dimension id="GEO" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:CENSUSHUB_TEST(1.2).GEO" position="3">
+              <ConceptIdentity>
+                <Ref id="GEO" maintainableParentID="CENSUSHUB_CONCEPTS" maintainableParentVersion="1.2" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_GEO" version="2.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+            <Dimension id="SEX" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:CENSUSHUB_TEST(1.2).SEX" position="4">
+              <ConceptIdentity>
+                <Ref id="SEX" maintainableParentID="CENSUSHUB_CONCEPTS" maintainableParentVersion="1.2" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_SEX" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+          </DimensionList>
+          <MeasureList id="MeasureDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDescriptor=ESTAT:CENSUSHUB_TEST(1.2).MeasureDescriptor">
+            <PrimaryMeasure id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.PrimaryMeasure=ESTAT:CENSUSHUB_TEST(1.2).OBS_VALUE">
+              <ConceptIdentity>
+                <Ref id="OBS_VALUE" maintainableParentID="CENSUSHUB_CONCEPTS" maintainableParentVersion="1.2" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <TextFormat textType="Long" />
+              </LocalRepresentation>
+            </PrimaryMeasure>
+          </MeasureList>
+        </DataStructureComponents>
+      </DataStructure>
+    </DataStructures>
+  </Structures>
+</Structure>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+  <Words>
+    <Recognized>
+      <Word>arterfact</Word>
+      <Word>sdmx</Word>
+      <Word>sqlite</Word>
+      <Word>nsi</Word>
+      <Word>estat</Word>
+      <Word>dsd</Word>
+      <Word>gesmes</Word>
+      <Word>dataflow</Word>
+      <Word>dataflows</Word>
+      <Word>metadataflow</Word>
+      <Word>metadataflows</Word>
+      <Word>datasource</Word>
+      <Word>organisation</Word>
+      <Word>localised</Word>
+      <Word>desc</Word>
+      <Word>artefact</Word>
+      <Word>utils</Word>
+      <Word>transcoding</Word>
+      <Word>transcoded</Word>
+      <Word>codelist</Word>
+      <Word>codelists</Word>
+      <Word>jdbc</Word>
+      <Word>Versionable</Word>
+      <Word>Annotable</Word>
+      <Word>timespan</Word>
+      <Word>timeseries</Word>
+      <Word>dataset</Word>
+      <!-- SDMX v2.0 XML Schema typos-->
+      <Word>Metadatataflow</Word>
+      <Word>Metadaflow</Word>
+      <Word>Metadatastructure</Word>
+      <!--Gesmes keywords-->
+      <Word>ftx</Word>
+      <Word>mref</Word>
+      <Word>arr</Word>
+      <Word>rel</Word>
+      <Word>iref</Word>
+      <Word>unb</Word>
+      <Word>unz</Word>
+      <Word>cdv</Word>
+      <Word>unt</Word>
+      <Word>una</Word>
+      <Word>dsi</Word>
+      <Word>dtm</Word>
+      <Word>gis</Word>
+      <Word>attr</Word>
+      <Word>nad</Word>
+      <Word>mr</Word>
+      <Word>bgm</Word>
+      <Word>ar</Word>
+      <Word>uncoded</Word>
+    </Recognized>
+    <DiscreteExceptions>
+      <Term>timespan</Term>
+      <Term>nsi</Term>
+      <Term>id</Term>
+      <Term>ts</Term>
+      <Term>dataflows</Term>
+      <Term>md</Term>
+      <Term>xs</Term>
+      <Term>db</Term>
+      <Term>datasource</Term>
+      <Term>mailto</Term>
+      <Term>dataset</Term>
+      <Term>metadata</Term>
+      <Term>metadataflow</Term>
+      <Term>metadataflows</Term>
+      <Term>Metadatastructure</Term>
+      <Term>dataflow</Term>
+      <Term>codelist</Term>
+      <Term>codelists</Term>
+     </DiscreteExceptions>
+  </Words>
+  <Acronyms>
+    <CasingExceptions>
+      <Acronym>NSI</Acronym> <!-- NSI -->
+      <!-- Various casings of id which are used to match the XML Schema-->
+      <Acronym>ID</Acronym> 
+      <Acronym>Id</Acronym>
+      <Acronym>id</Acronym>
+      <Acronym>Md</Acronym> <!-- Md5 -->
+      <Acronym>WSDL</Acronym>
+      <Acronym>Dataset</Acronym>
+      <Acronym>URL</Acronym>
+      <Acronym>URN</Acronym>
+      <Acronym>URI</Acronym>
+      <Acronym>Db</Acronym> <!-- DbAuth* -->
+      <Acronym>Ts</Acronym> <!--GesmesTs-->
+      <Acronym>Ms</Acronym> <!--SenderMs-->
+      <Acronym>Mr</Acronym> <!--SenderMr-->
+      <Acronym>Gis</Acronym>  <!--Gesmes GIS-->
+      <Acronym>HTTP</Acronym>
+      <Acronym>REST</Acronym>
+    </CasingExceptions>
+  </Acronyms>
+
+</Dictionary>

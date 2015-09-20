@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message:StructureSpecificDataQuery xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message SDMXMessage.xsd" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:query="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<message:Header>
+		<message:ID>ID0</message:ID>
+		<message:Test>false</message:Test>
+		<message:Prepared>2006-05-04T18:13:51.0Z</message:Prepared>
+		<message:Sender id="id0"/>
+		<message:Receiver id="id1"/>
+	</message:Header>
+	<message:Query>
+		<query:ReturnDetails detail="Full">
+			<query:Structure dimensionAtObservation="TIME_PERIOD" structureID="DEMO">
+				<common:Structure>
+					<Ref agencyID="ESTAT" id="STS" version="2.2"/>
+				</common:Structure>
+			</query:Structure>
+		</query:ReturnDetails>
+		<query:DataWhere>
+			<query:Dataflow>
+				<Ref agencyID="ESTAT" id="SSTSCONS_PROD_QT"/>
+			</query:Dataflow>
+            <query:Or>
+                <query:And>
+                    <query:DimensionValue>
+                        <query:ID>REF_AREA</query:ID>
+                        <query:Value>IT</query:Value>
+                    </query:DimensionValue>
+                     <query:DimensionValue>
+                        <query:ID>FREQ</query:ID>
+                        <query:Value>Q</query:Value>
+                    </query:DimensionValue>
+                </query:And>
+                <query:And>
+                    <query:DimensionValue>
+                        <query:ID>REF_AREA</query:ID>
+                        <query:Value>LU</query:Value>
+                    </query:DimensionValue>
+                     <query:DimensionValue>
+                        <query:ID>FREQ</query:ID>
+                        <query:Value>A</query:Value>
+                    </query:DimensionValue>
+                </query:And>
+            </query:Or>
+		</query:DataWhere>
+	</message:Query>
+</message:StructureSpecificDataQuery>
+

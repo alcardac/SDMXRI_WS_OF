@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<message:StructureSpecificDataQuery xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:query="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <message:Header>
+        <message:ID>QUERY_GR_REG</message:ID>
+        <message:Test>false</message:Test>
+        <message:Prepared>2010-11-23T08:00:33+01:00</message:Prepared>
+        <message:Sender id="GTS001"/>
+        <message:Receiver id="ESTAT"/>
+    </message:Header>
+    <message:Query>
+        <query:ReturnDetails detail="Full">
+            <query:Structure dimensionAtObservation="TIME_PERIOD" structureID="STS">
+                <common:Structure>
+                    <Ref id="STS" version="1.0" agencyID="ESTAT"/>
+                </common:Structure>
+            </query:Structure>
+        </query:ReturnDetails>
+        <query:DataWhere>
+            <query:Dataflow>
+                    <Ref id="SSTSCONS_PROD_M" agencyID="ESTAT" version="1.0"/>
+            </query:Dataflow>
+            <query:TimeDimensionValue>
+                <query:ID>TIME_PERIOD</query:ID>
+                <query:TimeValue operator="greaterThanOrEqual">2001-01</query:TimeValue>
+                <query:TimeValue operator="lessThan">2010-01</query:TimeValue>
+            </query:TimeDimensionValue>
+            <query:Or>
+                <query:DimensionValue>
+                    <query:ID>REF_AREA</query:ID>
+                    <query:Value>RO</query:Value>
+                </query:DimensionValue>
+                <query:DimensionValue>
+                    <query:ID>REF_AREA</query:ID>
+                    <query:Value>LU</query:Value>
+                </query:DimensionValue>
+            </query:Or>
+        </query:DataWhere>
+    </message:Query>
+</message:StructureSpecificDataQuery>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>false</Test>
+    <Prepared>2013-09-10T09:08:16.8548+02:00</Prepared>
+    <Sender id="ESTAT" />
+    <Receiver id="unknown" />
+  </Header>
+  <Structures>
+    <Dataflows xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <Dataflow id="SSTSCONS_PROD_M" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ESTAT:SSTSCONS_PROD_M(2.0)" agencyID="ESTAT" version="2.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Production in construction, total, building construction, civil engineering (Monthly)</Name>
+        <Structure>
+          <Ref id="STS" version="2.0" agencyID="ESTAT" package="datastructure" class="DataStructure" xmlns="" />
+        </Structure>
+      </Dataflow>
+    </Dataflows>
+    <Categorisations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <Categorisation id="2056562427_1929415840" urn="urn:sdmx:org.sdmx.infomodel.categoryscheme.Categorisation=ESTAT:2056562427_1929415840(1.0)" agencyID="ESTAT" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Production in construction, total, building construction, civil engineering (Monthly)</Name>
+        <Source>
+          <Ref id="SSTSCONS_PROD_M" version="2.0" agencyID="ESTAT" package="datastructure" class="Dataflow" xmlns="" />
+        </Source>
+        <Target>
+          <Ref id="SSTSCONS" maintainableParentID="ESTAT_DATAFLOWS_SCHEME" maintainableParentVersion="1.1" agencyID="ESTAT" package="categoryscheme" class="Category" xmlns="" />
+        </Target>
+      </Categorisation>
+    </Categorisations>
+  </Structures>
+</Structure>

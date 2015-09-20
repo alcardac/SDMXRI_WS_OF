@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E5923FA6-6095-4560-8B2C-8CA64E744DB4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Org.Sdmxsource.Sdmx.Structureparser</RootNamespace>
+    <AssemblyName>SdmxStructureParser</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SdmxStructureParser.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\SdmxStructureParser.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builder\Constraint\ConstraintBuilder.cs" />
+    <Compile Include="Builder\Query\DataQueryBuilder.cs" />
+    <Compile Include="Builder\Query\DataQueryBuilderV2.cs" />
+    <Compile Include="Builder\Query\DataQueryBuilderV21.cs" />
+    <Compile Include="Builder\Query\IDataQueryBuilder.cs" />
+    <Compile Include="Builder\Query\IQueryBuilder.cs" />
+    <Compile Include="Builder\Query\QueryBuilder.cs" />
+    <Compile Include="Builder\Query\QueryBuilderV1.cs" />
+    <Compile Include="Builder\Query\QueryBuilderV2.cs" />
+    <Compile Include="Builder\Query\QueryBuilderV21.cs" />
+    <Compile Include="Builder\SdmxObjects\AbstractSdmxObjectsBuilder.cs" />
+    <Compile Include="Builder\SdmxObjects\AbstractSdmxObjectsV2Builder.cs" />
+    <Compile Include="Builder\SdmxObjects\IMutableObjectsBuilder.cs" />
+    <Compile Include="Builder\SdmxObjects\ISdmxObjectsBuilder.cs" />
+    <Compile Include="Builder\SdmxObjects\MutableObjectsBuilder.cs" />
+    <Compile Include="Builder\SdmxObjects\SdmxObjectsV1Builder.cs" />
+    <Compile Include="Builder\SdmxObjects\SdmxObjectsV21Builder.cs" />
+    <Compile Include="Builder\SdmxObjects\SdmxObjectsV2RegDocBuilder.cs" />
+    <Compile Include="Builder\SdmxObjects\SdmxObjectsV2StrucDocBuilder.cs" />
+    <Compile Include="Builder\SdmxObjects\SdmxObjectsBuilder.cs" />
+    <Compile Include="Builder\SubscriptionObjects\ISubscriptionObjectsBuilder.cs" />
+    <Compile Include="Builder\SubscriptionObjects\SubscriptionObjectsBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\AbstractResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Error\ErrorResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Error\IErrorResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\HeaderHelper.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\IQueryProvisionResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\IQueryRegistrationResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\IQueryStructureResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\ISubmitProvisionResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\ISubmitRegistrationResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\ISubmitStructureResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\ISubmitSubscriptionResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\QueryProvisionResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\QueryRegistrationResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\QueryStructureResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\SubmitProvisionResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\SubmitRegistrationResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\SubmitStructureResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\SubmitSubscriptionResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V1\V1Helper.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V21\AbstractResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V21\ErrorResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V21\QueryRegistrationResponseBuilderV21.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V21\SubmitRegistrationResponseBuilderV21.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V21\SubmitStructureResponseBuilderV21.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V21\SubmitSubscriptionResponseBuilderV21.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V21\V21Helper.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V2\AbstractResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V2\QueryProvisionResponseBuilderV2.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V2\QueryRegistrationResponseBuilderV2.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V2\QueryStructureResponseBuilderV2.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V2\SubmitProvisionResponseBuilderV2.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V2\SubmitRegistrationResponseBuilderV2.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V2\SubmitStructureResponseBuilderV2.cs" />
+    <Compile Include="Builder\XmlSerialization\Registry\Response\V2\V2Helper.cs" />
+    <Compile Include="Builder\XmlSerialization\SubmitRegistrationResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\SubmitStructureReponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\SubmitSubscriptionResponseBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\AbstractBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\AgencyXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\AttributeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\CodelistXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\CodeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\ConceptXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\DataStructureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\DimensionXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\GroupXmlsBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\HeaderXmlsBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\PrimaryMeasureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\StructureHeaderXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\StructureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V1\TimeDimensionXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\AgencySchemeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\AbstractAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\AbstractItemSchemeMapAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\AbstractSchemeMapAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\AttributeXmlAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\CategoryAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\CodeAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\CodelistRefAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\ComponentAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\ConceptAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\DimensionXmlAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\GroupXmlAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\HierarchicalCodeAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\HierarchyAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\IAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\IdentifiableAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\ItemSchemeAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\LevelAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\MaintainableAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\MeasureDimensionXmlAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\NameableAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\OrganisationSchemeMapAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\OrganisationXmlAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\PrimaryMeasureXmlAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\ProcessStepAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\ReportingCategoryAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\RepresentationXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\TextFormatAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\TimeDimensionXmlAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\TimeRangeXmlAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Assemblers\ToValueTypeTypeBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\AttachmentConstraintXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\CategorisationXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\CategorySchemeMapAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\CategorySchemeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\CodelistMapAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\CodelistXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\ConceptSchemeMapAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\ConceptSchemeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\ConstraintAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\ContentConstraintXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\DataConsumerSchemeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\DataflowXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\DataProviderSchemeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\DataStructureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\DataTypeBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\HierarchicalCodelistXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\MetadataflowXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\MetadataStructureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\OrganisationUnitSchemeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\ProcessXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\ProvisionAgreementXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\RegistrationXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\RegistryRequest\SubmitRegistrationBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\RegistryRequest\SubmitStructureBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\RegistryRequest\SubmitSubscriptionBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\ReportingTaxonomyXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Response\SubmitRegistrationResponseBuilderV21.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Response\SubmitStructureResponseBuilderV21.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\Response\SubmitSubscriptionResponseBuilderV21.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\StructureHeaderXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\StructureMapAssembler.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\StructureSetXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\StructureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V21\SubscriptionXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\AbstractBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\AgencySchemeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\AttributeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\CategorySchemeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\CategoryXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\CodelistRefXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\CodelistXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\CodeRefXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\CodeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\ConceptSchemeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\ConceptXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\CrossSectionalMeasureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\DataflowXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\DataStructureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\DimensionXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\GroupXmlsBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\HierarchicalCodelistXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\HierarchyXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\LevelXmlsBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\MetadataAttributeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\MetadataflowXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\MetadataStructureDefinitionXmlsBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\OrganisationRoleXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\OrganisationSchemeXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\PrimaryMeasureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\ProcessXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\ProvisionAgreementXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\RegistrationXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\ReportingTaxonomyXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\ReportStructureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\StructureHeaderXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\StructureSetXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\StructureXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\V2\TimeDimensionXmlBuilder.cs" />
+    <Compile Include="Builder\XmlSerialization\XmlObjectBuilder.cs" />
+    <Compile Include="Engine\Writing\ErrorWriterEngineV21.cs" />
+    <Compile Include="Engine\Writing\SchemaLocationWriter.cs" />
+    <Compile Include="Factory\SdmxErrorWriterFactory.cs" />
+    <Compile Include="Factory\SdmxStructureParserFactory.cs" />
+    <Compile Include="Factory\SdmxStructureWriterFactory.cs" />
+    <Compile Include="Engine\ICategorisationCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\IConceptSchemeCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\IContentConstraintCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\ICrossReferenceReversionEngine.cs" />
+    <Compile Include="Engine\IDataflowCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\IDataStructureCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\IHierarchicCodelistCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\IMetadataflowCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\IMetadataStructureCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\IProcessCrossReferenceUpdater.cs" />
+    <Compile Include="Engine\IProvisionCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\IReportingTaxonomyBeanCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\ISdmxStructureDocumentSplitter.cs" />
+    <Compile Include="Engine\Writing\AbstractWritingEngine.cs" />
+    <Compile Include="Engine\ICrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Writing\RegistryQueryResponseWriterEngineV2.cs" />
+    <Compile Include="Engine\Reversion\CategorisationCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Reversion\ComponentCrossReferenceUpdater.cs" />
+    <Compile Include="Engine\Reversion\ConceptSchemeCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Reversion\ContentConstraintCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Reversion\CrossReferenceReversionEngine.cs" />
+    <Compile Include="Engine\Reversion\DataflowCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Reversion\DataStructureCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Reversion\HierarchicCodelistCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\IStructureSetCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Reversion\MetadataflowCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Reversion\MetadataStructureCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Reversion\ProcessCrossReferenceUpdater.cs" />
+    <Compile Include="Engine\Reversion\ProvisionCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Reversion\ReportingTaxonomyBeanCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Reversion\RepresentationCrossReferenceUpdater.cs" />
+    <Compile Include="Engine\Reversion\StructureSetCrossReferenceUpdaterEngine.cs" />
+    <Compile Include="Engine\Writing\StructureWriterEngineEdi.cs" />
+    <Compile Include="Engine\Writing\StructureWriterEngineV1.cs" />
+    <Compile Include="Engine\Writing\StructureWriterEngineV2.cs" />
+    <Compile Include="Engine\Writing\StructureWriterEngineV21.cs" />
+    <Compile Include="Manager\ErrorWriterManager.cs" />
+    <Compile Include="Manager\ExternalReferenceManager.cs" />
+    <Compile Include="Manager\IExternalReferenceManager.cs" />
+    <Compile Include="Manager\Parsing\BaseParsingManager.cs" />
+    <Compile Include="Manager\Parsing\DataQueryParseManager.cs" />
+    <Compile Include="Manager\Parsing\IDataQueryParseManager.cs" />
+    <Compile Include="Manager\Parsing\INotificationParsingManager.cs" />
+    <Compile Include="Manager\Parsing\IProvisionParsingManager.cs" />
+    <Compile Include="Manager\Parsing\IQueryParsingManager.cs" />
+    <Compile Include="Manager\Parsing\IRegistrationParsingManager.cs" />
+    <Compile Include="Manager\Parsing\IStructureValidationManager.cs" />
+    <Compile Include="Manager\Parsing\ISubscriptionParsingManager.cs" />
+    <Compile Include="Manager\Parsing\NotificationParsingManager.cs" />
+    <Compile Include="Manager\Parsing\ProvisionParsingManager.cs" />
+    <Compile Include="Manager\Parsing\QueryParsingManager.cs" />
+    <Compile Include="Manager\Parsing\RegistrationParsingManager.cs" />
+    <Compile Include="Manager\Parsing\StructureParsingManager.cs" />
+    <Compile Include="Manager\Parsing\StructureValidationManager.cs" />
+    <Compile Include="Manager\Parsing\SubscriptionParsingManager.cs" />
+    <Compile Include="Manager\Rest\RestStructureQueryManager.cs" />
+    <Compile Include="Manager\StructureVersionIncrementManager.cs" />
+    <Compile Include="Manager\StructureWriterManager.cs" />
+    <Compile Include="Model\SdmxErrorFormat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Workspace\IProvisionWorkspace.cs" />
+    <Compile Include="Workspace\IQueryWorkspace.cs" />
+    <Compile Include="Workspace\IRegistrationWorkspace.cs" />
+    <Compile Include="Workspace\IRegistryWorkspace.cs" />
+    <Compile Include="Workspace\ISubscriptionWorkspace.cs" />
+    <Compile Include="Workspace\QueryWorkspace.cs" />
+    <Compile Include="Workspace\StructureWorkspace.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V10\Org.Sdmx.Resources.SdmxMl.Schemas.V10.csproj">
+      <Project>{A288BFA3-8192-C141-A356-812A0262F2CF}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V20\Org.Sdmx.Resources.SdmxMl.Schemas.V20.csproj">
+      <Project>{AA97E1E9-E028-FC4D-8736-13372B3712DD}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V20</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V21\Org.Sdmx.Resources.SdmxMl.Schemas.V21.csproj">
+      <Project>{AF1E630B-A511-437E-BA63-1BC874403749}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V21</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxAPI\SdmxAPI.csproj">
+      <Project>{C13FCF38-348B-4848-BCFF-A7BD4D75911C}</Project>
+      <Name>SdmxAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxObjects\SdmxObjects.csproj">
+      <Project>{ECC53B22-BD93-49FF-8575-1DDFA2FE9A04}</Project>
+      <Name>SdmxObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxSourceUtil\SdmxSourceUtil.csproj">
+      <Project>{206D467D-2C89-4FA4-826E-CEFDE000A334}</Project>
+      <Name>SdmxSourceUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxStructureRetrieval\SdmxStructureRetrieval.csproj">
+      <Project>{61F796E4-E355-4B6B-AD00-89791BAB3900}</Project>
+      <Name>SdmxStructureRetrieval</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XObjects\XObjects.csproj">
+      <Project>{29FF8E34-FD09-47DF-8F6C-DF847E4B3AAB}</Project>
+      <Name>XObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

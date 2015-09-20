@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Estat.Nsi.SdmxSoapValidatorExtension.InitializerValueObject" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAABAAAA=</HashCode>
+      <FileName>InitializerValueObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.SdmxSoapValidatorExtension.SchemaCache" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAEACBAAAAAAAAAAAAAAAAAABEAAAAAAAAAEAAIQAA=</HashCode>
+      <FileName>SchemaCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAARAAEAACBAAQAAAAAoAAgAAhDEAAAAACgAIAQAAMA=</HashCode>
+      <FileName>SdmxSoapValidator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Estat.Nsi.SdmxSoapValidatorExtension.SdmxSoapValidatorAttribute" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SdmxSoapValidatorAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.SdmxSoapValidatorExtension.SoapConstants" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIBAACAAAAAAAIAAAABABAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>SoapConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.SdmxSoapValidatorExtension.SoapFaultFactory" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAAAAAAAAAAQAAAgAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SoapFaultFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Estat.Nsi.SdmxSoapValidatorExtension.Properties.Resources" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAABEAgAAQAAAAAAAQCABAACAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

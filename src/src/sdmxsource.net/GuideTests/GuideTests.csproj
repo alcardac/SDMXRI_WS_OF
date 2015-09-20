@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F4A2092-E4D4-415C-8995-82992F562858}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GuideTests</RootNamespace>
+    <AssemblyName>GuideTests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chapter1\Chapter1WritingStructures.cs" />
+    <Compile Include="Chapter1\SdmxFileWriter.cs" />
+    <Compile Include="Chapter1\StructuresCreator.cs" />
+    <Compile Include="Chapter4\Chapter4ReadingData.cs" />
+    <Compile Include="ReadingStructures.cs" />
+    <Compile Include="ResolveStructures.cs" />
+    <Compile Include="TestGuideSamples.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SdmxAPI\SdmxAPI.csproj">
+      <Project>{C13FCF38-348B-4848-BCFF-A7BD4D75911C}</Project>
+      <Name>SdmxAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxDataParser\SdmxDataParser.csproj">
+      <Project>{D0203D8A-63F9-4914-B9DF-F4D7EF512276}</Project>
+      <Name>SdmxDataParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxObjects\SdmxObjects.csproj">
+      <Project>{ECC53B22-BD93-49FF-8575-1DDFA2FE9A04}</Project>
+      <Name>SdmxObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxSourceUtil\SdmxSourceUtil.csproj">
+      <Project>{206D467D-2C89-4FA4-826E-CEFDE000A334}</Project>
+      <Name>SdmxSourceUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxStructureParser\SdmxStructureParser.csproj">
+      <Project>{E5923FA6-6095-4560-8B2C-8CA64E744DB4}</Project>
+      <Name>SdmxStructureParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxStructureRetrieval\SdmxStructureRetrieval.csproj">
+      <Project>{61F796E4-E355-4B6B-AD00-89791BAB3900}</Project>
+      <Name>SdmxStructureRetrieval</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="$(SolutionDir)\tests\test-files.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

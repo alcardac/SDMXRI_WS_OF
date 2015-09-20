@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B20CF5C2-3847-4781-8579-CE3E92D46628}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Estat.Sri.MappingStoreRetrieval</RootNamespace>
+    <AssemblyName>MappingStoreRetrieval</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MappingStoreRetrieval.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\MappingStoreRetrieval.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNoTests|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugNoTests\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\MappingStoreRetrieval.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EstatSdmxSourceExtension">
+      <HintPath>..\..\..\..\lib\EstatSdmxSourceExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="EstatSdmxSourceExtension.CustomRequests">
+      <HintPath>..\..\..\..\lib\EstatSdmxSourceExtension.CustomRequests.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V10">
+      <HintPath>..\..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V20">
+      <HintPath>..\..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V21">
+      <HintPath>..\..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxApi">
+      <HintPath>..\..\..\..\lib\SdmxApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxDataParser">
+      <HintPath>..\..\..\..\lib\SdmxDataParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxEdiParser">
+      <HintPath>..\..\..\..\lib\SdmxEdiParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxObjects">
+      <HintPath>..\..\..\..\lib\SdmxObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxParseBase">
+      <HintPath>..\..\..\..\lib\SdmxParseBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxQueryBuilder">
+      <HintPath>..\..\..\..\lib\SdmxQueryBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxSourceUtil">
+      <HintPath>..\..\..\..\lib\SdmxSourceUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureMutableParser">
+      <HintPath>..\..\..\..\lib\SdmxStructureMutableParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureParser">
+      <HintPath>..\..\..\..\lib\SdmxStructureParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureRetrieval">
+      <HintPath>..\..\..\..\lib\SdmxStructureRetrieval.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxXmlConstants">
+      <HintPath>..\..\..\..\lib\SdmxXmlConstants.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TabularWriters">
+      <HintPath>..\..\..\..\lib\TabularWriters.dll</HintPath>
+    </Reference>
+    <Reference Include="Xml.Schema.Linq">
+      <HintPath>..\..\..\..\lib\Xml.Schema.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builder\ArtefactCommandBuilder.cs" />
+    <Compile Include="Builder\ArtefactSqlBuilder.cs" />
+    <Compile Include="Builder\AuthArtefactCommandBuilder.cs" />
+    <Compile Include="Builder\AuthReferenceCommandBuilder.cs" />
+    <Compile Include="Builder\ArtefactParentsSqlBuilder.cs" />
+    <Compile Include="Builder\CrossDsdBuilder.cs" />
+    <Compile Include="Builder\CrossReferenceChildBuilder.cs" />
+    <Compile Include="Builder\IAuthCommandBuilder.cs" />
+    <Compile Include="Builder\ICrossReferenceRetrievalBuilder.cs" />
+    <Compile Include="Builder\ICrossReferenceSetBuilder.cs" />
+    <Compile Include="Builder\ItemTableInfoBuilder.cs" />
+    <Compile Include="Builder\PartialCodesCommandBuilder.cs" />
+    <Compile Include="Builder\ReferencedSqlQueryBuilder.cs" />
+    <Compile Include="Builder\DataflowCommandBuilder.cs" />
+    <Compile Include="Builder\ICommandBuilder.cs" />
+    <Compile Include="Builder\ISqlQueryInfoBuilder.cs" />
+    <Compile Include="Builder\ItemCommandBuilder.cs" />
+    <Compile Include="Builder\ItemSqlQueryBuilder.cs" />
+    <Compile Include="Builder\StructureReferenceFromMutableBuilder.cs" />
+    <Compile Include="Builder\TableInfoBuilder.cs" />
+    <Compile Include="Config\ConfigManager.cs" />
+    <Compile Include="Config\DataflowConfigurationSection.cs" />
+    <Compile Include="Config\MastoreProviderMappingSettingCollection.cs" />
+    <Compile Include="Config\MastoreProviderMappingSetting.cs" />
+    <Compile Include="Config\DatabaseSetting.cs" />
+    <Compile Include="Config\DatabaseSettingCollection.cs" />
+    <Compile Include="Config\MappingStoreConfigSection.cs" />
+    <Compile Include="Config\MappingStoreDefaultConstants.cs" />
+    <Compile Include="Config\SettingConstants.cs" />
+    <Compile Include="Constants\AttachmentLevelConstants.cs" />
+    <Compile Include="Constants\CategorisationConstant.cs" />
+    <Compile Include="Constants\ConceptSchemeConstant.cs" />
+    <Compile Include="Constants\CategorySchemeConstant.cs" />
+    <Compile Include="Constants\CodeListConstant.cs" />
+    <Compile Include="Constants\AgencySchemeConstant.cs" />
+    <Compile Include="Constants\ContentConstraintConstant.cs" />
+    <Compile Include="Constants\StructureSetConstant.cs" />
+    <Compile Include="Constants\OrganisationUnitSchemeConstant.cs" />
+    <Compile Include="Constants\DataConsumerSchemeConstant.cs" />
+    <Compile Include="Constants\DataProviderSchemeConstant.cs" />
+    <Compile Include="Constants\DataflowFilter.cs" />
+    <Compile Include="Constants\HclConstant.cs" />
+    <Compile Include="Constants\DsdConstant.cs" />
+    <Compile Include="Constants\DataflowConstant.cs" />
+    <Compile Include="Constants\LocalisedStringType.cs" />
+    <Compile Include="Constants\MappingStoreSqlStatements.cs" />
+    <Compile Include="Constants\ParameterNameConstants.cs" />
+    <Compile Include="Constants\PeriodCodelist.cs" />
+    <Compile Include="Constants\SdmxComponentType.cs" />
+    <Compile Include="Constants\VersionQueryType.cs" />
+    <Compile Include="Constants\WhereState.cs" />
+    <Compile Include="IncompleteMappingSetException.cs" />
+    <Compile Include="Engine\ArtefactRetrieverEngine.cs" />
+    <Compile Include="Engine\BaseRetrievalEngine.cs" />
+    <Compile Include="Engine\CategorisationRetrievalEngine.cs" />
+    <Compile Include="Engine\CodeListRetrievalEngine.cs" />
+    <Compile Include="Engine\Mapping\ITimeDimensionMapping.cs" />
+    <Compile Include="Engine\Mapping\TimeDimensionMultiFrequency.cs" />
+    <Compile Include="Engine\Mapping\TimeDimensionSingleFrequency.cs" />
+    <Compile Include="Engine\Mapping\TimeTranscodingWhereBuilder.cs" />
+    <Compile Include="Engine\PartialCodeListRetrievalEngine.cs" />
+    <Compile Include="Engine\ConceptSchemeRetrievalEngine.cs" />
+    <Compile Include="Engine\CategorySchemeRetrievalEngine.cs" />
+    <Compile Include="Engine\CrossReferenceResolverMutableEngine.cs" />
+    <Compile Include="Engine\MappingSetRetriever.cs" />
+    <Compile Include="Engine\HeaderRetrieverEngine.cs" />
+    <Compile Include="Engine\HierarchicalCodeListRetrievealEngine.cs" />
+    <Compile Include="Engine\DsdRetrievalEngine.cs" />
+    <Compile Include="Engine\DataflowRetrievalEngine.cs" />
+    <Compile Include="Engine\HierarchicalItemSchemeRetrievalEngine.cs" />
+    <Compile Include="Engine\ICrossReferenceResolverMutableEngine.cs" />
+    <Compile Include="Engine\IRetrievalEngine.cs" />
+    <Compile Include="Engine\ItemSchemeRetrieverEngine.cs" />
+    <Compile Include="Engine\Mapping\ComponentMapping.cs" />
+    <Compile Include="Engine\Mapping\ComponentMapping1C.cs" />
+    <Compile Include="Engine\Mapping\ComponentMapping1N.cs" />
+    <Compile Include="Engine\Mapping\ComponentMapping1to1.cs" />
+    <Compile Include="Engine\Mapping\ComponentMapping1to1T.cs" />
+    <Compile Include="Engine\Mapping\ComponentMappingNto1.cs" />
+    <Compile Include="Engine\Mapping\IComponentMapping.cs" />
+    <Compile Include="Engine\Mapping\IMapping.cs" />
+    <Compile Include="Engine\Mapping\ITimeDimension.cs" />
+    <Compile Include="Engine\Mapping\TimeDimension1Column.cs" />
+    <Compile Include="Engine\Mapping\TimeDimension1to1.cs" />
+    <Compile Include="Engine\Mapping\TimeDimension2Column.cs" />
+    <Compile Include="Engine\Mapping\TimeDimensionConstant.cs" />
+    <Compile Include="Engine\Mapping\TimeDimensionDateType.cs" />
+    <Compile Include="Engine\Mapping\TimeDimensionMapping.cs" />
+    <Compile Include="Engine\Mapping\TranscodingException.cs" />
+    <Compile Include="Engine\SubsetCodelistRetrievalEngine.cs" />
+    <Compile Include="ErrorMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\AuthExtensions.cs" />
+    <Compile Include="Extensions\DatabaseExtension.cs" />
+    <Compile Include="Extensions\HeaderExtensions.cs" />
+    <Compile Include="Extensions\MutableMaintainableExtensions.cs" />
+    <Compile Include="Extensions\QueryExtensions.cs" />
+    <Compile Include="Extensions\SdmxDateExtensions.cs" />
+    <Compile Include="Extensions\SdmxStructureTypeExtensions.cs" />
+    <Compile Include="Extensions\SetExtensions.cs" />
+    <Compile Include="Factory\AuthMutableRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\AuthCrossMutableRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\AdvancedMutableRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\AuthAdvancedMutableRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\IAuthAdvancedMutableRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\IAdvancedMutableRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\IAuthCrossRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\CrossMutableRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\ICrossRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\IAuthMutableRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\IMutableRetrievalManagerFactory.cs" />
+    <Compile Include="Factory\MutableRetrievalManagerFactory.cs" />
+    <Compile Include="Helper\ConnectionStringHelper.cs" />
+    <Compile Include="Helper\DatabaseType.cs" />
+    <Compile Include="Helper\DataReaderHelper.cs" />
+    <Compile Include="Helper\MaintainableMutableComparer.cs" />
+    <Compile Include="Helper\MappingUtils.cs" />
+    <Compile Include="Helper\RetrievalEngineContainer.cs" />
+    <Compile Include="Helper\SecurityHelper.cs" />
+    <Compile Include="Helper\SqlHelper.cs" />
+    <Compile Include="InformativeMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformativeMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\AdvancedStructureRetriever.cs" />
+    <Compile Include="Manager\AuthAdvancedStructureRetriever.cs" />
+    <Compile Include="Manager\CachedRetrievalManager.cs" />
+    <Compile Include="Manager\AuthMappingStoreRetrievalManager.cs" />
+    <Compile Include="Manager\AuthRetrievalManagerBase.cs" />
+    <Compile Include="Manager\AuthCachedRetrievalManager.cs" />
+    <Compile Include="Manager\AuthCrossReferenceRetrievalManager.cs" />
+    <Compile Include="Manager\AuthCachedAdvancedStructureRetriever.cs" />
+    <Compile Include="Manager\CrossReferenceRetrievalManager.cs" />
+    <Compile Include="Manager\Database.cs" />
+    <Compile Include="Manager\MappingStoreHeaderRetrievalManager.cs" />
+    <Compile Include="Manager\MappingStoreRetrievalManager.cs" />
+    <Compile Include="Manager\MappingStoreSdmxObjectRetrievalManager.cs" />
+    <Compile Include="Manager\RetrievalManagerBase.cs" />
+    <Compile Include="Manager\SpecialMutableObjectRetrievalManager.cs" />
+    <Compile Include="MappingStoreException.cs" />
+    <Compile Include="Model\ArtefactSqlQuery.cs" />
+    <Compile Include="Model\MappingStoreModel\TimeTranscodingCollection.cs" />
+    <Compile Include="Model\MappingStoreModel\TimeTranscodingEntity.cs" />
+    <Compile Include="Model\PeriodObject.cs" />
+    <Compile Include="Model\ReferenceSqlQuery.cs" />
+    <Compile Include="Model\ItemSqlQuery.cs" />
+    <Compile Include="Model\ItemTableInfo.cs" />
+    <Compile Include="Model\ListDictionary.cs" />
+    <Compile Include="Model\MaintainableDictionary.cs" />
+    <Compile Include="Model\MaintainableReferenceDictionary.cs" />
+    <Compile Include="Model\MappingStoreModel\ArtefactEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\AssignmentStatus.cs" />
+    <Compile Include="Model\MappingStoreModel\AttachmentLevel.cs" />
+    <Compile Include="Model\MappingStoreModel\CategoryEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\CategorySchemeEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\CodeCollection.cs" />
+    <Compile Include="Model\MappingStoreModel\CodeListEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\CodeSetCollection.cs" />
+    <Compile Include="Model\MappingStoreModel\ComponentEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\ConceptEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\ConnectionEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\CrossSectionalLevels.cs" />
+    <Compile Include="Model\MappingStoreModel\DataFlowEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\DatasetColumnEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\DatasetEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\DsdEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\GroupEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\ItemEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\LocalisedStringType.cs" />
+    <Compile Include="Model\MappingStoreModel\MappingEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\MappingSetEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\PersistentEntityBase.cs" />
+    <Compile Include="Model\MappingStoreModel\SdmxQueryTimeVO.cs" />
+    <Compile Include="Model\MappingStoreModel\TimeExpressionEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\TranscodingEntity.cs" />
+    <Compile Include="Model\MappingStoreModel\TranscodingRulesEntity.cs" />
+    <Compile Include="Model\PartialCodesSqlQuery.cs" />
+    <Compile Include="Model\RetrievalSettings.cs" />
+    <Compile Include="Model\SdmxQueryPeriod.cs" />
+    <Compile Include="Model\SqlQueryBase.cs" />
+    <Compile Include="Model\SqlQueryInfo.cs" />
+    <Compile Include="Model\TableInfo.cs" />
+    <Compile Include="Model\TimeTranscodingFieldOrdinal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ErrorMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformativeMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InformativeMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

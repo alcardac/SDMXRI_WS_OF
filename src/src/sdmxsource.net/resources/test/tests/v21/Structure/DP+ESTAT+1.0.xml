@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:Structure xmlns:mes="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:str="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure" xmlns:com="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+  <mes:Header>
+    <mes:ID>IDREF2</mes:ID>
+    <mes:Test>false</mes:Test>
+    <mes:Prepared>2014-01-20T12:10:45.650Z</mes:Prepared>
+    <mes:Sender id="Unknown"/>
+    <mes:Receiver id="Unknown"/>
+  </mes:Header>
+  <mes:Structures>
+    <str:OrganisationSchemes>
+        <str:DataProviderScheme id="DATA_PROVIDERS" agencyID="ESTAT" version="1.0" isFinal="false">
+            <com:Annotations>
+                <com:Annotation id="TEST_DP_SCH"/>
+            </com:Annotations>
+            <com:Name xml:lang="en">Test DP</com:Name>
+            <str:DataProvider id="TEST1">
+                <com:Name xml:lang="en">TEST DP</com:Name>
+            </str:DataProvider>
+            <str:DataProvider id="TEST2">
+                <com:Annotations>
+                    <com:Annotation>
+                        <com:AnnotationType>TEST DP type</com:AnnotationType>
+                    </com:Annotation>
+                </com:Annotations>
+                <com:Name xml:lang="en">TEST 2 DP</com:Name>
+            </str:DataProvider>
+        </str:DataProviderScheme>
+    </str:OrganisationSchemes>
+  </mes:Structures>
+</mes:Structure>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>_SharedItems_</name>
+  </assembly>
+  <members>
+    <!-- <member name="R:Project_ApiDocumentation">
+      <summary>
+        <h1>SDMX Source .NET for .NET v4.0</h1>
+        <para>
+          This is a .NET implementation of the  <a href="http://www.sdmxsource.org/">SDMX Source</a>
+        </para>
+      </summary>
+    </member> -->
+    <member name="N:Org.Sdmxsource.Sdmx.Api">
+      <summary>
+        The SdmxAPI defines high level SDMX Interfaces. These include the domain objects (SdmxObjects), retrieval managers, data writers, and data readers.
+      </summary>
+    </member>
+    <member name="N:Org.Sdmxsource.Sdmx.SdmxObjects">
+      <summary>
+        The SdmxObjects contain implementations of all the domain Objects as defined in the SDMXApi module. The Mutable objects are also in the module
+      </summary>
+    </member>
+    <member name="N:Org.Sdmxsource.Sdmx.StructureRetrieval">
+      <summary>
+        This module provides implementation classes for interfaces which define methods for retrieving Sdmx Structures and Registrations.
+      </summary>
+    </member>
+    <member name="N:Org.Sdmxsource.Sdmx.Structureparser">
+      <summary>
+        The structure parser provides functionality to validate and build SdmxObjects from SDMX-ML messages. The structure parser can also write SDMX-ML from SdmxObjects. The Structure parser offers the ability to resolve cross references, and externally referenced structures.
+      </summary>
+    </member>
+    <member name="N:Org.Sdmxsource.Sdmx.Util">
+      <summary>
+        This namespace contains various helper classes specific to SDMX
+      </summary>
+    </member>
+    <member name="N:Org.Sdmxsource.Util">
+      <summary>
+        This namespace contains various helper classes
+      </summary>
+    </member>
+    <member name="N:Org.Sdmxsource.XmlHelper">
+      <summary>
+        This namespace contains various helper classes for creating <c>XmlReader</c>, parsing and retrieving embeded .xsd files.
+      </summary>
+    </member>
+    <member name="N:Estat.Sri.SdmxEdiDataWriter">
+      <summary>
+        The <c>SdmxEdiDataWriter</c> writes <c>EDI</c> (<c>GESMES/TS</c>) data messages using the <see cref="Estat.Sri.SdmxEdiDataWriter.Engine.GesmesTimeSeriesWriter"/>.
+      </summary>
+    </member>
+    <member name="N:Estat.Sri.SdmxDataParser">
+      <summary>
+        The <c>SdmxDataParser</c> writes <c>SDMX-ML</c> data messages in SDMX v2.0 and SDMX v2.1 formats including Compact, StructureSpecific, CrossSectional and Generic.
+      </summary>
+    </member>
+    <member name="N:Estat.Sri.SdmxStructureMutableParser">
+      <summary>
+        The <c>SdmxStructureMutableParser</c> provides functionality to build SdmxObjects (and mutable objects) from SDMX-ML messages. The structure parser can also write SDMX-ML from SdmxObjects and mutable objects. Unlike the <c>StructureParser</c> it does not use a XML binding technology but uses <c>XmlReader</c> for reading and <c>XmlWriter</c> for writing and as a result is faster but covers only a subset of SDMX v2.0.
+        <note type="warning">
+          Only the following structures are supported:
+          - Category Schemes
+          - Codelists
+          - Concept schemes
+          - Dataflows
+          - Hierarchical Codelists
+          - KeyFamilies (DSD)
+        </note>
+      </summary>
+    </member>
+    <member name="N:Estat.Sri.SdmxParseBase">
+      <summary>
+        This package provides base and helper classes for <c>SdmxDataParser</c> and <c>SdmxStructureMutableParser</c>
+      </summary>
+    </member>
+    <member name="N:Estat.Sri.SdmxXmlConstants">
+      <summary>
+        This package provides constants and auto-generated enumerations of elements and attributes used in SDMX v1.0, v2.0 and v2.1. It is used in <c>SdmxDataParser</c> and <c>SdmxStructureMutableParser</c>
+      </summary>
+    </member>
+  </members>
+</doc>

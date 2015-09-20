@@ -1,0 +1,62 @@
+<StyleCopSettings Version="105">
+    <GlobalSettings>
+        <CollectionProperty Name="RecognizedWords">
+            <Value>SDMX</Value>
+            <Value>metadataflow</Value>
+            <Value>Codelist</Value>
+            <Value>categorisation</Value>
+            <Value>categorised</Value>
+            <Value>categorisations</Value>
+            <Value>organisation</Value>
+            <Value>annotable</Value>
+            <Value>artefact</Value>
+            <Value>artefacts</Value>
+            <Value>dataflows</Value>
+            <Value>codelists</Value>
+            <Value>metadataflow</Value>
+            <Value>metadataflows</Value>
+            <Value>categorising</Value>
+            <Value>maintainables</Value>
+        </CollectionProperty>
+    </GlobalSettings>
+    <Parsers>
+    <Parser ParserId="StyleCop.CSharp.CsParser">
+      <ParserSettings>
+        <BooleanProperty Name="AnalyzeDesignerFiles">False</BooleanProperty>
+      </ParserSettings>
+    </Parser>
+  </Parsers>
+  <Analyzers>
+    <Analyzer AnalyzerId="StyleCop.CSharp.NamingRules">
+      <Rules>
+        <Rule Name="FieldNamesMustNotBeginWithUnderscore">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+        <Rule Name="StaticReadonlyFieldsMustBeginWithUpperCaseLetter">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings>
+        <CollectionProperty Name="Hungarian">
+          <Value>db</Value>
+          <Value>pc</Value>
+          <Value>xs</Value>
+        </CollectionProperty>
+      </AnalyzerSettings>
+    </Analyzer>
+    <Analyzer AnalyzerId="StyleCop.CSharp.ReadabilityRules">
+      <Rules>
+        <Rule Name="PrefixCallsCorrectly">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings />
+    </Analyzer>
+  </Analyzers>
+</StyleCopSettings>

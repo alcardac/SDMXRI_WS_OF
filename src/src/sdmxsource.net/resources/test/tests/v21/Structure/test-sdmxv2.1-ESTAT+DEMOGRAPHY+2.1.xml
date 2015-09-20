@@ -1,0 +1,896 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>DEMOGRAPHY_RAPID_V21</ID>
+    <Test>false</Test>
+    <Prepared>2013-09-10T09:08:16.6418+02:00</Prepared>
+    <Sender id="ESTAT">
+      <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Statistical Office of the European Communities</Name>
+    </Sender>
+    <Receiver id="unknown" />
+    <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Demography Rapid Questionnaire DSD</Name>
+  </Header>
+  <Structures>
+    <Codelists xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <Codelist id="CL_COUNTRY" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_COUNTRY(1.1)" agencyID="ESTAT" version="1.1" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Country Codelist</Name>
+        <Code id="AD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).AD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Andorra</Name>
+        </Code>
+        <Code id="AL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).AL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Albania</Name>
+        </Code>
+        <Code id="AM" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).AM">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Armenia</Name>
+        </Code>
+        <Code id="AT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).AT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Austria</Name>
+        </Code>
+        <Code id="AZ" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).AZ">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Azerbaijan</Name>
+        </Code>
+        <Code id="BA" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).BA">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bosnia and Herzegovina</Name>
+        </Code>
+        <Code id="BE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).BE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Belgium</Name>
+        </Code>
+        <Code id="BG" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).BG">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bulgaria</Name>
+        </Code>
+        <Code id="CY" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).CY">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Cyprus</Name>
+        </Code>
+        <Code id="CZ" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).CZ">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Czech Republic</Name>
+        </Code>
+        <Code id="DE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).DE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Germany</Name>
+        </Code>
+        <Code id="DK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).DK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Denmark</Name>
+        </Code>
+        <Code id="DZ" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).DZ">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Algeria</Name>
+        </Code>
+        <Code id="EE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).EE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Estonia</Name>
+        </Code>
+        <Code id="EG" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).EG">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Egypt</Name>
+        </Code>
+        <Code id="EL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).EL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Greece</Name>
+        </Code>
+        <Code id="ES" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).ES">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Spain</Name>
+        </Code>
+        <Code id="FI" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).FI">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Finland</Name>
+        </Code>
+        <Code id="FR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).FR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">France</Name>
+        </Code>
+        <Code id="GE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).GE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Georgia</Name>
+        </Code>
+        <Code id="HR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).HR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Croatia</Name>
+        </Code>
+        <Code id="HU" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).HU">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Hungary</Name>
+        </Code>
+        <Code id="IE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).IE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Ireland</Name>
+        </Code>
+        <Code id="IL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).IL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Israel</Name>
+        </Code>
+        <Code id="IS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).IS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Iceland</Name>
+        </Code>
+        <Code id="IT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).IT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Italy</Name>
+        </Code>
+        <Code id="JO" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).JO">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Jordan</Name>
+        </Code>
+        <Code id="LB" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).LB">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Lebanon</Name>
+        </Code>
+        <Code id="LI" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).LI">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Liechtenstein</Name>
+        </Code>
+        <Code id="LT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).LT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Lithuania</Name>
+        </Code>
+        <Code id="LU" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).LU">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Luxembourg</Name>
+        </Code>
+        <Code id="LV" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).LV">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Latvia</Name>
+        </Code>
+        <Code id="MA" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).MA">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Morocco</Name>
+        </Code>
+        <Code id="MD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).MD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Moldova</Name>
+        </Code>
+        <Code id="ME" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).ME">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Montenegro</Name>
+        </Code>
+        <Code id="MK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).MK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The former Yugoslav Republic of Macedonia</Name>
+        </Code>
+        <Code id="MT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).MT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Malta</Name>
+        </Code>
+        <Code id="NL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).NL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">The Netherlands</Name>
+        </Code>
+        <Code id="NO" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).NO">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Norway</Name>
+        </Code>
+        <Code id="PL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).PL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Poland</Name>
+        </Code>
+        <Code id="PS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).PS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Occupied Palestinian Territory</Name>
+        </Code>
+        <Code id="PT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).PT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Portugal</Name>
+        </Code>
+        <Code id="RO" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).RO">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Romania</Name>
+        </Code>
+        <Code id="RS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).RS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Serbia</Name>
+        </Code>
+        <Code id="RU" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).RU">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Russian Federation</Name>
+        </Code>
+        <Code id="SE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).SE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Sweden</Name>
+        </Code>
+        <Code id="SI" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).SI">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Slovenia</Name>
+        </Code>
+        <Code id="SK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).SK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Slovak Republic</Name>
+        </Code>
+        <Code id="SM" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).SM">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">San Marino</Name>
+        </Code>
+        <Code id="SY" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).SY">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Syria</Name>
+        </Code>
+        <Code id="TN" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).TN">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tunisia</Name>
+        </Code>
+        <Code id="TR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).TR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Turkey</Name>
+        </Code>
+        <Code id="UA" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).UA">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Ukraine</Name>
+        </Code>
+        <Code id="UK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_COUNTRY(1.1).UK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">United Kingdom</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_DECI" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_DECI(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Decimals codelist</Name>
+        <Code id="0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DECI(1.0).0">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Zero</Name>
+        </Code>
+        <Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DECI(1.0).1">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">One</Name>
+        </Code>
+        <Code id="2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DECI(1.0).2">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Two</Name>
+        </Code>
+        <Code id="3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DECI(1.0).3">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Three</Name>
+        </Code>
+        <Code id="4" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DECI(1.0).4">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Four</Name>
+        </Code>
+        <Code id="5" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DECI(1.0).5">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Five</Name>
+        </Code>
+        <Code id="6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DECI(1.0).6">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Six</Name>
+        </Code>
+        <Code id="7" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DECI(1.0).7">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Seven</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_DEMO" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_DEMO(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Demography code list</Name>
+        <Code id="PJANT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).PJANT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Population on 1 January of Year X</Name>
+        </Code>
+        <Code id="LBIRTHST" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).LBIRTHST">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Births in Year X</Name>
+        </Code>
+        <Code id="DEATHST" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).DEATHST">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Deaths in Year X</Name>
+        </Code>
+        <Code id="ADJT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).ADJT">
+          <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+            <Annotation>
+              <AnnotationType>ShortDescription</AnnotationType>
+              <AnnotationText xml:lang="en">All changes in the population size that cannot be classified as births, deaths, immigration or emigration. This includes late notifications of demographic events, which the country decides not to add to the pertinent component. In some countries, the statistical adjustments might be incorporated in the net migration.</AnnotationText>
+            </Annotation>
+          </Annotations>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Statistical adjustment in Year X</Name>
+        </Code>
+        <Code id="PJAN1T" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).PJAN1T">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Population on 1 January Year X+1</Name>
+        </Code>
+        <Code id="LBIRTHOUT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).LBIRTHOUT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Births outside marriage in Year X</Name>
+        </Code>
+        <Code id="DEATHUN1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).DEATHUN1">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Deaths under 1 year in Year X</Name>
+        </Code>
+        <Code id="MAR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).MAR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Marriages in Year X</Name>
+        </Code>
+        <Code id="DIV" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).DIV">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Divorces in Year X</Name>
+        </Code>
+        <Code id="IMMIT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).IMMIT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Immigrants in Year X</Name>
+        </Code>
+        <Code id="EMIGT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).EMIGT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Emigrants in Year X</Name>
+        </Code>
+        <Code id="NETMT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).NETMT">
+          <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+            <Annotation>
+              <AnnotationType>ShortDescription</AnnotationType>
+              <AnnotationText xml:lang="en">The difference between the number of immigrants and the number of emigrants. Since most countries either do not have accurate figures on immigration and emigration or have no figures at all, net migration is estimated on the basis of the difference between population change and natural increase between the two dates concerned. The statistics on net migration are therefore affected by all the statistical inaccuracies in the two components of this equation, especially population change (that includes notably corrections due to population censuses, register counts, etc. which cannot be classified as births, deaths or migrations). Note that changes to national systems and methodologies for population statistics may result in unusually high or low numbers in one or more years.</AnnotationText>
+            </Annotation>
+          </Annotations>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Net migration in Year X</Name>
+        </Code>
+        <Code id="TFRNSI" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).TFRNSI">
+          <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+            <Annotation>
+              <AnnotationType>ShortDescription</AnnotationType>
+              <AnnotationText xml:lang="en">The average number of children that would be born alive to a woman during her lifetime if current age specific fertility rates were to continue.</AnnotationText>
+            </Annotation>
+          </Annotations>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Total fertility rate in Year X</Name>
+        </Code>
+        <Code id="LEXPNSIT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_DEMO(1.0).LEXPNSIT">
+          <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+            <Annotation>
+              <AnnotationType>ShortDescription</AnnotationType>
+              <AnnotationText xml:lang="en">The average number of years a person would live if current age specific mortality rates were to continue.</AnnotationText>
+            </Annotation>
+          </Annotations>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Life expectancy at birth in Year X</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_FREQ" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_FREQ(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Frequency codelist</Name>
+        <Code id="A" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_FREQ(1.0).A">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Annual</Name>
+        </Code>
+        <Code id="M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_FREQ(1.0).M">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Monthly</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_OBS_STATUS(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation status code list</Name>
+        <Code id="P" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_OBS_STATUS(1.0).P">
+          <Annotations xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+            <Annotation>
+              <AnnotationType>ShortDescription</AnnotationType>
+              <AnnotationText xml:lang="en">Estimates are considered provisional when one or more of the following conditions are met: they are based on data from a different source; they are calculated by a method different from the one usually applied; they are calculated from a smaller set of data, which does not include all the reporting units; the expected final value might be more than 5% higher or lower. However, even if not provisional, figures might always be subject to further revision and therefore should not be regarded as definitive but only as giving a good measure at a given moment.</AnnotationText>
+            </Annotation>
+          </Annotations>
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Provisional</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_SEX" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_SEX(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Sex codelist</Name>
+        <Code id="F" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.0).F">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Female</Name>
+        </Code>
+        <Code id="M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.0).M">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Male</Name>
+        </Code>
+        <Code id="T" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_SEX(1.0).T">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Total</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_TIME_FORMAT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_TIME_FORMAT(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Time Format</Name>
+        <Code id="P1Y" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_TIME_FORMAT(1.0).P1Y">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Annual</Name>
+        </Code>
+        <Code id="P6M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_TIME_FORMAT(1.0).P6M">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Semi-Annual</Name>
+        </Code>
+        <Code id="P3M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_TIME_FORMAT(1.0).P3M">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Quarterly</Name>
+        </Code>
+        <Code id="P1M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_TIME_FORMAT(1.0).P1M">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Monthly</Name>
+        </Code>
+        <Code id="P7D" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_TIME_FORMAT(1.0).P7D">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Weekly</Name>
+        </Code>
+        <Code id="P1D" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_TIME_FORMAT(1.0).P1D">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Daily</Name>
+        </Code>
+        <Code id="PT1M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_TIME_FORMAT(1.0).PT1M">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Minutely</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_UNIT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_UNIT(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit code list</Name>
+        <Code id="ARS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).ARS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Argentine peso</Name>
+        </Code>
+        <Code id="ATS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).ATS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Austrian Schilling</Name>
+        </Code>
+        <Code id="AUD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).AUD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Australian Dollar</Name>
+        </Code>
+        <Code id="BEF" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).BEF">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Belgian Franc</Name>
+        </Code>
+        <Code id="BEL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).BEL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Belgian Franc (Financial)</Name>
+        </Code>
+        <Code id="BGN" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).BGN">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bulgarian Lev</Name>
+        </Code>
+        <Code id="BRL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).BRL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Brazilian real</Name>
+        </Code>
+        <Code id="CAD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).CAD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Canadian Dollar</Name>
+        </Code>
+        <Code id="CHF" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).CHF">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Swiss Franc</Name>
+        </Code>
+        <Code id="CNY" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).CNY">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Chinese Yuan Renminbi</Name>
+        </Code>
+        <Code id="CYP" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).CYP">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Cypriot Pound</Name>
+        </Code>
+        <Code id="CZK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).CZK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Czech Koruna</Name>
+        </Code>
+        <Code id="DAYS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).DAYS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Days</Name>
+        </Code>
+        <Code id="DEM" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).DEM">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">German Mark</Name>
+        </Code>
+        <Code id="DKK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).DKK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Danish Krone</Name>
+        </Code>
+        <Code id="DZD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).DZD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Algerian dinar</Name>
+        </Code>
+        <Code id="EEK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).EEK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Estonian Kroon</Name>
+        </Code>
+        <Code id="ESP" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).ESP">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Spanish Peseta</Name>
+        </Code>
+        <Code id="EUR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).EUR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Euro</Name>
+        </Code>
+        <Code id="FIM" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).FIM">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Finnish Markka</Name>
+        </Code>
+        <Code id="FRF" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).FRF">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">French Franc</Name>
+        </Code>
+        <Code id="GBP" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).GBP">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">UK Pound Sterling</Name>
+        </Code>
+        <Code id="GRD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).GRD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Greek Drachma</Name>
+        </Code>
+        <Code id="HKD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).HKD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Hong Kong Dollar</Name>
+        </Code>
+        <Code id="HOURS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).HOURS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Hours</Name>
+        </Code>
+        <Code id="HRK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).HRK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Kroatian kuna</Name>
+        </Code>
+        <Code id="HUF" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).HUF">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Hungarian Forint</Name>
+        </Code>
+        <Code id="IDR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).IDR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indonesian rupiah</Name>
+        </Code>
+        <Code id="IEP" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).IEP">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Irish Pound</Name>
+        </Code>
+        <Code id="ILS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).ILS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Israeli shekel</Name>
+        </Code>
+        <Code id="INR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).INR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Indian Rupee</Name>
+        </Code>
+        <Code id="ISK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).ISK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Iceland Krona</Name>
+        </Code>
+        <Code id="ITL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).ITL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Italian Lira</Name>
+        </Code>
+        <Code id="JPY" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).JPY">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Japanese Yen</Name>
+        </Code>
+        <Code id="KILO" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).KILO">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Kilograms</Name>
+        </Code>
+        <Code id="KLITRE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).KLITRE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Kilolitres</Name>
+        </Code>
+        <Code id="KRW" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).KRW">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Korean Won (Republic)</Name>
+        </Code>
+        <Code id="LITRES" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).LITRES">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Litres</Name>
+        </Code>
+        <Code id="LKR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).LKR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Sri Lanka Rupee</Name>
+        </Code>
+        <Code id="LTL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).LTL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Lithuanian Litas</Name>
+        </Code>
+        <Code id="LUF" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).LUF">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Luxembourg Franc</Name>
+        </Code>
+        <Code id="LVL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).LVL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Latvian Lats</Name>
+        </Code>
+        <Code id="MAD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).MAD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Moroccan dirham</Name>
+        </Code>
+        <Code id="MAN-DY" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).MAN-DY">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Man Days</Name>
+        </Code>
+        <Code id="MAN-YR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).MAN-YR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Man Years</Name>
+        </Code>
+        <Code id="MONTHS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).MONTHS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Months</Name>
+        </Code>
+        <Code id="MTL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).MTL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Maltese Lira</Name>
+        </Code>
+        <Code id="MXN" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).MXN">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Mexican Peso</Name>
+        </Code>
+        <Code id="MXP" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).MXP">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Mexican Peso</Name>
+        </Code>
+        <Code id="MYR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).MYR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Malaysian Ringgit</Name>
+        </Code>
+        <Code id="NATCUR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).NATCUR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">National Currency</Name>
+        </Code>
+        <Code id="NLG" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).NLG">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Netherlands Guilder</Name>
+        </Code>
+        <Code id="NOK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).NOK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Nowegian Krone</Name>
+        </Code>
+        <Code id="NZD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).NZD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">New Zealand Dollar</Name>
+        </Code>
+        <Code id="OUNCES" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).OUNCES">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Ounces</Name>
+        </Code>
+        <Code id="PC" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).PC">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Percent</Name>
+        </Code>
+        <Code id="PCPA" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).PCPA">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Percent per annum</Name>
+        </Code>
+        <Code id="PERS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).PERS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Persons</Name>
+        </Code>
+        <Code id="PHP" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).PHP">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Philippine peso</Name>
+        </Code>
+        <Code id="PLN" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).PLN">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Polish (new) Zloty</Name>
+        </Code>
+        <Code id="PM" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).PM">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Per thousand</Name>
+        </Code>
+        <Code id="POINTS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).POINTS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Points</Name>
+        </Code>
+        <Code id="PTE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).PTE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Portugese Escudo</Name>
+        </Code>
+        <Code id="PURE_NUMB" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).PURE_NUMB">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">dimensionless value other than PC, PCPA and POINTS</Name>
+        </Code>
+        <Code id="ROL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).ROL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Romanian Leu</Name>
+        </Code>
+        <Code id="RUB" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).RUB">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Rouble (new)</Name>
+        </Code>
+        <Code id="SAR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).SAR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Saudi Riyal</Name>
+        </Code>
+        <Code id="SEK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).SEK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Swedish Krona</Name>
+        </Code>
+        <Code id="SGD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).SGD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Singapore Dollar</Name>
+        </Code>
+        <Code id="SIT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).SIT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Slovenian Tolar</Name>
+        </Code>
+        <Code id="SKK" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).SKK">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Slovak Koruna</Name>
+        </Code>
+        <Code id="SQ_M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).SQ_M">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Square Metres</Name>
+        </Code>
+        <Code id="THB" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).THB">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Thai Bhat</Name>
+        </Code>
+        <Code id="TONNES" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).TONNES">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tonnes</Name>
+        </Code>
+        <Code id="TRL" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).TRL">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Turkish Lira</Name>
+        </Code>
+        <Code id="TRY" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).TRY">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Turkish lira (new)</Name>
+        </Code>
+        <Code id="TWD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).TWD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">New Taiwan Dollar</Name>
+        </Code>
+        <Code id="UNITS" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).UNITS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit described in title</Name>
+        </Code>
+        <Code id="USD" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).USD">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">US Dollar</Name>
+        </Code>
+        <Code id="XDR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).XDR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Special Drawing Rights (S.D.R.)</Name>
+        </Code>
+        <Code id="XEU" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).XEU">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">European Currency Unit (E.C.U.)</Name>
+        </Code>
+        <Code id="ZAR" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT(1.0).ZAR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">South African Rand</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ESTAT:CL_UNIT_MULT(1.0)" agencyID="ESTAT" version="1.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit multiplier code list</Name>
+        <Code id="0" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT_MULT(1.0).0">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Units</Name>
+        </Code>
+        <Code id="1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT_MULT(1.0).1">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tens</Name>
+        </Code>
+        <Code id="2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT_MULT(1.0).2">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Hundreds</Name>
+        </Code>
+        <Code id="3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT_MULT(1.0).3">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Thousands</Name>
+        </Code>
+        <Code id="4" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT_MULT(1.0).4">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Tens of thousands</Name>
+        </Code>
+        <Code id="6" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT_MULT(1.0).6">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Millions</Name>
+        </Code>
+        <Code id="9" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=ESTAT:CL_UNIT_MULT(1.0).9">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Billions</Name>
+        </Code>
+      </Codelist>
+    </Codelists>
+    <Concepts xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <ConceptScheme id="DEMO_CONCEPTS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=ESTAT:DEMO_CONCEPTS(2.0)" agencyID="ESTAT" version="2.0" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Demography domain concept scheme</Name>
+        <Concept id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).FREQ">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Frequency</Name>
+        </Concept>
+        <Concept id="COUNTRY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).COUNTRY">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Reporting Country</Name>
+        </Concept>
+        <Concept id="SEX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).SEX">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Sex</Name>
+        </Concept>
+        <Concept id="DEMO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).DEMO">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Demography</Name>
+        </Concept>
+        <Concept id="TIME_FORMAT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).TIME_FORMAT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Time format code</Name>
+        </Concept>
+        <Concept id="TIME" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).TIME">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Time period or range</Name>
+        </Concept>
+        <Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).OBS_VALUE">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation Value</Name>
+        </Concept>
+        <Concept id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).OBS_STATUS">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Observation Status</Name>
+        </Concept>
+        <Concept id="UNIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).UNIT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Base Unit measure</Name>
+        </Concept>
+        <Concept id="UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).UNIT_MULT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Unit Multiplier</Name>
+        </Concept>
+        <Concept id="DECI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).DECI">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Decimals</Name>
+        </Concept>
+        <Concept id="TAB_NUM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).TAB_NUM">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Table Number</Name>
+        </Concept>
+        <Concept id="REV_NUM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).REV_NUM">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Revision Number</Name>
+        </Concept>
+        <Concept id="PJANT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).PJANT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Population on 1 January of Year X</Name>
+        </Concept>
+        <Concept id="LBIRTHST" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).LBIRTHST">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Births in Year X</Name>
+        </Concept>
+        <Concept id="DEATHST" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).DEATHST">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Deaths in Year X</Name>
+        </Concept>
+        <Concept id="ADJT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).ADJT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Statistical adjustment in Year X</Name>
+        </Concept>
+        <Concept id="PJAN1T" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).PJAN1T">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Population on 1 January Year X+1</Name>
+        </Concept>
+        <Concept id="LBIRTHOUT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).LBIRTHOUT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Births outside marriage in Year X</Name>
+        </Concept>
+        <Concept id="DEATHUN1" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).DEATHUN1">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Deaths under 1 year in Year X</Name>
+        </Concept>
+        <Concept id="MAR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).MAR">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Marriages in Year X</Name>
+        </Concept>
+        <Concept id="DIV" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).DIV">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Divorces in Year X</Name>
+        </Concept>
+        <Concept id="IMMIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).IMMIT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Immigrants in Year X</Name>
+        </Concept>
+        <Concept id="EMIGT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).EMIGT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Emigrants in Year X</Name>
+        </Concept>
+        <Concept id="NETMT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).NETMT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Net migration in Year X</Name>
+        </Concept>
+        <Concept id="TFRNSI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).TFRNSI">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Total fertility rate in Year X</Name>
+        </Concept>
+        <Concept id="LEXPNSIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ESTAT:DEMO_CONCEPTS(2.0).LEXPNSIT">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Life expectancy at birth in Year X</Name>
+        </Concept>
+      </ConceptScheme>
+    </Concepts>
+    <DataStructures xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <DataStructure id="DEMOGRAPHY" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ESTAT:DEMOGRAPHY(2.1)" agencyID="ESTAT" version="2.1" validFrom="2008-05-14T00:00:00" isFinal="true">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Demography Rapid Questionnaire Data Structure Definition</Name>
+        <DataStructureComponents>
+          <DimensionList id="DimensionDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DimensionDescriptor=ESTAT:DEMOGRAPHY(2.1).DimensionDescriptor">
+            <Dimension id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:DEMOGRAPHY(2.1).FREQ" position="1">
+              <ConceptIdentity>
+                <Ref id="FREQ" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_FREQ" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+            <Dimension id="COUNTRY" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:DEMOGRAPHY(2.1).COUNTRY" position="2">
+              <ConceptIdentity>
+                <Ref id="COUNTRY" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_COUNTRY" version="1.1" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+            <Dimension id="SEX" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dimension=ESTAT:DEMOGRAPHY(2.1).SEX" position="3">
+              <ConceptIdentity>
+                <Ref id="SEX" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_SEX" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </Dimension>
+            <MeasureDimension id="DEMO" urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDimension=ESTAT:DEMOGRAPHY(2.1).DEMO" position="4">
+              <ConceptIdentity>
+                <Ref id="DEMO" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="DEMO_CONCEPTS" version="2.0" agencyID="ESTAT" package="conceptscheme" class="ConceptScheme" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+            </MeasureDimension>
+            <TimeDimension id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.datastructure.TimeDimension=ESTAT:DEMOGRAPHY(2.1).TIME_PERIOD" position="5">
+              <ConceptIdentity>
+                <Ref id="TIME" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <TextFormat />
+              </LocalRepresentation>
+            </TimeDimension>
+          </DimensionList>
+          <AttributeList id="AttributeDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.AttributeDescriptor=ESTAT:DEMOGRAPHY(2.1).AttributeDescriptor">
+            <Attribute id="TAB_NUM" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DEMOGRAPHY(2.1).TAB_NUM" assignmentStatus="Mandatory">
+              <ConceptIdentity>
+                <Ref id="TAB_NUM" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <TextFormat textType="String" pattern="RQ(AL|AD|AM|AT|AZ|BE|BA|BG|HR|CY|CZ|DK|DZ|EE|EG|FI|FR|GE|DE|EL|HU|IS|IE|IL|IT|JO|LB|LV|LI|LI|LT|LU|MA|ME|MT|MD|NO|PL|PS|PT|RO|RS|RU|SM|SK|SI|ES|SE|SY|MK|NL|TN|TR|UA|UK)[0-9][0-9]V[1-9]" />
+              </LocalRepresentation>
+              <AttributeRelationship>
+                <None />
+              </AttributeRelationship>
+            </Attribute>
+            <Attribute id="REV_NUM" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DEMOGRAPHY(2.1).REV_NUM" assignmentStatus="Mandatory">
+              <ConceptIdentity>
+                <Ref id="REV_NUM" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <TextFormat textType="Integer" isSequence="true" startValue="1" endValue="9" interval="1" />
+              </LocalRepresentation>
+              <AttributeRelationship>
+                <None />
+              </AttributeRelationship>
+            </Attribute>
+            <Attribute id="UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DEMOGRAPHY(2.1).UNIT_MULT" assignmentStatus="Mandatory">
+              <ConceptIdentity>
+                <Ref id="UNIT_MULT" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_UNIT_MULT" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+              <AttributeRelationship>
+                <Dimension>
+                  <Ref id="FREQ" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="COUNTRY" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="SEX" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="DEMO" xmlns="" />
+                </Dimension>
+              </AttributeRelationship>
+            </Attribute>
+            <Attribute id="DECI" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DEMOGRAPHY(2.1).DECI" assignmentStatus="Mandatory">
+              <ConceptIdentity>
+                <Ref id="DECI" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_DECI" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+              <AttributeRelationship>
+                <Dimension>
+                  <Ref id="FREQ" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="COUNTRY" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="SEX" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="DEMO" xmlns="" />
+                </Dimension>
+              </AttributeRelationship>
+            </Attribute>
+            <Attribute id="TIME_FORMAT" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DEMOGRAPHY(2.1).TIME_FORMAT" assignmentStatus="Mandatory">
+              <ConceptIdentity>
+                <Ref id="TIME_FORMAT" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_TIME_FORMAT" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+              <AttributeRelationship>
+                <Dimension>
+                  <Ref id="FREQ" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="COUNTRY" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="SEX" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="DEMO" xmlns="" />
+                </Dimension>
+              </AttributeRelationship>
+            </Attribute>
+            <Attribute id="UNIT" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DEMOGRAPHY(2.1).UNIT" assignmentStatus="Mandatory">
+              <ConceptIdentity>
+                <Ref id="UNIT" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_UNIT" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+              <AttributeRelationship>
+                <Dimension>
+                  <Ref id="FREQ" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="COUNTRY" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="SEX" xmlns="" />
+                </Dimension>
+                <Dimension>
+                  <Ref id="DEMO" xmlns="" />
+                </Dimension>
+              </AttributeRelationship>
+            </Attribute>
+            <Attribute id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataAttribute=ESTAT:DEMOGRAPHY(2.1).OBS_STATUS" assignmentStatus="Conditional">
+              <ConceptIdentity>
+                <Ref id="OBS_STATUS" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <Enumeration>
+                  <Ref id="CL_OBS_STATUS" version="1.0" agencyID="ESTAT" package="codelist" class="Codelist" xmlns="" />
+                </Enumeration>
+              </LocalRepresentation>
+              <AttributeRelationship>
+                <PrimaryMeasure>
+                  <Ref id="OBS_VALUE" xmlns="" />
+                </PrimaryMeasure>
+              </AttributeRelationship>
+            </Attribute>
+          </AttributeList>
+          <MeasureList id="MeasureDescriptor" urn="urn:sdmx:org.sdmx.infomodel.datastructure.MeasureDescriptor=ESTAT:DEMOGRAPHY(2.1).MeasureDescriptor">
+            <PrimaryMeasure id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.datastructure.PrimaryMeasure=ESTAT:DEMOGRAPHY(2.1).OBS_VALUE">
+              <ConceptIdentity>
+                <Ref id="OBS_VALUE" maintainableParentID="DEMO_CONCEPTS" maintainableParentVersion="2.0" agencyID="ESTAT" package="conceptscheme" class="Concept" xmlns="" />
+              </ConceptIdentity>
+              <LocalRepresentation>
+                <TextFormat textType="Double" />
+              </LocalRepresentation>
+            </PrimaryMeasure>
+          </MeasureList>
+        </DataStructureComponents>
+      </DataStructure>
+    </DataStructures>
+  </Structures>
+</Structure>

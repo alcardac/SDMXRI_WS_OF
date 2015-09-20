@@ -1,0 +1,217 @@
+<GenericDataQuery xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>HC01</ID>
+    <Test>true</Test>
+    <Prepared>2011-05-18T10:38:48</Prepared>
+    <Sender id="4D0" />
+    <Receiver id="AT" />
+  </Header>
+  <Query>
+    <ReturnDetails detail="Full" observationAction="Active" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query" />
+    <DataWhere xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query">
+      <DataSetID operator="equal">HC01_TYPE_A</DataSetID>
+      <Dataflow>
+        <Ref agencyID="ESTAT" id="HC01_TYPE_A" version="2.0" xmlns="" />
+      </Dataflow>
+      <TimeDimensionValue>
+        <TimeValue operator="equal">2011</TimeValue>
+       </TimeDimensionValue>
+      <Or>
+        <DimensionValue>
+          <ID>GEO</ID>
+          <Value operator="equal">IT</Value>
+        </DimensionValue>
+      </Or>
+      <Or>
+        <DimensionValue>
+          <ID>SEX</ID>
+          <Value operator="equal">F</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>SEX</ID>
+          <Value operator="equal">M</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>SEX</ID>
+          <Value operator="equal">T</Value>
+        </DimensionValue>
+      </Or>
+      <Or>
+        <DimensionValue>
+          <ID>HST</ID>
+          <Value operator="equal">PRV</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>HST</ID>
+          <Value operator="equal">TOTAL</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>HST</ID>
+          <Value operator="equal">REP</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>HST</ID>
+          <Value operator="equal">MAR</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>HST</ID>
+          <Value operator="equal">MARO</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>HST</ID>
+          <Value operator="equal">MARS</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>HST</ID>
+          <Value operator="equal">FAM</Value>
+        </DimensionValue>
+      </Or>
+      <Or>
+        <DimensionValue>
+          <ID>LMS</ID>
+          <Value operator="equal">MARO</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>LMS</ID>
+          <Value operator="equal">DIV</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>LMS</ID>
+          <Value operator="equal">TOTAL</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>LMS</ID>
+          <Value operator="equal">MAR</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>LMS</ID>
+          <Value operator="equal">MARS</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>LMS</ID>
+          <Value operator="equal">WID</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>LMS</ID>
+          <Value operator="equal">SIN</Value>
+        </DimensionValue>
+      </Or>
+      <Or>
+        <DimensionValue>
+          <ID>CAS</ID>
+          <Value operator="equal">INAC</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>CAS</ID>
+          <Value operator="equal">ACT</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>CAS</ID>
+          <Value operator="equal">EMP</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>CAS</ID>
+          <Value operator="equal">UNE_NW</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>CAS</ID>
+          <Value operator="equal">UNE</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>CAS</ID>
+          <Value operator="equal">UNE_W</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>CAS</ID>
+          <Value operator="equal">POP</Value>
+        </DimensionValue>
+      </Or>
+      <Or>
+        <DimensionValue>
+          <ID>POB</ID>
+          <Value operator="equal">BE</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>POB</ID>
+          <Value operator="equal">BG</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>POB</ID>
+          <Value operator="equal">TOTAL</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>POB</ID>
+          <Value operator="equal">CZ</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>POB</ID>
+          <Value operator="equal">EU_OTH</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>POB</ID>
+          <Value operator="equal">NAT</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>POB</ID>
+          <Value operator="equal">FOR</Value>
+        </DimensionValue>
+      </Or>
+      <Or>
+        <DimensionValue>
+          <ID>COC</ID>
+          <Value operator="equal">FOR</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>COC</ID>
+          <Value operator="equal">EU_FOR</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>COC</ID>
+          <Value operator="equal">TOTAL</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>COC</ID>
+          <Value operator="equal">BE</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>COC</ID>
+          <Value operator="equal">NAT</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>COC</ID>
+          <Value operator="equal">BG</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>COC</ID>
+          <Value operator="equal">CZ</Value>
+        </DimensionValue>
+      </Or>
+      <Or>
+        <DimensionValue>
+          <ID>AGE</ID>
+          <Value operator="equal">Y1</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>AGE</ID>
+          <Value operator="equal">Y2</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>AGE</ID>
+          <Value operator="equal">TOTAL</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>AGE</ID>
+          <Value operator="equal">Y4</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>AGE</ID>
+          <Value operator="equal">Y5</Value>
+        </DimensionValue>
+        <DimensionValue>
+          <ID>AGE</ID>
+          <Value operator="equal">Y3</Value>
+        </DimensionValue>
+      </Or>
+    </DataWhere>
+  </Query>
+</GenericDataQuery>

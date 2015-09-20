@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>JD014</ID>
+    <Test>true</Test>
+    <Prepared>2013-09-10T09:08:15.7028+02:00</Prepared>
+    <Sender id="BIS">
+      <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bank for International Settlements</Name>
+      <Contact>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">G.B. Smith</Name>
+        <Telephone>+000.000.0000</Telephone>
+      </Contact>
+    </Sender>
+    <Receiver id="ECB">
+      <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">European Central Bank</Name>
+      <Contact>
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">B.S. Featherstone</Name>
+        <Department xml:lang="en">Statistics Division</Department>
+        <Telephone>+000.000.0001</Telephone>
+      </Contact>
+    </Receiver>
+    <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Trans46302</Name>
+  </Header>
+  <Structures>
+    <Codelists xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <Codelist id="CL_SOMETHING" uri="http://www.bis.org/structure/codelists/cl_topics.xml" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=BIS:CL_SOMETHING(1.0)" agencyID="BIS" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Debt Topics</Name>
+        <Code id="A" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=BIS:CL_SOMETHING(1.0).A">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bank loans</Name>
+        </Code>
+        <Code id="B" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=BIS:CL_SOMETHING(1.0).B">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Brady bonds</Name>
+        </Code>
+      </Codelist>
+      <Codelist id="CL_TOPICS" uri="http://www.bis.org/structure/codelists/cl_topics.xml" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=BIS:CL_TOPICS(1.0)" agencyID="BIS" version="1.0">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Debt Topics</Name>
+        <Code id="A" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=BIS:CL_TOPICS(1.0).A">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Bank loans</Name>
+        </Code>
+        <Code id="B" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=BIS:CL_TOPICS(1.0).B">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Brady bonds</Name>
+        </Code>
+      </Codelist>
+    </Codelists>
+  </Structures>
+</Structure>

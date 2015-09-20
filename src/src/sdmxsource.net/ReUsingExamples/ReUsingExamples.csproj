@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA0B7842-EBB1-4A4E-B404-9011E1624C27}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReUsingExamples</RootNamespace>
+    <AssemblyName>ReUsingExamples</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugTest\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataQuery\ReUsingDataQueryParsingManager.cs" />
+    <Compile Include="DataWriting\ReUsingCrossWriter.cs" />
+    <Compile Include="DataWriting\ReUsingBinaryTabularWriter.cs" />
+    <Compile Include="DataWriting\ReUsingGesmesWriter.cs" />
+    <Compile Include="DataWriting\ReUsingGenericWriter.cs" />
+    <Compile Include="DataWriting\ReUsingCompactWriter.cs" />
+    <Compile Include="DataWriting\ReUsingSqliteTabularWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StructureQuery\ReUsingQueryParsingManager.cs" />
+    <Compile Include="Structure\ReUsingStructureWritingManagerFast.cs" />
+    <Compile Include="Structure\ReUsingStructureParsingManagerFast.cs" />
+    <Compile Include="Structure\ReUsingStructureParsingManager.cs" />
+    <Compile Include="Structure\ReUsingStructureWritingManager.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V10\Org.Sdmx.Resources.SdmxMl.Schemas.V10.csproj">
+      <Project>{A288BFA3-8192-C141-A356-812A0262F2CF}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V20\Org.Sdmx.Resources.SdmxMl.Schemas.V20.csproj">
+      <Project>{AA97E1E9-E028-FC4D-8736-13372B3712DD}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V20</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Org.Sdmx.Resources.SdmxMl.Schemas.V21\Org.Sdmx.Resources.SdmxMl.Schemas.V21.csproj">
+      <Project>{AF1E630B-A511-437E-BA63-1BC874403749}</Project>
+      <Name>Org.Sdmx.Resources.SdmxMl.Schemas.V21</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxAPI\SdmxAPI.csproj">
+      <Project>{C13FCF38-348B-4848-BCFF-A7BD4D75911C}</Project>
+      <Name>SdmxAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxDataParser\SdmxDataParser.csproj">
+      <Project>{D0203D8A-63F9-4914-B9DF-F4D7EF512276}</Project>
+      <Name>SdmxDataParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxEdiDataWriter\SdmxEdiParser.csproj">
+      <Project>{1C1B950E-B956-4644-8BED-ECCAF2568A91}</Project>
+      <Name>SdmxEdiParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxIo\SdmxParseBase.csproj">
+      <Project>{CAC33584-A10B-4071-8E9C-1FB6BF488464}</Project>
+      <Name>SdmxParseBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxMlConstants\SdmxMlConstants.csproj">
+      <Project>{F678D2FF-02C1-4D42-902E-A7B995A6731B}</Project>
+      <Name>SdmxMlConstants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxObjects\SdmxObjects.csproj">
+      <Project>{ECC53B22-BD93-49FF-8575-1DDFA2FE9A04}</Project>
+      <Name>SdmxObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxSourceUtil\SdmxSourceUtil.csproj">
+      <Project>{206D467D-2C89-4FA4-826E-CEFDE000A334}</Project>
+      <Name>SdmxSourceUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxStructureMutableParser\SdmxStructureMutableParser.csproj">
+      <Project>{F55EF421-DAB3-4432-9E01-9087453CDC97}</Project>
+      <Name>SdmxStructureMutableParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxStructureParser\SdmxStructureParser.csproj">
+      <Project>{E5923FA6-6095-4560-8B2C-8CA64E744DB4}</Project>
+      <Name>SdmxStructureParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxStructureRetrieval\SdmxStructureRetrieval.csproj">
+      <Project>{61F796E4-E355-4B6B-AD00-89791BAB3900}</Project>
+      <Name>SdmxStructureRetrieval</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TabularWriters\TabularWriters.csproj">
+      <Project>{6C1D24FB-085C-4D6E-A9DF-FAFF24C241D2}</Project>
+      <Name>TabularWriters</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ESTAT+DEMOGRAPHY+2.1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESTAT+SSTSCONS_PROD_M+2.0.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESTAT+STS+2.0.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESTAT_CPI_v1.0.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="query.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="QueryStructureRequest.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

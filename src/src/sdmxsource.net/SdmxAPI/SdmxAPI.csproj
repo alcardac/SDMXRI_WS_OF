@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C13FCF38-348B-4848-BCFF-A7BD4D75911C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Org</RootNamespace>
+    <AssemblyName>SdmxApi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SdmxApi.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;CODE_ANALYSIS</DefineConstants>
+    <DocumentationFile>bin\Debug\SdmxApi.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Builder\IBaseObjectBuilder.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Builder\IBaseObjectsBuilder.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Builder\IBuilder.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Builder\IConstraintBuilder.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Builder\IDataQueryBuilder.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Builder\IDataQueryFluentBuilder.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Builder\IRetrievalBuilder.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Builder\IStructureQueryBuilder.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\ArtifactType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\AttributeAssignmentStatus.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\AttributeAttachmentLevel.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\BaseConstantType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\BaseDataFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\BaseQueryMessageType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\ComplexMaintainableQueryDetail.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\ComplexStructureQueryDetail.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\DataFileValidityState.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\DataFileValidityStateExtension.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\DatasetAction.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\DatasetPosition.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\DataQueryDetail.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\DataType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\DimensionAtObservation.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\EndpointType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\ExceptionCode.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\Agency.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\AgencyScheme.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\AttributeListObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\ConceptSchemeObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\ConstraintContentTarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\ContentConstraintObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\DataConsumerScheme.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\DataProviderScheme.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\DatasetStructureReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\DimensionList.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\DimensionObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\Header.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\DataSetTarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\KeyDescriptorValuesTarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\MaintainableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\MeasureList.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\PrimaryMeasure.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\ReportPeriodTarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\InterfaceConstant\SubscriptionObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\MessageType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\ObservationAction.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\OrderedOperator.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\PrimaryConceptRole.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\QueryMessageType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\RegistryMessageType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\SdmxConstants.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\SdmxErrorCode.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\SdmxSchema.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\SdmxStructureEnumType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\Severity.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\StructureOutputFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\StructureQueryDetail.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\StructureReferenceDetail.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\StructureType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\SubscriptionEnumType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\SubscriptionType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\TargetType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\TertiaryBool.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\TextFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\TextSearch.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\TextType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\TimeFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\ToValue.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Constants\WebServiceType.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Engine\IDataReaderEngine.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Engine\IDataWriterEngine.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Engine\IErrorWriterEngine.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Engine\IMetadataWriterEngine.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Engine\ISchemaWriterEngine.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Engine\IStructureWriterEngine.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Engine\IWriterEngine.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\BaseCheckedException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\CrossReferenceException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\IExceptionHandler.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\MaintainableObjectException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxInternalServerException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxNoResultsException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxNotImplementedException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxReferenceException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxResponseSizeExceedsLimitException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxResponseTooLargeException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxSemmanticException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxServiceUnavailableException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxSyntaxException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Exception\SdmxUnauthorisedException.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\IDataQueryFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\IDataReaderFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\IDataWriterFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\IErrorWriterFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\IMetadataWriterFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\IReadableDataLocationFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\ISchemaWriterFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\IStructureParserFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\IStructureQueryFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\IStructureWriterFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Factory\IWriteableDataLocationFactory.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Listener\IListener.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\INotificationManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Notification\INotificationManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Output\IErrorWriterManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Output\ISchemaWriterManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Output\IStructureWriterManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Parse\IStructureParsingManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Parse\IStructureVersionIncrementManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Persist\IDataPersistenceManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Persist\IRegistrationPersistenceManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Persist\IStructurePersistenceManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Persist\ISubscriptionPersistenceManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Persist\Mutable\ISdmxMutablePersistenceManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Persist\Mutable\ISdmxMutableProvisionPersistenceManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Persist\Mutable\ISdmxMutableRegistrationPersistenceManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Persist\Mutable\ISdmxMutableSubscriptionPersistenceManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Query\IDataQueryBuilderManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Query\IStructureQueryBuilderManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\ArtefactUrl.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\CrossReference\ICrossReferencedRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\CrossReference\ICrossReferenceInformationManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\CrossReference\ICrossReferencingRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\CrossReference\IStructureWithReferencesManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Data\IAdvancedSdmxDataRetrievalWithWriter.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Data\ISdmxDataRetrievalReader.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Data\ISdmxDataRetrievalWithStream.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Data\ISdmxDataRetrievalWithWriter.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Data\ISdmxDataSource.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\ICategorisationRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\IConstraintRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\IDataConstraintRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\IExternalReferenceRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\IHeaderRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\IIdentifiableRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\IOrganisationRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\IProvisionRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\IRegistrationRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\ISdmxBaseObjectRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\ISdmxObjectRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\ISdmxStructureContentsInformationManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\ISdmxSubscriptionRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\IServiceRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\IStructureVersionRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Mutable\IAdvancedSdmxMutableObjectRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Mutable\IAdvancedMutableStructureSearchManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Mutable\ICrossReferenceMutableRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Mutable\IMutableObjectRetrievalManagerBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Mutable\IMutableStructureSearchManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Mutable\IMutableStubRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Mutable\ISdmxMutableObjectRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Mutable\ISdmxMutableProvisionObjectRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Mutable\ISdmxMutableRegistrationObjectRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Mutable\ISdmxMutableSubscriptionObjectRetrievalManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Rest\IRestDataQueryManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Rest\IRestSchemaQueryManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Rest\IRestStructureQueryManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\ServiceRetrievalManagerConstants.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Retrieval\Webservice\IRESTStructureQueryManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Manager\Validation\IDataValidationManager.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Base\IAnnotableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Base\IAnnotationObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Base\IComponentObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Base\IIdentifiableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Base\IHierarchical.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Base\IMaintainableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Base\INameableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Base\IObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Base\IItemObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\CategoryScheme\ICategorisationObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\CategoryScheme\ICategoryObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\CategoryScheme\ICategorySchemeObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Codelist\ICodelistObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Codelist\ICodeObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Codelist\IHierarchicalCodelistObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Codelist\IHierarchicalCodeObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Codelist\IHierarchyObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Codelist\IHierarchyObjectBaseSet.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\ConceptScheme\IConceptObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\ConceptScheme\IConceptSchemeObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\DataStructure\IAttributeObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\DataStructure\IDataflowObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\DataStructure\IDataStructureObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\DataStructure\IDimensionObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\DataStructure\IGroupObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\DataStructure\IPrimaryMeasureObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\IObjectsBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Metadata\IMetadataBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Metadata\IMetadataReportBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Metadata\IMetadataSetBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Metadata\IReferenceValueBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Metadata\IReportedAttributeBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Metadata\ITargetBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Process\IINputOutputObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Process\IProcessObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Process\IProcessStepObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Registry\IProvisionAgreementObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\BaseObjects\Registry\IRegistrationObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Base\ISdmxDate.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\IAttributable.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\IDataFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\IKeyable.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\IKeyValue.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\IObservation.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\Query\Complex\IComplexComponentValue.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\Query\Complex\IComplexDataQuery.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\Query\Complex\IComplexDataQuerySelection.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\Query\Complex\IComplexDataQuerySelectionGroup.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\Query\IBaseDataQuery.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\Query\IDataQuery.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\Query\IDataQuerySelection.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Data\Query\IDataQuerySelectionGroup.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Format\IMetadataFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Format\ISchemaFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Header\IDatasetHeader.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Header\IDatasetStructureReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Header\IHeader.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Header\IParty.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\IContentConstraintModel.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\IErrorFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\IErrorList.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\IFooterMessage.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\ISdmxReader.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Format\IStructureFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\IStructureWorkspace.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Metadata\IDataKey.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Metadata\IMetadata.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Metadata\IMetadataReport.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Metadata\IMetadataSet.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Metadata\IReferenceValue.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Metadata\IReportedAttribute.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Metadata\ITarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Metadata\Mutable\IMetadataSetMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Metadata\Mutable\IReportedAttributeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Metadata\Mutable\IReportMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Base\IAnnotableMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Base\IAnnotationMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Base\IComponentMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Base\IHierarchical.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Base\IIdentifiableMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Base\IItemObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Base\IMaintainableMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Base\INameableMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\CategoryScheme\ICategoryMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\CategoryScheme\ICategorySchemeMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Codelist\ICodelistMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Codelist\ICodeMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Codelist\ICodeRefMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Codelist\IHierarchicalCodelistMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\Codelist\IHierarchyMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\ConceptScheme\IConceptMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\ConceptScheme\IConceptSchemeMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\DataStructure\IAttributeMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\DataStructure\IDataflowMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\DataStructure\IDataStructureMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\DataStructure\IDimensionMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\DataStructure\IGroupMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\MutableBaseObjects\DataStructure\IPrimaryMeasureMutableObjectBase.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IAgencyMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IAgencySchemeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IAnnotableMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IAnnotationMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IComponentMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IConceptBaseMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IContactMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IDataConsumerMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IDataConsumerSchemeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IDataProviderMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IDataProviderSchemeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IDataSourceMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IHierarchicalItemMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IHierarchyMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IIdentifiableMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IItemMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IItemSchemeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IMaintainableMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\INameableMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IOrganisationMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IOrganisationSchemeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IOrganisationUnitMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IOrganisationUnitSchemeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IRepresentationMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\ISchemeMapMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\IStructureMapMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\ITextFormatMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\ITextTypeWrapperMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\ITimeRangeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Base\ITransitionMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\CategoryScheme\ICategorisationMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\CategoryScheme\ICategoryMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\CategoryScheme\ICategorySchemeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\CategoryScheme\IReportingCategoryMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\CategoryScheme\IReportingTaxonomyMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Codelist\ICodelistMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Codelist\ICodeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Codelist\IHierarchicalCodelistMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Codelist\ILevelMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\ConceptScheme\IConceptMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\ConceptScheme\IConceptSchemeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\IAttributeListMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\IAttributeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\ICrossSectionalDataStructureMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\ICrossSectionalMeasureMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\IDataflowMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\IDataStructureMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\IDimensionListMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\IDimensionMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\IGroupMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\IMeasureListMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\DataStructure\IPrimaryMeasureMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\IMutableObjects.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\ICategoryMapMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\ICategorySchemeMapMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\ICodelistMapMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\IComponentMapMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\IConceptSchemeMapMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\IItemMapMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\IItemSchemeMapMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\IOrganisationSchemeMapMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\IRelatedStructuresMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\IRepresentationMapRefMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Mapping\IStructureSetMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\MetadataStructure\IConstraintContentTargetMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\MetadataStructure\IDataSetTargetMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\MetadataStructure\IIdentifiableTargetMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\MetadataStructure\IKeyDescriptorValuesTargetMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\MetadataStructure\IMetadataAttributeMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\MetadataStructure\IMetadataFlowMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\MetadataStructure\IMetadataStructureDefinitionMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\MetadataStructure\IMetadataTargetMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\MetadataStructure\IReportPeriodTargetMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\MetadataStructure\IReportStructureMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Process\IComputationMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Process\IInputOutputMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Process\IProcessMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Process\IProcessStepMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Reference\ICodelistRefMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Reference\ICodeRefMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Reference\ICrossReferenceTreeMutable.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Reference\IDataAndMetadataSetMutableReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Reference\IMutableCrossReferencingTree.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IAttachmentConstraintMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IConstrainedDataKeyMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IConstraintAttachmentMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IConstraintDataKeySetMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IConstraintMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IContentConstraintMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\ICubeRegionMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IDataSetReferenceMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IKeyValuesMutable.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IMetadataTargetKeyValuesMutable.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IMetadataTargetRegionMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IProvisionAgreementMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IReferencePeriodMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IRegistrationMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\IReleaseCalendarMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Mutable\Registry\ISubscriptionMutableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IAgency.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IAgencyScheme.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IAnnotableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IAnnotation.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IComponent.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IConceptBaseObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IConstrainableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IContact.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IDataConsumer.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IDataConsumerScheme.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IDataProvider.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IDataProviderScheme.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IDataSource.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IHierarchicalItemObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IIdentifiableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IOrganisationSchemeObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\ISdmxStructure.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IItemObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IMaintainableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\INameableObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IOrganisation.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IOrganisationUnit.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IOrganisationUnitSchemeObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IRepresentation.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\ISDMXObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IItemSchemeObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\IStructureUsage.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\ITextFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\ITextTypeWrapper.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Base\ITimeRange.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\CategoryScheme\ICategorisationObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\CategoryScheme\ICategoryObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\CategoryScheme\ICategorySchemeObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\CategoryScheme\IReportingCategoryObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\CategoryScheme\IReportingTaxonomyObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Codelist\ICode.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Codelist\ICodelistObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Codelist\ICodelistRef.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Codelist\IHierarchicalCode.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Codelist\IHierarchicalCodelistObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Codelist\IHierarchy.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Codelist\ILevelObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\ConceptScheme\IConceptObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\ConceptScheme\IConceptSchemeObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\IAttribute.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\IAttributeList.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\ICrossSectionalDataStructureObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\ICrossSectionalMeasure.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\IDataflowObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\IDataStructureObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\IDimension.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\IDimensionList.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\IGroup.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\IMeasureList.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\DataStructure\IPrimaryMeasure.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\IAgencyMetadata.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\IRegistrationInformation.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\IRegistryObjects.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\ISdmxObjectsInfo.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\ISdmxObjects.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\ICategoryMap.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\ICategorySchemeMapObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\ICodelistMapObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\IComponentMapObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\IConceptSchemeMapObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\IOrganisationSchemeMapObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\IRelatedStructures.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\IRepresentationMapRef.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\ISchemeMapObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\IStructureMapObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\IStructureSetObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\IItemMap.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Mapping\IItemSchemeMapObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\MetadataStructure\IConstraintContentTarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\MetadataStructure\IDataSetTarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\MetadataStructure\IIdentifiableTarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\MetadataStructure\IKeyDescriptorValuesTarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\MetadataStructure\IMetadataAttribute.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\MetadataStructure\IMetadataFlow.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\MetadataStructure\IMetadataStructureDefinitionObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\MetadataStructure\IMetadataTarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\MetadataStructure\IReportPeriodTarget.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\MetadataStructure\IReportStructure.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Process\IComputationObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Process\IInputOutputObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Process\IProcessObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Process\IProcessStepObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Process\ITransition.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\Complex\IComplexAnnotationReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\Complex\IComplexIdentifiableReferenceObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\Complex\IComplexNameableReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\Complex\IComplexStructureQuery.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\Complex\IComplexStructureQueryMetadata.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\Complex\IComplexStructureReferenceObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\Complex\IComplexTextReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\Complex\IComplexVersionReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\Complex\ITimeRange.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\ICrossReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\ICrossReferencingTree.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\IDataAndMetadataSetReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\IIdentifiableRefObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\IMaintainableRefObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Query\IRestDataQuery.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Query\IStructureQueryMetadata.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Reference\IStructureReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IAttachmentConstraintAttachment.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IAttachmentConstraintObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IConstrainedDataKey.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IConstraintAttachment.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IConstraintDataKeySet.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IConstraintObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IContentConstraintObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\ICubeRegion.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IDataSetReference.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IKeyValues.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IMetadataTargetKeyValues.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IMetadataTargetRegion.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\INotificationEvent.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IProvisionAgreementObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IReferencePeriod.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IRegistrationObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\IReleaseCalendar.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Objects\Registry\ISubscriptionObject.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Format\IDataQueryFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Query\IRestSchemaQuery.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Query\IRestStructureQuery.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\Format\IStructureQueryFormat.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\ResolutionSettings.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\ResolveCrossReferences.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\ResolveExternalSetting.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\SubmissionResponse\ISubmitRegistrationResponse.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\SubmissionResponse\ISubmitStructureResponse.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Model\SubmissionResponse\ISubmitSubscriptionResponse.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Util\IDictionaryOfSets.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Util\IMessageResolver.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Util\IDictionaryOfLists.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Util\IReadableDataLocation.cs" />
+    <Compile Include="Sdmxsource\Sdmx\Api\Util\IWriteableDataLocation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CustomDictionary.xml">
+      <Link>CustomDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

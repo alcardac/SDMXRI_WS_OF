@@ -1,0 +1,2477 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SdmxParseBase</name>
+    </assembly>
+    <members>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.HeaderReader">
+            <summary>
+                This class provides the method to read a SDMX Header for a SDMX Message and output a <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader"/>
+            </summary>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.Reader">
+            <summary>
+                The reader.
+            </summary>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.IoBase">
+            <summary>
+                The writer/reader base.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.IoBase._defaultSchema">
+            <summary>
+                The default sdmx schema version
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.IoBase._namespaces">
+            <summary>
+                The SDMX namespaces.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.IoBase._targetSchema">
+            <summary>
+                The target SDMX schema
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.IoBase.#ctor(Estat.Sri.SdmxParseBase.Model.SdmxNamespaces,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Engine.IoBase"/> class.
+            </summary>
+            <param name="namespaces">
+            The namespaces.
+            </param>
+            <param name="schema">
+            The SDMX schema version.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="schema"/> is null
+            </exception>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.IoBase.CreateNamespaces(Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchemaEnumType)">
+            <summary>
+            Create namespaces for the specified <paramref name="version"/>
+            </summary>
+            <param name="version">
+            The SDMX schema version.
+            </param>
+            <returns>
+            The <see cref="T:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces"/>.
+            </returns>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.IoBase.IsTwoPointOne">
+            <summary>
+                Gets a value indicating whether the <see cref="P:Estat.Sri.SdmxParseBase.Engine.IoBase.TargetSchema"/> is SDMX v2.1
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.IoBase.Namespaces">
+            <summary>
+                Gets the SDMX namespaces.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.IoBase.TargetSchema">
+            <summary>
+                Gets the target SDMX schema
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.Reader._attributes">
+            <summary>
+                The current XML attributes in a name-value map
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.Reader._elements">
+            <summary>
+                The stack of elements to parsed, used by xml parser.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.Reader._handleElementRules">
+            <summary>
+                The list of <see cref="T:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.CaseInfo"/> with methods and types that handle elements without text
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.Reader._handleTextRules">
+            <summary>
+                The list of <see cref="T:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.CaseInfo"/> with methods and types that handle elements with text
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.Reader._settings">
+            <summary>
+                The <c>xsd</c> schemas used by sdmx
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.#ctor(Estat.Sri.SdmxParseBase.Model.SdmxNamespaces,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Engine.Reader"/> class.
+            </summary>
+            <param name="namespaces">
+            The namespaces.
+            </param>
+            <param name="schema">
+            The schema.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.#ctor(Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Engine.Reader"/> class.
+            </summary>
+            <param name="schema">
+            The schema.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.#ctor(Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema,System.Xml.XmlReaderSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Engine.Reader"/> class.
+            </summary>
+            <param name="schema">
+            The schema.
+            </param>
+            <param name="settings">
+            The settings.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.#ctor(Estat.Sri.SdmxParseBase.Model.SdmxNamespaces,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema,System.Xml.XmlReaderSettings)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Engine.Reader"/> class.
+            </summary>
+            <param name="namespaces">
+            The namespaces.
+            </param>
+            <param name="schema">
+            The schema.
+            </param>
+            <param name="settings">
+            The settings.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.SettingsValidationEventHandler(System.Object,System.Xml.Schema.ValidationEventArgs)">
+            <summary>
+            Handle validation errors
+            </summary>
+            <param name="sender">
+            The source
+            </param>
+            <param name="e">
+            The <see cref="T:System.Xml.Schema.ValidationEventArgs"/>
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.AddHandleElement``1(Estat.Sri.SdmxParseBase.Engine.Reader.HandleComplexElement{``0})">
+            <summary>
+            Add element handler, <paramref name="handleTextMethod"/> for specific type. The order each handler is added is important
+            </summary>
+            <typeparam name="T">
+            The parent type
+            </typeparam>
+            <param name="handleTextMethod">
+            Text handling method
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.AddHandleText``1(Estat.Sri.SdmxParseBase.Engine.Reader.HandleText{``0})">
+            <summary>
+            Add element text handler, <paramref name="handleTextMethod"/> for specific type. The order each handler is added is important
+            </summary>
+            <typeparam name="T">
+            The parent type
+            </typeparam>
+            <param name="handleTextMethod">
+            Text handling method
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.CreateXmlReader(System.IO.TextReader)">
+            <summary>
+            Create an <see cref="T:System.Xml.XmlReader"/> object with <see cref="F:Estat.Sri.SdmxParseBase.Engine.Reader._settings"/> and the specified
+                <paramref name="textReader"/>
+            </summary>
+            <param name="textReader">
+            The input <see cref="T:System.IO.TextReader"/>
+            </param>
+            <returns>
+            an <see cref="T:System.Xml.XmlReader"/>
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.ExecuteHandleElement(System.Object,System.Object)">
+            <summary>
+            Execute the element handler for the <paramref name="parent"/> <see cref="T:System.Type"/> with the
+                <paramref name="localName"/>
+                . The handlers are added using the <see cref="M:Estat.Sri.SdmxParseBase.Engine.Reader.AddHandleElement``1(Estat.Sri.SdmxParseBase.Engine.Reader.HandleComplexElement{``0})"/>
+            </summary>
+            <param name="parent">
+            The parent object. The handler that will be executed depends on it's type
+            </param>
+            <param name="localName">
+            The local name string as an object
+            </param>
+            <returns>
+            The execute handle element.
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.ExecuteHandleText(System.Object,System.Object)">
+            <summary>
+            Execute the text handler for the <paramref name="parent"/> <see cref="T:System.Type"/> with the <paramref name="localName"/> . The handlers are added using the
+                <see cref="M:Estat.Sri.SdmxParseBase.Engine.Reader.AddHandleText``1(Estat.Sri.SdmxParseBase.Engine.Reader.HandleText{``0})"/>
+            </summary>
+            <param name="parent">
+            The parent object. The handler that will be executed depends on it's type
+            </param>
+            <param name="localName">
+            The local name string as an object
+            </param>
+            <returns>
+            <c>true</c> if matching type existed and executed. Else <c>false</c>
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.ReadHeader(System.Xml.XmlReader)">
+            <summary>
+            Read the header and return the <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader"/>
+            </summary>
+            <param name="reader">
+            The <see cref="T:System.Xml.XmlReader"/> to read the header from
+            </param>
+            <returns>
+            the <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader"/>
+            </returns>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Reader.Attributes">
+            <summary>
+                Gets the current XML attributes in a name-value map
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Reader.Elements">
+            <summary>
+                Gets the stack of elements to parsed, used by xml parser.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Reader.Settings">
+            <summary>
+                Gets the <c>xsd</c> schemas used by sdmx
+            </summary>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.Reader.HandleComplexElement`1">
+            <summary>
+            Delegate for handling elements
+            </summary>
+            <typeparam name="T">
+            The type of the <paramref name="parent"/>
+            </typeparam>
+            <param name="parent">
+            The parent object
+            </param>
+            <param name="localName">
+            the local name string as object
+            </param>
+            <returns>
+            The current object or null
+            </returns>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.Reader.HandleText`1">
+            <summary>
+            Delegate for handling simple element types with only text
+            </summary>
+            <typeparam name="T">
+            The type of the <paramref name="parent"/>
+            </typeparam>
+            <param name="parent">
+            The parent object
+            </param>
+            <param name="localName">
+            the local name string as object
+            </param>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch">
+            <summary>
+                TypeSwitch from
+                <see href="http://stackoverflow.com/questions/298976/c-is-there-a-better-alternative-than-this-to-switch-on-type/299120#299120">
+                    HERE
+                </see>
+                Modified to use
+                <see cref="T:Estat.Sri.SdmxParseBase.Engine.Reader.HandleText`1"/>
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.Case``1(Estat.Sri.SdmxParseBase.Engine.Reader.HandleText{``0})">
+            <summary>
+            A case statement
+            </summary>
+            <typeparam name="T">
+            The target type
+            </typeparam>
+            <param name="action">
+            The action to take
+            </param>
+            <returns>
+            A <see cref="T:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.CaseInfo"/> object
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.Case``1(Estat.Sri.SdmxParseBase.Engine.Reader.HandleComplexElement{``0})">
+            <summary>
+            A case statement
+            </summary>
+            <typeparam name="T">
+            The target type
+            </typeparam>
+            <param name="action">
+            The action to take
+            </param>
+            <returns>
+            A <see cref="T:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.CaseInfo"/> object
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.Do``1(System.Object,System.Object,System.Collections.Generic.IEnumerable{Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.CaseInfo})">
+            <summary>
+            Do the type switch
+            </summary>
+            <typeparam name="T">
+            The type of the <paramref name="parent"/>
+            </typeparam>
+            <param name="parent">
+            The source object
+            </param>
+            <param name="localName">
+            The element local name
+            </param>
+            <param name="cases">
+            The list of cases
+            </param>
+            <returns>
+            True if it succeeds
+            </returns>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.CaseInfo">
+            <summary>
+                Case statement information
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.CaseInfo.ElementHandler">
+            <summary>
+                Gets or sets the <see cref="T:Estat.Sri.SdmxParseBase.Engine.Reader.HandleComplexElement`1"/> to execute
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Reader.ElementTypeSwitch.CaseInfo.Target">
+            <summary>
+                Gets or sets the target type
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader._elements">
+            <summary>
+                The stack of elements to parsed, used by xml parser.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader._headerObject">
+            <summary>
+                The sdmx  message header object representation that is generated during the xml parsing
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader._lang">
+            <summary>
+                Current XmlLang scope
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader._text">
+            <summary>
+                The current element text
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.#ctor(Estat.Sri.SdmxParseBase.Model.SdmxNamespaces,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Engine.HeaderReader"/> class.
+            </summary>
+            <param name="namespaces">
+            The namespaces.
+            </param>
+            <param name="schema">
+            The schema.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.Read(System.IO.TextReader)">
+            <summary>
+            Parses from the XmlReader the Header element and the included elements and creates
+                from them a IHeader object. When the Header end element is reached it will return.
+            </summary>
+            <param name="textReader">
+            The XmlReader to read the header from.
+            </param>
+            <returns>
+            The IHeader object containing the information read from the XmlReader
+            </returns>
+            <remarks>
+            This is the standalone version of <see cref="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.Read(System.Xml.XmlReader)"/>. It should not be called after reading the MessageType element. e.g. Structure, CompactData e.t.c. i.e. the root element
+            </remarks>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.Read(System.Xml.XmlReader)">
+            <summary>
+            Parses from the XmlReader the Header element and the included elements and creates
+                from them a IHeader object. When the Header end element is reached it will return.
+            </summary>
+            <param name="reader">
+            The XmlReader to read the header from.
+            </param>
+            <returns>
+            The IHeader object containing the information read from the XmlReader
+            </returns>
+            <remarks>
+            It needs to be called after reading the MessageType element. e.g. Structure, CompactData e.t.c. i.e. the root element
+            </remarks>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.CreatePartyType">
+            <summary>
+                Create a PartyMutable object from the given attribute name,value table
+            </summary>
+            <returns>
+                A PartyMutable object with the attributes["id"] value
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HandleChildText(Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IContactMutableObject,System.Object)">
+            <summary>
+            Handle the elements text for child elements of <paramref name="contact"/>
+            </summary>
+            <param name="contact">
+            The contact parent.
+            </param>
+            <param name="localName">
+            The element tag local name.
+            </param>
+            <returns>
+            True if it was handled else false
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HandleElement(System.Object,System.Object)">
+            <summary>
+            The method is called every time a new element is encountered during parsing
+            </summary>
+            <param name="parent">
+            The parent SDMX Model object from Common API namespace
+            </param>
+            <param name="localName">
+            The name of the element
+            </param>
+            <returns>
+            The handle element.
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HandleElementEnd(System.Object,System.Object)">
+            <summary>
+            The method is called every time a closing element is encountered during parsing
+            </summary>
+            <param name="parent">
+            The parent SDMX Model object from Common API namespace
+            </param>
+            <param name="localName">
+            The name of the element
+            </param>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable">
+            <summary>
+            The header mutable.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable._additionalAttributes">
+            <summary>
+                The _additional attributes.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable._name">
+            <summary>
+                The _name.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable._receiver">
+            <summary>
+                The _receiver.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable._source">
+            <summary>
+                The _source.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable._structureReferences">
+            <summary>
+                The _structure references.
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.GetAdditionalAttribtue(System.String)">
+            <summary>
+            The get additional attribute.
+            </summary>
+            <param name="headerField">
+            The header field.
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.GetStructureById(System.String)">
+            <summary>
+            The get structure by id.
+            </summary>
+            <param name="structureId">
+            The structure id.
+            </param>
+            <returns>
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IDatasetStructureReference"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.HasAdditionalAttribtue(System.String)">
+            <summary>
+            The has additional attribute.
+            </summary>
+            <param name="headerField">
+            The header field.
+            </param>
+            <returns>
+            The <see cref="T:System.Boolean"/>.
+            </returns>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Action">
+            <summary>
+            Gets or sets the action.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Org#Sdmxsource#Sdmx#Api#Model#Header#IHeader#AdditionalAttribtues">
+            <summary>
+            Gets the additional attributes.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.AdditionalAttribtues">
+            <summary>
+            Gets the additional attributes.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.DataProviderReference">
+            <summary>
+            Gets or sets the data provider reference.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.DatasetId">
+            <summary>
+            Gets or sets the dataset id.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.EmbargoDate">
+            <summary>
+            Gets or sets the embargo date.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Extracted">
+            <summary>
+            Gets or sets the extracted.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Org#Sdmxsource#Sdmx#Api#Model#Header#IHeader#Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Prepared">
+            <summary>
+            Gets or sets the prepared.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Org#Sdmxsource#Sdmx#Api#Model#Header#IHeader#Receiver">
+            <summary>
+            Gets the receiver.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Receiver">
+            <summary>
+            Gets the receiver.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.ReportingBegin">
+            <summary>
+            Gets or sets the reporting begin.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.ReportingEnd">
+            <summary>
+            Gets or sets the reporting end.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Sender">
+            <summary>
+            Gets or sets the sender.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Org#Sdmxsource#Sdmx#Api#Model#Header#IHeader#Source">
+            <summary>
+            Gets the source.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Source">
+            <summary>
+            Gets the source.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Org#Sdmxsource#Sdmx#Api#Model#Header#IHeader#Structures">
+            <summary>
+            Gets the structures.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Structures">
+            <summary>
+            Gets the structures.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.Test">
+            <summary>
+            Gets or sets a value indicating whether test.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.HeaderMutable.ImmutableInstance">
+            <summary>
+            Gets the immutable instance.
+            </summary>
+            <value>
+            The immutable instance.
+            </value>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable">
+            <summary>
+            The party mutable.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable._contacts">
+            <summary>
+            The _contacts.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable._name">
+            <summary>
+            The _name.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable._id">
+            <summary>
+            The _id.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable._timeZone">
+            <summary>
+            The _time zone.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable.Org#Sdmxsource#Sdmx#Api#Model#Header#IParty#Contacts">
+            <summary>
+            Gets the contacts.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable.Contacts">
+            <summary>
+            Gets the contacts.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable.Org#Sdmxsource#Sdmx#Api#Model#Header#IParty#Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable.Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable.TimeZone">
+            <summary>
+            Gets or sets the time zone.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderReader.PartyMutable.ImmutableInstance">
+            <summary>
+            Gets the immutable instance.
+            </summary>
+            <value>
+            The immutable instance.
+            </value>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.HeaderWriter">
+            <summary>
+                This class is used by all the other message writers classes to write the Sdmx Header
+            </summary>
+            <remarks>
+                This class was copied from DataGenerator
+            </remarks>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Engine.Writer">
+            <summary>
+                The base class for all SDMX-ML writers.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.Writer._wrapped">
+            <summary>
+                A value indicating if <see cref="F:Estat.Sri.SdmxParseBase.Engine.Writer._writer"/> was already started and therefore expected to close outside
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.Writer._writer">
+            <summary>
+                The internal field used to store the XmlTextWriter object that is used
+                by this class and classed based on Writer to perform the xml writing
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.Writer._headerRetrievalManager">
+            <summary>
+            The _header retrieval manager
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.#ctor(System.Xml.XmlWriter,Estat.Sri.SdmxParseBase.Model.SdmxNamespaces,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Engine.Writer"/> class.
+            </summary>
+            <param name="writer">
+            The writer.
+            </param>
+            <param name="namespaces">
+            The namespaces. If set the null then the default parameters
+            </param>
+            <param name="schema">
+            The SDMX version schema.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="writer"/> is null
+                -or-
+                <paramref name="schema"/> is null
+            </exception>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.#ctor(System.Xml.XmlWriter,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema,Estat.Sri.SdmxParseBase.Model.SdmxNamespaces)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Engine.Writer"/> class.
+            </summary>
+            <param name="writer">
+            The output <see cref="T:System.Xml.XmlWriter"/>
+            </param>
+            <param name="targetSchema">
+            The target SDMX Schema version
+            </param>
+            <param name="namespaces">
+            The list of namespaces used by the message
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.GetRef(Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IMaintainableObject)">
+            <summary>
+            Gets the reference from the specified <paramref name="dataStructureObject"/>
+            </summary>
+            <param name="dataStructureObject">
+            The maintainable reference
+            </param>
+            <returns>
+            The <see cref="T:System.String"/>.
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Nullable{System.DateTime})">
+            <summary>
+            Write the element if it's value is not empty or null
+            </summary>
+            <param name="elementName">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Nullable{System.DateTime})">
+            <summary>
+            Write the element if it's value is not empty or null
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix pair
+            </param>
+            <param name="elementName">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.String)">
+            <summary>
+            Write the element if it's value is not empty or null
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix pair
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,System.String,System.String)">
+            <summary>
+            Write the element if it's value is not empty or null
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix pair
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(Estat.Sri.SdmxXmlConstants.ElementNameTable,System.String)">
+            <summary>
+            Write the element if it's value is not empty or null
+            </summary>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(System.String,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.String)">
+            <summary>
+            Write the element if it's value is not empty or null
+            </summary>
+            <param name="prefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Uri)">
+            <summary>
+            Write the element if it's value is not empty or null
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(System.String,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Uri)">
+            <summary>
+            Write the element if it's value is not empty or null
+            </summary>
+            <param name="prefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Boolean)">
+            <summary>
+            Write the element with it's <c>xs:boolean</c> value if it is true
+            </summary>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Boolean)">
+            <summary>
+            Write the element with it's <c>xs:boolean</c> value if it is true
+            </summary>
+            <param name="prefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryToWriteElement(System.String,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Boolean)">
+            <summary>
+            Write the element with it's <c>xs:boolean</c> value if it is true
+            </summary>
+            <param name="prefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(System.String,System.String)">
+            <summary>
+            Write the attribute if it's value is not empty or null
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(System.String,System.Uri)">
+            <summary>
+            Write the attribute if it's value is not  null
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(System.String,System.DateTime)">
+            <summary>
+            Write the attribute if it's value is larger than <see cref="F:System.DateTime.MinValue"/>
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(System.String,System.Boolean)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(System.String,Org.Sdmxsource.Sdmx.Api.Constants.TertiaryBoolEnumType)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(System.String,System.Int32)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(System.String,System.Int64)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(System.String,System.Double)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(System.String,System.Decimal)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.String)">
+            <summary>
+            Write the attribute if it's value is not empty or null
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Uri)">
+            <summary>
+            Write the attribute if it's value is not  null
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,Org.Sdmxsource.Sdmx.Api.Constants.TertiaryBoolEnumType)">
+            <summary>
+            Write the attribute if it's value is not  null
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,Org.Sdmxsource.Sdmx.Api.Constants.TertiaryBool)">
+            <summary>
+            Write the attribute if it's value is not  null
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.DateTime)">
+            <summary>
+            Write the attribute if it's value is larger than <see cref="F:System.DateTime.MinValue"/>
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Boolean)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Int32)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Int64)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Double)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Decimal)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Nullable{System.DateTime})">
+            <summary>
+            Write the attribute if it's value is larger than <see cref="F:System.DateTime.MinValue"/>
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Nullable{System.Boolean})">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Nullable{System.Int32})">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Nullable{System.Int64})">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Nullable{System.Double})">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.TryWriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Nullable{System.Decimal})">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteAnnotations(Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Collections.Generic.ICollection{Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IAnnotation})">
+            <summary>
+            Write annotations
+            </summary>
+            <param name="element">
+            The root annotations element name
+            </param>
+            <param name="annotations">
+            The list of annotations to write
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteAnnotations(Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Collections.Generic.ICollection{Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.IAnnotationMutableObject})">
+            <summary>
+            Write annotations
+            </summary>
+            <param name="element">
+            The root annotations element name
+            </param>
+            <param name="annotations">
+            The list of annotations to write
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteAttribute(System.String,System.Boolean)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteAttribute(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Boolean)">
+            <summary>
+            Write the attribute and it's value
+            </summary>
+            <param name="attribute">
+            The attribute name
+            </param>
+            <param name="value">
+            The attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteAttributeString(System.String,System.String)">
+            <summary>
+            Write an attribute with the specified name and value
+            </summary>
+            <param name="name">
+            Attribute name
+            </param>
+            <param name="value">
+            Attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteAttributeString(Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.String)">
+            <summary>
+            Write an attribute with the specified name and value
+            </summary>
+            <param name="name">
+            Attribute name
+            </param>
+            <param name="value">
+            Attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteAttributeString(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,System.String,System.String)">
+            <summary>
+            Write an attribute with the specified name and value
+            </summary>
+            <param name="namespacePrefixPair">
+            The XML prefix
+            </param>
+            <param name="name">
+            Attribute name
+            </param>
+            <param name="value">
+            Attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteAttributeString(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.String)">
+            <summary>
+            Write an attribute with the specified name and value
+            </summary>
+            <param name="namespacePrefixPair">
+            The XML prefix
+            </param>
+            <param name="name">
+            Attribute name
+            </param>
+            <param name="value">
+            Attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteAttributeString(System.String,System.String,System.String)">
+            <summary>
+            Write an attribute with the specified name and value
+            </summary>
+            <param name="prefix">
+            The XML prefix
+            </param>
+            <param name="name">
+            Attribute name
+            </param>
+            <param name="value">
+            Attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteAttributeString(System.String,System.String,System.Uri)">
+            <summary>
+            Write an attribute with the specified name and value
+            </summary>
+            <param name="prefix">
+            The XML prefix
+            </param>
+            <param name="name">
+            Attribute name
+            </param>
+            <param name="value">
+            Attribute value
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteElement(System.String,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.String)">
+            <summary>
+            Write the element
+            </summary>
+            <param name="prefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Boolean)">
+            <summary>
+            Write the element with it's <c>xs:boolean</c> value
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Int32)">
+            <summary>
+            Write the element with it's <c>xs:boolean</c> value
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,System.String,System.Boolean)">
+            <summary>
+            Write the element with it's <c>xs:boolean</c> value
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,System.String,System.Int32)">
+            <summary>
+            Write the element with it's <c>xs:boolean</c> value
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,System.String,System.String)">
+            <summary>
+            Write the element
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.String)">
+            <summary>
+            Write the element
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteElement(System.String,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Boolean)">
+            <summary>
+            Write the element with it's <c>xs:boolean</c> value
+            </summary>
+            <param name="prefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="value">
+            The elements text
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteEndDocument">
+            <summary>
+                Write end document and flush
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteEndElement">
+            <summary>
+                Close one element
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteMessageHeader(Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader)">
+            <summary>
+            Write header using the <see cref="T:Estat.Sri.SdmxParseBase.Engine.HeaderWriter"/>
+            </summary>
+            <param name="header">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader"/> to write
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteMessageTag(Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            This method is used to write the root xml tag and message  tag
+                with their corresponding attributes
+            </summary>
+            <param name="message">
+            The message to write
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteNamespaceDecl(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair)">
+            <summary>
+            Write the specified <paramref name="ns"/> declaration
+            </summary>
+            <param name="ns">
+            The namespace with prefix
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteStartElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            Write a Start Element to the given XmlTextWriter using the given prefix and the <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> name
+            </summary>
+            <param name="ns">
+            The namespace and prefix
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteStartElement(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,System.String)">
+            <summary>
+            Write a Start Element to the given XmlTextWriter using the given prefix and the <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> name
+            </summary>
+            <param name="ns">
+            The namespace and prefix
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteStartElement(System.String,Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            Write a Start Element to the given XmlTextWriter using the given prefix and the <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> name
+            </summary>
+            <param name="prefix">
+            The namespace prefix
+            </param>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteStartElement(System.String)">
+            <summary>
+            Write a Start Element to the given XmlTextWriter using the given prefix and the <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> name
+            </summary>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteStartElement(Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            Write a Start Element to the given XmlTextWriter using the given prefix and the <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> name
+            </summary>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteStartElement(System.String,System.String)">
+            <summary>
+            Write a Start Element to the given XmlTextWriter using the given prefix and the <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> name
+            </summary>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="ns">
+            The namespace
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteStartElement(Estat.Sri.SdmxXmlConstants.ElementNameTable,System.String)">
+            <summary>
+            Write a Start Element to the given XmlTextWriter using the given prefix and the <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> name
+            </summary>
+            <param name="element">
+            The <see cref="T:Estat.Sri.SdmxXmlConstants.ElementNameTable"/> element name
+            </param>
+            <param name="ns">
+            The namespace
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteTextType(Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper,Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            This is an internal method that is used to write a <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper"/>
+                The method create a xml element named by the name parameter.
+                It will only write the xml element if the <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper"/> is not null or empty
+            </summary>
+            <param name="textObject">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper"/> object containing the data to be written
+            </param>
+            <param name="name">
+            The name of the xml element
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteTextType(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            This is an internal method that is used to write the <paramref name="textObject"/>
+                The method create a xml element named by the name parameter.
+                It will only write the xml element if the text inside <paramref name="textObject"/> is not null or empty
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix pair
+            </param>
+            <param name="textObject">
+            The <see cref="T:System.Collections.Generic.KeyValuePair`2"/> object containing the data to be written, where key is the locale and value the text value
+            </param>
+            <param name="name">
+            The name of the xml element
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteTextType(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,System.Collections.Generic.KeyValuePair{System.String,System.String},Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            This is an internal method that is used to write the <paramref name="textObject"/>
+                The method create a xml element named by the name parameter.
+                It will only write the xml element if the text inside <paramref name="textObject"/> is not null or empty
+            </summary>
+            <param name="namespacePrefix">
+            The namespace Prefix.
+            </param>
+            <param name="textObject">
+            The <see cref="T:System.Collections.Generic.KeyValuePair`2"/> object containing the data to be written, where key is the locale and value the text value
+            </param>
+            <param name="name">
+            The name of the xml element
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteTextType(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,System.Collections.Generic.IList{Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper},Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            This is an internal method that is used to write a <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper"/>
+            The method create a XML element named by the name parameter.
+            It will only write the XML element if the <see cref="P:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper.Value"/> is not null or empty
+            </summary>
+            <param name="namespacePrefix">The namespace prefix that should be used</param>
+            <param name="textObject">The text object.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteTextType(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper,Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            This is an internal method that is used to write a <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper"/>
+                The method create a xml element named by the name parameter.
+                It will only write the xml element if the <see cref="P:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper.Value"/> is not null or empty
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix that should be used
+            </param>
+            <param name="textObject">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper"/> object containing the data to be written
+            </param>
+            <param name="name">
+            The name of the xml element
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteTextType(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base.ITextTypeWrapperMutableObject,Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            This is an internal method that is used to write a <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper"/>
+                The method create a xml element named by the name parameter.
+                It will only write the xml element if the <see cref="P:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper.Value"/> is not null or empty
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix that should be used
+            </param>
+            <param name="textObject">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper"/> object containing the data to be written
+            </param>
+            <param name="name">
+            The name of the xml element
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteTextType(System.String,Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper,Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            This is an internal method that is used to write a <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper"/>
+                The method create a xml element named by the name parameter.
+                It will only write the xml element if the <see cref="P:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper.Value"/> is not null or empty
+            </summary>
+            <param name="prefix">
+            The namespace prefix that should be used
+            </param>
+            <param name="textObject">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.ITextTypeWrapper"/> object containing the data to be written
+            </param>
+            <param name="name">
+            The name of the xml element
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.Writer.WriteTextType(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.String,System.String)">
+            <summary>
+            This is an internal method that is used to write the <paramref name="value"/> for the specified
+                <paramref name="locale"/>
+                The method create a XML element named by the name parameter.
+                It will only write the XML element if the text inside <paramref name="value"/> is not null or empty
+            </summary>
+            <param name="namespacePrefix">
+            The namespace prefix
+            </param>
+            <param name="name">
+            The name of the XML element
+            </param>
+            <param name="value">
+            The text value.
+            </param>
+            <param name="locale">
+            The locale.
+            </param>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Writer.HeaderRetrievalManager">
+            <summary>
+            Gets or sets the header retrieval manager.
+            </summary>
+            <value>
+            The header retrieval manager.
+            </value>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Writer.DefaultPrefix">
+            <summary>
+                Gets the default prefix that will be used by this message.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Writer.NameNamespace">
+            <summary>
+                Gets the name namespace.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Writer.SdmxMLWriter">
+            <summary>
+                Gets the internal field used to store the XmlTextWriter object that is used
+                by this class and classed based on Writer to perform the xml writing
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Writer.Wrapped">
+            <summary>
+                Gets a value indicating whether the <see cref="F:Estat.Sri.SdmxParseBase.Engine.Writer._writer"/> was already started and therefore expected to close outside
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.Writer.DefaultNS">
+            <summary>
+              Gets the default namespace
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderWriter.DefaultSenderId">
+            <summary>
+                The default sender id.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Engine.HeaderWriter._retrievalManager">
+            <summary>
+            The _retrieval manager
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderWriter.#ctor(System.Xml.XmlWriter,Estat.Sri.SdmxParseBase.Model.SdmxNamespaces,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Engine.HeaderWriter"/> class.
+            </summary>
+            <param name="writer">
+            The writer.
+            </param>
+            <param name="namespaces">
+            The namespaces.
+            </param>
+            <param name="schema">
+            The schema.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderWriter.#ctor(System.Xml.XmlWriter,Estat.Sri.SdmxParseBase.Model.SdmxNamespaces,Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema,Org.Sdmxsource.Sdmx.Api.Manager.Retrieval.IHeaderRetrievalManager)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Engine.HeaderWriter"/> class.
+            </summary>
+            <param name="writer">The writer.</param>
+            <param name="namespaces">The namespaces.</param>
+            <param name="schema">The schema.</param>
+            <param name="retrievalManager">The header retrieval manager.</param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderWriter.WriteHeader(Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader)">
+            <summary>
+            This is the main method of the class that writes the <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader"/>
+                The methods write the xml Header tag and add it's attributes.
+            </summary>
+            <param name="header">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader"/> object containing the header data to be written
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderWriter.WriteHeader(Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader,System.String,Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure.IDataStructureObject[])">
+            <summary>
+            This is the main method of the class that writes the <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader"/>
+                The methods write the xml Header tag and add it's attributes.
+            </summary>
+            <param name="header">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader"/> object containing the header data to be written
+            </param>
+            <param name="dimensionAtObservation">
+            The dimension At Observation.
+            </param>
+            <param name="dataStructureObjects">
+            The data Structure Objects.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderWriter.WriteContactType(Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IContact)">
+            <summary>
+            This is an internal method that is used to write a <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IContact"/>
+                The method creates a xml Contact element
+            </summary>
+            <param name="contactObj">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Base.IContact"/> object containing the data to be written
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderWriter.WriteListContacts(Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair,Estat.Sri.SdmxXmlConstants.ElementNameTable,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Write the list contacts.
+            </summary>
+            <param name="namespacePrefixPair">
+            The namespace prefix pair.
+            </param>
+            <param name="element">
+            The element.
+            </param>
+            <param name="list">
+            The list.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Engine.HeaderWriter.WritePartyType(Org.Sdmxsource.Sdmx.Api.Model.Header.IParty,Estat.Sri.SdmxXmlConstants.ElementNameTable)">
+            <summary>
+            This is an internal method that is used to write the specified <paramref name="partyObj"/>
+            </summary>
+            <param name="partyObj">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IParty"/> object containing the data to be written
+            </param>
+            <param name="name">
+            The name of the xml element
+            </param>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Engine.HeaderWriter.DefaultNS">
+            <summary>
+                Gets the default namespace
+            </summary>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Helper.Helper">
+            <summary>
+                This class contains helper static methods
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.BuildSimpleHeaderObject(System.String,System.String)">
+            <summary>
+            This internal method is used to generate a dummy header in case no header was already provided
+            </summary>
+            <param name="id">
+            The dataflow identifier used to populate the header identifier property <see cref="P:Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader.Id"/>
+            </param>
+            <param name="senderId">
+            The sender ID to use
+            </param>
+            <returns>
+            This method return the newly created <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Header.IHeader"/>
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.GetAttachmentLevelV2(Org.Sdmxsource.Sdmx.Api.Constants.AttributeAttachmentLevel)">
+            <summary>
+            Gets the attachment level v 2.
+            </summary>
+            <param name="attachmentLevel">
+            The attachment level.
+            </param>
+            <returns>
+            The attachment level as string
+            </returns>
+            <exception cref="T:System.ArgumentException">
+            Unknown attachment level
+            </exception>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.MergeArray``1(``0[],``0[])">
+            <summary>
+            Merge two arrays of type <typeparamref name="T"/>
+            </summary>
+            <typeparam name="T">
+            The type
+            </typeparam>
+            <param name="arrayOne">
+            The first array
+            </param>
+            <param name="arrayTwo">
+            The second array
+            </param>
+            <returns>
+            a new array [ <paramref name="arrayOne"/> , <paramref name="arrayTwo"/> ]
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetEnumFromAttribute``1(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,``0)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <typeparam name="T">
+            The Enumeration type
+            </typeparam>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <exception cref="T:System.ArgumentException">
+            <typeparamref name="T"/>
+                is not an Enumeration
+            </exception>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetEnumFromAttribute``1(System.Collections.Generic.IDictionary{System.String,System.String},System.String,``0)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <typeparam name="T">
+            The Enumeration type
+            </typeparam>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <exception cref="T:System.ArgumentException">
+            <typeparamref name="T"/>
+                is not an Enumeration
+            </exception>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.String)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Uri)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},System.String,Org.Sdmxsource.Sdmx.Api.Constants.TertiaryBool)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Boolean)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.String)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Uri)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Boolean)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,Org.Sdmxsource.Sdmx.Api.Constants.TertiaryBool)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Nullable{System.Int64})">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Nullable{System.Decimal})">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Int32)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.DateTime)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Nullable{System.DateTime})">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},Estat.Sri.SdmxXmlConstants.AttributeNameTable,System.Double)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Int32)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.DateTime)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Nullable{System.DateTime})">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetFromAttribute(System.Collections.Generic.IDictionary{System.String,System.String},System.String,System.Double)">
+            <summary>
+            Try to get the value from the given attribute (name,value) dictionary if any. Else return the existing value of given property.
+            </summary>
+            <param name="attributes">
+            A dictionary with attribute (name, value) pairs
+            </param>
+            <param name="attribute">
+            The attribute name we need to get the value from
+            </param>
+            <param name="property">
+            The default value in case the attribute is not in the dictionary
+            </param>
+            <returns>
+            The value of the attribute if any, else the value of the property
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.TrySetUri(System.String)">
+            <summary>
+            Try set Uri from text, only if the text contains a valid Uri
+            </summary>
+            <param name="text">
+            THe uri
+            </param>
+            <returns>
+            The Uri if <paramref name="text"/> contains a valid <see cref="T:System.Uri"/> else <c>null</c>
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Helper.IsTrue(System.String)">
+            <summary>
+            Check if the given <paramref name="xmlBoolValue"/> is "true" or "1". Else if it is null, empty or some other value return false.
+            </summary>
+            <param name="xmlBoolValue">
+            The <c>xs:bool</c> type value
+            </param>
+            <returns>
+            true if <paramref name="xmlBoolValue"/> is "true" or "1". Else false
+            </returns>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Helper.Validator">
+            <summary>
+                This is a utility class for checking a DSD for compliance
+                with producing Compact or Cross-Sectional Data.
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Validator.ValidateForCompact(Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure.IDataStructureObject)">
+            <summary>
+            This method checks a DSD for compliance with producing Compact Data.
+                In detail, it checks that if a TimeDimension is present and at least
+                one dimension is frequency dimension. If there is none an error message
+                is returned to the caller
+            </summary>
+            <param name="keyFamily">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure.IDataStructureObject"/>of the DSD to be checked
+            </param>
+            <returns>
+            The error messages in case of invalid DSD or an empty string in case a valid DSD
+            </returns>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.Validator.ValidateForCrossSectional(Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure.IDataStructureObject)">
+            <summary>
+            This method checks a DSD for compliance with producing  Cross-Sectional Data.
+                In detail, it checks all Dimensions and all Attributes for having or not having
+                cross-sectional attachment group. If there are components with no attachment level,
+                it returns a list with them in the message.
+            </summary>
+            <param name="keyFamily">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure.IDataStructureObject"/>of the DSD to be checked
+            </param>
+            <returns>
+            The error messages in case of invalid DSD or an empty string in case a valid DSD
+            </returns>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Helper.WriterHelper">
+            <summary>
+                This class contains static helper methods
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Helper.WriterHelper.ValidateErrors(System.String)">
+            <summary>
+            Check if the specified <paramref name="errors"/> contains any errors. i.e. is not empty. If it is not empty an
+                <see cref="T:Org.Sdmxsource.Sdmx.Api.Exception.SdmxNotImplementedException"/>
+                is thrown
+            </summary>
+            <param name="errors">
+            The string containing
+            </param>
+            <exception cref="T:Org.Sdmxsource.Sdmx.Api.Exception.SdmxNotImplementedException">
+            the specified
+                <paramref name="errors"/>
+                is not empty and contains errors
+            </exception>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair">
+            <summary>
+                This class holds a namespace and prefix pair
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair._empty">
+            <summary>
+                The empty
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair._namespace">
+            <summary>
+                The namespace.
+            </summary>
+        </member>
+        <member name="F:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair._prefix">
+            <summary>
+                The prefix.
+            </summary>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair.#ctor(System.Uri,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair"/> class.
+            </summary>
+            <param name="ns">
+            The namespace
+            </param>
+            <param name="prefix">
+            The prefix.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair"/> class.
+            </summary>
+            <param name="ns">
+            The namespace
+            </param>
+            <param name="prefix">
+            The prefix.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair"/> class.
+            </summary>
+            <param name="prefix">
+            The prefix.
+            </param>
+        </member>
+        <member name="M:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair.#ctor">
+            <summary>
+                Prevents a default instance of the <see cref="T:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair"/> class from being created.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair.Empty">
+            <summary>
+                Gets an empty <see cref="T:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair"/>
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair.NS">
+            <summary>
+                Gets the namespace
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.NamespacePrefixPair.Prefix">
+            <summary>
+                Gets the prefix.
+            </summary>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces">
+            <summary>
+                The set of namespaces used to generate the xml SDMX messages
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.Common">
+            <summary>
+                Gets or sets the URL of the common namespace
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.Compact">
+            <summary>
+                Gets or sets the URL of the compact namespace
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.Cross">
+            <summary>
+                Gets or sets the URL of the cross namespace
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.Generic">
+            <summary>
+                Gets or sets the URL of the generic namespace
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.Message">
+            <summary>
+                Gets or sets the URL of the message namespace
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.Query">
+            <summary>
+                Gets or sets the URL of the query namespace
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.Registry">
+            <summary>
+                Gets or sets the  URL of the registry message
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.SchemaLocation">
+            <summary>
+                Gets or sets the schema location
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.Structure">
+            <summary>
+                Gets or sets the URL of the structure namespace
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.DataSetStructureSpecific">
+            <summary>
+                Gets or sets the URL of the structure specific dataset namespace. Note this depends on the <c>DSD</c> and applies to all SDMX versions.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.StructureSpecific21">
+            <summary>
+                Gets or sets the URL of the structure specific dataset namespace. Note this about <c>http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific</c>
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.UseEstatUrn">
+            <summary>
+                Gets or sets a value indicating whether the ESTAT URN format should be used.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.Utility">
+            <summary>
+                Gets or sets the URL of the utility namespace
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Model.SdmxNamespaces.Xsi">
+            <summary>
+                Gets or sets the URL of the XSI namespace
+            </summary>
+        </member>
+        <member name="T:Estat.Sri.SdmxParseBase.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ErrorDimensionNoCrossSectionalLevelFormat1">
+            <summary>
+              Looks up a localized string similar to Dimension {0} does not have a Cross-Sectional attachment level..
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ErrorInvalidAttachmentLevel">
+            <summary>
+              Looks up a localized string similar to level is None.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ErrorNoTimeDimensionFormat2">
+            <summary>
+              Looks up a localized string similar to DSD {0} {1} does not have a Time Dimension. Only Cross-Sectional data may be requested..
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ErrorStartGroupAfterStartSeries">
+            <summary>
+              Looks up a localized string similar to Cannot call a StartGroup after StartSeries.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ErrorStartGroupNotCalled">
+            <summary>
+              Looks up a localized string similar to StartGroup not called.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ErrorStartGroupNotCalledOrStartSeriesStarted">
+            <summary>
+              Looks up a localized string similar to StartGroup not called or a StartSeries was called.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ErrorStartObsNotCalled">
+            <summary>
+              Looks up a localized string similar to StartXSObservation not called.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ErrorStartSectionNotCalled">
+            <summary>
+              Looks up a localized string similar to StartSection not called.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ErrorStartSeriesNotCalled">
+            <summary>
+              Looks up a localized string similar to StartSeries not called.
+            </summary>
+        </member>
+        <member name="P:Estat.Sri.SdmxParseBase.Properties.Resources.ExceptionXS21">
+            <summary>
+              Looks up a localized string similar to SDMX v2.1 doesn&apos;t support CrossSectional messages.
+            </summary>
+        </member>
+    </members>
+</doc>

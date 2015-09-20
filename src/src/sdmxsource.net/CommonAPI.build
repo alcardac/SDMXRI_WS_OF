@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="ValidateSolutionConfiguration;ValidateToolsVersions;ValidateProjects" DefaultTargets="Build">
+  <PropertyGroup>
+    <MSBuildToolsRoot>C:\Windows\Microsoft.NET\Framework\</MSBuildToolsRoot>
+    <FrameworkSDKRoot>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\</FrameworkSDKRoot>
+    <MSBuildRuntimeVersion>4.0.30319</MSBuildRuntimeVersion>
+    <SDK40ToolsPath>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\NETFX 4.0 Tools\</SDK40ToolsPath>
+    <SDK35ToolsPath>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\</SDK35ToolsPath>
+    <MSBuildToolsPath32>C:\Windows\Microsoft.NET\Framework\v4.0.30319\</MSBuildToolsPath32>
+    <VCTargetsPath>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\</VCTargetsPath>
+    <VisualStudioVersion>10.0</VisualStudioVersion>
+    <AspNetConfiguration>Release</AspNetConfiguration>
+    <SolutionDir>E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\</SolutionDir>
+    <SolutionExt>.sln</SolutionExt>
+    <SolutionFileName>CommonAPI.sln</SolutionFileName>
+    <SolutionName>CommonAPI</SolutionName>
+    <SolutionPath>E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\CommonAPI.sln</SolutionPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <CurrentSolutionConfigurationContents>
+      <SolutionConfiguration xmlns="">
+  <ProjectConfiguration Project="{C13FCF38-348B-4848-BCFF-A7BD4D75911C}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxAPI\SdmxAPI.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{206D467D-2C89-4FA4-826E-CEFDE000A334}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxSourceUtil\SdmxSourceUtil.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{ED9DCC4E-68DF-4724-BFF1-A77F948EA648}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxApiTests\SdmxApiTests.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{ECC53B22-BD93-49FF-8575-1DDFA2FE9A04}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxObjects\SdmxObjects.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{AA97E1E9-E028-FC4D-8736-13372B3712DD}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V20\Org.Sdmx.Resources.SdmxMl.Schemas.V20.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{A288BFA3-8192-C141-A356-812A0262F2CF}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V10\Org.Sdmx.Resources.SdmxMl.Schemas.V10.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{AF1E630B-A511-437E-BA63-1BC874403749}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V21\Org.Sdmx.Resources.SdmxMl.Schemas.V21.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{61F796E4-E355-4B6B-AD00-89791BAB3900}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureRetrieval\SdmxStructureRetrieval.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{E5923FA6-6095-4560-8B2C-8CA64E744DB4}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureParser\SdmxStructureParser.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{29FF8E34-FD09-47DF-8F6C-DF847E4B3AAB}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\XObjects\XObjects.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{CAC33584-A10B-4071-8E9C-1FB6BF488464}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxIo\SdmxParseBase.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{D0203D8A-63F9-4914-B9DF-F4D7EF512276}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxDataParser\SdmxDataParser.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{F55EF421-DAB3-4432-9E01-9087453CDC97}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureMutableParser\SdmxStructureMutableParser.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{1C1B950E-B956-4644-8BED-ECCAF2568A91}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxEdiDataWriter\SdmxEdiDataWriter.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{F678D2FF-02C1-4D42-902E-A7B995A6731B}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxMlConstants\SdmxMlConstants.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{6C1D24FB-085C-4D6E-A9DF-FAFF24C241D2}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\TabularWriters\TabularWriters.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{9AC39CB7-95B1-48CE-A942-1FD20A822C40}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\ApiDocumentation\ApiDocumentation.shfbproj" BuildProjectInSolution="False">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{CA0B7842-EBB1-4A4E-B404-9011E1624C27}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\ReUsingExamples\ReUsingExamples.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+  <ProjectConfiguration Project="{F9407FC3-4D8E-4490-BEE7-0F055383624A}" AbsolutePath="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxQueryBuilder\SdmxQueryBuilder.csproj" BuildProjectInSolution="True">Release|AnyCPU</ProjectConfiguration>
+</SolutionConfiguration>
+    </CurrentSolutionConfigurationContents>
+  </PropertyGroup>
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxAPI\SdmxAPI.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxSourceUtil\SdmxSourceUtil.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxApiTests\SdmxApiTests.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxObjects\SdmxObjects.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V20\Org.Sdmx.Resources.SdmxMl.Schemas.V20.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V10\Org.Sdmx.Resources.SdmxMl.Schemas.V10.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V21\Org.Sdmx.Resources.SdmxMl.Schemas.V21.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureRetrieval\SdmxStructureRetrieval.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureParser\SdmxStructureParser.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\XObjects\XObjects.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxIo\SdmxParseBase.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxDataParser\SdmxDataParser.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureMutableParser\SdmxStructureMutableParser.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxEdiDataWriter\SdmxEdiDataWriter.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxMlConstants\SdmxMlConstants.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\TabularWriters\TabularWriters.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\ReUsingExamples\ReUsingExamples.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+    <ProjectReference Include="E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxQueryBuilder\SdmxQueryBuilder.csproj">
+      <ToolsVersion>
+      </ToolsVersion>
+      <SkipNonexistentProjects>False</SkipNonexistentProjects>
+      <AdditionalProperties>Configuration=Release; Platform=AnyCPU; VisualStudioVersion=10.0</AdditionalProperties>
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectReference>
+  </ItemGroup>
+  <Target Name="ValidateSolutionConfiguration">
+    <Error Condition="('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' != 'true')" Text="The specified solution configuration &quot;$(Configuration)|$(Platform)&quot; is invalid. Please specify a valid solution configuration using the Configuration and Platform properties (e.g. MSBuild.exe Solution.sln /p:Configuration=Debug /p:Platform=&quot;Any CPU&quot;) or leave those properties blank to use the default solution configuration." Code="MSB4126" HelpKeyword="MSBuild.SolutionInvalidSolutionConfiguration" />
+    <Warning Condition="('$(CurrentSolutionConfigurationContents)' == '') and ('$(SkipInvalidConfigurations)' == 'true')" Text="The specified solution configuration &quot;$(Configuration)|$(Platform)&quot; is invalid. Please specify a valid solution configuration using the Configuration and Platform properties (e.g. MSBuild.exe Solution.sln /p:Configuration=Debug /p:Platform=&quot;Any CPU&quot;) or leave those properties blank to use the default solution configuration." Code="MSB4126" HelpKeyword="MSBuild.SolutionInvalidSolutionConfiguration" />
+    <Message Condition="'$(CurrentSolutionConfigurationContents)' != ''" Text="Building solution configuration &quot;$(Configuration)|$(Platform)&quot;." />
+  </Target>
+  <Target Name="ValidateToolsVersions">
+    <Error Condition="'$(MSBuildToolsVersion)' == '2.0' and ('$(ProjectToolsVersion)' != '2.0' and '$(ProjectToolsVersion)' != '')" Text="The tools version &quot;$(MSBuildToolsVersion)&quot; of the solution does not support building projects with a different tools version." Code="MSB4149" HelpKeyword="MSBuild.SolutionToolsVersionDoesNotSupportProjectToolsVersion" />
+  </Target>
+  <Target Name="ValidateProjects">
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxAPI&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxAPI&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxSourceUtil&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxSourceUtil&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxApiTests&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxApiTests&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxObjects&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxObjects&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;Org.Sdmx.Resources.SdmxMl.Schemas.V20&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;Org.Sdmx.Resources.SdmxMl.Schemas.V20&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;Org.Sdmx.Resources.SdmxMl.Schemas.V10&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;Org.Sdmx.Resources.SdmxMl.Schemas.V10&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;Org.Sdmx.Resources.SdmxMl.Schemas.V21&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;Org.Sdmx.Resources.SdmxMl.Schemas.V21&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxStructureRetrieval&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxStructureRetrieval&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxStructureParser&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxStructureParser&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;XObjects&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;XObjects&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxParseBase&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxParseBase&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxDataParser&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxDataParser&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxStructureMutableParser&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxStructureMutableParser&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxEdiDataWriter&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxEdiDataWriter&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxMlConstants&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;SdmxMlConstants&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;TabularWriters&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;TabularWriters&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " Text="The project &quot;ApiDocumentation&quot; is not selected for building in solution configuration &quot;Debug|Any CPU&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Mixed Platforms') " Text="The project &quot;ApiDocumentation&quot; is not selected for building in solution configuration &quot;Debug|Mixed Platforms&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;ApiDocumentation&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Any CPU') " Text="The project &quot;ApiDocumentation&quot; is not selected for building in solution configuration &quot;Release|Any CPU&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'Mixed Platforms') " Text="The project &quot;ApiDocumentation&quot; is not selected for building in solution configuration &quot;Release|Mixed Platforms&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;ApiDocumentation&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'Any CPU') " Text="The project &quot;ReUsingExamples&quot; is not selected for building in solution configuration &quot;Debug|Any CPU&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Debug') and ('$(Platform)' == 'x86') " Text="The project &quot;ReUsingExamples&quot; is not selected for building in solution configuration &quot;Debug|x86&quot;." />
+    <Message Condition=" ('$(Configuration)' == 'Release') and ('$(Platform)' == 'x86') " Text="The project &quot;ReUsingExamples&quot; is not selected for building in solution configuration &quot;Release|x86&quot;." />
+  </Target>
+  <Target Name="Build" Outputs="@(CollectedBuildOutput)">
+    <MSBuild Projects="@(ProjectReference)" BuildInParallel="True" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Clean">
+    <MSBuild Projects="@(ProjectReference-&gt;Reverse())" Targets="Clean" BuildInParallel="True" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)" />
+  </Target>
+  <Target Name="Rebuild" Outputs="@(CollectedBuildOutput)">
+    <MSBuild Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)">
+      <Output TaskParameter="TargetOutputs" ItemName="CollectedBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Publish">
+    <MSBuild Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" Properties="BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" SkipNonexistentProjects="%(ProjectReference.SkipNonexistentProjects)" />
+  </Target>
+  <Target Name="SdmxAPI" Outputs="@(SdmxAPIBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxAPI\SdmxAPI.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxAPIBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxAPI:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxAPI\SdmxAPI.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxAPI:Rebuild" Outputs="@(SdmxAPIBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxAPI\SdmxAPI.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxAPIBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxAPI:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxAPI\SdmxAPI.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxSourceUtil" Outputs="@(SdmxSourceUtilBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxSourceUtil\SdmxSourceUtil.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxSourceUtilBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxSourceUtil:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxSourceUtil\SdmxSourceUtil.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxSourceUtil:Rebuild" Outputs="@(SdmxSourceUtilBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxSourceUtil\SdmxSourceUtil.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxSourceUtilBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxSourceUtil:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxSourceUtil\SdmxSourceUtil.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxApiTests" Outputs="@(SdmxApiTestsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxApiTests\SdmxApiTests.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxApiTestsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxApiTests:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxApiTests\SdmxApiTests.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxApiTests:Rebuild" Outputs="@(SdmxApiTestsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxApiTests\SdmxApiTests.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxApiTestsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxApiTests:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxApiTests\SdmxApiTests.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxObjects" Outputs="@(SdmxObjectsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxObjects\SdmxObjects.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxObjectsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxObjects:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxObjects\SdmxObjects.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxObjects:Rebuild" Outputs="@(SdmxObjectsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxObjects\SdmxObjects.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxObjectsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxObjects:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxObjects\SdmxObjects.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V20" Outputs="@(Org_Sdmx_Resources_SdmxMl_Schemas_V20BuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V20\Org.Sdmx.Resources.SdmxMl.Schemas.V20.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Org_Sdmx_Resources_SdmxMl_Schemas_V20BuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V20:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V20\Org.Sdmx.Resources.SdmxMl.Schemas.V20.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V20:Rebuild" Outputs="@(Org_Sdmx_Resources_SdmxMl_Schemas_V20BuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V20\Org.Sdmx.Resources.SdmxMl.Schemas.V20.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Org_Sdmx_Resources_SdmxMl_Schemas_V20BuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V20:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V20\Org.Sdmx.Resources.SdmxMl.Schemas.V20.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V10" Outputs="@(Org_Sdmx_Resources_SdmxMl_Schemas_V10BuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V10\Org.Sdmx.Resources.SdmxMl.Schemas.V10.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Org_Sdmx_Resources_SdmxMl_Schemas_V10BuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V10:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V10\Org.Sdmx.Resources.SdmxMl.Schemas.V10.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V10:Rebuild" Outputs="@(Org_Sdmx_Resources_SdmxMl_Schemas_V10BuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V10\Org.Sdmx.Resources.SdmxMl.Schemas.V10.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Org_Sdmx_Resources_SdmxMl_Schemas_V10BuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V10:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V10\Org.Sdmx.Resources.SdmxMl.Schemas.V10.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V21" Outputs="@(Org_Sdmx_Resources_SdmxMl_Schemas_V21BuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V21\Org.Sdmx.Resources.SdmxMl.Schemas.V21.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Org_Sdmx_Resources_SdmxMl_Schemas_V21BuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V21:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V21\Org.Sdmx.Resources.SdmxMl.Schemas.V21.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V21:Rebuild" Outputs="@(Org_Sdmx_Resources_SdmxMl_Schemas_V21BuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V21\Org.Sdmx.Resources.SdmxMl.Schemas.V21.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="Org_Sdmx_Resources_SdmxMl_Schemas_V21BuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="Org_Sdmx_Resources_SdmxMl_Schemas_V21:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\Org.Sdmx.Resources.SdmxMl.Schemas.V21\Org.Sdmx.Resources.SdmxMl.Schemas.V21.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxStructureRetrieval" Outputs="@(SdmxStructureRetrievalBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureRetrieval\SdmxStructureRetrieval.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxStructureRetrievalBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxStructureRetrieval:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureRetrieval\SdmxStructureRetrieval.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxStructureRetrieval:Rebuild" Outputs="@(SdmxStructureRetrievalBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureRetrieval\SdmxStructureRetrieval.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxStructureRetrievalBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxStructureRetrieval:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureRetrieval\SdmxStructureRetrieval.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxStructureParser" Outputs="@(SdmxStructureParserBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureParser\SdmxStructureParser.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxStructureParserBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxStructureParser:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureParser\SdmxStructureParser.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxStructureParser:Rebuild" Outputs="@(SdmxStructureParserBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureParser\SdmxStructureParser.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxStructureParserBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxStructureParser:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureParser\SdmxStructureParser.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="XObjects" Outputs="@(XObjectsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\XObjects\XObjects.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="XObjectsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="XObjects:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\XObjects\XObjects.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="XObjects:Rebuild" Outputs="@(XObjectsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\XObjects\XObjects.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="XObjectsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="XObjects:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\XObjects\XObjects.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxParseBase" Outputs="@(SdmxParseBaseBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxIo\SdmxParseBase.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxParseBaseBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxParseBase:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxIo\SdmxParseBase.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxParseBase:Rebuild" Outputs="@(SdmxParseBaseBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxIo\SdmxParseBase.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxParseBaseBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxParseBase:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxIo\SdmxParseBase.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxDataParser" Outputs="@(SdmxDataParserBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxDataParser\SdmxDataParser.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxDataParserBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxDataParser:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxDataParser\SdmxDataParser.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxDataParser:Rebuild" Outputs="@(SdmxDataParserBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxDataParser\SdmxDataParser.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxDataParserBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxDataParser:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxDataParser\SdmxDataParser.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxStructureMutableParser" Outputs="@(SdmxStructureMutableParserBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureMutableParser\SdmxStructureMutableParser.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxStructureMutableParserBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxStructureMutableParser:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureMutableParser\SdmxStructureMutableParser.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxStructureMutableParser:Rebuild" Outputs="@(SdmxStructureMutableParserBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureMutableParser\SdmxStructureMutableParser.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxStructureMutableParserBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxStructureMutableParser:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxStructureMutableParser\SdmxStructureMutableParser.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxEdiDataWriter" Outputs="@(SdmxEdiDataWriterBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxEdiDataWriter\SdmxEdiDataWriter.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxEdiDataWriterBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxEdiDataWriter:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxEdiDataWriter\SdmxEdiDataWriter.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxEdiDataWriter:Rebuild" Outputs="@(SdmxEdiDataWriterBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxEdiDataWriter\SdmxEdiDataWriter.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxEdiDataWriterBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxEdiDataWriter:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxEdiDataWriter\SdmxEdiDataWriter.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxMlConstants" Outputs="@(SdmxMlConstantsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxMlConstants\SdmxMlConstants.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxMlConstantsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxMlConstants:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxMlConstants\SdmxMlConstants.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxMlConstants:Rebuild" Outputs="@(SdmxMlConstantsBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxMlConstants\SdmxMlConstants.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxMlConstantsBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxMlConstants:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxMlConstants\SdmxMlConstants.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="TabularWriters" Outputs="@(TabularWritersBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\TabularWriters\TabularWriters.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="TabularWritersBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="TabularWriters:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\TabularWriters\TabularWriters.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="TabularWriters:Rebuild" Outputs="@(TabularWritersBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\TabularWriters\TabularWriters.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="TabularWritersBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="TabularWriters:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\TabularWriters\TabularWriters.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="ReUsingExamples" Outputs="@(ReUsingExamplesBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\ReUsingExamples\ReUsingExamples.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="ReUsingExamplesBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="ReUsingExamples:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\ReUsingExamples\ReUsingExamples.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="ReUsingExamples:Rebuild" Outputs="@(ReUsingExamplesBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\ReUsingExamples\ReUsingExamples.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="ReUsingExamplesBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="ReUsingExamples:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\ReUsingExamples\ReUsingExamples.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxQueryBuilder" Outputs="@(SdmxQueryBuilderBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxQueryBuilder\SdmxQueryBuilder.csproj'" Projects="@(ProjectReference)" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxQueryBuilderBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxQueryBuilder:Clean">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxQueryBuilder\SdmxQueryBuilder.csproj'" Projects="@(ProjectReference)" Targets="Clean" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+  <Target Name="SdmxQueryBuilder:Rebuild" Outputs="@(SdmxQueryBuilderBuildOutput)">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxQueryBuilder\SdmxQueryBuilder.csproj'" Projects="@(ProjectReference)" Targets="Rebuild" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)">
+      <Output TaskParameter="TargetOutputs" ItemName="SdmxQueryBuilderBuildOutput" />
+    </MSBuild>
+  </Target>
+  <Target Name="SdmxQueryBuilder:Publish">
+    <MSBuild Condition="'%(ProjectReference.Identity)' == 'E:\Devel\GIT\CommonAPI\sdmxsource.net_0_9_25\SdmxQueryBuilder\SdmxQueryBuilder.csproj'" Projects="@(ProjectReference)" Targets="Publish" BuildInParallel="True" ToolsVersion="$(ProjectToolsVersion)" Properties="Configuration=Release; Platform=AnyCPU;BuildingSolutionFile=true; CurrentSolutionConfigurationContents=$(CurrentSolutionConfigurationContents); SolutionDir=$(SolutionDir); SolutionExt=$(SolutionExt); SolutionFileName=$(SolutionFileName); SolutionName=$(SolutionName); SolutionPath=$(SolutionPath)" />
+  </Target>
+</Project>

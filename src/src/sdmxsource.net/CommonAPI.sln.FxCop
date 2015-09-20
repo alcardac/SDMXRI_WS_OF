@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FxCopProject Version="10.0" Name="My FxCop Project">
+ <ProjectOptions>
+  <SharedProject>True</SharedProject>
+  <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
+  <SaveMessages>
+   <Project Status="Active, Excluded, Good, Noise" NewOnly="False" />
+   <Report Status="Active, Good, Noise" NewOnly="False" />
+  </SaveMessages>
+  <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
+  <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
+  <EnableMultithreadedAnalysis>True</EnableMultithreadedAnalysis>
+  <SourceLookup>True</SourceLookup>
+  <AnalysisExceptionsThreshold>10</AnalysisExceptionsThreshold>
+  <RuleExceptionsThreshold>1</RuleExceptionsThreshold>
+  <Spelling Locale="en-US" />
+  <OverrideRuleVisibilities>False</OverrideRuleVisibilities>
+  <CustomDictionaries SearchFxCopDir="True" SearchUserProfile="True" SearchProjectDir="True" />
+  <SearchGlobalAssemblyCache>False</SearchGlobalAssemblyCache>
+  <DeadlockDetectionTimeout>120</DeadlockDetectionTimeout>
+  <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
+ </ProjectOptions>
+ <Targets>
+  <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/SdmxAPI/bin/Debug/</Directory>
+   <Directory>$(ProjectDir)/SdmxAPI/bin/Debug/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/SdmxAPI/bin/DebugTest/SdmxApi.dll" Analyze="True" AnalyzeAllChildren="True" />
+ </Targets>
+ <Rules>
+  <RuleFiles>
+   <RuleFile Name="$(FxCopDir)\Rules\DesignRules.dll" Enabled="True" AllRulesEnabled="False">
+    <Rule Name="AbstractTypesShouldNotHaveConstructors" Enabled="True" />
+    <Rule Name="AvoidEmptyInterfaces" Enabled="True" />
+    <Rule Name="AvoidExcessiveParametersOnGenericTypes" Enabled="True" />
+    <Rule Name="AvoidOutParameters" Enabled="True" />
+    <Rule Name="CollectionsShouldImplementGenericInterface" Enabled="True" />
+    <Rule Name="ConsiderPassingBaseTypesAsParameters" Enabled="True" />
+    <Rule Name="DeclareEventHandlersCorrectly" Enabled="True" />
+    <Rule Name="DeclareTypesInNamespaces" Enabled="True" />
+    <Rule Name="DefaultParametersShouldNotBeUsed" Enabled="True" />
+    <Rule Name="DefineAccessorsForAttributeArguments" Enabled="True" />
+    <Rule Name="DoNotCatchGeneralExceptionTypes" Enabled="True" />
+    <Rule Name="DoNotDeclareProtectedMembersInSealedTypes" Enabled="True" />
+    <Rule Name="DoNotDeclareStaticMembersOnGenericTypes" Enabled="True" />
+    <Rule Name="DoNotDeclareVirtualMembersInSealedTypes" Enabled="True" />
+    <Rule Name="DoNotDeclareVisibleInstanceFields" Enabled="True" />
+    <Rule Name="DoNotExposeGenericLists" Enabled="True" />
+    <Rule Name="DoNotHideBaseClassMethods" Enabled="True" />
+    <Rule Name="DoNotNestGenericTypesInMemberSignatures" Enabled="True" />
+    <Rule Name="DoNotOverloadOperatorEqualsOnReferenceTypes" Enabled="True" />
+    <Rule Name="DoNotPassTypesByReference" Enabled="True" />
+    <Rule Name="DoNotRaiseExceptionsInUnexpectedLocations" Enabled="True" />
+    <Rule Name="EnumeratorsShouldBeStronglyTyped" Enabled="True" />
+    <Rule Name="EnumsShouldHaveZeroValue" Enabled="True" />
+    <Rule Name="EnumStorageShouldBeInt32" Enabled="True" />
+    <Rule Name="ExceptionsShouldBePublic" Enabled="True" />
+    <Rule Name="GenericMethodsShouldProvideTypeParameter" Enabled="True" />
+    <Rule Name="ICollectionImplementationsHaveStronglyTypedMembers" Enabled="True" />
+    <Rule Name="ImplementIDisposableCorrectly" Enabled="True" />
+    <Rule Name="ImplementStandardExceptionConstructors" Enabled="True" />
+    <Rule Name="IndexersShouldNotBeMultidimensional" Enabled="True" />
+    <Rule Name="InterfaceMethodsShouldBeCallableByChildTypes" Enabled="True" />
+    <Rule Name="ListsAreStronglyTyped" Enabled="True" />
+    <Rule Name="MarkAssembliesWithAssemblyVersion" Enabled="True" />
+    <Rule Name="MarkAssembliesWithClsCompliant" Enabled="True" />
+    <Rule Name="MarkAssembliesWithComVisible" Enabled="True" />
+    <Rule Name="MarkAttributesWithAttributeUsage" Enabled="True" />
+    <Rule Name="MarkEnumsWithFlags" Enabled="True" />
+    <Rule Name="MembersShouldNotExposeCertainConcreteTypes" Enabled="True" />
+    <Rule Name="MovePInvokesToNativeMethodsClass" Enabled="True" />
+    <Rule Name="NestedTypesShouldNotBeVisible" Enabled="True" />
+    <Rule Name="OverloadOperatorEqualsOnOverloadingAddAndSubtract" Enabled="True" />
+    <Rule Name="OverrideMethodsOnComparableTypes" Enabled="True" />
+    <Rule Name="PropertiesShouldNotBeWriteOnly" Enabled="True" />
+    <Rule Name="ProvideObsoleteAttributeMessage" Enabled="True" />
+    <Rule Name="ReplaceRepetitiveArgumentsWithParamsArray" Enabled="True" />
+    <Rule Name="StaticHolderTypesShouldBeSealed" Enabled="True" />
+    <Rule Name="StaticHolderTypesShouldNotHaveConstructors" Enabled="True" />
+    <Rule Name="StringUriOverloadsCallSystemUriOverloads" Enabled="True" />
+    <Rule Name="TypesShouldNotExtendCertainBaseTypes" Enabled="True" />
+    <Rule Name="TypesThatOwnDisposableFieldsShouldBeDisposable" Enabled="True" />
+    <Rule Name="TypesThatOwnNativeResourcesShouldBeDisposable" Enabled="True" />
+    <Rule Name="UriParametersShouldNotBeStrings" Enabled="True" />
+    <Rule Name="UriPropertiesShouldNotBeStrings" Enabled="True" />
+    <Rule Name="UriReturnValuesShouldNotBeStrings" Enabled="True" />
+    <Rule Name="UseEventsWhereAppropriate" Enabled="True" />
+    <Rule Name="UseGenericEventHandlerInstances" Enabled="True" />
+    <Rule Name="UseGenericsWhereAppropriate" Enabled="True" />
+    <Rule Name="UseIntegralOrStringArgumentForIndexers" Enabled="True" />
+    <Rule Name="UsePropertiesWhereAppropriate" Enabled="True" />
+   </RuleFile>
+   <RuleFile Name="$(FxCopDir)\Rules\GlobalizationRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\InteroperabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\MobilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\NamingRules.dll" Enabled="False" AllRulesEnabled="False" />
+   <RuleFile Name="$(FxCopDir)\Rules\PerformanceRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\PortabilityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\SecurityTransparencyRules.dll" Enabled="True" AllRulesEnabled="True" />
+   <RuleFile Name="$(FxCopDir)\Rules\UsageRules.dll" Enabled="True" AllRulesEnabled="True" />
+  </RuleFiles>
+  <Groups />
+  <Settings />
+ </Rules>
+ <FxCopReport Version="10.0">
+  <Targets>
+   <Target Name="$(ProjectDir)/SdmxAPI/bin/DebugTest/SdmxApi.dll">
+    <Modules>
+     <Module Name="sdmxapi.dll">
+      <Namespaces>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Constants">
+        <Types>
+         <Type Name="SdmxConstants">
+          <Members>
+           <Member Name="#GetSchemaName(System.String)">
+            <Messages>
+             <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'schemaUri'</Item>
+               <Item>'SdmxConstants.GetSchemaName(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GetSchemaVersion(System.String)">
+            <Messages>
+             <Message TypeName="StringUriOverloadsCallSystemUriOverloads" Category="Microsoft.Design" CheckId="CA1057" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'SdmxConstants.GetSchemaVersion(string)'</Item>
+               <Item>'uri'</Item>
+               <Item>'SdmxConstants.GetSchemaVersion(Uri)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#IsKnownNamespace(System.String)">
+            <Messages>
+             <Message TypeName="StringUriOverloadsCallSystemUriOverloads" Category="Microsoft.Design" CheckId="CA1057" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'SdmxConstants.IsKnownNamespace(string)'</Item>
+               <Item>'uri'</Item>
+               <Item>'SdmxConstants.IsKnownNamespace(Uri)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="SdmxStructureType">
+          <Members>
+           <Member Name="#UrnClass">
+            <Messages>
+             <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'SdmxStructureType.UrnClass'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UrnPackage">
+            <Messages>
+             <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'SdmxStructureType.UrnPackage'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#UrnPrefix">
+            <Messages>
+             <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'SdmxStructureType.UrnPrefix'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#V2UrnPrefix">
+            <Messages>
+             <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'SdmxStructureType.V2UrnPrefix'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="StructureQueryDetail">
+          <Members>
+           <Member Name="#ParseString(System.String)">
+            <Messages>
+             <Message TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308" Created="2014-05-09 14:29:27Z">
+              <Issue Name="ToUpperInvariant">
+               <Item>'StructureQueryDetail.ParseString(string)'</Item>
+               <Item>'string.ToLowerInvariant()'</Item>
+              </Issue>
+              <Issue Name="ToUpperInvariant">
+               <Item>'StructureQueryDetail.ParseString(string)'</Item>
+               <Item>'string.ToLowerInvariant()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="StructureReferenceDetail">
+          <Members>
+           <Member Name="#ParseString(System.String)">
+            <Messages>
+             <Message TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308" Created="2014-05-09 14:29:27Z">
+              <Issue Name="ToUpperInvariant">
+               <Item>'StructureReferenceDetail.ParseString(string)'</Item>
+               <Item>'string.ToLowerInvariant()'</Item>
+              </Issue>
+              <Issue Name="ToUpperInvariant">
+               <Item>'StructureReferenceDetail.ParseString(string)'</Item>
+               <Item>'string.ToLowerInvariant()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Engine">
+        <Types>
+         <Type Name="ISchemaWriterEngine">
+          <Members>
+           <Member Name="#GenerateCrossSectionalSchema(System.IO.Stream,Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.DataStructure.IDataStructureObjectBase,System.String,System.String,System.Collections.Generic.IDictionary`2&lt;System.String,System.Collections.Generic.ISet`1&lt;System.String&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'ISchemaWriterEngine.GenerateCrossSectionalSchema(Stream, IDataStructureObjectBase, string, string, IDictionary&lt;string, ISet&lt;string&gt;&gt;)'</Item>
+               <Item>'IDictionary&lt;string, ISet&lt;string&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GenerateSchema(System.IO.Stream,Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.DataStructure.IDataStructureObjectBase,System.String,System.Collections.Generic.IDictionary`2&lt;System.String,System.Collections.Generic.ISet`1&lt;System.String&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'ISchemaWriterEngine.GenerateSchema(Stream, IDataStructureObjectBase, string, IDictionary&lt;string, ISet&lt;string&gt;&gt;)'</Item>
+               <Item>'IDictionary&lt;string, ISet&lt;string&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Exception">
+        <Types>
+         <Type Name="BaseCheckedException">
+          <Messages>
+           <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Created="2014-05-09 14:29:27Z">
+            <Issue>
+             <Item>'BaseCheckedException'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="SdmxException">
+          <Members>
+           <Member Name="#Message">
+            <Accessors>
+             <Accessor Name="#get_Message()">
+              <Messages>
+               <Message Id="Org.Sdmxsource.Sdmx.Api.Exception.SdmxException.GetMessage(System.Exception,System.String,System.Object[])" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Created="2014-05-09 14:29:27Z">
+                <Issue>
+                 <Item>'SdmxException.GetMessage(Exception, string, object[])'</Item>
+                 <Item>'SdmxException.Message.get()'</Item>
+                 <Item>'SdmxException.GetMessage(Exception, string, object[], CultureInfo)'</Item>
+                </Issue>
+               </Message>
+              </Messages>
+             </Accessor>
+            </Accessors>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Factory">
+        <Types>
+         <Type Name="IWriteableDataLocationFactory">
+          <Members>
+           <Member Name="#GetTemporaryWriteableDataLocation()">
+            <Messages>
+             <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Created="2014-05-09 14:29:27Z">
+              <Issue Certainty="50">
+               <Item>'IWriteableDataLocationFactory.GetTemporaryWriteableDataLocation()'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Manager.Output">
+        <Types>
+         <Type Name="ISchemaWriterManager">
+          <Members>
+           <Member Name="#GenerateCrossSectionalSchema(System.IO.Stream,Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.DataStructure.IDataStructureObjectBase,Org.Sdmxsource.Sdmx.Api.Model.Format.ISchemaFormat,System.String,System.String,System.Collections.Generic.IDictionary`2&lt;System.String,System.Collections.Generic.ISet`1&lt;System.String&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'ISchemaWriterManager.GenerateCrossSectionalSchema(Stream, IDataStructureObjectBase, ISchemaFormat, string, string, IDictionary&lt;string, ISet&lt;string&gt;&gt;)'</Item>
+               <Item>'IDictionary&lt;string, ISet&lt;string&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#GenerateSchema(System.IO.Stream,Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.DataStructure.IDataStructureObjectBase,Org.Sdmxsource.Sdmx.Api.Model.Format.ISchemaFormat,System.String,System.Collections.Generic.IDictionary`2&lt;System.String,System.Collections.Generic.ISet`1&lt;System.String&gt;&gt;)">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'ISchemaWriterManager.GenerateSchema(Stream, IDataStructureObjectBase, ISchemaFormat, string, IDictionary&lt;string, ISet&lt;string&gt;&gt;)'</Item>
+               <Item>'IDictionary&lt;string, ISet&lt;string&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Model">
+        <Types>
+         <Type Name="IErrorFormat">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Created="2014-05-09 14:29:27Z">
+            <Issue>
+             <Item>'IErrorFormat'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Model.BaseObjects.DataStructure">
+        <Types>
+         <Type Name="IDataStructureObjectBase">
+          <Members>
+           <Member Name="#DataStructureObject">
+            <Messages>
+             <Message TypeName="ProvideObsoleteAttributeMessage" Category="Microsoft.Design" CheckId="CA1041" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'IDataStructureObjectBase.DataStructureObject'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Model.Format">
+        <Types>
+         <Type Name="IDataQueryFormat`1">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Created="2014-05-09 14:29:27Z">
+            <Issue>
+             <Item>'IDataQueryFormat&lt;T&gt;'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+         <Type Name="IStructureQueryFormat`1">
+          <Messages>
+           <Message TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040" Created="2014-05-09 14:29:27Z">
+            <Issue>
+             <Item>'IStructureQueryFormat&lt;T&gt;'</Item>
+            </Issue>
+           </Message>
+          </Messages>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.Base">
+        <Types>
+         <Type Name="IAnnotableMutableObject">
+          <Members>
+           <Member Name="#AddAnnotation(System.String,System.String,System.String)">
+            <Messages>
+             <Message Id="2#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'url'</Item>
+               <Item>'IAnnotableMutableObject.AddAnnotation(string, string, string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+         <Type Name="IContactMutableObject">
+          <Members>
+           <Member Name="#AddUri(System.String)">
+            <Messages>
+             <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'uri'</Item>
+               <Item>'IContactMutableObject.AddUri(string)'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.CategoryScheme">
+        <Types>
+         <Type Name="IReportingCategoryMutableObject">
+          <Members>
+           <Member Name="#ProvisioningMetadata">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'IReportingCategoryMutableObject.ProvisioningMetadata'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#StructuralMetadata">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'IReportingCategoryMutableObject.StructuralMetadata'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Model.Mutable.Mapping">
+        <Types>
+         <Type Name="IRelatedStructuresMutableObject">
+          <Members>
+           <Member Name="#CategorySchemeRef">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'IRelatedStructuresMutableObject.CategorySchemeRef'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#ConceptSchemeRef">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'IRelatedStructuresMutableObject.ConceptSchemeRef'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#DataStructureRef">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'IRelatedStructuresMutableObject.DataStructureRef'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#HierCodelistRef">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'IRelatedStructuresMutableObject.HierCodelistRef'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#MetadataStructureRef">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'IRelatedStructuresMutableObject.MetadataStructureRef'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+           <Member Name="#OrgSchemeRef">
+            <Messages>
+             <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'IRelatedStructuresMutableObject.OrgSchemeRef'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+       <Namespace Name="Org.Sdmxsource.Sdmx.Api.Model.Query">
+        <Types>
+         <Type Name="IRestDataQuery">
+          <Members>
+           <Member Name="#QueryList">
+            <Messages>
+             <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Created="2014-05-09 14:29:27Z">
+              <Issue>
+               <Item>'IRestDataQuery.QueryList'</Item>
+               <Item>'IList&lt;ISet&lt;string&gt;&gt;'</Item>
+              </Issue>
+             </Message>
+            </Messages>
+           </Member>
+          </Members>
+         </Type>
+        </Types>
+       </Namespace>
+      </Namespaces>
+     </Module>
+    </Modules>
+   </Target>
+  </Targets>
+  <Rules>
+   <Rule TypeName="AvoidEmptyInterfaces" Category="Microsoft.Design" CheckId="CA1040">
+    <Resolution Name="Default">Define a custom attribute to replace {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+    <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   </Rule>
+   <Rule TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006">
+    <Resolution Name="Default">Consider a design where {0} doesn't nest generic type {1}.</Resolution>
+   </Rule>
+   <Rule TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240">
+    <Resolution Name="Default">Add an implementation of GetObjectData to type {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="NormalizeStringsToUppercase" Category="Microsoft.Globalization" CheckId="CA1308">
+    <Resolution Name="ToUpperInvariant">In method {0}, replace the call to {1} with String.ToUpperInvariant().</Resolution>
+   </Rule>
+   <Rule TypeName="ProvideObsoleteAttributeMessage" Category="Microsoft.Design" CheckId="CA1041">
+    <Resolution Name="Default">Provide a message for the ObsoleteAttribute that marks {0}.</Resolution>
+   </Rule>
+   <Rule TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304">
+    <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   </Rule>
+   <Rule TypeName="StringUriOverloadsCallSystemUriOverloads" Category="Microsoft.Design" CheckId="CA1057">
+    <Resolution Name="Default">Refactor {0} so that it builds a System.Uri object from {1}, and then calls {2}.</Resolution>
+   </Rule>
+   <Rule TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054">
+    <Resolution Name="Default">Change the type of parameter {0} of method {1} from string to System.Uri, or provide an overload of {1}, that allows {0} to be passed as a System.Uri object.</Resolution>
+   </Rule>
+   <Rule TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056">
+    <Resolution Name="Default">Change the type of property {0} from string to System.Uri.</Resolution>
+   </Rule>
+   <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+    <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   </Rule>
+  </Rules>
+ </FxCopReport>
+</FxCopProject>

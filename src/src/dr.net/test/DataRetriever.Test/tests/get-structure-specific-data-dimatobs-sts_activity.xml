@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<message:StructureSpecificDataQuery xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message SDMXMessage.xsd" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:query="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<message:Header>
+		<message:ID>ID0</message:ID>
+		<message:Test>false</message:Test>
+		<message:Prepared>2006-05-04T18:13:51.0Z</message:Prepared>
+		<message:Sender id="id0"/>
+		<message:Receiver id="id1"/>
+	</message:Header>
+	<message:Query>
+		<query:ReturnDetails>
+			<query:Structure dimensionAtObservation="STS_ACTIVITY" structureID="DEMO">
+				<common:Structure>
+					<Ref agencyID="ESTAT" id="STS" version="3.1"/>
+				</common:Structure>
+			</query:Structure>
+		</query:ReturnDetails>
+		<query:DataWhere>
+			<query:Dataflow>
+				<Ref agencyID="ESTAT" id="SSTSCONS_PROD_A"/>
+			</query:Dataflow>
+			<query:DimensionValue>
+				<query:ID>AREA</query:ID>
+				<query:Value>IT</query:Value>
+			</query:DimensionValue>
+			<query:TimeDimensionValue>
+				<query:TimeValue operator="lessThanOrEqual">2012</query:TimeValue>
+			</query:TimeDimensionValue>
+			<query:Or>
+				<query:PrimaryMeasureValue>
+					<query:ID>OBS_VALUE</query:ID>
+					<query:NumericValue operator="lessThan">50455</query:NumericValue>
+				</query:PrimaryMeasureValue>
+			</query:Or>
+			<query:Or>
+				<query:DimensionValue>
+					<query:ID>STS_ACTIVITY</query:ID>
+					<query:Value>NS0020</query:Value>
+				</query:DimensionValue>
+				<query:DimensionValue>
+					<query:ID>STS_ACTIVITY</query:ID>
+					<query:Value>NS0030</query:Value>
+				</query:DimensionValue>
+			</query:Or>
+		</query:DataWhere>
+	</message:Query>
+</message:StructureSpecificDataQuery>
+

@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{925F2A0D-1919-4639-A7BB-6FF128EA6BF2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Estat.Sri.Ws.Controllers</RootNamespace>
+    <AssemblyName>Controllers</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataRetriever">
+      <HintPath>..\..\..\..\lib\DataRetriever.dll</HintPath>
+    </Reference>
+    <Reference Include="edtFTPnet, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4b0c991f43097782">
+      <HintPath>..\..\..\..\lib\edtFTPnet.dll</HintPath>
+    </Reference>
+    <Reference Include="EstatSdmxSourceExtension">
+      <HintPath>..\..\..\..\lib\EstatSdmxSourceExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="EstatSdmxSourceExtension.CustomRequests">
+      <HintPath>..\..\..\..\lib\EstatSdmxSourceExtension.CustomRequests.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MappingStoreRetrieval">
+      <HintPath>..\..\..\..\lib\MappingStoreRetrieval.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V10">
+      <HintPath>..\..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V10.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V20">
+      <HintPath>..\..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V21">
+      <HintPath>..\..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll</HintPath>
+    </Reference>
+    <Reference Include="PcAxis">
+      <HintPath>..\..\..\..\lib\PcAxis.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxApi">
+      <HintPath>..\..\..\..\lib\SdmxApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxDataParser">
+      <HintPath>..\..\..\..\lib\SdmxDataParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxEdiParser">
+      <HintPath>..\..\..\..\lib\SdmxEdiParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxObjects">
+      <HintPath>..\..\..\..\lib\SdmxObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxParseBase">
+      <HintPath>..\..\..\..\lib\SdmxParseBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxQueryBuilder">
+      <HintPath>..\..\..\..\lib\SdmxQueryBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxSourceUtil">
+      <HintPath>..\..\..\..\lib\SdmxSourceUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureMutableParser">
+      <HintPath>..\..\..\..\lib\SdmxStructureMutableParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureParser">
+      <HintPath>..\..\..\..\lib\SdmxStructureParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureRetrieval">
+      <HintPath>..\..\..\..\lib\SdmxStructureRetrieval.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxXmlConstants">
+      <HintPath>..\..\..\..\lib\SdmxXmlConstants.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureRetriever">
+      <HintPath>..\..\..\..\lib\StructureRetriever.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TabularWriters">
+      <HintPath>..\..\..\..\lib\TabularWriters.dll</HintPath>
+    </Reference>
+    <Reference Include="Xml.Schema.Linq">
+      <HintPath>..\..\..\..\lib\Xml.Schema.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builder\ControllerBuilder.cs" />
+    <Compile Include="Builder\MessageFaultSoapv20Builder.cs" />
+    <Compile Include="Builder\MessageFaultSoapv21Builder.cs" />
+    <Compile Include="Builder\CrossDataWriterBuilder.cs" />
+    <Compile Include="Builder\DataWriterBuilder.cs" />
+    <Compile Include="Builder\IWriterBuilder.cs" />
+    <Compile Include="Builder\SoapFaultExceptionBuilder.cs" />
+    <Compile Include="Builder\StructureBuilder.cs" />
+    <Compile Include="Builder\WebFaultExceptionRestBuilder.cs" />
+    <Compile Include="Constants\FaultCode.cs" />
+    <Compile Include="Constants\HeaderSettings.cs" />
+    <Compile Include="Constants\HeaderSettings.Designer.cs">
+      <DependentUpon>HeaderSettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Constants\SdmxV20Errors.cs" />
+    <Compile Include="Constants\SettingsConstants.cs" />
+    <Compile Include="Constants\SoapOperation.cs" />
+    <Compile Include="Constants\SoapOperationResponse.cs" />
+    <Compile Include="Constants\WebServiceEndpoint.cs" />
+    <Compile Include="Controller\AdvancedDataController.cs" />
+    <Compile Include="Controller\AdvancedDataResponseGenerator.cs" />
+    <Compile Include="Controller\DataControllerBase.cs" />
+    <Compile Include="Controller\DataRequestValidator.cs" />
+    <Compile Include="Controller\IController.cs" />
+    <Compile Include="Controller\IDataRequestValidator.cs" />
+    <Compile Include="Controller\IResponseGenerator.cs" />
+    <Compile Include="Controller\IStreamController.cs" />
+    <Compile Include="Controller\QueryStructureController.cs" />
+    <Compile Include="Controller\SimpleCrossDataResponseGenerator.cs" />
+    <Compile Include="Controller\SimpleDataController.cs" />
+    <Compile Include="Controller\SimpleDataResponseGenerator.cs" />
+    <Compile Include="Controller\StreamController.cs" />
+    <Compile Include="Controller\StructureRequestRestController.cs" />
+    <Compile Include="Controller\StructureRequestV20Controller.cs" />
+    <Compile Include="Controller\StructureRequestV21AdvancedController.cs" />
+    <Compile Include="Controller\StructureResponseGenerator.cs" />
+    <Compile Include="Engine\DelayedCrossWriterEngine.cs" />
+    <Compile Include="Engine\DelayedDataWriterEngine.cs" />
+    <Compile Include="Extension\InputExtension.cs" />
+    <Compile Include="Extension\SdmxErrorExtension.cs" />
+    <Compile Include="Extension\WriterExtension.cs" />
+    <Compile Include="Manager\SettingsManager.cs" />
+    <Compile Include="Model\SdmxFault.cs" />
+    <Compile Include="Model\SdmxMessageFault.cs" />
+    <Compile Include="Model\SdmxMessageSoap.cs" />
+    <Compile Include="Model\SdmxMessageBase.cs" />
+    <Compile Include="Model\SdmxMessageRest.cs" />
+    <Compile Include="Model\WebServiceInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\AuthModule\Estat.Nsi.AuthModule.csproj">
+      <Project>{fa5e8aa2-8e62-49a3-bbca-7cbef6f31b04}</Project>
+      <Name>Estat.Nsi.AuthModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SdmxSoapExtension\SdmxSoapValidatorExtension.csproj">
+      <Project>{15567B17-4694-4C26-B4E5-6B9CE2915D75}</Project>
+      <Name>SdmxSoapValidatorExtension</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Constants\HeaderSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>HeaderSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureSpecificDataQuery xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>IDREF1</ID>
+    <Test>false</Test>
+    <Prepared>2014-06-03T17:17:55.2301578+03:00</Prepared>
+    <Sender id="Unknown" />
+    <Receiver id="Unknown" />
+  </Header>
+  <Query>
+    <ReturnDetails detail="Full" observationAction="Active" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query">
+      <Structure dimensionAtObservation="TIME_PERIOD" structureID="StructureId">
+        <Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">
+          <Ref agencyID="IT1" id="161_Economic_Performance" version="1.0" xmlns="" />
+        </Structure>
+      </Structure>
+    </ReturnDetails>
+    <DataWhere xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query">
+      <Dataflow>
+        <Ref agencyID="IT1" id="161_267" version="1.0" xmlns="" />
+      </Dataflow>
+      <TimeDimensionValue>
+        <TimeValue operator="greaterThanOrEqual">2008-01-01</TimeValue>
+        <TimeValue operator="lessThanOrEqual">2008-01-01</TimeValue>
+      </TimeDimensionValue>
+      <Or>
+        <DimensionValue>
+          <ID>ACTIVITY2007</ID>
+          <Value operator="equal">05</Value>
+        </DimensionValue>
+      </Or>
+    </DataWhere>
+  </Query>
+</StructureSpecificDataQuery>

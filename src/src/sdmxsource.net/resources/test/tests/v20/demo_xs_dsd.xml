@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegistryInterface xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message SDMXMessage.xsd" xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:registry="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/registry" xmlns:common="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common" xmlns:generic="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/generic" xmlns:query="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:structure="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header>
+    <ID>IDREF802ad4d7-9b4a-4af8-9fc9-d2a696ccd355</ID>
+    <Test>false</Test>
+    <Prepared>2014-11-19T13:01:14</Prepared>
+    <Sender id="unknown" />
+  </Header>
+  <QueryStructureResponse>
+    <registry:StatusMessage status="Success" />
+    <registry:KeyFamilies>
+      <structure:KeyFamily id="DEMOGRAPHY" urn="urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ESTAT:DEMOGRAPHY(2.1)" version="2.1" agencyID="ESTAT" isFinal="true">
+        <structure:Name xml:lang="en">Demography Rapid Questionnaire Data Structure Definition</structure:Name>
+        <structure:Components>
+          <structure:Dimension isFrequencyDimension="true" conceptRef="FREQ" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" codelist="CL_FREQ" codelistVersion="1.0" codelistAgency="ESTAT" crossSectionalAttachGroup="true" />
+          <structure:Dimension conceptRef="COUNTRY" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" codelist="CL_COUNTRY" codelistVersion="1.1" codelistAgency="ESTAT" crossSectionalAttachGroup="true" />
+          <structure:Dimension conceptRef="SEX" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" codelist="CL_SEX" codelistVersion="1.1" codelistAgency="ESTAT" crossSectionalAttachObservation="true" />
+          <structure:Dimension isMeasureDimension="true" conceptRef="DEMO" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" codelist="CL_DEMO" codelistVersion="1.0" codelistAgency="ESTAT" />
+          <structure:TimeDimension conceptRef="TIME" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0">
+            <structure:TextFormat />
+          </structure:TimeDimension>
+          <structure:PrimaryMeasure conceptRef="OBS_VALUE" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" />
+          <structure:CrossSectionalMeasure conceptRef="PJANT" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="PJANT" />
+          <structure:CrossSectionalMeasure conceptRef="LBIRTHST" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="LBIRTHST" />
+          <structure:CrossSectionalMeasure conceptRef="DEATHST" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="DEATHST" />
+          <structure:CrossSectionalMeasure conceptRef="ADJT" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="ADJT" />
+          <structure:CrossSectionalMeasure conceptRef="PJAN1T" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="PJAN1T" />
+          <structure:CrossSectionalMeasure conceptRef="LBIRTHOUT" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="LBIRTHOUT" />
+          <structure:CrossSectionalMeasure conceptRef="DEATHUN1" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="DEATHUN1" />
+          <structure:CrossSectionalMeasure conceptRef="MAR" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="MAR" />
+          <structure:CrossSectionalMeasure conceptRef="DIV" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="DIV" />
+          <structure:CrossSectionalMeasure conceptRef="IMMIT" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="IMMIT" />
+          <structure:CrossSectionalMeasure conceptRef="EMIGT" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="EMIGT" />
+          <structure:CrossSectionalMeasure conceptRef="NETMT" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="NETMT" />
+          <structure:CrossSectionalMeasure conceptRef="TFRNSI" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="TFRNSI" />
+          <structure:CrossSectionalMeasure conceptRef="LEXPNSIT" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" measureDimension="DEMO" code="LEXPNSIT" />
+          <structure:Attribute conceptRef="TAB_NUM" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" crossSectionalAttachDataSet="true" attachmentLevel="DataSet" assignmentStatus="Mandatory" />
+          <structure:Attribute conceptRef="REV_NUM" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" crossSectionalAttachDataSet="true" attachmentLevel="DataSet" assignmentStatus="Mandatory" />
+          <structure:Attribute conceptRef="UNIT_MULT" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" codelist="CL_UNIT_MULT" codelistVersion="1.0" codelistAgency="ESTAT" crossSectionalAttachSection="true" attachmentLevel="Series" assignmentStatus="Mandatory" />
+          <structure:Attribute conceptRef="DECI" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" codelist="CL_DECI" codelistVersion="1.0" codelistAgency="ESTAT" crossSectionalAttachSection="true" attachmentLevel="Series" assignmentStatus="Mandatory" />
+          <structure:Attribute conceptRef="TIME_FORMAT" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" codelist="CL_TIME_FORMAT" codelistVersion="1.0" codelistAgency="ESTAT" crossSectionalAttachGroup="true" attachmentLevel="Series" assignmentStatus="Mandatory" />
+          <structure:Attribute conceptRef="UNIT" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" codelist="CL_UNIT" codelistVersion="1.0" codelistAgency="ESTAT" crossSectionalAttachSection="true" attachmentLevel="Series" assignmentStatus="Mandatory" />
+          <structure:Attribute conceptRef="OBS_STATUS" conceptSchemeRef="DEMO_CONCEPTS" conceptSchemeAgency="ESTAT" conceptSchemeVersion="2.0" codelist="CL_OBS_STATUS" codelistVersion="1.0" codelistAgency="ESTAT" crossSectionalAttachObservation="true" attachmentLevel="Observation" assignmentStatus="Conditional" />
+        </structure:Components>
+      </structure:KeyFamily>
+    </registry:KeyFamilies>
+  </QueryStructureResponse>
+</RegistryInterface>

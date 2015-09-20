@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PcAxis</name>
+    </assembly>
+    <members>
+        <member name="M:org.estat.PcAxis.PcAxis.createCodesValuesPairs(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Populate a map between the specified codes and values of the specified column
+            </summary>
+            <param name="column">The key column. It must be the key used for values and codes maps.</param>
+            <param name="values">The key columns to list of values map</param>
+            <param name="codes">The key columns to list of codes map</param>
+            <param name="codeValuePairs">The map to populate</param>
+        </member>
+        <member name="P:org.estat.PcAxis.PcAxis.DataPreviewRows">
+            <summary>
+            The number of rows to show when <see cref="F:org.estat.PcAxis.PcAxisProvider.PcAxisConnection.DataPreviewOnly"/> is set to true
+            </summary>
+        </member>
+        <member name="F:org.estat.PcAxis.PcAxisProvider.PcAxisConnection.tempDir">
+            <summary>
+            the directory in which sqlite files will be saved.
+            </summary>
+        </member>
+        <member name="F:org.estat.PcAxis.PcAxisProvider.PcAxisConnection._tempFileCollection">
+            <summary>
+            The temporary file collection
+            </summary>
+        </member>
+        <member name="M:org.estat.PcAxis.PcAxisProvider.PcAxisConnection.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:System.ComponentModel.Component"/> and optionally releases the managed resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources. 
+            </param>
+        </member>
+        <member name="P:org.estat.PcAxis.PcAxisProvider.PcAxisConnection.TempDir">
+            <summary>
+            Gets or sets the directory in which sqlite files will be saved.
+            </summary>
+        </member>
+        <member name="P:org.estat.PcAxis.PcAxisProvider.PcAxisConnection.UseMemory">
+            <summary>
+            Gets or sets a value indicating whether to use in memory sqlite or not
+            </summary>
+        </member>
+        <member name="P:org.estat.PcAxis.PcAxisProvider.PcAxisConnection.DataPreviewRows">
+            <summary>
+            The number of rows to show when <see cref="F:org.estat.PcAxis.PcAxisProvider.PcAxisConnection.DataPreviewOnly"/> is set to true
+            </summary>
+        </member>
+        <member name="T:org.estat.PcAxis.TupleIterator">
+            This class is an iterator over all tuples in a finite cartesian product 
+            of finite sets.  Some special cases: if the number of sets passed in is 
+            zero, then the Cartesian product contains one element, the empty tuple.  
+            If an empty set is passed in, then the Cartesian product is empty.  
+        </member>
+        <member name="F:org.estat.PcAxis.TupleIterator.cartproduct">
+            A List of Collections. 
+        </member>
+        <member name="F:org.estat.PcAxis.TupleIterator.currstate">
+            A List of iterators storing the tuple-iterator's state. 
+        </member>
+        <member name="M:org.estat.PcAxis.TupleIterator.MoveNext">
+            Returns true if there are any more elements in the Cartesian product 
+            to return.  
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:org.estat.PcAxis.TupleIterator.Current" -->
+    </members>
+</doc>

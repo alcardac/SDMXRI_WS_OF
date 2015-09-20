@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B9287F61-845E-4F4B-8C63-9D8616A2C46A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRest", "tests\TestRest\TestRest.csproj", "{8F4C5084-66A3-4926-8C21-EECD8F31E247}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWsSoap", "tests\TestWsSoap\TestWsSoap.csproj", "{5019D071-6ECC-4261-BF82-B807F98179F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "src\Controllers\Controllers.csproj", "{925F2A0D-1919-4639-A7BB-6FF128EA6BF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Estat.Nsi.AuthModule", "src\AuthModule\Estat.Nsi.AuthModule.csproj", "{FA5E8AA2-8E62-49A3-BBCA-7CBEF6F31B04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdmxSoapValidatorExtension", "src\SdmxSoapExtension\SdmxSoapValidatorExtension.csproj", "{15567B17-4694-4C26-B4E5-6B9CE2915D75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F4C5084-66A3-4926-8C21-EECD8F31E247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4C5084-66A3-4926-8C21-EECD8F31E247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4C5084-66A3-4926-8C21-EECD8F31E247}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8F4C5084-66A3-4926-8C21-EECD8F31E247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4C5084-66A3-4926-8C21-EECD8F31E247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F4C5084-66A3-4926-8C21-EECD8F31E247}.Release|x86.ActiveCfg = Release|Any CPU
+		{5019D071-6ECC-4261-BF82-B807F98179F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5019D071-6ECC-4261-BF82-B807F98179F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5019D071-6ECC-4261-BF82-B807F98179F8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5019D071-6ECC-4261-BF82-B807F98179F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5019D071-6ECC-4261-BF82-B807F98179F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5019D071-6ECC-4261-BF82-B807F98179F8}.Release|x86.ActiveCfg = Release|Any CPU
+		{925F2A0D-1919-4639-A7BB-6FF128EA6BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925F2A0D-1919-4639-A7BB-6FF128EA6BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925F2A0D-1919-4639-A7BB-6FF128EA6BF2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{925F2A0D-1919-4639-A7BB-6FF128EA6BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925F2A0D-1919-4639-A7BB-6FF128EA6BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925F2A0D-1919-4639-A7BB-6FF128EA6BF2}.Release|x86.ActiveCfg = Release|Any CPU
+		{FA5E8AA2-8E62-49A3-BBCA-7CBEF6F31B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA5E8AA2-8E62-49A3-BBCA-7CBEF6F31B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA5E8AA2-8E62-49A3-BBCA-7CBEF6F31B04}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FA5E8AA2-8E62-49A3-BBCA-7CBEF6F31B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA5E8AA2-8E62-49A3-BBCA-7CBEF6F31B04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA5E8AA2-8E62-49A3-BBCA-7CBEF6F31B04}.Release|x86.ActiveCfg = Release|Any CPU
+		{15567B17-4694-4C26-B4E5-6B9CE2915D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15567B17-4694-4C26-B4E5-6B9CE2915D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15567B17-4694-4C26-B4E5-6B9CE2915D75}.Debug|x86.ActiveCfg = Debug|x86
+		{15567B17-4694-4C26-B4E5-6B9CE2915D75}.Debug|x86.Build.0 = Debug|x86
+		{15567B17-4694-4C26-B4E5-6B9CE2915D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15567B17-4694-4C26-B4E5-6B9CE2915D75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15567B17-4694-4C26-B4E5-6B9CE2915D75}.Release|x86.ActiveCfg = Release|x86
+		{15567B17-4694-4C26-B4E5-6B9CE2915D75}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<message:StructureSpecificDataQuery xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message https://registry.sdmx.org/schemas/v2_1/SDMXMessage.xsd" xmlns:common="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common" xmlns:message="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message" xmlns:query="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <message:Header>
+        <message:ID>ID0</message:ID>
+        <message:Test>false</message:Test>
+        <message:Prepared>2006-05-04T18:13:51.0Z</message:Prepared>
+        <message:Sender id="id0"/>
+        <message:Receiver id="id1"/>
+    </message:Header>
+    <message:Query>
+        <query:ReturnDetails defaultLimit="1024" detail="Full">
+            <query:Structure dimensionAtObservation="TIME_PERIOD" structureID="DEMO">
+                <common:Structure>
+                    <Ref agencyID="ESTAT" id="STS" version="3.1"/>
+                </common:Structure>
+            </query:Structure>
+        </query:ReturnDetails>
+        <query:DataWhere>
+            <query:Dataflow>
+                <Ref agencyID="ESTAT" id="SSTSCONS_PROD_M_2GROUPS" version="1.0" xmlns="" />
+            </query:Dataflow>
+            <query:Or>
+                <query:AttributeValue>
+                    <query:ID>TITLE</query:ID>
+                    <query:TextValue operator="contains">slash</query:TextValue>
+                </query:AttributeValue>
+            </query:Or>
+        </query:DataWhere>
+    </message:Query>
+</message:StructureSpecificDataQuery>

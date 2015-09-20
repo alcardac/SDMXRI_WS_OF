@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NSIWebService</name>
+    </assembly>
+    <members>
+        <member name="T:Estat.Nsi.DataDisseminationWS.Builder.WebServiceInfoBuilder">
+            <summary>
+            Build the collection of <see cref="T:Estat.Sri.Ws.Controllers.Model.WebServiceInfo"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.Builder.WebServiceInfoBuilder._names">
+            <summary>
+              The service descriptions
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.Builder.WebServiceInfoBuilder._schemas">
+            <summary>
+              The schema folders TODO those are configurable
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.Builder.WebServiceInfoBuilder._types">
+            <summary>
+              The current endpoint list
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.Builder.WebServiceInfoBuilder._webServices">
+            <summary>
+              The collection of web service info
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Builder.WebServiceInfoBuilder.BuildEndpoints">
+            <summary>
+            Build the endpoint array
+            </summary>
+            <returns>
+            The endpoint info array 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Builder.WebServiceInfoBuilder.GetEndpoint(System.Type)">
+            <summary>
+            Gets the <see cref="T:Estat.Sri.Ws.Controllers.Model.WebServiceInfo"/> from the specified <paramref name="type"/> if it has the <see cref="T:System.Web.Services.WebServiceAttribute"/>
+            </summary>
+            <param name="type">
+            The type which should have the <see cref="T:Estat.Sri.Ws.Controllers.Model.WebServiceInfo"/> 
+            </param>
+            <returns>
+            the <see cref="T:Estat.Sri.Ws.Controllers.Model.WebServiceInfo"/> from the specified <paramref name="type"/> if it has the <see cref="T:System.Web.Services.WebServiceAttribute"/> ; otherwise null 
+            </returns>
+        </member>
+        <member name="P:Estat.Nsi.DataDisseminationWS.Builder.WebServiceInfoBuilder.WebServices">
+            <summary>
+              Gets the collection of web service info
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper">
+            <summary>
+            This class is a wrapper for streaming response instead of using <see cref="T:System.Xml.XmlDocument"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper._logger">
+            <summary>
+            The logger.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper._controller">
+            <summary>
+              The controller
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper._soapOperation">
+            <summary>
+            The _soap operation
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper._soapFaultExceptionBuilder">
+            <summary>
+            The _soap fault exception builder
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper.#ctor">
+            <summary>
+              Initializes a new instance of the <see cref="T:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper"/> class.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper.#ctor(Estat.Sri.Ws.Controllers.Controller.IStreamController{System.Xml.XmlWriter},Estat.Sri.Ws.Controllers.Constants.SoapOperation)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper"/> class.
+            </summary>
+            <param name="controller">
+            The <see cref="T:Estat.Sri.Ws.Controllers.Controller.IStreamController`1"/> which will be used at <see cref="M:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper.WriteXml(System.Xml.XmlWriter)"/> 
+            </param>
+            <param name="soapOperation">
+            The soap Operation.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="controller"/>
+              is null
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper.GetAnySchema(System.Xml.Schema.XmlSchemaSet)">
+            <summary>
+            Get an empty <see cref="T:System.Xml.XmlQualifiedName"/>
+            </summary>
+            <param name="xs">
+            Parameter not used in this method 
+            </param>
+            <returns>
+            The <see cref="F:System.Xml.XmlQualifiedName.Empty"/> 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper.GetSchema">
+            <summary>
+            This method is reserved and should not be used. When implementing the IXmlSerializable interface, you should return null (Nothing in Visual Basic) from this method, and instead, if specifying a custom schema is required, apply the <see cref="T:System.Xml.Serialization.XmlSchemaProviderAttribute"/> to the class.
+            </summary>
+            <returns>
+            An <see cref="T:System.Xml.Schema.XmlSchema"/> that describes the XML representation of the object that is produced by the <see cref="M:System.Xml.Serialization.IXmlSerializable.WriteXml(System.Xml.XmlWriter)"/> method and consumed by the <see cref="M:System.Xml.Serialization.IXmlSerializable.ReadXml(System.Xml.XmlReader)"/> method. 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper.ReadXml(System.Xml.XmlReader)">
+            <summary>
+            Generates an object from its XML representation.
+            </summary>
+            <param name="reader">
+            The <see cref="T:System.Xml.XmlReader"/> stream from which the object is deserialized. 
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.XmlStreamWrapper.WriteXml(System.Xml.XmlWriter)">
+            <summary>
+            Converts an object into its XML representation.
+            </summary>
+            <param name="writer">
+            The <see cref="T:System.Xml.XmlWriter"/> stream to which the object is serialized. 
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.DataDisseminationWS.Global">
+            <summary>
+            The global.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.Global._log">
+            <summary>
+            The _log
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Global.Application_AuthenticateRequest(System.Object,System.EventArgs)">
+            <summary>
+            The application_ authenticate request.
+            </summary>
+            <param name="sender">
+            The sender.
+            </param>
+            <param name="e">
+            The e.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Global.Application_BeginRequest(System.Object,System.EventArgs)">
+            <summary>
+            The application_ begin request.
+            </summary>
+            <param name="sender">
+            The sender.
+            </param>
+            <param name="e">
+            The e.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Global.Application_End(System.Object,System.EventArgs)">
+            <summary>
+            The application_ end.
+            </summary>
+            <param name="sender">
+            The sender.
+            </param>
+            <param name="e">
+            The e.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Global.Application_Error(System.Object,System.EventArgs)">
+            <summary>
+            The application_ error.
+            </summary>
+            <param name="sender">
+            The sender.
+            </param>
+            <param name="e">
+            The e.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Global.Application_Start(System.Object,System.EventArgs)">
+            <summary>
+            The application_ start.
+            </summary>
+            <param name="sender">
+            The sender.
+            </param>
+            <param name="e">
+            The e.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Global.Session_End(System.Object,System.EventArgs)">
+            <summary>
+            The session_ end.
+            </summary>
+            <param name="sender">
+            The sender.
+            </param>
+            <param name="e">
+            The e.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Global.Session_Start(System.Object,System.EventArgs)">
+            <summary>
+            The session_ start.
+            </summary>
+            <param name="sender">
+            The sender.
+            </param>
+            <param name="e">
+            The e.
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.DataDisseminationWS.Default">
+            <summary>
+            The class that interfaces between the aspx page and the internal classes. 
+            It also contains some utility classes
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Default.IsPrivate(System.Net.IPAddress)">
+            <summary>
+            Checks if the specified <paramref name="address"/> is a private (RFC 1918, RFC 4193) or link local (RFC 5735, RFC 3927, RFC 4291)
+            </summary>
+            <param name="address">The IP Address</param>
+            <returns>True if the specified <paramref name="address"/> is a private or link local; otherwise false</returns>
+            <remarks>See <a href="http://en.wikipedia.org/wiki/Private_network">http://en.wikipedia.org/wiki/Private_network</a></remarks>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.Default.TryGetExternal(System.Net.IPHostEntry)">
+            <summary>
+            Try to get an external IP; otherwise the first local or private IP. It will use IPv6 only if there is no IPv4 IPs.
+            </summary>
+            <param name="host">The host entry</param>
+            <returns>an external IP; otherwise the first local or private IP</returns>
+        </member>
+        <member name="P:Estat.Nsi.DataDisseminationWS.Default.WebServices">
+            <summary>
+              Gets the collection of web service info
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.DataDisseminationWS.Default.Version">
+            <summary>
+              Gets the NSI Web Service version
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.DataDisseminationWS.NSIStdV20Service">
+            <summary>
+                Data Dissemination Web Service is used by the NSI to disseminate
+                data, exposing it for queries. It is the main class of the NSI web service
+                it encapsulates of the application logic and it is responsible for performing
+                the call to the QueryParser, applying the query and returning the resulting dataset.
+            </summary>
+            <example>
+                A simple <see cref="T:Estat.Nsi.DataDisseminationWS.NSIStdV20Service"/> client in C#
+                <code source="ReUsingExamples\NsiWebService\ReUsingWebService.cs" lang="cs"/>
+                The <code>WSDLSettings</code> class used by the client
+                <code source="ReUsingExamples\NsiWebService\WSDLSettings.cs" lang="cs"/>
+            </example>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.NSIStdV20Service._logger">
+            <summary>
+                The logger
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.NSIStdV20Service._controllerBuilder">
+            <summary>
+                The _controller builder
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.DataDisseminationWS.NSIStdV20Service._soapFaultExceptionBuilder">
+            <summary>
+            The _soap fault exception builder
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.NSIStdV20Service.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Estat.Nsi.DataDisseminationWS.NSIStdV20Service"/> class.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.NSIStdV20Service.GetCompactData(System.Xml.XmlNode)">
+            <summary>
+            Web Method that is used to retrieve sdmx data in compact format based on a sdmx query
+            </summary>
+            <param name="query">
+            The sdmx query
+            </param>
+            <returns>
+            The queried data in sdmx compact format
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.NSIStdV20Service.GetCrossSectionalData(System.Xml.XmlDocument)">
+            <summary>
+            Web Method that is used to retrieve sdmx data in cross sectional format based on a sdmx query
+            </summary>
+            <param name="query">
+            The sdmx query
+            </param>
+            <returns>
+            The queried data in sdmx cross sectional format
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.NSIStdV20Service.GetGenericData(System.Xml.XmlDocument)">
+            <summary>
+            Web Method that is used to retrieve sdmx data in generic format based on a sdmx query
+            </summary>
+            <param name="query">
+            The sdmx query
+            </param>
+            <returns>
+            The queried data in sdmx generic format
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.NSIStdV20Service.QueryStructure(System.Xml.XmlDocument)">
+            <summary>
+            Web Method that is used to retrieve sdmx structural metadata based on a sdmx query structure request
+            </summary>
+            <param name="query">
+            The sdmx query structure request
+            </param>
+            <returns>
+            The sdmx structural metadata inside a RegistryInterface QueryStructureResponse
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.NSIStdV20Service.Test(System.String,System.String)">
+            <summary>
+            Web Method that is used for testing purposes and retrieve SDMX data by calling the other
+                web methods of this service. The method accept as an input a file path to the xml file
+                containing the SDMX query, and a string specifying the format for the output data
+            </summary>
+            <param name="xmlQueryPath">
+            The complete file path to the file containing the SDMX query
+            </param>
+            <param name="targetFormat">
+            The string specifying the format. The accepted values are:
+                <list type="bullet">
+            <item>
+            compact
+                    </item>
+            <item>
+            cross
+                    </item>
+            <item>
+            general
+                    </item>
+            </list>
+            </param>
+            <returns>
+            The result of the query in the specified format
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.DataDisseminationWS.NSIStdV20Service.HandleRequest(System.Xml.XmlNode,Estat.Sri.Ws.Controllers.Controller.IController{System.Xml.XmlNode,System.Xml.XmlWriter},Estat.Sri.Ws.Controllers.Constants.SoapOperation)">
+            <summary>
+            The method that handle the processing of the SDMX query and orchestrate the
+            calls to different building blocks.
+            </summary>
+            <param name="input">The xml containing the query bean</param>
+            <param name="controller">The Controller of the request</param>
+            <param name="soapOperation">The SOAP operation.</param>
+            <returns>
+            The queried data in specified format
+            </returns>
+        </member>
+        <member name="P:Estat.Nsi.DataDisseminationWS.NSIStdV20Service.Endpoint">
+            <summary>
+                Gets the <see cref="T:Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema"/> for this service
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.DataDisseminationWS.NSIEstatV20Service">
+            <summary>
+            Web Service used by NSI for data dissemination and structural metadata retrieval. This service uses the SDMX 2.0 Schema files with Eurostat extensions
+            </summary>
+            <example>
+            A simple <see cref="T:Estat.Nsi.DataDisseminationWS.NSIStdV20Service"/> client in C#
+            <code source="ReUsingExamples\NsiWebService\ReUsingWebService.cs" lang="cs"/>
+            The <code>WSDLSettings</code> class used by the client
+            <code source="ReUsingExamples\NsiWebService\WSDLSettings.cs" lang="cs"/>
+            </example>
+        </member>
+        <member name="P:Estat.Nsi.DataDisseminationWS.NSIEstatV20Service.Endpoint">
+            <summary>
+            Gets the <see cref="T:Org.Sdmxsource.Sdmx.Api.Constants.SdmxSchema"/> for this service
+            </summary>
+        </member>
+        <member name="T:Resources.Messages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.app_copyright">
+            <summary>
+              Looks up a localized string similar to Copyright (c) 2009 by the European Commission, represented by Eurostat..
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.app_description">
+            <summary>
+              Looks up a localized string similar to NSI Web Service provider.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.app_version">
+            <summary>
+              Looks up a localized string similar to v{0}.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.help_external">
+            <summary>
+              Looks up a localized string similar to This page appears to be have been requested using an external (internet) host name or IP address. External should be able to access the endpoints configured for NSI Web Service using one of the above URLs..
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.help_localhost">
+            <summary>
+              Looks up a localized string similar to &lt;b&gt;Warning.&lt;/b&gt; This page appears to have been requested using a local or internal host name or IP. The above endpoints are not accessible from external users. Please contact your network administrator to retrieve the external hostname or IP for this web service..
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.help_not_external">
+            <summary>
+              Looks up a localized string similar to &lt;b&gt;Warning.&lt;/b&gt; This page appears to have been requested using a local or internal host name or IP. The above endpoint URL might not be accessible from external users. Please contact your network administrator to retrieve the external hostname or IP for this web service..
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.index_page_title">
+            <summary>
+              Looks up a localized string similar to NSI Web Service - Index page.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_endpoints_info">
+            <summary>
+              Looks up a localized string similar to Endpoints.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_endpoint_name">
+            <summary>
+              Looks up a localized string similar to Service Name.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_endpoint_namespace">
+            <summary>
+              Looks up a localized string similar to Namespace.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_endpoint_path">
+            <summary>
+              Looks up a localized string similar to Endpoint path.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_endpoint_wsdl">
+            <summary>
+              Looks up a localized string similar to WSDL link.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_endpoint_xsd">
+            <summary>
+              Looks up a localized string similar to XML Schema path.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_estatv20">
+            <summary>
+              Looks up a localized string similar to SDMX v2.0 with Eurostat extensions.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_estatv20_wcf">
+            <summary>
+              Looks up a localized string similar to Standard SDMX v2.0 with Eurostat extensions (No extra element).
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_remarks">
+            <summary>
+              Looks up a localized string similar to Remarks.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_request_host">
+            <summary>
+              Looks up a localized string similar to Requested Host/IP.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_request_info">
+            <summary>
+              Looks up a localized string similar to Request information.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_request_is_external">
+            <summary>
+              Looks up a localized string similar to Is usable from external users.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_request_port">
+            <summary>
+              Looks up a localized string similar to Port.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_request_property">
+            <summary>
+              Looks up a localized string similar to Property.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_request_root_url">
+            <summary>
+              Looks up a localized string similar to Root URL.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_request_value">
+            <summary>
+              Looks up a localized string similar to Value.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_stdv20">
+            <summary>
+              Looks up a localized string similar to Standard SDMX v2.0.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_stdv20_wcf">
+            <summary>
+              Looks up a localized string similar to Standard SDMX v2.0 (No extra element).
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.label_stdv21">
+            <summary>
+              Looks up a localized string similar to Standard SDMX v2.1.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.lable_endpoint_link_wsdl">
+            <summary>
+              Looks up a localized string similar to WSDL.
+            </summary>
+        </member>
+        <member name="P:Resources.Messages.lable_endpoint_link_xsd">
+            <summary>
+              Looks up a localized string similar to SDMXMessage.xsd.
+            </summary>
+        </member>
+    </members>
+</doc>

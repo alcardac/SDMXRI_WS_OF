@@ -1,0 +1,26 @@
+<StructureSpecificDataQuery xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>IDREF1</ID>
+    <Test>false</Test>
+    <Prepared>2014-01-13T11:27:55.7318528+01:00</Prepared>
+    <Sender id="Unknown" />
+    <Receiver id="Unknown" />
+  </Header>
+  <Query>
+    <ReturnDetails detail="Full" observationAction="Active" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query" />
+    <DataWhere xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query">
+      <DataSetID operator="equal">HC01_TYPE_A</DataSetID>
+      <Dataflow>
+        <Ref agencyID="ESTAT" id="HC01_TYPE_A" version="2.0" xmlns="" />
+      </Dataflow>
+        <DimensionValue>
+          <ID>GEO</ID>
+          <Value operator="notEqual">IT</Value>
+        </DimensionValue>
+        <DimensionValue>
+            <ID>GEO</ID>
+            <Value operator="notEqual">PL</Value>
+        </DimensionValue>
+    </DataWhere>
+  </Query>
+</StructureSpecificDataQuery>

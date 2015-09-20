@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<QueryMessage xmlns="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message" xmlns:query="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/query" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://katharma.agilis-sa.gr/SDMXML/SDMXMessage.xsd">
+  <Header>
+    <ID>CENSUSHUB_Q_XS1</ID>
+    <Test>true</Test>
+    <Name xml:lang="it">CENSUSHUB_Q_XS1</Name>
+    <Prepared>2008-05-06T12:01:00</Prepared>
+    <Sender id="4D0"/>
+    <Receiver id="IT1"/>
+  </Header>
+  <Query>
+	<query:DataWhere>
+	  <query:And>
+		<query:DataProvider>IT1</query:DataProvider>
+		<query:Dataflow>CENSUSHUB_TEST_Q</query:Dataflow>
+		<query:Or>
+		  <query:Dimension id="SEX">001</query:Dimension>
+		  <query:Dimension id="SEX">002</query:Dimension>
+		</query:Or>
+		<query:Or>
+		  <query:Dimension id="AGE">TOT</query:Dimension>
+		  <query:Dimension id="AGE">008</query:Dimension>
+		  <query:Dimension id="AGE">010</query:Dimension>
+		  <query:Dimension id="AGE">012</query:Dimension>
+		</query:Or>
+		<query:Or>
+		  <query:Dimension id="CAS">TOT</query:Dimension>
+		  <query:Dimension id="CAS">003</query:Dimension>
+		  <query:Dimension id="CAS">004</query:Dimension>
+		  <query:Dimension id="CAS">NST</query:Dimension>
+		</query:Or>
+		<query:Or>
+		  <query:Dimension id="GEO">CZ</query:Dimension>
+		  <query:Dimension id="GEO">CZ01</query:Dimension>
+		  <query:Dimension id="GEO">CZ02</query:Dimension>
+		  <query:Dimension id="GEO">CZ03</query:Dimension>
+		  <query:Dimension id="GEO">CZ032</query:Dimension>
+		</query:Or>
+	  </query:And>
+	</query:DataWhere>
+  </Query>
+</QueryMessage>

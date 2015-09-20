@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Structure xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message">
+  <Header>
+    <ID>REGISTRY_RESPONSE</ID>
+    <Test>false</Test>
+    <Prepared>2013-09-10T09:08:16.8398+02:00</Prepared>
+    <Sender id="ESTAT" />
+    <Receiver id="unknown" />
+  </Header>
+  <Structures>
+    <HierarchicalCodelists xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure">
+      <HierarchicalCodelist id="HCL_SAMPLE_NZ" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCodelist=ESTAT:HCL_SAMPLE_NZ(2.1)" agencyID="ESTAT" version="2.1" validFrom="2008-04-01T00:00:00" validTo="2008-12-31T00:00:00" isFinal="false">
+        <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Sample Hierarchical Codelist</Name>
+        <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">This is a sample Hierarchical Codelist</Description>
+        <IncludedCodelist alias="CL_AREAS@ECB@10">
+          <Ref id="CL_AREAS" version="1.0" agencyID="ECB" package="codelist" class="Codelist" xmlns="" />
+        </IncludedCodelist>
+        <IncludedCodelist alias="CL_COUNTRIES@ECB@10">
+          <Ref id="CL_COUNTRIES" version="1.0" agencyID="ECB" package="codelist" class="Codelist" xmlns="" />
+        </IncludedCodelist>
+        <Hierarchy id="HIERARCHY_CASE1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Hierarchy=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1" leveled="false">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">World countries</Name>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Level Based Hierarchy for world countries. In this case, each
+                    child can have only one parent (see "3.2.5.8 Hierarchical Code
+                    Scheme" of "SDMX IMPLEMENTORS GUIDE (VERSION
+                    2.0)."</Description>
+          <HierarchicalCode id="A1" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.A1">
+            <CodelistAliasRef>CL_AREAS@ECB@10</CodelistAliasRef>
+            <CodeID>
+              <Ref id="A1" xmlns="" />
+            </CodeID>
+            <HierarchicalCode id="E1" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.A1.E1">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="E1" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="F2" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.A1.F2">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="F2" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="E7" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.A1.E7">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="E7" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="E4" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.A1.E4">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="E4" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+          </HierarchicalCode>
+          <HierarchicalCode id="E4" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E4">
+            <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+            <CodeID>
+              <Ref id="E4" xmlns="" />
+            </CodeID>
+            <HierarchicalCode id="ZW" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E4.ZW">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="ZW" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="MA" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E4.MA">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="MA" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="EG" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E4.EG">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="EG" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+          </HierarchicalCode>
+          <HierarchicalCode id="E1" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E1">
+            <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+            <CodeID>
+              <Ref id="E1" xmlns="" />
+            </CodeID>
+            <HierarchicalCode id="FR" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E1.FR">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="FR" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="IT" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E1.IT">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="IT" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="GR" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E1.GR">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="GR" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="ES" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E1.ES">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="ES" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+          </HierarchicalCode>
+          <HierarchicalCode id="F2" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.F2">
+            <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+            <CodeID>
+              <Ref id="F2" xmlns="" />
+            </CodeID>
+            <HierarchicalCode id="CN" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.F2.CN">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="CN" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="JP" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.F2.JP">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="JP" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+          </HierarchicalCode>
+          <HierarchicalCode id="E7" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E7">
+            <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+            <CodeID>
+              <Ref id="E7" xmlns="" />
+            </CodeID>
+            <HierarchicalCode id="BR" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E7.BR">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="BR" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="US" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E7.US">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="US" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="AR" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE1.E7.AR">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="AR" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+          </HierarchicalCode>
+        </Hierarchy>
+        <Hierarchy id="HIERARCHY_CASE2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Hierarchy=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2" leveled="false">
+          <Name xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Member countries of EU</Name>
+          <Description xml:lang="en" xmlns="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common">Value Based Hierarchy for EU Member countries. In this case, each
+                    child can have more than one parents (see "3.2.5.8 Hierarchical Code
+                    Scheme" of "SDMX IMPLEMENTORS GUIDE (VERSION
+                    2.0)."</Description>
+          <HierarchicalCode id="D2" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2">
+            <CodelistAliasRef>CL_AREAS@ECB@10</CodelistAliasRef>
+            <CodeID>
+              <Ref id="D2" xmlns="" />
+            </CodeID>
+            <HierarchicalCode id="AT" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.AT">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="AT" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="BE" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.BE">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="BE" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="DE" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.DE">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="DE" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="DK" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.DK">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="DK" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="ES" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.ES">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="ES" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="FI" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.FI">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="FI" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="FR" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.FR">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="FR" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="GB" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.GB">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="GB" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="GR" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.GR">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="GR" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="IE" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.IE">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="IE" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="IT" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.IT">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="IT" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="LU" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.LU">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="LU" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="NL" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.NL">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="NL" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="PT" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.PT">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="PT" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="SE" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D2.SE">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="SE" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+          </HierarchicalCode>
+          <HierarchicalCode id="D3" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3">
+            <CodelistAliasRef>CL_AREAS@ECB@10</CodelistAliasRef>
+            <CodeID>
+              <Ref id="D3" xmlns="" />
+            </CodeID>
+            <HierarchicalCode id="AT" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.AT">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="AT" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="BE" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.BE">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="BE" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="CY" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.CY">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="CY" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="CZ" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.CZ">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="CZ" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="NL" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.NL">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="NL" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="DK" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.DK">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="DK" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="EE" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.EE">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="EE" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="ES" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.ES">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="ES" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="FI" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.FI">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="FI" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="FR" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.FR">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="FR" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="GB" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.GB">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="GB" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="GR" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.GR">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="GR" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="HU" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.HU">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="HU" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="IE" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.IE">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="IE" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="IT" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.IT">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="IT" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="LT" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.LT">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="LT" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="LU" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.LU">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="LU" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="LV" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.LV">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="LV" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="MT" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.MT">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="MT" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="SK" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.SK">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="SK" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="PL" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.PL">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="PL" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="PT" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.PT">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="PT" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="SE" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.SE">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="SE" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="SI" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.SI">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="SI" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+            <HierarchicalCode id="DE" urn="urn:sdmx:org.sdmx.infomodel.codelist.HierarchicalCode=ESTAT:HCL_SAMPLE_NZ(2.1).HIERARCHY_CASE2.D3.DE">
+              <CodelistAliasRef>CL_COUNTRIES@ECB@10</CodelistAliasRef>
+              <CodeID>
+                <Ref id="DE" xmlns="" />
+              </CodeID>
+            </HierarchicalCode>
+          </HierarchicalCode>
+        </Hierarchy>
+      </HierarchicalCodelist>
+    </HierarchicalCodelists>
+  </Structures>
+</Structure>

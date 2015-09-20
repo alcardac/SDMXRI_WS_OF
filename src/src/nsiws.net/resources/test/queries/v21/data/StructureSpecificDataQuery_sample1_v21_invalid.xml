@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns7:StructureSpecificDataQuery xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/metadata/structurespecific"
+ xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific"
+ xmlns:ns3="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common"
+ xmlns:ns4="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/metadata/generic"
+ xmlns:ns5="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure"
+ xmlns:ns6="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/registry"
+ xmlns:ns7="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message"
+ xmlns:ns8="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer"
+ xmlns:ns9="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic"
+ xmlns:ns10="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message file:/Users/sli/Documents/sdmx/standard/SDMX_2-1_ALL_SECTIONS/Aug11/SDMX_2-1-1_SECTION_3B_SDMX_ML_Schemas_Samples_201108/schemas/SDMXMessage.xsd">
+    <ns7:Header>
+        <ns7:ID>ID0</ns7:ID>
+        <ns7:Test>false</ns7:Test>
+        <ns7:Prepared>2006-05-04T18:13:51.0Z</ns7:Prepared>
+        <ns7:Sender id="id0">
+        </ns7:Sender>
+        <ns7:Receiver id="id1">
+        </ns7:Receiver>
+    </ns7:Header>
+    <ns7:Query>
+        <ns10:ReturnDetails defaultLimit="1024" detail="SeriesKeyOnly" observationAction="Added">
+            <ns10:FirstNObservations>10</ns10:FirstNObservations>
+            <ns10:LastNObservations>15</ns10:LastNObservations>
+            <!-- invalid value for dimensionAtObservation -->
+            <ns10:Structure dimensionAtObservation="#44REF_AREA" structureID="DEMO">
+                <ns3:Structure>
+                    <Ref agencyID="ESTAT" id="DEMO" version="1.2.3"/>
+                </ns3:Structure>
+            </ns10:Structure>
+        </ns10:ReturnDetails>
+        <ns10:DataWhere>
+            <ns10:DataSetID operator="contains">Mitsos</ns10:DataSetID>
+             <ns10:Dataflow>
+                <Ref agencyID="ESTAT" id="SSTSCONS_PROD_A"/>
+            </ns10:Dataflow>
+            <ns10:DimensionValue>
+                <ns10:ID>REF_AREA</ns10:ID>
+                <ns10:Value>GR</ns10:Value>
+            </ns10:DimensionValue>
+            <ns10:TimeDimensionValue>
+                <ns10:TimeValue operator="lessThanOrEqual">2012</ns10:TimeValue>
+            </ns10:TimeDimensionValue>
+            <ns10:AttributeValue>
+                <ns10:ID>TITLE</ns10:ID>
+                <ns10:TextValue operator="startsWith">Frutopia</ns10:TextValue>
+            </ns10:AttributeValue>
+            <ns10:Or>
+                <ns10:PrimaryMeasureValue>
+                    <ns10:ID>OBS_VALUE</ns10:ID>
+                    <ns10:NumericValue operator="greaterThan">23256</ns10:NumericValue>
+                </ns10:PrimaryMeasureValue>
+                <ns10:PrimaryMeasureValue>
+                    <ns10:ID>OBS_VALUE</ns10:ID>
+                    <ns10:NumericValue operator="lessThan">50455</ns10:NumericValue>
+                </ns10:PrimaryMeasureValue>
+            </ns10:Or>
+            <ns10:Or>
+                <ns10:DimensionValue>
+                    <ns10:ID>SEX</ns10:ID>
+                    <ns10:Value>M</ns10:Value>
+                </ns10:DimensionValue>
+                <ns10:DimensionValue>
+                    <ns10:ID>SEX</ns10:ID>
+                    <ns10:Value>F</ns10:Value>
+                </ns10:DimensionValue>
+            </ns10:Or>
+            <ns10:Or>
+                <ns10:DimensionValue>
+                    <ns10:ID>PIZZA</ns10:ID>
+                    <ns10:Value operator="equal">margarita</ns10:Value>
+                </ns10:DimensionValue>
+                <ns10:DimensionValue>
+                    <ns10:ID>PIZZA</ns10:ID>
+                    <ns10:Value operator="equal">feta</ns10:Value>
+                </ns10:DimensionValue>
+                <ns10:DimensionValue>
+                    <ns10:ID>PIZZA</ns10:ID>
+                    <ns10:Value operator="equal">diabola</ns10:Value>
+                </ns10:DimensionValue>
+            </ns10:Or>
+        </ns10:DataWhere>
+    </ns7:Query>
+</ns7:StructureSpecificDataQuery>

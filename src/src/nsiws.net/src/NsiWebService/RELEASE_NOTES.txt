@@ -1,0 +1,99 @@
+NSI Web Service Release notes
+=============================
+
+2.0.beta2 2009-12-18
+====================
+
+Changes :
+
+- When checking for XS DSD do not check the isFrequency dimension for XS attachment level as it defaults to XS group
+
+- Added assembly information and version
+
+Known issues:
+
+- Some times if the SOAP request or the included SDMX Query is invalid (e.g. not well formed) and IIS is used, the IIS will close the http connection when using Soap UI tool and the request never reaches NSI Web Service module.
+
+
+2.0.beta2 2009-12-08
+====================
+
+Changes:
+
+- update to add the extra <query> parameter in the request
+- Added xsd files as content
+
+2.0.beta2 2009-12-05
+====================
+
+Bug fixes:
+
+- Copy XSD files to app directory. They were already included in 
+the src directory.
+
+
+2.0.beta2 2009-11-30
+====================
+
+New features:
+
+- Retrieval of <Head> information of the SDMX message from Mapping Store or by generating it (Data Retriever).
+
+Changes:
+
+- Header API change in DR 
+
+Bugs fixed :
+
+Known issues:
+
+
+1.0.beta2 2009-11-23
+====================
+
+Changes:
+
+- Updated PC-Axis (v1.0 23-11-2009) and DataRetriever (v1.0 16-11-2009) DLLs . 
+ - The DataRetriever DLL should fix an issue with SQL Query not generated correctly when no component or time constrains where present in the SDMX Query.
+
+1.0.beta2 2009-11-12
+====================
+
+Changes:
+
+- Changed web requests parameter name to "Query"
+- Updated DLLs
+
+1.0.beta2 2009-11-10
+=====================
+
+Fixed issues :
+
+- Catch invalid soap requests (where XmlDocument parameter in web methods is null)
+
+1.0.beta2 2009-11-09
+====================
+
+Fixed issues :
+
+- Updated installation guide
+- Updated web.config to perfom validation on sdmx queries
+
+1.0.beta2 2009-11-08
+====================
+
+Fixed bugs :
+
+- Missing reference to PcAxis.dll and releated DLLs.
+
+1.0.0beta 2009-11-06
+=====================
+
+New features:
+
+- Supports Generic, CrossSectional and Compact formats
+- Checks if CrossSectional or Time series format is possible
+
+Known issues :
+
+- No Utility format support

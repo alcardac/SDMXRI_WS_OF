@@ -1,0 +1,1317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Estat.Nsi.AuthModule</name>
+    </assembly>
+    <members>
+        <member name="T:Estat.Nsi.AuthModule.UserFactory">
+            <summary>
+            Singleton class for creating <see cref="T:Estat.Nsi.AuthModule.IUser"/> objects using the implementation specified in <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.UserImplementation"/>
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.AbstractFactory">
+            <summary>
+            Abstract class for building Factories containing the common code
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AbstractFactory.Create``1(System.String)">
+            <summary>
+            Create an instance of the specified type
+            </summary>
+            <typeparam name="T">
+            The base type of the interface to create
+            </typeparam>
+            <param name="typeName">
+            The type name of the implementation to create
+            </param>
+            <returns>
+            The instance of the specified type or null if it fails
+            </returns>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.UserFactory._instance">
+            <summary>
+            The singleton instance
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.UserFactory._configuredType">
+            <summary>
+            Holds the configured implementation to use
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserFactory.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Estat.Nsi.AuthModule.UserFactory"/> class from being created. 
+            Initialize a new instance of the <see cref="T:Estat.Nsi.AuthModule.UserFactory"/> class
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserFactory.CreateUser(System.String)">
+            <summary>
+            Create a new <see cref="T:Estat.Nsi.AuthModule.IUser"/> implementation using the implementation specified in <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.AuthenticationImplementation"/>
+            </summary>
+            <param name="domain">
+            The authentication domain/realm
+            </param>
+            <returns>
+            A new <see cref="T:Estat.Nsi.AuthModule.IUser"/> implementation object
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserFactory.CreateUser(System.String,System.String)">
+            <summary>
+            Create a new <see cref="T:Estat.Nsi.AuthModule.IUser"/> implementation using the <paramref name="type"/> or the <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.AuthenticationImplementation"/>
+            </summary>
+            <param name="domain">
+            The authentication domain/realm
+            </param>
+            <param name="type">
+            The implementation base type. It uses the syntax accepted by <see cref="M:System.Type.GetType(System.String)"/> method. If it is null then it is ignored and this method behaves like <see cref="M:Estat.Nsi.AuthModule.UserFactory.CreateUser(System.String)"/>
+            </param>
+            <returns>
+            A new <see cref="T:Estat.Nsi.AuthModule.IUser"/> implementation object
+            </returns>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.UserFactory.Instance">
+            <summary>
+            Gets the singleton instance
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.UserCredentialsFactory">
+            <summary>
+            Singleton class for creating <see cref="T:Estat.Nsi.AuthModule.IUserCredentials"/> objects using the implementation specified in <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.UserCredentialsImplementation"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.UserCredentialsFactory._instance">
+            <summary>
+            The singleton instance
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.UserCredentialsFactory._configuredType">
+            <summary>
+            Holds the configured implementation to use
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserCredentialsFactory.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Estat.Nsi.AuthModule.UserCredentialsFactory"/> class from being created. 
+            Initialize a new instance of the <see cref="T:Estat.Nsi.AuthModule.UserCredentialsFactory"/> class
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserCredentialsFactory.CreateUserCredentials">
+            <summary>
+            Create a new <see cref="T:Estat.Nsi.AuthModule.IUserCredentials"/> implementation using the implementation specified in <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.UserCredentialsImplementation"/>
+            </summary>
+            <returns>
+            A new <see cref="T:Estat.Nsi.AuthModule.IUserCredentials"/> implementation object
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserCredentialsFactory.CreateUserCredentials(System.String)">
+            <summary>
+            Create a new <see cref="T:Estat.Nsi.AuthModule.IUserCredentials"/> implementation using the <paramref name="type"/> or the <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.UserCredentialsImplementation"/>
+            </summary>
+            <param name="type">
+            The implementation base type. It uses the syntax accepted by <see cref="M:System.Type.GetType(System.String)"/> method. If it is null then it is ignored and this method behaves like <see cref="M:Estat.Nsi.AuthModule.UserCredentialsFactory.CreateUserCredentials"/>
+            </param>
+            <returns>
+            A new <see cref="T:Estat.Nsi.AuthModule.IUserCredentials"/> implementation object
+            </returns>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.UserCredentialsFactory.Instance">
+            <summary>
+            Gets the singleton instance
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.Config.AuthorizationImplementationElement">
+            <summary>
+            The <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> implementation element
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.Config.ImplementationElement">
+            <summary>
+            Abstract class for *Implementation elements
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.Config.ImplementationElement.ImplementationTypeName">
+            <summary>
+            The attribute name of the implementation type attribute
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.Config.ImplementationElement.TypeValidator(System.Object)">
+            <summary>
+            Check if the implementation is valid
+            </summary>
+            <param name="value">
+            The type name
+            </param>
+            <exception cref="T:Estat.Nsi.AuthModule.AuthConfigurationException">
+            <see cref="P:Estat.Nsi.AuthModule.Errors.ImplementationMissingAttr"/>, <see cref="P:Estat.Nsi.AuthModule.Errors.ImplementationCannotLoad"/>
+            </exception>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Config.ImplementationElement.ImplementationType">
+            <summary>
+            Gets or sets the implementation base type. It uses the syntax accepted by <see cref="M:System.Type.GetType(System.String)"/> method
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.DbAuthorizationProvider">
+            <summary>
+            Implementation of the <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> interface. 
+            This implementation will retrieve the allowed dataflows from a database using a configurable SQL query
+            The connection string and the SQL query are specified in the .config file
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.IAuthorizationProvider">
+            <summary>
+            Interface for Authorization Providers
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.IAuthorizationProvider.AccessControl(Estat.Nsi.AuthModule.IUser,System.String)">
+            <summary>
+            Check if there is at least one dataflow with the specified ID in list of allowed dataflows
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> to check
+            </param>
+            <param name="dataflowId">
+            The dataflow ID
+            </param>
+            <returns>
+            True if there is at least one dataflow with the specified ID in list of allowed dataflows. Else false
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.IAuthorizationProvider.AccessControl(Estat.Nsi.AuthModule.IUser,Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            Check if there is a dataflow in the list of allowed dataflows which matches the id, version and agencyId of the specified <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/> 
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> to check
+            </param>
+            <param name="dataflowRef">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/> to check
+            </param>
+            <returns>
+            True if there is a dataflow in the list of allowed dataflows which matches the id, version and agencyId of the specified <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/> 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.IAuthorizationProvider.GetDataflows(Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Get the collection of allowed dataflows
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> to check
+            </param>
+            <returns>
+            The list of dataflows for the <see cref="T:Estat.Nsi.AuthModule.IUser"/> 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.IAuthorizationProvider.GetDataflows(Estat.Nsi.AuthModule.IUser,System.String)">
+            <summary>
+            Get the collection of allowed dataflows with the specific dataflow id
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> to check
+            </param>
+            <param name="dataflowId">
+            The dataflow id
+            </param>
+            <returns>
+            The list of dataflows for the <see cref="T:Estat.Nsi.AuthModule.IUser"/> 
+            </returns>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._database">
+            <summary>
+            The authorization database
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._dataflowIdSet">
+            <summary>
+            The list of allowed dataflows. The map consists of IMaintainableRefObject.id to DataflowRefBeans
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._dataflowSet">
+            <summary>
+            The list of allowed dataflows. The map consists of IMaintainableRefObject to DataflowRefBean.Id
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._selectQuery">
+            <summary>
+            The SQL query as specified in the config file
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._lastUser">
+            <summary>
+            The last <see cref="T:Estat.Nsi.AuthModule.IUser"/>
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthorizationProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/> class. 
+            Initialize a new instance of the <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/> class
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthorizationProvider.#ctor(Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/> class. 
+            Initialize a new instance of the <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/> class with the specified <see cref="T:Estat.Nsi.AuthModule.IUser"/>.
+            This constructor calls <see cref="M:Estat.Nsi.AuthModule.DbAuthorizationProvider.SetUser(Estat.Nsi.AuthModule.IUser)"/>
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/>
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthorizationProvider.AccessControl(Estat.Nsi.AuthModule.IUser,System.String)">
+            <summary>
+            Check if there is at least one dataflow with the specified ID in list of allowed dataflows
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> to check
+            </param>
+            <param name="dataflowId">
+            The dataflow ID
+            </param>
+            <returns>
+            True if there is at least one dataflow with the specified ID in list of allowed dataflows. Else false
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthorizationProvider.AccessControl(Estat.Nsi.AuthModule.IUser,Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            Check if there is a dataflow in the list of allowed dataflows which matches the id, version and agencyId of the specified <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/> 
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> to check
+            </param>
+            <param name="dataflowRef">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/> to check
+            </param>
+            <returns>
+            True if there is a dataflow in the list of allowed dataflows which matches the id, version and agencyId of the specified <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/> 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthorizationProvider.GetDataflows(Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Get the collection of allowed dataflows
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> to check
+            </param>
+            <returns>
+            The list of dataflows for the <see cref="T:Estat.Nsi.AuthModule.IUser"/> 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthorizationProvider.GetDataflows(Estat.Nsi.AuthModule.IUser,System.String)">
+            <summary>
+            Get the collection of allowed dataflows with the specific dataflow id
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> to check
+            </param>
+            <param name="dataflowId">
+            The dataflow id
+            </param>
+            <returns>
+            The list of dataflows for the <see cref="T:Estat.Nsi.AuthModule.IUser"/> 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthorizationProvider.RetrieveAllowedDataFlows(Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Retrieve allowed dataflows for user from the database
+            </summary>
+            <param name="user">
+            The user
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthorizationProvider.SetUser(Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Set the <see cref="T:Estat.Nsi.AuthModule.IUser"/>. 
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/>
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.NoAccessAuthorizationProvider">
+            <summary>
+            This implementation of IAuthorizationProvider interface provides no access to any dataflow.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.NoAccessAuthorizationProvider.AccessControl(Estat.Nsi.AuthModule.IUser,System.String)">
+            <summary>
+            Check if there is at least one dataflow with the specified ID in list of allowed dataflows
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> instance with the user name.
+            </param>
+            <param name="dataflowId">
+            The dataflow ID
+            </param>
+            <returns>
+            True if there is at least one dataflow with the specified ID in list of allowed dataflows. Else false
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.NoAccessAuthorizationProvider.AccessControl(Estat.Nsi.AuthModule.IUser,Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            Check if there is a dataflow in the list of allowed dataflows which matches the id, version and agencyId of the specified <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/> 
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> instance with the user name.
+            </param>
+            <param name="dataflowRef">
+            The <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/> to check
+            </param>
+            <returns>
+            True if there is a dataflow in the list of allowed dataflows which matches the id, version and agencyId of the specified <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/> 
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.NoAccessAuthorizationProvider.GetDataflows(Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Get the collection of allowed dataflows
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> instance with the user name.
+            </param>
+            <returns>
+            An empty collection
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.NoAccessAuthorizationProvider.GetDataflows(Estat.Nsi.AuthModule.IUser,System.String)">
+            <summary>
+            Get the collection of allowed dataflows
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> instance with the user name.
+            </param>
+            <param name="dataflowId">
+            The dataflow ID
+            </param>
+            <returns>
+            An empty collection
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.Config.UserCredentialsImplementationElement">
+            <summary>
+            The <see cref="T:Estat.Nsi.AuthModule.IUserCredentials"/> implementation element
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.Config.AuthenticationImplementationElement">
+            <summary>
+            The <see cref="T:Estat.Nsi.AuthModule.IAuthenticationProvider"/> implementation element
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.UserPassThrough">
+            <summary>
+            An implementation of this <see cref="T:Estat.Nsi.AuthModule.IUser"/> interface. This implementation doesn't encypt or encode the password in any way
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.IUser">
+            <summary>
+            Interface for storing user credential and checking passwords
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.IUser.CheckPasswordEnc(System.String)">
+            <summary>
+            This method checks if the given password matches with the possibly encypted <see cref="P:Estat.Nsi.AuthModule.IUser.Password"/>
+            </summary>
+            <param name="password">
+            The password from the authentication provider
+            </param>
+            <returns>
+            True if specifed password == g(<see cref="P:Estat.Nsi.AuthModule.IUser.Password"/>) where g is the encryption method depending on the implementation
+            </returns>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.IUser.Domain">
+            <summary>
+            Gets or sets the Domain/Realm
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.IUser.Password">
+            <summary>
+            Gets or sets the Password
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.IUser.UserName">
+            <summary>
+            Gets or sets the User name
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserPassThrough.CheckPasswordEnc(System.String)">
+            <summary>
+            This method checks if the given password matches with the  <see cref="P:Estat.Nsi.AuthModule.IUser.Password"/>
+            </summary>
+            <param name="password">
+            The password from the authentication provider
+            </param>
+            <returns>
+            True if specifed password == <see cref="P:Estat.Nsi.AuthModule.IUser.Password"/>. Else false
+            </returns>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.UserPassThrough.Domain">
+            <summary>
+            Gets or sets the Domain/Realm
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.UserPassThrough.Password">
+            <summary>
+            Gets or sets the Password
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.UserPassThrough.UserName">
+            <summary>
+            Gets or sets the User name
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.Errors">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.DbAuthenticationInvalidSqlQuery">
+            <summary>
+              Looks up a localized string similar to select &lt;password field&gt;  from &lt;table(s)&gt; where ... &lt;user field&gt;={0}.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.DbAuthInvalidSqlQuery">
+            <summary>
+              Looks up a localized string similar to Invalid SQL for {0}. Please make sure that the sql query in the form: {1}.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.DbAuthMissingConnectionStringName">
+            <summary>
+              Looks up a localized string similar to Connection String name is not set.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.DbAuthorizationInvalidSqlQuery">
+            <summary>
+              Looks up a localized string similar to select &lt;dataflow id&gt; as {0}, &lt;dataflow version&gt; as {1}, &lt;dataflow agency&gt; as {2} from &lt;table(s)&gt; where ... &lt;user field&gt;={3}.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.DbAuthValidateMissingSql">
+            <summary>
+              Looks up a localized string similar to SQL query not set.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.ImplementationCannotLoad">
+            <summary>
+              Looks up a localized string similar to Could not load the implementation &apos;{0}&apos; for interface {1}.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.ImplementationMissing">
+            <summary>
+              Looks up a localized string similar to Implementation for {0} not set.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.ImplementationMissingAttr">
+            <summary>
+              Looks up a localized string similar to Implementation not set.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.MissingAuthorizationImplementation">
+            <summary>
+              Looks up a localized string similar to Missing authorization implementation.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Errors.MissingConfiguration">
+            <summary>
+              Looks up a localized string similar to Missing configuration for module {0}.
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.AuthUtils">
+            <summary>
+            This class holds a collection of helper static methods
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthUtils.ConvertDBValue``1(System.Object)">
+            <summary>
+            Convert the specified object base type to the generic type.
+            </summary>
+            <typeparam name="T">
+            The output base type
+            </typeparam>
+            <param name="value">
+            The value to convert
+            </param>
+            <returns>
+            If <c>param</c> is <see cref="T:System.DBNull"/> then return the <c>default(T)</c> else the dbValue converted to (T) type
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthUtils.ValidateConfig(System.Object,System.Type)">
+            <summary>
+            Check if a configuration setting is set and throw an <see cref="T:Estat.Nsi.AuthModule.AuthConfigurationException"/> if not
+            </summary>
+            <param name="config">
+            The config artefact to check
+            </param>
+            <param name="type">
+            The type of the calling module
+            </param>
+            <exception cref="T:Estat.Nsi.AuthModule.AuthConfigurationException">
+            See the <see cref="P:Estat.Nsi.AuthModule.Errors.MissingConfiguration"/>
+            </exception>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthUtils.ValidateContains(System.String,System.String[])">
+            <summary>
+            Validates that all the specified strings exist in the input string in any order
+            </summary>
+            <param name="input">
+            The input string to check
+            </param>
+            <param name="values">
+            A non-null and non empty collection of strings to check
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            strings is null
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            strings is empty
+            </exception>
+            <returns>
+            True if all the specified strings are included in the input string. Else false.
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.IUserCredentials">
+            <summary>
+            Interface for implementations that retrieve user name and password
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.IUserCredentials.ParseResponse(System.Web.HttpApplication,Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Parse the HTTP response from <paramref name="application"/> and populate the <paramref name="user"/>
+            </summary>
+            <param name="application">
+            The current <see cref="T:System.Web.HttpApplication"/> instance
+            </param>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> object to populate
+            </param>
+            <returns>
+            True if retrieving the user credentials were successfull
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.IUserCredentials.RequestAuthentication(System.Web.HttpApplication,System.String)">
+            <summary>
+            Request authentication from client. This might be a no-op for some implementations
+            </summary>
+            <param name="application">
+            The current <see cref="T:System.Web.HttpApplication"/> instance
+            </param>
+            <param name="domain">
+            The domain/realm to use when requesting authentication
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.Config.DBAuthorizationElement">
+            <summary>
+            The <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/> configuration element
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.Config.DBAuthSqlElement">
+            <summary>
+            Abstract class for DbAuth* elements which contains the common configuration properties
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.Config.DBAuthSqlElement.SqlValidate(System.Object)">
+            <summary>
+            Check if the specified value is empty
+            </summary>
+            <param name="value">
+            The sql query string
+            </param>
+            <exception cref="T:Estat.Nsi.AuthModule.AuthConfigurationException">
+            See the <see cref="P:Estat.Nsi.AuthModule.Errors.DbAuthValidateMissingSql"/>
+            </exception>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Config.DBAuthSqlElement.ConnectionStringName">
+            <summary>
+            Gets or sets the ConnectionString Name. Must exist a connectionString with this name at connectionStrings section
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Config.DBAuthSqlElement.Sql">
+            <summary>
+            Gets or sets the SQL Query with macros
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.NsiAuthModule">
+            <summary>
+            A HTTP Auth Module for IIS for restricting access to dataflows for data and structure requests.
+            </summary>
+            <remarks>
+            You will need to configure this module in the web.config file of your
+            web and register it with IIS before being able to use it. For more information
+            see the following link: http://go.microsoft.com/?linkid=8101007
+            </remarks>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.NsiAuthModule._log">
+            <summary>
+            The log
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.NsiAuthModule._anonUser">
+            <summary>
+            The _anon user.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.NsiAuthModule._authentication">
+            <summary>
+            The _authentication.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.NsiAuthModule._realm">
+            <summary>
+            The _realm.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.NsiAuthModule._userCred">
+            <summary>
+            The _user cred.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.NsiAuthModule.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.NsiAuthModule"/> class. 
+            Create a new instance of the <see cref="T:Estat.Nsi.AuthModule.NsiAuthModule"/> class
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.NsiAuthModule.Dispose">
+            <summary>
+            Disposes of the resources (other than memory) used by the module that implements <see cref="T:System.Web.IHttpModule"/>.
+            </summary>
+            <remarks>
+            Noop for this implementation
+            </remarks>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.NsiAuthModule.Init(System.Web.HttpApplication)">
+            <summary>
+            Initializes a module and prepares it to handle requests.
+            </summary>
+            <param name="context">
+            An <see cref="T:System.Web.HttpApplication"/> that provides access to the methods, properties, and events common to all application objects within an ASP.NET application.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.NsiAuthModule.OnAuthenticateRequest(System.Object,System.EventArgs)">
+            <summary>
+            Authentication Request event handler
+            </summary>
+            <param name="sender">
+            The current <see cref="T:System.Web.HttpApplication"/> instance
+            </param>
+            <param name="e">
+            Not used
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.AuthenticationProviderFactory">
+            <summary>
+            Singleton class for creating <see cref="T:Estat.Nsi.AuthModule.IAuthenticationProvider"/> objects using the implementation specified in <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.AuthenticationImplementation"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthenticationProviderFactory._instance">
+            <summary>
+            The singleton instance
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthenticationProviderFactory._configuredType">
+            <summary>
+            Holds the configured implementation to use
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthenticationProviderFactory.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Estat.Nsi.AuthModule.AuthenticationProviderFactory"/> class from being created. 
+            Initialize a new instance of the <see cref="T:Estat.Nsi.AuthModule.AuthenticationProviderFactory"/> class
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthenticationProviderFactory.CreateAuthenticationProvider">
+            <summary>
+            Create a new <see cref="T:Estat.Nsi.AuthModule.IAuthenticationProvider"/> implementation using the implementation specified in <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.AuthenticationImplementation"/>
+            </summary>
+            <returns>
+            A new <see cref="T:Estat.Nsi.AuthModule.IAuthenticationProvider"/> implementation object
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthenticationProviderFactory.CreateAuthenticationProvider(System.String)">
+            <summary>
+            Create a new <see cref="T:Estat.Nsi.AuthModule.IAuthenticationProvider"/> implementation using the <paramref name="type"/> or the <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.AuthenticationImplementation"/>
+            </summary>
+            <param name="type">
+            The implementation base type. It uses the syntax accepted by <see cref="M:System.Type.GetType(System.String)"/> method. If it is null then it is ignored and this method behaves like <see cref="M:Estat.Nsi.AuthModule.AuthenticationProviderFactory.CreateAuthenticationProvider"/>
+            </param>
+            <returns>
+            A new <see cref="T:Estat.Nsi.AuthModule.IAuthenticationProvider"/> implementation object
+            </returns>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.AuthenticationProviderFactory.Instance">
+            <summary>
+            Gets the singleton instance
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.IAuthenticationProvider">
+            <summary>
+            The interface for Authentication Provider
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.IAuthenticationProvider.Authenticate(Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Authenticate the specified user
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> instance containing the user information
+            </param>
+            <returns>
+            If the user is authenticated <see cref="T:Estat.Nsi.AuthModule.AuthorizationProviderFactory"/> else null
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.DbConstants">
+            <summary>
+            A list of constants used by the <see cref="T:Estat.Nsi.AuthModule.DbAuthenticationProvider"/> and <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbConstants.DataflowAgencyIdField">
+            <summary>
+            The dataflow agency id field. This string will replace the <see cref="F:Estat.Nsi.AuthModule.DbConstants.DataflowAgencyIdMacro"/> from  <see cref="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._selectQuery"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbConstants.DataflowAgencyIdMacro">
+            <summary>
+            The dataflow agency id macro variable used in the <see cref="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._selectQuery"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbConstants.DataflowIdField">
+            <summary>
+            The dataflow id field. This string will replace the <see cref="F:Estat.Nsi.AuthModule.DbConstants.DataflowIdMacro"/> from  <see cref="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._selectQuery"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbConstants.DataflowIdMacro">
+            <summary>
+            The dataflow id macro variable used in the <see cref="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._selectQuery"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbConstants.DataflowVersionField">
+            <summary>
+            The dataflow version field. This string will replace the <see cref="F:Estat.Nsi.AuthModule.DbConstants.DataflowVersionMacro"/> from  <see cref="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._selectQuery"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbConstants.DataflowVersionMacro">
+            <summary>
+            The dataflow version macro variable used in the <see cref="F:Estat.Nsi.AuthModule.DbAuthorizationProvider._selectQuery"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbConstants.UserMacro">
+            <summary>
+            The user macro variable used in the user provided queries
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbConstants.UserParamName">
+            <summary>
+            The prepared statement parameter name
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.UserMd5">
+            <summary>
+            The user md 5.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserMd5.CheckPasswordEnc(System.String)">
+            <summary>
+            This method checks if the given password matches with the MD5 hash of the <see cref="P:Estat.Nsi.AuthModule.IUser.Password"/>
+            </summary>
+            <param name="password">
+            The password from the authentication provider
+            </param>
+            <returns>
+            True if specifed password == g(<see cref="P:Estat.Nsi.AuthModule.IUser.Password"/>) where g is the MD5 hash method
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserMd5.GetPasswordHash(System.String)">
+            <summary>
+            Get MD5 hash of the specified <paramref name="txtNewPassword"/>
+            </summary>
+            <param name="txtNewPassword">
+            The text to get the MD5 hash
+            </param>
+            <returns>
+            The MD5 hash of the specified <paramref name="txtNewPassword"/>
+            </returns>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.UserMd5.Domain">
+            <summary>
+            Gets or sets the Domain/Realm
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.UserMd5.Password">
+            <summary>
+            Gets or sets the Password
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.UserMd5.UserName">
+            <summary>
+            Gets or sets the User name
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.AuthorizationProviderFactory">
+            <summary>
+            Class for creating <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> objects using the implementation specified in <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.AuthorizationImplementation"/>
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthorizationProviderFactory._configuredType">
+            <summary>
+            The _configured type.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthorizationProviderFactory._defaultAuthorizationProvider">
+            <summary>
+            The _default authorization provider.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthorizationProviderFactory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.AuthorizationProviderFactory"/> class. 
+            Create a new instance of the <see cref="T:Estat.Nsi.AuthModule.AuthorizationProviderFactory"/> class 
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthorizationProviderFactory.#ctor(Estat.Nsi.AuthModule.IAuthorizationProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.AuthorizationProviderFactory"/> class. 
+            Create a new instance of the <see cref="T:Estat.Nsi.AuthModule.AuthorizationProviderFactory"/> class with the specified default <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/>
+            </summary>
+            <param name="defaultAuthorizationProvider">
+            The <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> based object
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthorizationProviderFactory.CreateAuthorizationProvider">
+            <summary>
+            Create a new <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> implementation using the implementation specified in <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.AuthorizationImplementation"/>
+            or the default <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> specified in the constructor
+            </summary>
+            <returns>
+            A new <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> implementation object
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthorizationProviderFactory.CreateAuthorizationProvider(System.String)">
+            <summary>
+            Create a new <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> implementation using the <paramref name="type"/> or the <see cref="P:Estat.Nsi.AuthModule.AuthConfigSection.AuthorizationImplementation"/>
+            </summary>
+            <param name="type">
+            The implementation base type. It uses the syntax accepted by <see cref="M:System.Type.GetType(System.String)"/> method. If it is null then it is ignored and this method behaves like <see cref="M:Estat.Nsi.AuthModule.AuthorizationProviderFactory.CreateAuthorizationProvider"/>
+            </param>
+            <returns>
+            A new <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> implementation object
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.AuthConfigurationException">
+            <summary>
+            An exception that is thrown when there is a configuration error
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthConfigurationException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.AuthConfigurationException"/> class with the specified error message
+            </summary>
+            <param name="message">
+            The error message
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthConfigurationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.AuthConfigurationException"/> class with the specified error message and a reference to the inner exception that is the cause of this exception
+            </summary>
+            <param name="message">
+            The error message
+            </param>
+            <param name="innerException">
+            The inner exception
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthConfigurationException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.AuthConfigurationException"/> class.
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.AuthConfigurationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.AuthConfigurationException"/> class with serialized data.
+            </summary>
+            <param name="info">
+            The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown. 
+                            </param>
+            <param name="context">
+            The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination. 
+                            </param>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="info"/> parameter is null. 
+                            </exception>
+            <exception cref="T:System.Runtime.Serialization.SerializationException">
+            The class name is null or <see cref="P:System.Exception.HResult"/> is zero (0). 
+            </exception>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.Config.UserImplementationElement">
+            <summary>
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> implementation element
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.ConfigManager">
+            <summary>
+            Configuration manager for this module
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.ConfigManager._instance">
+            <summary>
+            The singleton instance
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.ConfigManager._config">
+            <summary>
+            The configuration section
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.ConfigManager.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Estat.Nsi.AuthModule.ConfigManager"/> class from being created. 
+            Initialize a new instance of the <see cref="T:Estat.Nsi.AuthModule.ConfigManager"/> class
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.ConfigManager.Instance">
+            <summary>
+            Gets the singleton instance
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.ConfigManager.Config">
+            <summary>
+            Gets the current configuration section
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.Config.DBAuthenticationElement">
+            <summary>
+            The <see cref="T:Estat.Nsi.AuthModule.DbAuthenticationProvider"/> configuration element
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.DataflowCompare">
+            <summary>
+            Comparer for <see cref="T:Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject"/>
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DataflowCompare.Equals(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject,Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            Determines whether two objects of type DataflowRefBean are equal.
+            </summary>
+            <returns>
+            true if the specified DataflowRefBean are equal; otherwise, false.
+            </returns>
+            <param name="x">
+            The first object to compare.
+                            </param>
+            <param name="y">
+            The second object to compare.
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DataflowCompare.GetHashCode(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            A hash function for the specified DataflowRefBean for hashing algorithms and data structures, such as a hash table.
+            </summary>
+            <returns>
+            A hash code for the specified DataflowRefBean object.
+            </returns>
+            <param name="obj">
+            The DataflowRefBean object for which to get a hash code. if null it returns 0
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.AuthConfigSection">
+            <summary>
+            The main configuration section of the AuthModule
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthConfigSection.AnonUserName">
+            <summary>
+            The anon user name.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthConfigSection.AuthenticationImplName">
+            <summary>
+            The authentication impl name.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthConfigSection.AuthorizationImplName">
+            <summary>
+            The authorization impl name.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthConfigSection.DbAuthName">
+            <summary>
+            The db auth name.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthConfigSection.RealmName">
+            <summary>
+            The realm name.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthConfigSection.UserCredImplName">
+            <summary>
+            The user cred impl name.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.AuthConfigSection.UserImplName">
+            <summary>
+            The user impl name.
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.AuthConfigSection.AnonymousUser">
+            <summary>
+            Gets or sets the Anonymous user. if its not set or is empty or null, it's disabled
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.AuthConfigSection.AuthenticationImplementation">
+            <summary>
+            Gets or sets the <see cref="T:Estat.Nsi.AuthModule.IAuthenticationProvider"/> implementation element
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.AuthConfigSection.AuthorizationImplementation">
+            <summary>
+            Gets or sets the <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> implementation element
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.AuthConfigSection.DBAuth">
+            <summary>
+            Gets or sets the <see cref="T:Estat.Nsi.AuthModule.DbAuthenticationProvider"/> and <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/> configuration section
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.AuthConfigSection.Realm">
+            <summary>
+            Gets or sets the Realm/Domain
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.AuthConfigSection.UserCredentialsImplementation">
+            <summary>
+            Gets or sets the <see cref="T:Estat.Nsi.AuthModule.IUserCredentials"/> implementation element
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.AuthConfigSection.UserImplementation">
+            <summary>
+            Gets or sets the <see cref="T:Estat.Nsi.AuthModule.IUser"/> implementation element
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.DbAuthenticationProvider">
+            <summary>
+            An implementation of the <see cref="T:Estat.Nsi.AuthModule.IAuthenticationProvider"/> interface.
+            This implementation uses a database and a configurable sql query to authenticate the user.
+            The database connection string and sql query are configured in .config files.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbAuthenticationProvider._database">
+            <summary>
+            The authentication database
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbAuthenticationProvider._query">
+            <summary>
+            The _query.
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DbAuthenticationProvider._selectQuery">
+            <summary>
+            The sql query as specified in the config file
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthenticationProvider.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.DbAuthenticationProvider"/> class
+            </summary>
+            <exception cref="T:Estat.Nsi.AuthModule.AuthConfigurationException">Missing or invalid configuration at .config</exception>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthenticationProvider.Authenticate(Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Authenticate the specified user
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> instance containing the user information
+            </param>
+            <returns>
+            If the user is authenticated <see cref="T:Estat.Nsi.AuthModule.AuthorizationProviderFactory"/> else null
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthenticationProvider.HasDbAuthorizationConfig">
+            <summary>
+            Check if <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/> configuration exists
+            </summary>
+            <returns>
+            True if <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/> configuration exists. Else false.
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DbAuthenticationProvider.Exists(Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Check if the specified user with user name and password exists.
+            </summary>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> object that holds the user credentials
+            </param>
+            <returns>
+            True if the specified user with user name and password exists. Else false
+            </returns>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.UserCredentialsHttpBasic">
+            <summary>
+            An implentation of the <see cref="T:Estat.Nsi.AuthModule.IUserCredentials"/> interface.
+            This implementation uses HTTP HEADER and HTTP Basic authentication to retrieve the user credentials
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.UserCredentialsHttpBasic._basic">
+            <summary>
+            Regular expression that parses the HTTP Basic Authentication header
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.UserCredentialsHttpBasic._basicSep">
+            <summary>
+            The Basic authentication separator
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserCredentialsHttpBasic.ParseResponse(System.Web.HttpApplication,Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Parse the HTTP response from <paramref name="application"/> and populate the <paramref name="user"/>
+            </summary>
+            <param name="application">
+            The current <see cref="T:System.Web.HttpApplication"/> instance
+            </param>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> object to populate
+            </param>
+            <returns>
+            True if retrieving the user credentials were successfull
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserCredentialsHttpBasic.RequestAuthentication(System.Web.HttpApplication,System.String)">
+            <summary>
+            Request authentication from client
+            </summary>
+            <param name="application">
+            The current <see cref="T:System.Web.HttpApplication"/> instance
+            </param>
+            <param name="domain">
+            The domain/realm to use when requesting authentication
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.UserCredentialsHttpBasic.CreateDeniedResponse(System.Web.HttpApplication)">
+            <summary>
+            Create an 401 (Access Denied) HTTP response
+            </summary>
+            <param name="application">
+            The current <see cref="T:System.Web.HttpApplication"/> instance
+            </param>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.Config.DBAuthElement">
+            <summary>
+            The <see cref="T:Estat.Nsi.AuthModule.DbAuthenticationProvider"/> and <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/> configuration section
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Config.DBAuthElement.Authentication">
+            <summary>
+            Gets or sets the <see cref="T:Estat.Nsi.AuthModule.DbAuthenticationProvider"/> configuration element
+            </summary>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.Config.DBAuthElement.Authorization">
+            <summary>
+            Gets or sets the <see cref="T:Estat.Nsi.AuthModule.DbAuthorizationProvider"/> configuration element
+            </summary>
+        </member>
+        <member name="T:Estat.Nsi.AuthModule.DataflowPrincipal">
+            <summary>
+            An implementation of the <see cref="T:System.Security.Principal.IPrincipal"/> interface that stores that allowed dataflows
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DataflowPrincipal._dataflowRegex">
+            <summary>
+            Regular expression for matching the convention AGENCY+ID+VERSION used in dataflow in SDMX Queries
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DataflowPrincipal._authorizationProvider">
+            <summary>
+            This field holds the <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> of this principal
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DataflowPrincipal._identity">
+            <summary>
+            This field holds the <see cref="T:System.Security.Principal.IIdentity"/> of this principal
+            </summary>
+        </member>
+        <member name="F:Estat.Nsi.AuthModule.DataflowPrincipal._user">
+            <summary>
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> of this principal
+            </summary>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DataflowPrincipal.#ctor(System.Security.Principal.IIdentity,Estat.Nsi.AuthModule.IAuthorizationProvider,Estat.Nsi.AuthModule.IUser)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Estat.Nsi.AuthModule.DataflowPrincipal"/> class. 
+            Initialize a new instance of the <see cref="T:Estat.Nsi.AuthModule.DataflowPrincipal"/> class with the specified <paramref name="identity"/> and <paramref name="authorizationProvider"/>
+            </summary>
+            <param name="identity">
+            The <see cref="T:System.Security.Principal.IIdentity"/> of this principal
+            </param>
+            <param name="authorizationProvider">
+            The <see cref="T:Estat.Nsi.AuthModule.IAuthorizationProvider"/> of this principal
+            </param>
+            <param name="user">
+            The <see cref="T:Estat.Nsi.AuthModule.IUser"/> for this principal
+            </param>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DataflowPrincipal.GetAllowedDataflow(System.String)">
+            <summary>
+            Get the latest allowed dataflow with version and agency (if are either defined)
+            </summary>
+            <param name="dataflowId">
+            The dataflow id
+            </param>
+            <returns>
+            The allowed dataflow with biggest version
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DataflowPrincipal.GetAllowedDataflow(Org.Sdmxsource.Sdmx.Api.Model.Objects.DataStructure.IDataflowObject)">
+            <summary>
+            Get the latest allowed dataflow with version and agency (if are either defined)
+            </summary>
+            <param name="dataflow">
+            The dataflow object
+            </param>
+            <returns>
+            The allowed dataflow with biggest version
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DataflowPrincipal.GetAllowedDataflow(Org.Sdmxsource.Sdmx.Api.Model.Objects.Reference.IMaintainableRefObject)">
+            <summary>
+            Get the latest allowed dataflow with version and agency (if are either defined)
+            </summary>
+            <param name="dataflowRef">
+            The dataflow reference
+            </param>
+            <returns>
+            The allowed dataflow with biggest version
+            </returns>
+        </member>
+        <member name="M:Estat.Nsi.AuthModule.DataflowPrincipal.IsInRole(System.String)">
+            <summary>
+            Determines whether the current principal belongs to the specified role.
+            </summary>
+            <returns>
+            true if the current principal is a member of the specified role; otherwise, false.
+            </returns>
+            <param name="role">
+            The name of the role for which to check membership. 
+            </param>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.DataflowPrincipal.AllowedDataflows">
+            <summary>
+            Gets the collection of allowed dataflows
+            </summary>
+            <returns>The list of allowed dataflows</returns>
+        </member>
+        <member name="P:Estat.Nsi.AuthModule.DataflowPrincipal.Identity">
+            <summary>
+            Gets the identity of the current principal.
+            </summary>
+            <returns>
+            The <see cref="T:System.Security.Principal.IIdentity"/> object associated with the current principal.
+            </returns>
+        </member>
+    </members>
+</doc>

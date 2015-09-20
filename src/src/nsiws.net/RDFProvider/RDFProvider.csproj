@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04639A9B-C7D0-4FCF-BC4B-3EDB68B786C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RDFProvider</RootNamespace>
+    <AssemblyName>RDFProvider</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Controllers">
+      <HintPath>..\src\Controllers\bin\Debug\Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="DataRetriever">
+      <HintPath>..\..\dr.net\src\DataRetriever\bin\Debug\DataRetriever.dll</HintPath>
+    </Reference>
+    <Reference Include="Estat.Nsi.AuthModule">
+      <HintPath>..\src\Controllers\bin\Debug\Estat.Nsi.AuthModule.dll</HintPath>
+    </Reference>
+    <Reference Include="EstatSdmxSourceExtension">
+      <HintPath>..\..\..\lib\EstatSdmxSourceExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MappingStoreRetrieval, Version=3.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\MappingStoreRetrieval.dll</HintPath>
+    </Reference>
+    <Reference Include="PcAxis">
+      <HintPath>..\..\..\lib\PcAxis.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxApi">
+      <HintPath>..\..\sdmxsource.net\SdmxAPI\bin\Debug\SdmxApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxObjects">
+      <HintPath>..\..\sdmxsource.net\SdmxObjects\bin\Debug\SdmxObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxSourceUtil">
+      <HintPath>..\..\..\lib\SdmxSourceUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureParser">
+      <HintPath>..\..\sdmxsource.net\SdmxStructureParser\bin\Debug\SdmxStructureParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureRetrieval">
+      <HintPath>..\..\..\lib\SdmxStructureRetrieval.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureRetriever">
+      <HintPath>..\..\..\lib\StructureRetriever.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xml.Schema.Linq">
+      <HintPath>..\..\..\lib\Xml.Schema.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\NamespacePrefixPair.cs" />
+    <Compile Include="Constants\RDFAttributeNameTable.cs" />
+    <Compile Include="Constants\RDFConcurrentNameTable.cs" />
+    <Compile Include="Constants\RDFConstants.cs" />
+    <Compile Include="Constants\RDFElementNameTable.cs" />
+    <Compile Include="Constants\RDFNamespaces.cs" />
+    <Compile Include="Constants\RDFNameTableCache.cs" />
+    <Compile Include="Constants\RDFPrefixConstants.cs" />
+    <Compile Include="Data\Controller\Builder\IWriterBuilderRDF.cs" />
+    <Compile Include="Data\Controller\Builder\RDFControllerBuilder.cs" />
+    <Compile Include="Data\Controller\Builder\RDFDataWriterBuilder.cs" />
+    <Compile Include="Data\Controller\DataControllerBase.cs" />
+    <Compile Include="Data\Controller\DataRequestValidator.cs" />
+    <Compile Include="Data\Controller\Engine\RDFDelayedDataWriterEngine.cs" />
+    <Compile Include="Data\Controller\IController.cs" />
+    <Compile Include="Data\Controller\IDataRequestValidator.cs" />
+    <Compile Include="Data\Controller\IResponseGenerator.cs" />
+    <Compile Include="Data\Controller\QueryStructureController.cs" />
+    <Compile Include="Data\Controller\RDFSimpleDataController.cs" />
+    <Compile Include="Data\Controller\RDFSimpleDataResponseGenerator.cs" />
+    <Compile Include="Data\Controller\RDFStructureResponseGenerator.cs" />
+    <Compile Include="Data\Controller\StreamController.cs" />
+    <Compile Include="Structure\Controller\Builder\StructureBuilder.cs" />
+    <Compile Include="Data\Controller\StructureRequestRestController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\Retriever\Builders\DDbConnectionBuilder.cs" />
+    <Compile Include="Data\Retriever\Builders\IBuilder.cs" />
+    <Compile Include="Data\Retriever\Builders\ISqlBuilder.cs" />
+    <Compile Include="Data\Retriever\Builders\SeriesDataSetSqlBuilder.cs" />
+    <Compile Include="Data\Retriever\Builders\SeriesGroupSqlBuilder.cs" />
+    <Compile Include="Data\Retriever\Builders\SeriesOrderedDimensionBuilder.cs" />
+    <Compile Include="Data\Retriever\Builders\SeriesSqlBuilder.cs" />
+    <Compile Include="Data\Retriever\Builders\SqlBuilderBase.cs" />
+    <Compile Include="Data\Retriever\Builders\SqlQuery.cs" />
+    <Compile Include="Data\Retriever\DataRetrieverException.cs" />
+    <Compile Include="Data\Retriever\DataRetrieverHelper.cs" />
+    <Compile Include="Data\Retriever\Engines\IRDFDataQueryEngine.cs" />
+    <Compile Include="Data\Retriever\Engines\RDFDataQueryEngineBase.cs" />
+    <Compile Include="Data\Retriever\Engines\RDFSeriesDataQueryEngine.cs" />
+    <Compile Include="Data\Retriever\Engines\RDFSeriesDataQueryEngineBase.cs" />
+    <Compile Include="Data\Retriever\Manager\IRDFDataRetrievalWithWriter.cs" />
+    <Compile Include="Data\Retriever\Manager\IRDFQueryEngineManager.cs" />
+    <Compile Include="Data\Retriever\Manager\RDFSeriesQueryEngineManager.cs" />
+    <Compile Include="Data\Retriever\Model\ComponentValue.cs" />
+    <Compile Include="Data\Retriever\Model\DataRetrievalInfo.cs" />
+    <Compile Include="Data\Retriever\Model\DataRetrievalInfoSeries.cs" />
+    <Compile Include="Data\Retriever\Model\GroupInformation.cs" />
+    <Compile Include="Data\Retriever\Model\IMappedValues.cs" />
+    <Compile Include="Data\Retriever\Model\MappedValues.cs" />
+    <Compile Include="Data\Retriever\Model\MappedValuesBase.cs" />
+    <Compile Include="Data\Retriever\Model\ReadOnlyKey.cs" />
+    <Compile Include="Data\Retriever\Model\XsMeasureCache.cs" />
+    <Compile Include="Data\Retriever\RDFDataRetrieverCore.cs" />
+    <Compile Include="Data\Writer\Engine\IRDFWriterEngine.cs" />
+    <Compile Include="Data\Writer\Engine\RDFDataWriterEngine.cs" />
+    <Compile Include="Data\Writer\Engine\Writer.cs" />
+    <Compile Include="Structure\Controller\Builder\IRDFWriterBuilder.cs" />
+    <Compile Include="Structure\Engine\IStructureRDFWriterEngine.cs" />
+    <Compile Include="Structure\Factory\IStructureRDFWriterFactory.cs" />
+    <Compile Include="Structure\Factory\RDFStructureWriterFactory.cs" />
+    <Compile Include="Structure\Manager\Output\IStructureRDFWriterManager.cs" />
+    <Compile Include="Structure\Manager\StructureRDFWritingManager.cs" />
+    <Compile Include="Structure\Writing\SchemaLocationWriter.cs" />
+    <Compile Include="Structure\Writing\StructureWriterEngineRDF.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

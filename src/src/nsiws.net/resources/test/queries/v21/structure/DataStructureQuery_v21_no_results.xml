@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns7:DataStructureQuery xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/metadata/structurespecific"
+ xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/structurespecific"
+ xmlns:ns3="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/common"
+ xmlns:ns4="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/metadata/generic"
+ xmlns:ns5="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/structure"
+ xmlns:ns6="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/registry"
+ xmlns:ns7="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message"
+ xmlns:ns8="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message/footer"
+ xmlns:ns9="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/data/generic"
+ xmlns:ns10="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/query"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/message file:/Users/sli/Documents/sdmx/standard/SDMX_2-1_ALL_SECTIONS/Aug11/SDMX_2-1-1_SECTION_3B_SDMX_ML_Schemas_Samples_201108/schemas/SDMXMessage.xsd">
+    <ns7:Header>
+        <ns7:ID>ID0</ns7:ID>
+        <ns7:Test>false</ns7:Test>
+        <ns7:Prepared>2006-05-04T18:13:51.0Z</ns7:Prepared>
+        <ns7:Sender id="id0">
+        </ns7:Sender>
+        <ns7:Receiver id="id1">
+        </ns7:Receiver>
+    </ns7:Header>
+    <ns7:Query>
+        <ns10:ReturnDetails returnMatchedArtefact="false">
+            <ns10:References detail="Full">
+                <ns10:SpecificObjects>
+                    <ns3:Codelist/>
+                    <ns3:ConceptScheme/>
+                </ns10:SpecificObjects>
+            </ns10:References>
+        </ns10:ReturnDetails>
+        <ns10:DataStructureWhere>
+            <ns10:ID operator="equal">DO_NOT_EXIST</ns10:ID>
+        </ns10:DataStructureWhere>
+    </ns7:Query>
+</ns7:DataStructureQuery>

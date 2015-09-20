@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{226045DD-9918-41AF-A051-3A13236E9E61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSVZip</RootNamespace>
+    <AssemblyName>CSVZip</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Controllers">
+      <HintPath>..\src\NsiWebService\bin\Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="DataRetriever">
+      <HintPath>..\..\..\lib\DataRetriever.dll</HintPath>
+    </Reference>
+    <Reference Include="Estat.Nsi.AuthModule">
+      <HintPath>..\src\AuthModule\bin\Debug\Estat.Nsi.AuthModule.dll</HintPath>
+    </Reference>
+    <Reference Include="EstatSdmxSourceExtension">
+      <HintPath>..\..\..\lib\EstatSdmxSourceExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\src\NsiWebService\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MappingStoreRetrieval">
+      <HintPath>..\src\NsiWebService\bin\MappingStoreRetrieval.dll</HintPath>
+    </Reference>
+    <Reference Include="PcAxis">
+      <HintPath>..\..\..\lib\PcAxis.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxApi">
+      <HintPath>..\src\NsiWebService\bin\SdmxApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxDataParser">
+      <HintPath>..\..\sdmxsource.net\SdmxDataParser\bin\Debug\SdmxDataParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxObjects">
+      <HintPath>..\..\sdmxsource.net\SdmxDataParser\bin\Debug\SdmxObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureRetriever">
+      <HintPath>..\..\..\lib\StructureRetriever.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Builder\CsvZipControllerBuilder.cs" />
+    <Compile Include="Controller\Builder\CsvZipDataWriterBuilder.cs" />
+    <Compile Include="Controller\CsvZipDataController.cs" />
+    <Compile Include="Engine\CsvZipBaseDataWriter.cs" />
+    <Compile Include="Engine\CsvZipDataResponseGenerator.cs" />
+    <Compile Include="Engine\CsvZipDelayedDataWriterEngine.cs" />
+    <Compile Include="Engine\CsvZipTextWriter.cs" />
+    <Compile Include="Engine\ICsvZipDataWriterEngine.cs" />
+    <Compile Include="Engine\Manager\CsvZipDataRetrievalWithWriter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Retriever\Builders\ComplexSqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\CrossSectionalSqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\DDbConnectionBuilder.cs" />
+    <Compile Include="Retriever\Builders\HeaderBuilder.cs" />
+    <Compile Include="Retriever\Builders\IBuilder.cs" />
+    <Compile Include="Retriever\Builders\ISqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\SeriesDataSetSqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\SeriesGroupSqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\SeriesOrderedDimensionBuilder.cs" />
+    <Compile Include="Retriever\Builders\SeriesSqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\SqlBuilderBase.cs" />
+    <Compile Include="Retriever\Builders\SqlQuery.cs" />
+    <Compile Include="Retriever\CsvZipDataRetrieverCore.cs" />
+    <Compile Include="Retriever\DataRetrieverException.cs" />
+    <Compile Include="Retriever\DataRetrieverHelper.cs" />
+    <Compile Include="Retriever\Engines\CrossSectionalDataQueryEngineBase.cs" />
+    <Compile Include="Retriever\Engines\CrossSectionalMeasuresDataQueryEngine.cs" />
+    <Compile Include="Retriever\Engines\CrossSectionalMeasuresMappedDataQueryEngine.cs" />
+    <Compile Include="Retriever\Engines\CrossSectionalPrimaryDataQueryEngine.cs" />
+    <Compile Include="Retriever\Engines\DataQueryEngineBase.cs" />
+    <Compile Include="Retriever\Engines\IDataQueryEngine.cs" />
+    <Compile Include="Retriever\Engines\SeriesDataQueryEngine.cs" />
+    <Compile Include="Retriever\Engines\SeriesDataQueryEngineBase.cs" />
+    <Compile Include="Retriever\Engines\SeriesDataQueryEngineXsMeasureBuffered.cs" />
+    <Compile Include="Retriever\Manager\CrossSectionalQueryEngineManager.cs" />
+    <Compile Include="Retriever\Manager\IQueryEngineManager.cs" />
+    <Compile Include="Retriever\Manager\SeriesQueryEngineManager.cs" />
+    <Compile Include="Retriever\Model\ComponentValue.cs" />
+    <Compile Include="Retriever\Model\DataRetrievalInfo.cs" />
+    <Compile Include="Retriever\Model\DataRetrievalInfoSeries.cs" />
+    <Compile Include="Retriever\Model\DataRetrievalInfoXS.cs" />
+    <Compile Include="Retriever\Model\GroupInformation.cs" />
+    <Compile Include="Retriever\Model\IMappedValues.cs" />
+    <Compile Include="Retriever\Model\MappedValues.cs" />
+    <Compile Include="Retriever\Model\MappedValuesBase.cs" />
+    <Compile Include="Retriever\Model\MappedXsValues.cs" />
+    <Compile Include="Retriever\Model\ReadOnlyKey.cs" />
+    <Compile Include="Retriever\Model\XsMeasureCache.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="lib\Ionic.Zip.dll" />
+    <Content Include="lib\Ionic.Zip.pdb" />
+    <Content Include="lib\Ionic.Zip.xml" />
+    <Content Include="lib\zip.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

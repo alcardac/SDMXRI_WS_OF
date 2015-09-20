@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0B3A306-C805-4E8A-9610-434FA8E4025D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DsplDataFormat</RootNamespace>
+    <AssemblyName>DsplDataFormat</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Controllers">
+      <HintPath>..\src\Controllers\bin\Debug\Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="DataRetriever, Version=5.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\DataRetriever.dll</HintPath>
+    </Reference>
+    <Reference Include="EstatSdmxSourceExtension, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\EstatSdmxSourceExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MappingStoreRetrieval, Version=3.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\MappingStoreRetrieval.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V20, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V20.dll</HintPath>
+    </Reference>
+    <Reference Include="Org.Sdmx.Resources.SdmxMl.Schemas.V21, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Org.Sdmx.Resources.SdmxMl.Schemas.V21.dll</HintPath>
+    </Reference>
+    <Reference Include="PcAxis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\PcAxis.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxApi, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\SdmxApi.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxDataParser, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\SdmxDataParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxObjects, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\SdmxObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxParseBase, Version=0.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\SdmxParseBase.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxSourceUtil, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\SdmxSourceUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureParser, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\SdmxStructureParser.dll</HintPath>
+    </Reference>
+    <Reference Include="SdmxStructureRetrieval, Version=0.3.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\SdmxStructureRetrieval.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureRetriever, Version=3.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\StructureRetriever.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TabularWriters">
+      <HintPath>..\..\..\lib\TabularWriters.dll</HintPath>
+    </Reference>
+    <Reference Include="Xml.Schema.Linq, Version=0.3.0.0, Culture=neutral, PublicKeyToken=47d0c84d0ebb13e5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Xml.Schema.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Builder\DsplControllerBuilder.cs" />
+    <Compile Include="Controller\Builder\DsplDataWriterBuilder.cs" />
+    <Compile Include="Controller\DataRequestValidator.cs" />
+    <Compile Include="Controller\DsplDataController.cs" />
+    <Compile Include="Engine\DsplDataResponseGenerator.cs" />
+    <Compile Include="Engine\DsplDelayedDataWriterEngine.cs" />
+    <Compile Include="Engine\DsplBaseDataWriter.cs" />
+    <Compile Include="Engine\DsplMetadataEngine.cs" />
+    <Compile Include="Engine\DsplTextWriter.cs" />
+    <Compile Include="Engine\IDsplDataWriterEngine.cs" />
+    <Compile Include="Engine\Manager\IDsplDataRetrievalWithWriter.cs" />
+    <Compile Include="Model\DsplStructure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Retriever\Builders\ComplexSqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\CrossSectionalSqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\DDbConnectionBuilder.cs" />
+    <Compile Include="Retriever\Builders\HeaderBuilder.cs" />
+    <Compile Include="Retriever\Builders\IBuilder.cs" />
+    <Compile Include="Retriever\Builders\ISqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\SeriesDataSetSqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\SeriesGroupSqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\SeriesOrderedDimensionBuilder.cs" />
+    <Compile Include="Retriever\Builders\SeriesSqlBuilder.cs" />
+    <Compile Include="Retriever\Builders\SqlBuilderBase.cs" />
+    <Compile Include="Retriever\Builders\SqlQuery.cs" />
+    <Compile Include="Retriever\DataRetrieverException.cs" />
+    <Compile Include="Retriever\DataRetrieverHelper.cs" />
+    <Compile Include="Retriever\DsplDataRetrieverCore.cs" />
+    <Compile Include="Retriever\Engines\CrossSectionalDataQueryEngineBase.cs" />
+    <Compile Include="Retriever\Engines\CrossSectionalMeasuresDataQueryEngine.cs" />
+    <Compile Include="Retriever\Engines\CrossSectionalMeasuresMappedDataQueryEngine.cs" />
+    <Compile Include="Retriever\Engines\CrossSectionalPrimaryDataQueryEngine.cs" />
+    <Compile Include="Retriever\Engines\DataQueryEngineBase.cs" />
+    <Compile Include="Retriever\Engines\IDataQueryEngine.cs" />
+    <Compile Include="Retriever\Engines\SeriesDataQueryEngine.cs" />
+    <Compile Include="Retriever\Engines\SeriesDataQueryEngineBase.cs" />
+    <Compile Include="Retriever\Engines\SeriesDataQueryEngineXsMeasureBuffered.cs" />
+    <Compile Include="Retriever\Manager\CrossSectionalQueryEngineManager.cs" />
+    <Compile Include="Retriever\Manager\IQueryEngineManager.cs" />
+    <Compile Include="Retriever\Manager\SeriesQueryEngineManager.cs" />
+    <Compile Include="Retriever\Model\ComponentValue.cs" />
+    <Compile Include="Retriever\Model\DataRetrievalInfo.cs" />
+    <Compile Include="Retriever\Model\DataRetrievalInfoSeries.cs" />
+    <Compile Include="Retriever\Model\DataRetrievalInfoXS.cs" />
+    <Compile Include="Retriever\Model\GroupInformation.cs" />
+    <Compile Include="Retriever\Model\IMappedValues.cs" />
+    <Compile Include="Retriever\Model\MappedValues.cs" />
+    <Compile Include="Retriever\Model\MappedValuesBase.cs" />
+    <Compile Include="Retriever\Model\MappedXsValues.cs" />
+    <Compile Include="Retriever\Model\ReadOnlyKey.cs" />
+    <Compile Include="Retriever\Model\XsMeasureCache.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\AuthModule\Estat.Nsi.AuthModule.csproj">
+      <Project>{FA5E8AA2-8E62-49A3-BBCA-7CBEF6F31B04}</Project>
+      <Name>Estat.Nsi.AuthModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\zip.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
